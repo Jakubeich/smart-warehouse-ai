@@ -1,0 +1,15 @@
+{
+  "model": "nn-975367e33160",
+  "seed": 920000,
+  "pairs": 24,
+  "both_completed": 22,
+  "completed": {
+    "classical": 24,
+    "neural": 22
+  },
+  "mean_ticks": {
+    "classical": 272.59090909090907,
+    "neural": 252.72727272727272
+  },
+  "executed_collisions": 0
+}

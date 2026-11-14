@@ -1,0 +1,49 @@
+{
+  "selected": "speed-feedback-32",
+  "maps": 64,
+  "both_completed": 58,
+  "before": {
+    "completed": 61,
+    "statuses": {
+      "COMPLETED": 61,
+      "FAILED": 2,
+      "TICK_LIMIT": 1
+    },
+    "stalls": 2,
+    "stalls_in_passage_zone": 2,
+    "scenarios_with_passage_wait_ge_10": 15,
+    "passage_waits_ge_10": 192,
+    "mean_ticks_both_completed": 273.63793103448273,
+    "mean_passage_wait_ticks_both_completed": 34.810344827586206,
+    "executed_collisions": 0
+  },
+  "after": {
+    "completed": 59,
+    "statuses": {
+      "COMPLETED": 59,
+      "TICK_LIMIT": 1,
+      "FAILED": 4
+    },
+    "stalls": 4,
+    "stalls_in_passage_zone": 4,
+    "scenarios_with_passage_wait_ge_10": 29,
+    "passage_waits_ge_10": 173,
+    "mean_ticks_both_completed": 277.8103448275862,
+    "mean_passage_wait_ticks_both_completed": 52.793103448275865,
+    "executed_collisions": 0
+  },
+  "only_after_complete": [
+    1130011
+  ],
+  "only_before_complete": [
+    1130016,
+    1130019,
+    1130042
+  ],
+  "median_paired_ticks_delta": 1.5,
+  "faster_tied_slower": [
+    24,
+    4,
+    30
+  ]
+}

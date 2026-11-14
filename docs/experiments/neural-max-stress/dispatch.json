@@ -1,0 +1,981 @@
+[
+  {
+    "robots": 12,
+    "feasible_robot_task_pairs": 2400,
+    "robots_preferring_task_to_idle": 12,
+    "tasks_assigned_on_tick_1": 12,
+    "ranks": [
+      {
+        "robot": "R-01",
+        "tasks_feasible": 200,
+        "best_task_id": "T-049",
+        "best_task_score": 1.7404278130096746,
+        "idle_score": -3.651324025091472
+      },
+      {
+        "robot": "R-02",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.7965600400323687,
+        "idle_score": -3.651324025091472
+      },
+      {
+        "robot": "R-03",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.2632776090123374,
+        "idle_score": -3.651324025091472
+      },
+      {
+        "robot": "R-04",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.8062257715450223,
+        "idle_score": -3.651324025091472
+      },
+      {
+        "robot": "R-05",
+        "tasks_feasible": 200,
+        "best_task_id": "T-049",
+        "best_task_score": 1.5404407233117887,
+        "idle_score": -3.651324025091472
+      },
+      {
+        "robot": "R-06",
+        "tasks_feasible": 200,
+        "best_task_id": "T-186",
+        "best_task_score": 1.669738116868767,
+        "idle_score": -3.651324025091472
+      },
+      {
+        "robot": "R-07",
+        "tasks_feasible": 200,
+        "best_task_id": "T-049",
+        "best_task_score": 1.4748807272998405,
+        "idle_score": -3.651324025091472
+      },
+      {
+        "robot": "R-08",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.7519572005316804,
+        "idle_score": -3.651324025091472
+      },
+      {
+        "robot": "R-09",
+        "tasks_feasible": 200,
+        "best_task_id": "T-087",
+        "best_task_score": 1.421153704214494,
+        "idle_score": -3.651324025091472
+      },
+      {
+        "robot": "R-10",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.79581773980664,
+        "idle_score": -3.651324025091472
+      },
+      {
+        "robot": "R-11",
+        "tasks_feasible": 200,
+        "best_task_id": "T-049",
+        "best_task_score": 1.7718992191468481,
+        "idle_score": -3.651324025091472
+      },
+      {
+        "robot": "R-12",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.8030760075958916,
+        "idle_score": -3.651324025091472
+      }
+    ]
+  },
+  {
+    "robots": 17,
+    "feasible_robot_task_pairs": 3400,
+    "robots_preferring_task_to_idle": 17,
+    "tasks_assigned_on_tick_1": 9,
+    "ranks": [
+      {
+        "robot": "R-01",
+        "tasks_feasible": 200,
+        "best_task_id": "T-183",
+        "best_task_score": 1.8618267863696636,
+        "idle_score": 1.1054027355188498
+      },
+      {
+        "robot": "R-02",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.8314429535820331,
+        "idle_score": 1.1054027355188498
+      },
+      {
+        "robot": "R-03",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.4288638333489077,
+        "idle_score": 1.1054027355188498
+      },
+      {
+        "robot": "R-04",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.9111253888478668,
+        "idle_score": 1.1054027355188498
+      },
+      {
+        "robot": "R-05",
+        "tasks_feasible": 200,
+        "best_task_id": "T-087",
+        "best_task_score": 1.6023071740618038,
+        "idle_score": 1.1054027355188498
+      },
+      {
+        "robot": "R-06",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.6813428442389822,
+        "idle_score": 1.1054027355188498
+      },
+      {
+        "robot": "R-07",
+        "tasks_feasible": 200,
+        "best_task_id": "T-087",
+        "best_task_score": 1.5530365489384936,
+        "idle_score": 1.1054027355188498
+      },
+      {
+        "robot": "R-08",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.8092001051865128,
+        "idle_score": 1.1054027355188498
+      },
+      {
+        "robot": "R-09",
+        "tasks_feasible": 200,
+        "best_task_id": "T-087",
+        "best_task_score": 1.4885250203289988,
+        "idle_score": 1.1054027355188498
+      },
+      {
+        "robot": "R-10",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.9060096548312913,
+        "idle_score": 1.1054027355188498
+      },
+      {
+        "robot": "R-11",
+        "tasks_feasible": 200,
+        "best_task_id": "T-087",
+        "best_task_score": 1.6769443306022465,
+        "idle_score": 1.1054027355188498
+      },
+      {
+        "robot": "R-12",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.8750539904877013,
+        "idle_score": 1.1054027355188498
+      },
+      {
+        "robot": "R-13",
+        "tasks_feasible": 200,
+        "best_task_id": "T-087",
+        "best_task_score": 1.4852622892526333,
+        "idle_score": 1.1054027355188498
+      },
+      {
+        "robot": "R-14",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.9287128023860538,
+        "idle_score": 1.1054027355188498
+      },
+      {
+        "robot": "R-15",
+        "tasks_feasible": 200,
+        "best_task_id": "T-087",
+        "best_task_score": 1.6782323109468866,
+        "idle_score": 1.1054027355188498
+      },
+      {
+        "robot": "R-16",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.8335756329869708,
+        "idle_score": 1.1054027355188498
+      },
+      {
+        "robot": "R-17",
+        "tasks_feasible": 200,
+        "best_task_id": "T-183",
+        "best_task_score": 1.8113644683135106,
+        "idle_score": 1.1054027355188498
+      }
+    ]
+  },
+  {
+    "robots": 20,
+    "feasible_robot_task_pairs": 4000,
+    "robots_preferring_task_to_idle": 0,
+    "tasks_assigned_on_tick_1": 0,
+    "ranks": [
+      {
+        "robot": "R-01",
+        "tasks_feasible": 200,
+        "best_task_id": "T-183",
+        "best_task_score": 1.810069837578762,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-02",
+        "tasks_feasible": 200,
+        "best_task_id": "T-196",
+        "best_task_score": 1.871798092691656,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-03",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.4415005743673694,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-04",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.8708194216168967,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-05",
+        "tasks_feasible": 200,
+        "best_task_id": "T-087",
+        "best_task_score": 1.512206783663637,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-06",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.598290787865969,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-07",
+        "tasks_feasible": 200,
+        "best_task_id": "T-087",
+        "best_task_score": 1.4663459765456848,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-08",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.726148048813499,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-09",
+        "tasks_feasible": 200,
+        "best_task_id": "T-087",
+        "best_task_score": 1.405472963955985,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-10",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.8562248282408238,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-11",
+        "tasks_feasible": 200,
+        "best_task_id": "T-087",
+        "best_task_score": 1.6189317413343158,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-12",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.8938728518967693,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-13",
+        "tasks_feasible": 200,
+        "best_task_id": "T-087",
+        "best_task_score": 1.4022102328796198,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-14",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.8870678074698117,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-15",
+        "tasks_feasible": 200,
+        "best_task_id": "T-087",
+        "best_task_score": 1.59758674980018,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-16",
+        "tasks_feasible": 200,
+        "best_task_id": "T-196",
+        "best_task_score": 1.8819129175533316,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-17",
+        "tasks_feasible": 200,
+        "best_task_id": "T-183",
+        "best_task_score": 1.8164994633807245,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-18",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 2.147958945733216,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-19",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.486750962492818,
+        "idle_score": 3.750178062678615
+      },
+      {
+        "robot": "R-20",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.5327307918540214,
+        "idle_score": 3.750178062678615
+      }
+    ]
+  },
+  {
+    "robots": 24,
+    "feasible_robot_task_pairs": 4800,
+    "robots_preferring_task_to_idle": 0,
+    "tasks_assigned_on_tick_1": 0,
+    "ranks": [
+      {
+        "robot": "R-01",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.761711448092768,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-02",
+        "tasks_feasible": 200,
+        "best_task_id": "T-196",
+        "best_task_score": 1.7736076450997982,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-03",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.4583495623919822,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-04",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.7416758998659894,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-05",
+        "tasks_feasible": 200,
+        "best_task_id": "T-087",
+        "best_task_score": 1.3754069865437515,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-06",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.487554712701951,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-07",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.3452235920783602,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-08",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.6132935705551672,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-09",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.3634198123045838,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-10",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.7080991216935615,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-11",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.4723709885814842,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-12",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.736948510588071,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-13",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.3678487861410813,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-14",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.9039167954944263,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-15",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.4263886230258933,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-16",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.840470187142749,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-17",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.8506217276441383,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-18",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 2.111972515895445,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-19",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.5035999505174311,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-20",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.4514129142399284,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-21",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.5039032682400795,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-22",
+        "tasks_feasible": 200,
+        "best_task_id": "T-196",
+        "best_task_score": 1.8027996427190003,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-23",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.4357243683292567,
+        "idle_score": 6.494128061823894
+      },
+      {
+        "robot": "R-24",
+        "tasks_feasible": 200,
+        "best_task_id": "T-050",
+        "best_task_score": 1.6681660852732108,
+        "idle_score": 6.494128061823894
+      }
+    ]
+  },
+  {
+    "robots": 28,
+    "feasible_robot_task_pairs": 5600,
+    "robots_preferring_task_to_idle": 0,
+    "tasks_assigned_on_tick_1": 0,
+    "ranks": [
+      {
+        "robot": "R-01",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.6586696104245555,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-02",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.7850146191426937,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-03",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.4768313176354162,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-04",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.6536924286028383,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-05",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.341832250605102,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-06",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.4915496023943302,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-07",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.3643320951101556,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-08",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.5859935684948259,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-09",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.3823873515349174,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-10",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.5815489804145393,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-11",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.3340345902643505,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-12",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.6945138428917914,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-13",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.3868319396152058,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-14",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.92076578351904,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-15",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.289988775368631,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-16",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.8573191751673626,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-17",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.7346296625515767,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-18",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 2.1288215039200598,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-19",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.5218310066455214,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-20",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.4690497578892783,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-21",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.3717099105516992,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-22",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.8076398132054157,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-23",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.4543314731303625,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-24",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.5590491359094896,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-25",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.690623353275992,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-26",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 2.038320727669161,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-27",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.587023430178794,
+        "idle_score": 8.187957567644768
+      },
+      {
+        "robot": "R-28",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.5365492914044354,
+        "idle_score": 8.187957567644768
+      }
+    ]
+  },
+  {
+    "robots": 32,
+    "feasible_robot_task_pairs": 6400,
+    "robots_preferring_task_to_idle": 0,
+    "tasks_assigned_on_tick_1": 0,
+    "ranks": [
+      {
+        "robot": "R-01",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.5216158644171152,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-02",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.8034483137975459,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-03",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.4962320504729523,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-04",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.6728938348475182,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-05",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.361232983442638,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-06",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.5031875714271623,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-07",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.3837328279476926,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-08",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.6053943013323624,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-09",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.4017880843724566,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-10",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.6006299988803707,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-11",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.2461936024704114,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-12",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.7134489357773364,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-13",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.4062326724527454,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-14",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.9384473808278588,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-15",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.2705542093337148,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-16",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.8753924353929905,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-17",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.5058308941887135,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-18",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 2.145670491944675,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-19",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.541231739483058,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-20",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.4788269645638554,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-21",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.2390331447325902,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-22",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.825948158302597,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-23",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.4737322059679003,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-24",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.5762693920170687,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-25",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.55787409963358,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-26",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 2.055391191433407,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-27",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.4485717382722758,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-28",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.551908785153765,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-29",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.3792882398674042,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-30",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 1.758448624787443,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-31",
+        "tasks_feasible": 200,
+        "best_task_id": "T-119",
+        "best_task_score": 1.5714301041496899,
+        "idle_score": 8.510544908789804
+      },
+      {
+        "robot": "R-32",
+        "tasks_feasible": 200,
+        "best_task_id": "T-023",
+        "best_task_score": 2.168295686007398,
+        "idle_score": 8.510544908789804
+      }
+    ]
+  }
+]

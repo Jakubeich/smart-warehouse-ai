@@ -1,0 +1,308 @@
+{
+  "created_at": "2026-11-13T21:12:47.065601+00:00",
+  "question": "Does route-aware ML dispatch help under narrow passages and opposing traffic?",
+  "baseline": "priority",
+  "limits": {
+    "max_ticks": 4000,
+    "wall_seconds_per_run": 30
+  },
+  "conditions": [
+    [
+      "one-narrow-4",
+      4,
+      true,
+      1,
+      1
+    ],
+    [
+      "one-narrow-8",
+      8,
+      true,
+      1,
+      1
+    ],
+    [
+      "two-narrow-8",
+      8,
+      true,
+      2,
+      1
+    ],
+    [
+      "two-narrow-12",
+      12,
+      true,
+      2,
+      1
+    ],
+    [
+      "two-wide-8",
+      8,
+      true,
+      2,
+      2
+    ],
+    [
+      "open-8",
+      8,
+      false,
+      2,
+      1
+    ]
+  ],
+  "training": [
+    {
+      "action": "collect_train",
+      "maps": 15,
+      "seed": 610000,
+      "max_ticks": 4000,
+      "vary_layouts": true,
+      "generator": {
+        "width": 20,
+        "height": 20,
+        "task_count": 64,
+        "traffic": "bidirectional",
+        "name": "Trénink tras / one-narrow-4",
+        "robot_count": 4,
+        "bottlenecks": true,
+        "passage_count": 1,
+        "passage_width": 1
+      }
+    },
+    {
+      "action": "collect_train",
+      "maps": 15,
+      "seed": 620000,
+      "max_ticks": 4000,
+      "vary_layouts": true,
+      "generator": {
+        "width": 20,
+        "height": 20,
+        "task_count": 64,
+        "traffic": "bidirectional",
+        "name": "Trénink tras / one-narrow-8",
+        "robot_count": 8,
+        "bottlenecks": true,
+        "passage_count": 1,
+        "passage_width": 1
+      }
+    },
+    {
+      "action": "collect_train",
+      "maps": 15,
+      "seed": 630000,
+      "max_ticks": 4000,
+      "vary_layouts": true,
+      "generator": {
+        "width": 20,
+        "height": 20,
+        "task_count": 64,
+        "traffic": "bidirectional",
+        "name": "Trénink tras / two-narrow-8",
+        "robot_count": 8,
+        "bottlenecks": true,
+        "passage_count": 2,
+        "passage_width": 1
+      }
+    },
+    {
+      "action": "collect_train",
+      "maps": 15,
+      "seed": 640000,
+      "max_ticks": 4000,
+      "vary_layouts": true,
+      "generator": {
+        "width": 20,
+        "height": 20,
+        "task_count": 64,
+        "traffic": "bidirectional",
+        "name": "Trénink tras / two-narrow-12",
+        "robot_count": 12,
+        "bottlenecks": true,
+        "passage_count": 2,
+        "passage_width": 1
+      }
+    },
+    {
+      "action": "collect_train",
+      "maps": 15,
+      "seed": 650000,
+      "max_ticks": 4000,
+      "vary_layouts": true,
+      "generator": {
+        "width": 20,
+        "height": 20,
+        "task_count": 64,
+        "traffic": "bidirectional",
+        "name": "Trénink tras / two-wide-8",
+        "robot_count": 8,
+        "bottlenecks": true,
+        "passage_count": 2,
+        "passage_width": 2
+      }
+    },
+    {
+      "action": "collect_train",
+      "maps": 15,
+      "seed": 660000,
+      "max_ticks": 4000,
+      "vary_layouts": true,
+      "generator": {
+        "width": 20,
+        "height": 20,
+        "task_count": 64,
+        "traffic": "bidirectional",
+        "name": "Trénink tras / open-8",
+        "robot_count": 8,
+        "bottlenecks": false,
+        "passage_count": 2,
+        "passage_width": 1
+      }
+    }
+  ],
+  "evaluation": [
+    {
+      "action": "compare",
+      "maps": 12,
+      "seed": 750000,
+      "baseline": "priority",
+      "max_ticks": 4000,
+      "vary_layouts": true,
+      "generator": {
+        "width": 20,
+        "height": 20,
+        "task_count": 64,
+        "traffic": "bidirectional",
+        "name": "Porovnání tras / one-narrow-4",
+        "robot_count": 4,
+        "bottlenecks": true,
+        "passage_count": 1,
+        "passage_width": 1
+      }
+    },
+    {
+      "action": "compare",
+      "maps": 12,
+      "seed": 750000,
+      "baseline": "priority",
+      "max_ticks": 4000,
+      "vary_layouts": true,
+      "generator": {
+        "width": 20,
+        "height": 20,
+        "task_count": 64,
+        "traffic": "bidirectional",
+        "name": "Porovnání tras / one-narrow-8",
+        "robot_count": 8,
+        "bottlenecks": true,
+        "passage_count": 1,
+        "passage_width": 1
+      }
+    },
+    {
+      "action": "compare",
+      "maps": 12,
+      "seed": 750000,
+      "baseline": "priority",
+      "max_ticks": 4000,
+      "vary_layouts": true,
+      "generator": {
+        "width": 20,
+        "height": 20,
+        "task_count": 64,
+        "traffic": "bidirectional",
+        "name": "Porovnání tras / two-narrow-8",
+        "robot_count": 8,
+        "bottlenecks": true,
+        "passage_count": 2,
+        "passage_width": 1
+      }
+    },
+    {
+      "action": "compare",
+      "maps": 12,
+      "seed": 750000,
+      "baseline": "priority",
+      "max_ticks": 4000,
+      "vary_layouts": true,
+      "generator": {
+        "width": 20,
+        "height": 20,
+        "task_count": 64,
+        "traffic": "bidirectional",
+        "name": "Porovnání tras / two-narrow-12",
+        "robot_count": 12,
+        "bottlenecks": true,
+        "passage_count": 2,
+        "passage_width": 1
+      }
+    },
+    {
+      "action": "compare",
+      "maps": 12,
+      "seed": 750000,
+      "baseline": "priority",
+      "max_ticks": 4000,
+      "vary_layouts": true,
+      "generator": {
+        "width": 20,
+        "height": 20,
+        "task_count": 64,
+        "traffic": "bidirectional",
+        "name": "Porovnání tras / two-wide-8",
+        "robot_count": 8,
+        "bottlenecks": true,
+        "passage_count": 2,
+        "passage_width": 2
+      }
+    },
+    {
+      "action": "compare",
+      "maps": 12,
+      "seed": 750000,
+      "baseline": "priority",
+      "max_ticks": 4000,
+      "vary_layouts": true,
+      "generator": {
+        "width": 20,
+        "height": 20,
+        "task_count": 64,
+        "traffic": "bidirectional",
+        "name": "Porovnání tras / open-8",
+        "robot_count": 8,
+        "bottlenecks": false,
+        "passage_count": 2,
+        "passage_width": 1
+      }
+    }
+  ],
+  "before_model_id": "c1e5ab35-ecd3-4e29-8265-421cfe12c19d",
+  "before_dataset": {
+    "episodes": 11,
+    "samples": 88,
+    "layouts": 6,
+    "unfinished": 10,
+    "failed_runs": 0,
+    "min_samples": 60,
+    "min_layouts": 5
+  },
+  "source_sha256": {
+    "apps/backend/app/simulation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "apps/backend/app/simulation/engine.py": "b012584552c234bca79df71538c70812c250b149d86f4b39cc9b2f7882c1117e",
+    "apps/backend/app/simulation/invariants.py": "88767ae8a2f66fb8c56d12fc485efb60b58a1e65715448e2950840af441f0473",
+    "apps/backend/app/simulation/service.py": "f48a62e8a3ff2b0507b79aecc30aa3aba35330a40a98c139a02f733d7c1529fd",
+    "apps/backend/app/learning/__init__.py": "2d9f212ba21ce87d47f8051b747239832c6bc3b832c64795468203de0846712d",
+    "apps/backend/app/learning/features.py": "3680612f1a25c3970627a4cee5cbb8bc0c41f59138245d57b40ac9d37bde523b",
+    "apps/backend/app/learning/model.py": "4f4654563d7abb863a1be083a385b2ca340741a9e5ab33e1611a31a0ce0c9963",
+    "apps/backend/app/learning/runner.py": "7415bf369832b55542c867ad2f51ae11572965ac781ff659b42a808d3506c9b7",
+    "apps/backend/app/learning/service.py": "a03f35ffafe0c9b40a6be9c7c311f050682d6bb0e07f1601fb7adb146dcb76a4",
+    "apps/backend/app/scheduling/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "apps/backend/app/scheduling/assignment.py": "832f9ef10ed3187fb19cc103d58bb3f438f6621b9cf94e5b92024023b2a73b18",
+    "apps/backend/app/algorithms/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "apps/backend/app/algorithms/mapf.py": "2173589e8d3b044d945e105b385d2cfa98ec7c186dd0e28151ea34df9c02e451",
+    "apps/backend/app/algorithms/pathfinding.py": "b01cbb6d56d03f774dd449136475f4fc36a0c4113a7a1b909ad182601418bf3b",
+    "apps/backend/app/core/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "apps/backend/app/core/demos.py": "15831f074df583341af2304af64203f4e0974775acfbdd7d0fdd98647e7fc609",
+    "apps/backend/app/core/generator.py": "89ff35fc48dda87db76ae91fa7335dd0ad0a162ef5d0020772c17cfd2ff92d49"
+  }
+}

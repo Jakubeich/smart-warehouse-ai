@@ -1,0 +1,47 @@
+{
+  "selected": "yield-16",
+  "maps": 64,
+  "both_completed": 59,
+  "before": {
+    "completed": 59,
+    "statuses": {
+      "COMPLETED": 59,
+      "TICK_LIMIT": 1,
+      "FAILED": 4
+    },
+    "stalls": 4,
+    "stalls_in_passage_zone": 4,
+    "scenarios_with_passage_wait_ge_10": 18,
+    "passage_waits_ge_10": 251,
+    "mean_ticks_both_completed": 274.3728813559322,
+    "mean_passage_wait_ticks_both_completed": 40.067796610169495,
+    "executed_collisions": 0
+  },
+  "after": {
+    "completed": 62,
+    "statuses": {
+      "COMPLETED": 62,
+      "TICK_LIMIT": 1,
+      "FAILED": 1
+    },
+    "stalls": 1,
+    "stalls_in_passage_zone": 1,
+    "scenarios_with_passage_wait_ge_10": 12,
+    "passage_waits_ge_10": 174,
+    "mean_ticks_both_completed": 279.6271186440678,
+    "mean_passage_wait_ticks_both_completed": 31.508474576271187,
+    "executed_collisions": 0
+  },
+  "only_after_complete": [
+    1230019,
+    1230033,
+    1230034
+  ],
+  "only_before_complete": [],
+  "median_paired_ticks_delta": 4,
+  "faster_tied_slower": [
+    18,
+    5,
+    36
+  ]
+}

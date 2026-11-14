@@ -1,0 +1,513 @@
+{
+  "id": "47accc59-d559-4892-823d-23edc9a78674",
+  "created_at": "2026-11-13T19:41:24.202400+00:00",
+  "algorithm": "RandomForestRegressor",
+  "feature_version": 1,
+  "features": [
+    "pickup_distance",
+    "delivery_distance",
+    "handling_ticks",
+    "fleet_size",
+    "active_robots",
+    "pending_tasks",
+    "blocked_ratio",
+    "battery_ratio",
+    "payload_ratio",
+    "robots_near_pickup",
+    "robots_near_dropoff",
+    "map_width",
+    "map_height",
+    "local_degree",
+    "planner_cbs",
+    "planner_adaptive"
+  ],
+  "seed": 2026,
+  "sklearn_version": "1.9.1",
+  "target": "assignment_to_unload_ticks",
+  "dataset_hash": "e9e47579fa6a69d036175c66862acfb5e981c6c589a79b9010e633a67f2a6c05",
+  "episode_ids": [
+    "generated-02484432752f0834be3af1bd141fbf14",
+    "generated-3058f3493e9867b48357cd24a822c600",
+    "generated-5d5a80d8f75f35287ca7f3c9c8ef63ae",
+    "generated-5f2cf1651f78a2ea5c9aa6134c75ded8",
+    "generated-70eaf872298ffa9d83fc11988919d4a5",
+    "generated-70fbbf6edefb2fa0ea9869296f66c761",
+    "generated-7c7ac02602bf9fd59de94e7426681820",
+    "generated-b4e50782b176f284588d0e97324665af",
+    "generated-b8931b1c50cafa048b1adf34d5595a6c",
+    "generated-c7709e5d5f05767505dd96e1b3864630",
+    "generated-d2f74a3dba2d292f4f33101b42916db2",
+    "generated-f827b3b7d5b00458301ecb1efd570f30"
+  ],
+  "samples": 288,
+  "train_samples": 216,
+  "test_samples": 72,
+  "train_layouts": [
+    "0757d2583b8719ac41b393e0",
+    "106673786dbd36121fec09d0",
+    "20b4d4d78947f491c365c30b",
+    "2a2d118f733af1595adbf8b1",
+    "59a8ea06c193a731d8244803",
+    "8b4ab7b00e74252d335f6cdf",
+    "8e05bcf1f37c596ee11ce801",
+    "b6f708e68e386ecc78fa1b7d",
+    "ed6baa1620b7e50e549cfe48"
+  ],
+  "test_layouts": [
+    "1f270a87ef784c40f6029ea2",
+    "f092d6d1a96635646ddcb443",
+    "faeafff9952024b1e9e502f1"
+  ],
+  "metrics": {
+    "mae": 0.12602702684082892,
+    "rmse": 0.2945576689420353,
+    "baseline_mae": 0.05555555555555555,
+    "baseline_rmse": 0.28867513459481287
+  },
+  "feature_importance": {
+    "pickup_distance": 0.16349190341773293,
+    "delivery_distance": 0.1864478095268215,
+    "handling_ticks": 0.04666691017459867,
+    "fleet_size": 0.0,
+    "active_robots": 0.0352747305370484,
+    "pending_tasks": 0.17894386298929196,
+    "blocked_ratio": 0.060475402785298026,
+    "battery_ratio": 0.0,
+    "payload_ratio": 0.12815401045920108,
+    "robots_near_pickup": 0.016162846383144008,
+    "robots_near_dropoff": 0.007069852144265964,
+    "map_width": 0.035558609198611625,
+    "map_height": 0.14175406238398586,
+    "local_degree": 0.0,
+    "planner_cbs": 0.0,
+    "planner_adaptive": 0.0
+  },
+  "validation_predictions": [
+    {
+      "actual": 34.0,
+      "predicted": 34.07874503968254,
+      "baseline": 34.0
+    },
+    {
+      "actual": 39.0,
+      "predicted": 39.28306051587302,
+      "baseline": 39.0
+    },
+    {
+      "actual": 49.0,
+      "predicted": 49.19464285714286,
+      "baseline": 49.0
+    },
+    {
+      "actual": 52.0,
+      "predicted": 52.153397817460316,
+      "baseline": 52.0
+    },
+    {
+      "actual": 41.0,
+      "predicted": 41.282126322751324,
+      "baseline": 41.0
+    },
+    {
+      "actual": 41.0,
+      "predicted": 41.247536375661376,
+      "baseline": 41.0
+    },
+    {
+      "actual": 46.0,
+      "predicted": 46.02039930555556,
+      "baseline": 46.0
+    },
+    {
+      "actual": 48.0,
+      "predicted": 48.04708581349206,
+      "baseline": 48.0
+    },
+    {
+      "actual": 45.0,
+      "predicted": 45.03315972222222,
+      "baseline": 45.0
+    },
+    {
+      "actual": 32.0,
+      "predicted": 32.09355985449736,
+      "baseline": 32.0
+    },
+    {
+      "actual": 46.0,
+      "predicted": 46.0,
+      "baseline": 46.0
+    },
+    {
+      "actual": 50.0,
+      "predicted": 50.009548611111114,
+      "baseline": 50.0
+    },
+    {
+      "actual": 41.0,
+      "predicted": 41.01537698412698,
+      "baseline": 41.0
+    },
+    {
+      "actual": 36.0,
+      "predicted": 35.00208333333333,
+      "baseline": 35.0
+    },
+    {
+      "actual": 48.0,
+      "predicted": 47.0,
+      "baseline": 47.0
+    },
+    {
+      "actual": 50.0,
+      "predicted": 50.0,
+      "baseline": 50.0
+    },
+    {
+      "actual": 38.0,
+      "predicted": 38.0,
+      "baseline": 38.0
+    },
+    {
+      "actual": 44.0,
+      "predicted": 44.025429894179894,
+      "baseline": 44.0
+    },
+    {
+      "actual": 50.0,
+      "predicted": 50.020833333333336,
+      "baseline": 50.0
+    },
+    {
+      "actual": 28.0,
+      "predicted": 28.0,
+      "baseline": 28.0
+    },
+    {
+      "actual": 50.0,
+      "predicted": 50.039517195767196,
+      "baseline": 50.0
+    },
+    {
+      "actual": 31.0,
+      "predicted": 31.0,
+      "baseline": 31.0
+    },
+    {
+      "actual": 37.0,
+      "predicted": 37.004960317460316,
+      "baseline": 37.0
+    },
+    {
+      "actual": 43.0,
+      "predicted": 43.0145171957672,
+      "baseline": 43.0
+    },
+    {
+      "actual": 36.0,
+      "predicted": 36.165104166666666,
+      "baseline": 36.0
+    },
+    {
+      "actual": 43.0,
+      "predicted": 43.0625248015873,
+      "baseline": 43.0
+    },
+    {
+      "actual": 47.0,
+      "predicted": 47.41907242063492,
+      "baseline": 47.0
+    },
+    {
+      "actual": 46.0,
+      "predicted": 46.17735615079365,
+      "baseline": 46.0
+    },
+    {
+      "actual": 33.0,
+      "predicted": 33.09522982804233,
+      "baseline": 33.0
+    },
+    {
+      "actual": 47.0,
+      "predicted": 47.22770337301587,
+      "baseline": 47.0
+    },
+    {
+      "actual": 42.0,
+      "predicted": 42.015277777777776,
+      "baseline": 42.0
+    },
+    {
+      "actual": 45.0,
+      "predicted": 45.13264715608466,
+      "baseline": 45.0
+    },
+    {
+      "actual": 46.0,
+      "predicted": 46.1262607473545,
+      "baseline": 46.0
+    },
+    {
+      "actual": 40.0,
+      "predicted": 40.12221808862434,
+      "baseline": 40.0
+    },
+    {
+      "actual": 44.0,
+      "predicted": 44.08765707671958,
+      "baseline": 44.0
+    },
+    {
+      "actual": 54.0,
+      "predicted": 54.11321924603175,
+      "baseline": 54.0
+    },
+    {
+      "actual": 36.0,
+      "predicted": 36.004960317460316,
+      "baseline": 36.0
+    },
+    {
+      "actual": 42.0,
+      "predicted": 42.01875,
+      "baseline": 42.0
+    },
+    {
+      "actual": 39.0,
+      "predicted": 39.020833333333336,
+      "baseline": 39.0
+    },
+    {
+      "actual": 47.0,
+      "predicted": 47.065600198412696,
+      "baseline": 47.0
+    },
+    {
+      "actual": 37.0,
+      "predicted": 37.0,
+      "baseline": 37.0
+    },
+    {
+      "actual": 36.0,
+      "predicted": 36.0,
+      "baseline": 36.0
+    },
+    {
+      "actual": 41.0,
+      "predicted": 41.0,
+      "baseline": 41.0
+    },
+    {
+      "actual": 39.0,
+      "predicted": 39.0,
+      "baseline": 39.0
+    },
+    {
+      "actual": 42.0,
+      "predicted": 42.025,
+      "baseline": 42.0
+    },
+    {
+      "actual": 39.0,
+      "predicted": 39.0,
+      "baseline": 39.0
+    },
+    {
+      "actual": 45.0,
+      "predicted": 45.026041666666664,
+      "baseline": 45.0
+    },
+    {
+      "actual": 43.0,
+      "predicted": 43.0,
+      "baseline": 43.0
+    },
+    {
+      "actual": 28.0,
+      "predicted": 28.162090773809524,
+      "baseline": 28.0
+    },
+    {
+      "actual": 35.0,
+      "predicted": 35.16815889550264,
+      "baseline": 35.0
+    },
+    {
+      "actual": 41.0,
+      "predicted": 41.122767857142854,
+      "baseline": 41.0
+    },
+    {
+      "actual": 40.0,
+      "predicted": 40.388458994709,
+      "baseline": 40.0
+    },
+    {
+      "actual": 34.0,
+      "predicted": 34.02048611111111,
+      "baseline": 34.0
+    },
+    {
+      "actual": 31.0,
+      "predicted": 31.14318783068783,
+      "baseline": 31.0
+    },
+    {
+      "actual": 38.0,
+      "predicted": 38.237545469576716,
+      "baseline": 38.0
+    },
+    {
+      "actual": 45.0,
+      "predicted": 45.15900297619048,
+      "baseline": 45.0
+    },
+    {
+      "actual": 32.0,
+      "predicted": 32.016724537037035,
+      "baseline": 32.0
+    },
+    {
+      "actual": 25.0,
+      "predicted": 25.088525132275134,
+      "baseline": 25.0
+    },
+    {
+      "actual": 45.0,
+      "predicted": 45.03541666666667,
+      "baseline": 45.0
+    },
+    {
+      "actual": 42.0,
+      "predicted": 42.0218253968254,
+      "baseline": 42.0
+    },
+    {
+      "actual": 34.0,
+      "predicted": 34.004960317460316,
+      "baseline": 34.0
+    },
+    {
+      "actual": 27.0,
+      "predicted": 27.0,
+      "baseline": 27.0
+    },
+    {
+      "actual": 44.0,
+      "predicted": 44.205828373015876,
+      "baseline": 44.0
+    },
+    {
+      "actual": 27.0,
+      "predicted": 27.0,
+      "baseline": 27.0
+    },
+    {
+      "actual": 28.0,
+      "predicted": 28.0,
+      "baseline": 28.0
+    },
+    {
+      "actual": 43.0,
+      "predicted": 41.212227182539685,
+      "baseline": 41.0
+    },
+    {
+      "actual": 34.0,
+      "predicted": 34.014136904761905,
+      "baseline": 34.0
+    },
+    {
+      "actual": 36.0,
+      "predicted": 36.0,
+      "baseline": 36.0
+    },
+    {
+      "actual": 31.0,
+      "predicted": 31.016753472222224,
+      "baseline": 31.0
+    },
+    {
+      "actual": 32.0,
+      "predicted": 32.0,
+      "baseline": 32.0
+    },
+    {
+      "actual": 34.0,
+      "predicted": 34.004960317460316,
+      "baseline": 34.0
+    },
+    {
+      "actual": 31.0,
+      "predicted": 31.008072916666666,
+      "baseline": 31.0
+    }
+  ],
+  "training_range": {
+    "pickup_distance": [
+      1.0,
+      30.0
+    ],
+    "delivery_distance": [
+      13.0,
+      33.0
+    ],
+    "handling_ticks": [
+      2.0,
+      8.0
+    ],
+    "fleet_size": [
+      4.0,
+      4.0
+    ],
+    "active_robots": [
+      0.0,
+      3.0
+    ],
+    "pending_tasks": [
+      1.0,
+      24.0
+    ],
+    "blocked_ratio": [
+      0.07142857142857142,
+      0.12222222222222222
+    ],
+    "battery_ratio": [
+      1.0,
+      1.0
+    ],
+    "payload_ratio": [
+      0.1,
+      0.7
+    ],
+    "robots_near_pickup": [
+      0.0,
+      2.0
+    ],
+    "robots_near_dropoff": [
+      0.0,
+      3.0
+    ],
+    "map_width": [
+      16.0,
+      24.0
+    ],
+    "map_height": [
+      14.0,
+      18.0
+    ],
+    "local_degree": [
+      4.0,
+      4.0
+    ],
+    "planner_cbs": [
+      0.0,
+      0.0
+    ],
+    "planner_adaptive": [
+      1.0,
+      1.0
+    ]
+  }
+}

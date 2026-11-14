@@ -1,0 +1,369 @@
+[
+  {
+    "label": "yield-8",
+    "maps": 32,
+    "both_completed": 27,
+    "before": {
+      "completed": 29,
+      "statuses": {
+        "COMPLETED": 29,
+        "FAILED": 3
+      },
+      "stalls": 3,
+      "stalls_in_passage_zone": 2,
+      "scenarios_with_passage_wait_ge_10": 9,
+      "passage_waits_ge_10": 68,
+      "mean_ticks_both_completed": 275.51851851851853,
+      "mean_passage_wait_ticks_both_completed": 43,
+      "executed_collisions": 0
+    },
+    "after": {
+      "completed": 28,
+      "statuses": {
+        "COMPLETED": 28,
+        "TICK_LIMIT": 3,
+        "FAILED": 1
+      },
+      "stalls": 1,
+      "stalls_in_passage_zone": 1,
+      "scenarios_with_passage_wait_ge_10": 11,
+      "passage_waits_ge_10": 300,
+      "mean_ticks_both_completed": 272.037037037037,
+      "mean_passage_wait_ticks_both_completed": 33.111111111111114,
+      "executed_collisions": 0
+    },
+    "only_after_complete": [
+      1220017
+    ],
+    "only_before_complete": [
+      1220007,
+      1220019
+    ],
+    "median_paired_ticks_delta": -3,
+    "faster_tied_slower": [
+      17,
+      1,
+      9
+    ]
+  },
+  {
+    "label": "yield-16",
+    "maps": 32,
+    "both_completed": 29,
+    "before": {
+      "completed": 29,
+      "statuses": {
+        "COMPLETED": 29,
+        "FAILED": 3
+      },
+      "stalls": 3,
+      "stalls_in_passage_zone": 2,
+      "scenarios_with_passage_wait_ge_10": 9,
+      "passage_waits_ge_10": 68,
+      "mean_ticks_both_completed": 273.1034482758621,
+      "mean_passage_wait_ticks_both_completed": 44.310344827586206,
+      "executed_collisions": 0
+    },
+    "after": {
+      "completed": 31,
+      "statuses": {
+        "COMPLETED": 31,
+        "FAILED": 1
+      },
+      "stalls": 1,
+      "stalls_in_passage_zone": 1,
+      "scenarios_with_passage_wait_ge_10": 6,
+      "passage_waits_ge_10": 30,
+      "mean_ticks_both_completed": 264.58620689655174,
+      "mean_passage_wait_ticks_both_completed": 20.586206896551722,
+      "executed_collisions": 0
+    },
+    "only_after_complete": [
+      1220016,
+      1220017
+    ],
+    "only_before_complete": [],
+    "median_paired_ticks_delta": -7,
+    "faster_tied_slower": [
+      20,
+      1,
+      8
+    ]
+  },
+  {
+    "label": "yield-32",
+    "maps": 32,
+    "both_completed": 28,
+    "before": {
+      "completed": 29,
+      "statuses": {
+        "COMPLETED": 29,
+        "FAILED": 3
+      },
+      "stalls": 3,
+      "stalls_in_passage_zone": 2,
+      "scenarios_with_passage_wait_ge_10": 9,
+      "passage_waits_ge_10": 68,
+      "mean_ticks_both_completed": 274.14285714285717,
+      "mean_passage_wait_ticks_both_completed": 37.75,
+      "executed_collisions": 0
+    },
+    "after": {
+      "completed": 30,
+      "statuses": {
+        "COMPLETED": 30,
+        "TICK_LIMIT": 1,
+        "FAILED": 1
+      },
+      "stalls": 1,
+      "stalls_in_passage_zone": 1,
+      "scenarios_with_passage_wait_ge_10": 6,
+      "passage_waits_ge_10": 130,
+      "mean_ticks_both_completed": 273.35714285714283,
+      "mean_passage_wait_ticks_both_completed": 29.321428571428573,
+      "executed_collisions": 0
+    },
+    "only_after_complete": [
+      1220016,
+      1220017
+    ],
+    "only_before_complete": [
+      1220030
+    ],
+    "median_paired_ticks_delta": -0.5,
+    "faster_tied_slower": [
+      14,
+      0,
+      14
+    ]
+  },
+  {
+    "label": "yield-64",
+    "maps": 32,
+    "both_completed": 29,
+    "before": {
+      "completed": 29,
+      "statuses": {
+        "COMPLETED": 29,
+        "FAILED": 3
+      },
+      "stalls": 3,
+      "stalls_in_passage_zone": 2,
+      "scenarios_with_passage_wait_ge_10": 9,
+      "passage_waits_ge_10": 68,
+      "mean_ticks_both_completed": 273.1034482758621,
+      "mean_passage_wait_ticks_both_completed": 44.310344827586206,
+      "executed_collisions": 0
+    },
+    "after": {
+      "completed": 32,
+      "statuses": {
+        "COMPLETED": 32
+      },
+      "stalls": 0,
+      "stalls_in_passage_zone": 0,
+      "scenarios_with_passage_wait_ge_10": 6,
+      "passage_waits_ge_10": 19,
+      "mean_ticks_both_completed": 273.2758620689655,
+      "mean_passage_wait_ticks_both_completed": 31.862068965517242,
+      "executed_collisions": 0
+    },
+    "only_after_complete": [
+      1220016,
+      1220017,
+      1220018
+    ],
+    "only_before_complete": [],
+    "median_paired_ticks_delta": 0,
+    "faster_tied_slower": [
+      13,
+      2,
+      14
+    ]
+  },
+  {
+    "label": "yield-and-pace-8",
+    "maps": 32,
+    "both_completed": 27,
+    "before": {
+      "completed": 29,
+      "statuses": {
+        "COMPLETED": 29,
+        "FAILED": 3
+      },
+      "stalls": 3,
+      "stalls_in_passage_zone": 2,
+      "scenarios_with_passage_wait_ge_10": 9,
+      "passage_waits_ge_10": 68,
+      "mean_ticks_both_completed": 275.48148148148147,
+      "mean_passage_wait_ticks_both_completed": 34.666666666666664,
+      "executed_collisions": 0
+    },
+    "after": {
+      "completed": 28,
+      "statuses": {
+        "COMPLETED": 28,
+        "FAILED": 3,
+        "TICK_LIMIT": 1
+      },
+      "stalls": 3,
+      "stalls_in_passage_zone": 3,
+      "scenarios_with_passage_wait_ge_10": 9,
+      "passage_waits_ge_10": 201,
+      "mean_ticks_both_completed": 274.962962962963,
+      "mean_passage_wait_ticks_both_completed": 32.7037037037037,
+      "executed_collisions": 0
+    },
+    "only_after_complete": [
+      1220016
+    ],
+    "only_before_complete": [
+      1220019,
+      1220030
+    ],
+    "median_paired_ticks_delta": 0,
+    "faster_tied_slower": [
+      12,
+      4,
+      11
+    ]
+  },
+  {
+    "label": "yield-and-pace-16",
+    "maps": 32,
+    "both_completed": 27,
+    "before": {
+      "completed": 29,
+      "statuses": {
+        "COMPLETED": 29,
+        "FAILED": 3
+      },
+      "stalls": 3,
+      "stalls_in_passage_zone": 2,
+      "scenarios_with_passage_wait_ge_10": 9,
+      "passage_waits_ge_10": 68,
+      "mean_ticks_both_completed": 269.25925925925924,
+      "mean_passage_wait_ticks_both_completed": 30.814814814814813,
+      "executed_collisions": 0
+    },
+    "after": {
+      "completed": 29,
+      "statuses": {
+        "COMPLETED": 29,
+        "FAILED": 3
+      },
+      "stalls": 3,
+      "stalls_in_passage_zone": 3,
+      "scenarios_with_passage_wait_ge_10": 9,
+      "passage_waits_ge_10": 88,
+      "mean_ticks_both_completed": 267.037037037037,
+      "mean_passage_wait_ticks_both_completed": 34,
+      "executed_collisions": 0
+    },
+    "only_after_complete": [
+      1220016,
+      1220017
+    ],
+    "only_before_complete": [
+      1220010,
+      1220030
+    ],
+    "median_paired_ticks_delta": -3,
+    "faster_tied_slower": [
+      15,
+      4,
+      8
+    ]
+  },
+  {
+    "label": "yield-and-pace-32",
+    "maps": 32,
+    "both_completed": 29,
+    "before": {
+      "completed": 29,
+      "statuses": {
+        "COMPLETED": 29,
+        "FAILED": 3
+      },
+      "stalls": 3,
+      "stalls_in_passage_zone": 2,
+      "scenarios_with_passage_wait_ge_10": 9,
+      "passage_waits_ge_10": 68,
+      "mean_ticks_both_completed": 273.1034482758621,
+      "mean_passage_wait_ticks_both_completed": 44.310344827586206,
+      "executed_collisions": 0
+    },
+    "after": {
+      "completed": 31,
+      "statuses": {
+        "COMPLETED": 31,
+        "FAILED": 1
+      },
+      "stalls": 1,
+      "stalls_in_passage_zone": 0,
+      "scenarios_with_passage_wait_ge_10": 12,
+      "passage_waits_ge_10": 60,
+      "mean_ticks_both_completed": 279.9655172413793,
+      "mean_passage_wait_ticks_both_completed": 68.03448275862068,
+      "executed_collisions": 0
+    },
+    "only_after_complete": [
+      1220016,
+      1220017
+    ],
+    "only_before_complete": [],
+    "median_paired_ticks_delta": 5,
+    "faster_tied_slower": [
+      10,
+      2,
+      17
+    ]
+  },
+  {
+    "label": "yield-and-pace-64",
+    "maps": 32,
+    "both_completed": 28,
+    "before": {
+      "completed": 29,
+      "statuses": {
+        "COMPLETED": 29,
+        "FAILED": 3
+      },
+      "stalls": 3,
+      "stalls_in_passage_zone": 2,
+      "scenarios_with_passage_wait_ge_10": 9,
+      "passage_waits_ge_10": 68,
+      "mean_ticks_both_completed": 274.14285714285717,
+      "mean_passage_wait_ticks_both_completed": 37.75,
+      "executed_collisions": 0
+    },
+    "after": {
+      "completed": 31,
+      "statuses": {
+        "COMPLETED": 31,
+        "FAILED": 1
+      },
+      "stalls": 1,
+      "stalls_in_passage_zone": 1,
+      "scenarios_with_passage_wait_ge_10": 6,
+      "passage_waits_ge_10": 32,
+      "mean_ticks_both_completed": 273.67857142857144,
+      "mean_passage_wait_ticks_both_completed": 34.42857142857143,
+      "executed_collisions": 0
+    },
+    "only_after_complete": [
+      1220016,
+      1220017,
+      1220018
+    ],
+    "only_before_complete": [
+      1220030
+    ],
+    "median_paired_ticks_delta": 4.5,
+    "faster_tied_slower": [
+      11,
+      1,
+      16
+    ]
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "asset": "robot",
+    "bounds_metres_blender_xyz": {
+      "min": [
+        -0.39,
+        -0.29,
+        0.0
+      ],
+      "max": [
+        0.389,
+        0.29,
+        0.38
+      ],
+      "size": [
+        0.779,
+        0.58,
+        0.38
+      ]
+    },
+    "roundtrip": "passed"
+  },
+  {
+    "asset": "shelf",
+    "bounds_metres_blender_xyz": {
+      "min": [
+        -0.46,
+        -0.46,
+        0.0
+      ],
+      "max": [
+        0.46,
+        0.46,
+        1.65
+      ],
+      "size": [
+        0.92,
+        0.92,
+        1.65
+      ]
+    },
+    "roundtrip": "passed"
+  },
+  {
+    "asset": "pickup",
+    "bounds_metres_blender_xyz": {
+      "min": [
+        -0.46,
+        -0.46,
+        0.0
+      ],
+      "max": [
+        0.46,
+        0.46,
+        0.8
+      ],
+      "size": [
+        0.92,
+        0.92,
+        0.8
+      ]
+    },
+    "roundtrip": "passed"
+  },
+  {
+    "asset": "dropoff",
+    "bounds_metres_blender_xyz": {
+      "min": [
+        -0.46,
+        -0.46,
+        0.0
+      ],
+      "max": [
+        0.46,
+        0.46,
+        0.8
+      ],
+      "size": [
+        0.92,
+        0.92,
+        0.8
+      ]
+    },
+    "roundtrip": "passed"
+  },
+  {
+    "asset": "charger",
+    "bounds_metres_blender_xyz": {
+      "min": [
+        -0.46,
+        -0.46,
+        0.0
+      ],
+      "max": [
+        0.46,
+        0.46,
+        0.55
+      ],
+      "size": [
+        0.92,
+        0.92,
+        0.55
+      ]
+    },
+    "roundtrip": "passed"
+  },
+  {
+    "asset": "pallet",
+    "bounds_metres_blender_xyz": {
+      "min": [
+        -0.275,
+        -0.24,
+        0.0
+      ],
+      "max": [
+        0.275,
+        0.24,
+        0.312
+      ],
+      "size": [
+        0.55,
+        0.48,
+        0.312
+      ]
+    },
+    "roundtrip": "passed"
+  },
+  {
+    "asset": "wall",
+    "bounds_metres_blender_xyz": {
+      "min": [
+        -0.5,
+        -0.5,
+        0.0
+      ],
+      "max": [
+        0.5,
+        0.5,
+        1.6
+      ],
+      "size": [
+        1.0,
+        1.0,
+        1.6
+      ]
+    },
+    "roundtrip": "passed"
+  },
+  {
+    "asset": "obstacle",
+    "bounds_metres_blender_xyz": {
+      "min": [
+        -0.4,
+        -0.4,
+        0.0
+      ],
+      "max": [
+        0.4,
+        0.4,
+        0.585
+      ],
+      "size": [
+        0.8,
+        0.8,
+        0.585
+      ]
+    },
+    "roundtrip": "passed"
+  }
+]

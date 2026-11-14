@@ -1,0 +1,117 @@
+{
+  "model_id": "cea34362-b596-4ff3-bb4c-0b380e7bdbdf",
+  "dataset_hash": "c850acf7cd9a6d57a394176f077b35a2a6d2a6d1b9afac9009bcaf9c4fa88005",
+  "environment": {
+    "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "sklearn": "1.9.1"
+  },
+  "all_model_data": {
+    "episodes": 95,
+    "samples": 5690,
+    "statuses": {
+      "COMPLETED": 93,
+      "FAILED": 2
+    },
+    "unfinished_assignments": 18,
+    "positive_delay_samples": 2202,
+    "mean_delay_ticks": 1.5404217926186292,
+    "max_delay_ticks": 25.0
+  },
+  "new_training": {
+    "episodes": 90,
+    "samples": 5602,
+    "statuses": {
+      "COMPLETED": 87,
+      "FAILED": 3
+    },
+    "unfinished_assignments": 26,
+    "positive_delay_samples": 2182,
+    "mean_delay_ticks": 1.5542663334523386,
+    "max_delay_ticks": 25.0
+  },
+  "new_training_by_condition": {
+    "one-narrow-4": {
+      "episodes": 15,
+      "samples": 960,
+      "statuses": {
+        "COMPLETED": 15
+      },
+      "unfinished_assignments": 0,
+      "positive_delay_samples": 299,
+      "mean_delay_ticks": 1.1416666666666666,
+      "max_delay_ticks": 13.0
+    },
+    "one-narrow-8": {
+      "episodes": 15,
+      "samples": 896,
+      "statuses": {
+        "COMPLETED": 14,
+        "FAILED": 1
+      },
+      "unfinished_assignments": 8,
+      "positive_delay_samples": 523,
+      "mean_delay_ticks": 3.2935267857142856,
+      "max_delay_ticks": 25.0
+    },
+    "two-narrow-8": {
+      "episodes": 15,
+      "samples": 960,
+      "statuses": {
+        "COMPLETED": 15
+      },
+      "unfinished_assignments": 0,
+      "positive_delay_samples": 378,
+      "mean_delay_ticks": 1.5291666666666666,
+      "max_delay_ticks": 15.0
+    },
+    "two-narrow-12": {
+      "episodes": 15,
+      "samples": 866,
+      "statuses": {
+        "COMPLETED": 13,
+        "FAILED": 2
+      },
+      "unfinished_assignments": 18,
+      "positive_delay_samples": 478,
+      "mean_delay_ticks": 2.443418013856813,
+      "max_delay_ticks": 24.0
+    },
+    "two-wide-8": {
+      "episodes": 15,
+      "samples": 960,
+      "statuses": {
+        "COMPLETED": 15
+      },
+      "unfinished_assignments": 0,
+      "positive_delay_samples": 287,
+      "mean_delay_ticks": 0.6614583333333334,
+      "max_delay_ticks": 7.0
+    },
+    "open-8": {
+      "episodes": 15,
+      "samples": 960,
+      "statuses": {
+        "COMPLETED": 15
+      },
+      "unfinished_assignments": 0,
+      "positive_delay_samples": 217,
+      "mean_delay_ticks": 0.459375,
+      "max_delay_ticks": 5.0
+    }
+  },
+  "route_feature_importance_sum": 0.3692155444623128,
+  "route_feature_nonzero_samples": {
+    "pickup_route_occupied": 3055,
+    "delivery_route_occupied": 3640,
+    "route_stationary_blockers": 1577,
+    "route_reserved_overlap": 5285,
+    "route_vertex_conflicts": 4089,
+    "route_head_on_conflicts": 618,
+    "route_opposing_edges": 3611,
+    "route_same_direction_edges": 4072,
+    "route_narrow_cells": 4399,
+    "route_narrow_occupied": 890,
+    "route_service_ticks": 633
+  }
+}

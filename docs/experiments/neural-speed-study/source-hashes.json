@@ -1,0 +1,15 @@
+{
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "sha256": {
+    "scripts/study-neural-speed.py": "a86903d22cbb088affa414e446e7e30fc4d8eeb6e05bcdc62ce431314e072b8f",
+    "scripts/study-online-neural-fleet.py": "7e13bcf09f3356642ed46d4059c25ee1794dce81a7f95c4c8458d8cb2064905d",
+    "scripts/train-neural-fleet.py": "cd9f489bfcdfcf5858fed520df01eb183dce2e9d5fc2c617c3a3df3608563fbf",
+    "apps/backend/app/neural/online.py": "50a0ba5bf94c6f652f9782871b7cbf846683db361a3980d4744f8c1d2620e688",
+    "apps/backend/app/neural/policy.py": "b7ec5e740ca8f9ba3b3f734f7d5aa41d2b334158f8839db6cef0567205eac76c",
+    "apps/backend/app/simulation/engine.py": "e23e30f230c3e6286a62b0664f20a43e9a36abbfd6f67c85617ca919895a4928",
+    "apps/backend/app/simulation/service.py": "ade97b556eacbd4409721c17698ea03ec80adadec2a90fc4daa440fd9954f1ff",
+    "apps/backend/app/simulation/invariants.py": "88767ae8a2f66fb8c56d12fc485efb60b58a1e65715448e2950840af441f0473",
+    "apps/backend/app/core/generator.py": "89ff35fc48dda87db76ae91fa7335dd0ad0a162ef5d0020772c17cfd2ff92d49",
+    "apps/backend/uv.lock": "7d9ea47ac68f07ea16a5da49805dd3f0894b216730b9a7b401ad9d0c4ba7d68a"
+  }
+}

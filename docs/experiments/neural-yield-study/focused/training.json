@@ -1,0 +1,582 @@
+[
+  {
+    "seed": 1250000,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 194,
+    "completed_tasks": 16,
+    "executed_collisions": 0,
+    "rejected_moves": 9,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 9,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 6,
+    "feedback": {
+      "crossings": 26,
+      "yield_rewards": 3
+    }
+  },
+  {
+    "seed": 1250001,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 218,
+    "completed_tasks": 16,
+    "executed_collisions": 0,
+    "rejected_moves": 41,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 60,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 7,
+    "feedback": {
+      "crossings": 30,
+      "yield_rewards": 13
+    }
+  },
+  {
+    "seed": 1250002,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 217,
+    "completed_tasks": 16,
+    "executed_collisions": 0,
+    "rejected_moves": 34,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 13,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 7,
+    "feedback": {
+      "crossings": 30,
+      "yield_rewards": 11
+    }
+  },
+  {
+    "seed": 1250003,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 201,
+    "completed_tasks": 16,
+    "executed_collisions": 0,
+    "rejected_moves": 6,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 3,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 1,
+    "feedback": {
+      "crossings": 22,
+      "yield_rewards": 8
+    }
+  },
+  {
+    "seed": 1250004,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 307,
+    "completed_tasks": 20,
+    "executed_collisions": 0,
+    "rejected_moves": 45,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 0,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 0,
+    "feedback": {
+      "crossings": 37,
+      "yield_rewards": 1
+    }
+  },
+  {
+    "seed": 1250005,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 274,
+    "completed_tasks": 20,
+    "executed_collisions": 0,
+    "rejected_moves": 26,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 15,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 5,
+    "feedback": {
+      "crossings": 40,
+      "yield_rewards": 6
+    }
+  },
+  {
+    "seed": 1250006,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 236,
+    "completed_tasks": 20,
+    "executed_collisions": 0,
+    "rejected_moves": 30,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 8,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 1,
+    "feedback": {
+      "crossings": 31,
+      "yield_rewards": 9
+    }
+  },
+  {
+    "seed": 1250007,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 248,
+    "completed_tasks": 20,
+    "executed_collisions": 0,
+    "rejected_moves": 45,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 33,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 8,
+    "feedback": {
+      "crossings": 30,
+      "yield_rewards": 15
+    }
+  },
+  {
+    "seed": 1250008,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 392,
+    "completed_tasks": 24,
+    "executed_collisions": 0,
+    "rejected_moves": 113,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 80,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 9,
+    "feedback": {
+      "crossings": 42,
+      "yield_rewards": 11,
+      "persistent_swap_penalties": 12
+    }
+  },
+  {
+    "seed": 1250009,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 413,
+    "completed_tasks": 24,
+    "executed_collisions": 0,
+    "rejected_moves": 47,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 17,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 6,
+    "feedback": {
+      "crossings": 44,
+      "yield_rewards": 9
+    }
+  },
+  {
+    "seed": 1250010,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 314,
+    "completed_tasks": 24,
+    "executed_collisions": 0,
+    "rejected_moves": 100,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 81,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 9,
+    "feedback": {
+      "crossings": 43,
+      "yield_rewards": 22,
+      "persistent_swap_penalties": 4
+    }
+  },
+  {
+    "seed": 1250011,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 428,
+    "completed_tasks": 24,
+    "executed_collisions": 0,
+    "rejected_moves": 76,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 26,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 6,
+    "feedback": {
+      "crossings": 39,
+      "yield_rewards": 16
+    }
+  },
+  {
+    "seed": 1250012,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 222,
+    "completed_tasks": 16,
+    "executed_collisions": 0,
+    "rejected_moves": 4,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 1,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 1,
+    "feedback": {
+      "crossings": 27,
+      "yield_rewards": 2
+    }
+  },
+  {
+    "seed": 1250013,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 173,
+    "completed_tasks": 16,
+    "executed_collisions": 0,
+    "rejected_moves": 15,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 11,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 4,
+    "feedback": {
+      "crossings": 26,
+      "yield_rewards": 9
+    }
+  },
+  {
+    "seed": 1250014,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 178,
+    "completed_tasks": 16,
+    "executed_collisions": 0,
+    "rejected_moves": 10,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 7,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 6,
+    "feedback": {
+      "crossings": 26,
+      "yield_rewards": 8
+    }
+  },
+  {
+    "seed": 1250015,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 190,
+    "completed_tasks": 16,
+    "executed_collisions": 0,
+    "rejected_moves": 33,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 37,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 9,
+    "feedback": {
+      "crossings": 23,
+      "yield_rewards": 15
+    }
+  },
+  {
+    "seed": 1250016,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 277,
+    "completed_tasks": 20,
+    "executed_collisions": 0,
+    "rejected_moves": 48,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 38,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 9,
+    "feedback": {
+      "crossings": 24,
+      "yield_rewards": 7
+    }
+  },
+  {
+    "seed": 1250017,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 372,
+    "completed_tasks": 20,
+    "executed_collisions": 0,
+    "rejected_moves": 163,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 53,
+    "passage_waits_ge_10": 1,
+    "longest_passage_wait": 11,
+    "feedback": {
+      "crossings": 36,
+      "yield_rewards": 16
+    }
+  },
+  {
+    "seed": 1250018,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 292,
+    "completed_tasks": 20,
+    "executed_collisions": 0,
+    "rejected_moves": 43,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 7,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 4,
+    "feedback": {
+      "crossings": 33,
+      "yield_rewards": 5
+    }
+  },
+  {
+    "seed": 1250019,
+    "status": "FAILED",
+    "reason": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+    "ticks": 1465,
+    "completed_tasks": 13,
+    "executed_collisions": 0,
+    "rejected_moves": 10317,
+    "stall": true,
+    "stall_in_passage_zone": true,
+    "passage_wait_ticks": 7666,
+    "passage_waits_ge_10": 55,
+    "longest_passage_wait": 1277,
+    "feedback": {
+      "crossings": 20,
+      "yield_rewards": 6,
+      "persistent_swap_penalties": 2576
+    }
+  },
+  {
+    "seed": 1250020,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 368,
+    "completed_tasks": 24,
+    "executed_collisions": 0,
+    "rejected_moves": 43,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 5,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 4,
+    "feedback": {
+      "crossings": 33,
+      "yield_rewards": 2
+    }
+  },
+  {
+    "seed": 1250021,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 295,
+    "completed_tasks": 24,
+    "executed_collisions": 0,
+    "rejected_moves": 51,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 4,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 1,
+    "feedback": {
+      "crossings": 43,
+      "yield_rewards": 7
+    }
+  },
+  {
+    "seed": 1250022,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 293,
+    "completed_tasks": 24,
+    "executed_collisions": 0,
+    "rejected_moves": 31,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 13,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 6,
+    "feedback": {
+      "crossings": 44,
+      "yield_rewards": 12
+    }
+  },
+  {
+    "seed": 1250023,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 316,
+    "completed_tasks": 24,
+    "executed_collisions": 0,
+    "rejected_moves": 45,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 5,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 1,
+    "feedback": {
+      "crossings": 42,
+      "yield_rewards": 9
+    }
+  },
+  {
+    "seed": 1250024,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 266,
+    "completed_tasks": 16,
+    "executed_collisions": 0,
+    "rejected_moves": 30,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 23,
+    "passage_waits_ge_10": 1,
+    "longest_passage_wait": 10,
+    "feedback": {
+      "crossings": 23,
+      "yield_rewards": 6,
+      "persistent_swap_penalties": 4
+    }
+  },
+  {
+    "seed": 1250025,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 262,
+    "completed_tasks": 16,
+    "executed_collisions": 0,
+    "rejected_moves": 34,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 36,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 8,
+    "feedback": {
+      "crossings": 31,
+      "yield_rewards": 7
+    }
+  },
+  {
+    "seed": 1250026,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 158,
+    "completed_tasks": 16,
+    "executed_collisions": 0,
+    "rejected_moves": 26,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 12,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 4,
+    "feedback": {
+      "crossings": 24,
+      "yield_rewards": 11
+    }
+  },
+  {
+    "seed": 1250027,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 186,
+    "completed_tasks": 16,
+    "executed_collisions": 0,
+    "rejected_moves": 26,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 4,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 1,
+    "feedback": {
+      "crossings": 25,
+      "yield_rewards": 8
+    }
+  },
+  {
+    "seed": 1250028,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 372,
+    "completed_tasks": 20,
+    "executed_collisions": 0,
+    "rejected_moves": 50,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 49,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 9,
+    "feedback": {
+      "crossings": 41,
+      "yield_rewards": 10
+    }
+  },
+  {
+    "seed": 1250029,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 280,
+    "completed_tasks": 20,
+    "executed_collisions": 0,
+    "rejected_moves": 16,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 9,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 4,
+    "feedback": {
+      "crossings": 36,
+      "yield_rewards": 4
+    }
+  },
+  {
+    "seed": 1250030,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 257,
+    "completed_tasks": 20,
+    "executed_collisions": 0,
+    "rejected_moves": 42,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 68,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 8,
+    "feedback": {
+      "crossings": 29,
+      "yield_rewards": 20
+    }
+  },
+  {
+    "seed": 1250031,
+    "status": "COMPLETED",
+    "reason": null,
+    "ticks": 188,
+    "completed_tasks": 20,
+    "executed_collisions": 0,
+    "rejected_moves": 89,
+    "stall": false,
+    "stall_in_passage_zone": false,
+    "passage_wait_ticks": 10,
+    "passage_waits_ge_10": 0,
+    "longest_passage_wait": 4,
+    "feedback": {
+      "crossings": 28,
+      "yield_rewards": 11
+    }
+  }
+]

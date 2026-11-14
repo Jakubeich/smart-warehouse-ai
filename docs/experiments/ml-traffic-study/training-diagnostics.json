@@ -1,0 +1,41 @@
+{
+  "verified_dataset_hash": "96fd53410d13b4e872ec89a67e8ed2e58b381aed3f2b2c4ffff2110745d91dda",
+  "new_training_maps": 90,
+  "new_training_samples": 8640,
+  "positive_delay_samples": 1264,
+  "mean_delay_ticks": 0.2743055555555556,
+  "max_delay_ticks": 7.0,
+  "active_other_robots_mean": 5.9118055555555555,
+  "active_other_robots_max": 11.0,
+  "validation_new_maps_by_fleet": {
+    "8": {
+      "samples": 768,
+      "new_mae": 0.3912191868921544,
+      "old_mae": 0.7315335556159939,
+      "geometric_mae": 0.20833333333333334
+    },
+    "12": {
+      "samples": 672,
+      "new_mae": 0.38598171852376856,
+      "old_mae": 0.7286510948352933,
+      "geometric_mae": 0.22321428571428573
+    },
+    "16": {
+      "samples": 576,
+      "new_mae": 0.5297320159786342,
+      "old_mae": 0.8807487366691468,
+      "geometric_mae": 0.3350694444444444
+    }
+  },
+  "model_total_samples": 9036,
+  "train_samples": 6880,
+  "test_samples": 2156,
+  "train_maps": 81,
+  "test_maps": 28,
+  "environment": {
+    "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "sklearn": "1.9.1"
+  }
+}

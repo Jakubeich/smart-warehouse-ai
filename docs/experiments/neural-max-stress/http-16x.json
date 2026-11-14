@@ -1,0 +1,214 @@
+{
+  "initial_model": "nn-a0a0d5fb69a7",
+  "terminal_model": "nn-6a76bd3c5cfa",
+  "speed": 16.0,
+  "status": "FAILED",
+  "terminal_tick": 353,
+  "tasks_completed": 1,
+  "executed_collisions": 0,
+  "elapsed_seconds": 13.031579167000018,
+  "websocket_snapshots": 355,
+  "health": [
+    {
+      "status": 200,
+      "latency_ms": 1.2540410971269011
+    },
+    {
+      "status": 200,
+      "latency_ms": 3.1297500245273113
+    },
+    {
+      "status": 200,
+      "latency_ms": 105.60045903548598
+    },
+    {
+      "status": 200,
+      "latency_ms": 35.368166980333626
+    },
+    {
+      "status": 200,
+      "latency_ms": 24.611333035863936
+    },
+    {
+      "status": 200,
+      "latency_ms": 20.30920796096325
+    },
+    {
+      "status": 200,
+      "latency_ms": 1.9069580594077706
+    },
+    {
+      "status": 200,
+      "latency_ms": 2.2884580539539456
+    },
+    {
+      "status": 200,
+      "latency_ms": 32.79937501065433
+    },
+    {
+      "status": 200,
+      "latency_ms": 2.0688329823315144
+    },
+    {
+      "status": 200,
+      "latency_ms": 37.1908750385046
+    },
+    {
+      "status": 200,
+      "latency_ms": 2.217915956862271
+    },
+    {
+      "status": 200,
+      "latency_ms": 1.9525829702615738
+    },
+    {
+      "status": 200,
+      "latency_ms": 2.36904202029109
+    },
+    {
+      "status": 200,
+      "latency_ms": 2.1219169721007347
+    },
+    {
+      "status": 200,
+      "latency_ms": 2.552082994952798
+    },
+    {
+      "status": 200,
+      "latency_ms": 26.628500083461404
+    },
+    {
+      "status": 200,
+      "latency_ms": 6.381625076755881
+    },
+    {
+      "status": 200,
+      "latency_ms": 5.204041954129934
+    },
+    {
+      "status": 200,
+      "latency_ms": 1.728624920360744
+    },
+    {
+      "status": 200,
+      "latency_ms": 10.145874926820397
+    },
+    {
+      "status": 200,
+      "latency_ms": 57.87083297036588
+    },
+    {
+      "status": 200,
+      "latency_ms": 2.0400829380378127
+    },
+    {
+      "status": 200,
+      "latency_ms": 3.897791961207986
+    },
+    {
+      "status": 200,
+      "latency_ms": 11.223166016861796
+    },
+    {
+      "status": 200,
+      "latency_ms": 47.082292032428086
+    },
+    {
+      "status": 200,
+      "latency_ms": 2.6765420334413648
+    },
+    {
+      "status": 200,
+      "latency_ms": 2.1987500367686152
+    },
+    {
+      "status": 200,
+      "latency_ms": 11.139624984934926
+    },
+    {
+      "status": 200,
+      "latency_ms": 11.344625032506883
+    },
+    {
+      "status": 200,
+      "latency_ms": 50.165042048320174
+    },
+    {
+      "status": 200,
+      "latency_ms": 8.853250066749752
+    },
+    {
+      "status": 200,
+      "latency_ms": 11.22995896730572
+    },
+    {
+      "status": 200,
+      "latency_ms": 10.86824992671609
+    },
+    {
+      "status": 200,
+      "latency_ms": 2.656625001691282
+    },
+    {
+      "status": 200,
+      "latency_ms": 2.1222919458523393
+    },
+    {
+      "status": 200,
+      "latency_ms": 11.895709089003503
+    },
+    {
+      "status": 200,
+      "latency_ms": 12.202583951875567
+    },
+    {
+      "status": 200,
+      "latency_ms": 3.075040993280709
+    },
+    {
+      "status": 200,
+      "latency_ms": 2.1556250285357237
+    },
+    {
+      "status": 200,
+      "latency_ms": 11.35645795147866
+    },
+    {
+      "status": 200,
+      "latency_ms": 5.735125043429434
+    },
+    {
+      "status": 200,
+      "latency_ms": 2.0934169879183173
+    },
+    {
+      "status": 200,
+      "latency_ms": 1.7960830591619015
+    },
+    {
+      "status": 200,
+      "latency_ms": 2.4310830049216747
+    },
+    {
+      "status": 200,
+      "latency_ms": 3.2892919844016433
+    },
+    {
+      "status": 200,
+      "latency_ms": 2.151459106244147
+    },
+    {
+      "status": 200,
+      "latency_ms": 1.8947920762002468
+    },
+    {
+      "status": 200,
+      "latency_ms": 12.276667053811252
+    },
+    {
+      "status": 200,
+      "latency_ms": 11.513833072967827
+    }
+  ],
+  "health_after_failure": 200
+}

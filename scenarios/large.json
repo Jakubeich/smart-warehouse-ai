@@ -1,0 +1,3124 @@
+{
+  "schema_version": 1,
+  "id": "demo-large",
+  "name": "Large Warehouse",
+  "warehouse": {
+    "schema_version": 1,
+    "id": "warehouse-large",
+    "name": "Large Warehouse",
+    "width": 40,
+    "height": 28,
+    "cell_size": 1.0,
+    "cells": [
+      {
+        "x": 1,
+        "y": 2,
+        "type": "PICKUP"
+      },
+      {
+        "x": 1,
+        "y": 5,
+        "type": "PICKUP"
+      },
+      {
+        "x": 1,
+        "y": 8,
+        "type": "PICKUP"
+      },
+      {
+        "x": 1,
+        "y": 11,
+        "type": "PICKUP"
+      },
+      {
+        "x": 1,
+        "y": 14,
+        "type": "PICKUP"
+      },
+      {
+        "x": 1,
+        "y": 17,
+        "type": "PICKUP"
+      },
+      {
+        "x": 1,
+        "y": 20,
+        "type": "PICKUP"
+      },
+      {
+        "x": 1,
+        "y": 23,
+        "type": "PICKUP"
+      },
+      {
+        "x": 1,
+        "y": 26,
+        "type": "CHARGER"
+      },
+      {
+        "x": 2,
+        "y": 26,
+        "type": "CHARGER"
+      },
+      {
+        "x": 3,
+        "y": 26,
+        "type": "CHARGER"
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 4,
+        "y": 26,
+        "type": "CHARGER"
+      },
+      {
+        "x": 5,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 5,
+        "y": 26,
+        "type": "CHARGER"
+      },
+      {
+        "x": 6,
+        "y": 26,
+        "type": "CHARGER"
+      },
+      {
+        "x": 7,
+        "y": 26,
+        "type": "CHARGER"
+      },
+      {
+        "x": 8,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 8,
+        "y": 26,
+        "type": "CHARGER"
+      },
+      {
+        "x": 9,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 9,
+        "y": 26,
+        "type": "CHARGER"
+      },
+      {
+        "x": 10,
+        "y": 26,
+        "type": "CHARGER"
+      },
+      {
+        "x": 12,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 12,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 13,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 16,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 17,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 20,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 21,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 24,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 25,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 28,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 29,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 32,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 33,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 36,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 3,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 4,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 5,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 6,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 7,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 8,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 9,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 10,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 11,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 12,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 13,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 15,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 16,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 17,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 18,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 19,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 20,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 21,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 22,
+        "type": "SHELF"
+      },
+      {
+        "x": 37,
+        "y": 23,
+        "type": "SHELF"
+      },
+      {
+        "x": 38,
+        "y": 2,
+        "type": "DROPOFF"
+      },
+      {
+        "x": 38,
+        "y": 5,
+        "type": "DROPOFF"
+      },
+      {
+        "x": 38,
+        "y": 8,
+        "type": "DROPOFF"
+      },
+      {
+        "x": 38,
+        "y": 11,
+        "type": "DROPOFF"
+      },
+      {
+        "x": 38,
+        "y": 14,
+        "type": "DROPOFF"
+      },
+      {
+        "x": 38,
+        "y": 17,
+        "type": "DROPOFF"
+      },
+      {
+        "x": 38,
+        "y": 20,
+        "type": "DROPOFF"
+      },
+      {
+        "x": 38,
+        "y": 23,
+        "type": "DROPOFF"
+      }
+    ],
+    "metadata": {}
+  },
+  "robots": [
+    {
+      "id": "R-01",
+      "name": "Atlas 01",
+      "position": [
+        1,
+        26
+      ],
+      "home": [
+        1,
+        26
+      ],
+      "orientation": 0,
+      "status": "IDLE",
+      "task_id": null,
+      "path": [],
+      "path_index": 0,
+      "battery_capacity": 100.0,
+      "battery": 100.0,
+      "capacity": 50.0,
+      "load": 0.0,
+      "completed_tasks": 0,
+      "distance": 0,
+      "waiting": 0,
+      "busy_ticks": 0,
+      "mode": "IDLE",
+      "service_remaining": 0,
+      "goal": null
+    },
+    {
+      "id": "R-02",
+      "name": "Atlas 02",
+      "position": [
+        2,
+        26
+      ],
+      "home": [
+        2,
+        26
+      ],
+      "orientation": 0,
+      "status": "IDLE",
+      "task_id": null,
+      "path": [],
+      "path_index": 0,
+      "battery_capacity": 100.0,
+      "battery": 100.0,
+      "capacity": 50.0,
+      "load": 0.0,
+      "completed_tasks": 0,
+      "distance": 0,
+      "waiting": 0,
+      "busy_ticks": 0,
+      "mode": "IDLE",
+      "service_remaining": 0,
+      "goal": null
+    },
+    {
+      "id": "R-03",
+      "name": "Atlas 03",
+      "position": [
+        3,
+        26
+      ],
+      "home": [
+        3,
+        26
+      ],
+      "orientation": 0,
+      "status": "IDLE",
+      "task_id": null,
+      "path": [],
+      "path_index": 0,
+      "battery_capacity": 100.0,
+      "battery": 100.0,
+      "capacity": 50.0,
+      "load": 0.0,
+      "completed_tasks": 0,
+      "distance": 0,
+      "waiting": 0,
+      "busy_ticks": 0,
+      "mode": "IDLE",
+      "service_remaining": 0,
+      "goal": null
+    },
+    {
+      "id": "R-04",
+      "name": "Atlas 04",
+      "position": [
+        4,
+        26
+      ],
+      "home": [
+        4,
+        26
+      ],
+      "orientation": 0,
+      "status": "IDLE",
+      "task_id": null,
+      "path": [],
+      "path_index": 0,
+      "battery_capacity": 100.0,
+      "battery": 100.0,
+      "capacity": 50.0,
+      "load": 0.0,
+      "completed_tasks": 0,
+      "distance": 0,
+      "waiting": 0,
+      "busy_ticks": 0,
+      "mode": "IDLE",
+      "service_remaining": 0,
+      "goal": null
+    },
+    {
+      "id": "R-05",
+      "name": "Atlas 05",
+      "position": [
+        5,
+        26
+      ],
+      "home": [
+        5,
+        26
+      ],
+      "orientation": 0,
+      "status": "IDLE",
+      "task_id": null,
+      "path": [],
+      "path_index": 0,
+      "battery_capacity": 100.0,
+      "battery": 100.0,
+      "capacity": 50.0,
+      "load": 0.0,
+      "completed_tasks": 0,
+      "distance": 0,
+      "waiting": 0,
+      "busy_ticks": 0,
+      "mode": "IDLE",
+      "service_remaining": 0,
+      "goal": null
+    },
+    {
+      "id": "R-06",
+      "name": "Atlas 06",
+      "position": [
+        6,
+        26
+      ],
+      "home": [
+        6,
+        26
+      ],
+      "orientation": 0,
+      "status": "IDLE",
+      "task_id": null,
+      "path": [],
+      "path_index": 0,
+      "battery_capacity": 100.0,
+      "battery": 100.0,
+      "capacity": 50.0,
+      "load": 0.0,
+      "completed_tasks": 0,
+      "distance": 0,
+      "waiting": 0,
+      "busy_ticks": 0,
+      "mode": "IDLE",
+      "service_remaining": 0,
+      "goal": null
+    },
+    {
+      "id": "R-07",
+      "name": "Atlas 07",
+      "position": [
+        7,
+        26
+      ],
+      "home": [
+        7,
+        26
+      ],
+      "orientation": 0,
+      "status": "IDLE",
+      "task_id": null,
+      "path": [],
+      "path_index": 0,
+      "battery_capacity": 100.0,
+      "battery": 100.0,
+      "capacity": 50.0,
+      "load": 0.0,
+      "completed_tasks": 0,
+      "distance": 0,
+      "waiting": 0,
+      "busy_ticks": 0,
+      "mode": "IDLE",
+      "service_remaining": 0,
+      "goal": null
+    },
+    {
+      "id": "R-08",
+      "name": "Atlas 08",
+      "position": [
+        8,
+        26
+      ],
+      "home": [
+        8,
+        26
+      ],
+      "orientation": 0,
+      "status": "IDLE",
+      "task_id": null,
+      "path": [],
+      "path_index": 0,
+      "battery_capacity": 100.0,
+      "battery": 100.0,
+      "capacity": 50.0,
+      "load": 0.0,
+      "completed_tasks": 0,
+      "distance": 0,
+      "waiting": 0,
+      "busy_ticks": 0,
+      "mode": "IDLE",
+      "service_remaining": 0,
+      "goal": null
+    },
+    {
+      "id": "R-09",
+      "name": "Atlas 09",
+      "position": [
+        9,
+        26
+      ],
+      "home": [
+        9,
+        26
+      ],
+      "orientation": 0,
+      "status": "IDLE",
+      "task_id": null,
+      "path": [],
+      "path_index": 0,
+      "battery_capacity": 100.0,
+      "battery": 100.0,
+      "capacity": 50.0,
+      "load": 0.0,
+      "completed_tasks": 0,
+      "distance": 0,
+      "waiting": 0,
+      "busy_ticks": 0,
+      "mode": "IDLE",
+      "service_remaining": 0,
+      "goal": null
+    },
+    {
+      "id": "R-10",
+      "name": "Atlas 10",
+      "position": [
+        10,
+        26
+      ],
+      "home": [
+        10,
+        26
+      ],
+      "orientation": 0,
+      "status": "IDLE",
+      "task_id": null,
+      "path": [],
+      "path_index": 0,
+      "battery_capacity": 100.0,
+      "battery": 100.0,
+      "capacity": 50.0,
+      "load": 0.0,
+      "completed_tasks": 0,
+      "distance": 0,
+      "waiting": 0,
+      "busy_ticks": 0,
+      "mode": "IDLE",
+      "service_remaining": 0,
+      "goal": null
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T-001",
+      "pickup": [
+        1,
+        5
+      ],
+      "dropoff": [
+        38,
+        2
+      ],
+      "priority": 3,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-002",
+      "pickup": [
+        1,
+        11
+      ],
+      "dropoff": [
+        38,
+        11
+      ],
+      "priority": 2,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-003",
+      "pickup": [
+        1,
+        5
+      ],
+      "dropoff": [
+        38,
+        5
+      ],
+      "priority": 5,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-004",
+      "pickup": [
+        1,
+        20
+      ],
+      "dropoff": [
+        38,
+        2
+      ],
+      "priority": 1,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-005",
+      "pickup": [
+        1,
+        5
+      ],
+      "dropoff": [
+        38,
+        11
+      ],
+      "priority": 2,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-006",
+      "pickup": [
+        1,
+        2
+      ],
+      "dropoff": [
+        38,
+        11
+      ],
+      "priority": 5,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-007",
+      "pickup": [
+        1,
+        20
+      ],
+      "dropoff": [
+        38,
+        11
+      ],
+      "priority": 4,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-008",
+      "pickup": [
+        1,
+        14
+      ],
+      "dropoff": [
+        38,
+        2
+      ],
+      "priority": 2,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-009",
+      "pickup": [
+        1,
+        20
+      ],
+      "dropoff": [
+        38,
+        17
+      ],
+      "priority": 3,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-010",
+      "pickup": [
+        1,
+        8
+      ],
+      "dropoff": [
+        38,
+        11
+      ],
+      "priority": 3,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-011",
+      "pickup": [
+        1,
+        5
+      ],
+      "dropoff": [
+        38,
+        5
+      ],
+      "priority": 4,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-012",
+      "pickup": [
+        1,
+        5
+      ],
+      "dropoff": [
+        38,
+        17
+      ],
+      "priority": 3,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-013",
+      "pickup": [
+        1,
+        14
+      ],
+      "dropoff": [
+        38,
+        2
+      ],
+      "priority": 4,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-014",
+      "pickup": [
+        1,
+        5
+      ],
+      "dropoff": [
+        38,
+        20
+      ],
+      "priority": 1,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-015",
+      "pickup": [
+        1,
+        14
+      ],
+      "dropoff": [
+        38,
+        17
+      ],
+      "priority": 5,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-016",
+      "pickup": [
+        1,
+        11
+      ],
+      "dropoff": [
+        38,
+        5
+      ],
+      "priority": 1,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-017",
+      "pickup": [
+        1,
+        11
+      ],
+      "dropoff": [
+        38,
+        14
+      ],
+      "priority": 1,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-018",
+      "pickup": [
+        1,
+        11
+      ],
+      "dropoff": [
+        38,
+        5
+      ],
+      "priority": 4,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-019",
+      "pickup": [
+        1,
+        14
+      ],
+      "dropoff": [
+        38,
+        23
+      ],
+      "priority": 3,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-020",
+      "pickup": [
+        1,
+        8
+      ],
+      "dropoff": [
+        38,
+        17
+      ],
+      "priority": 3,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-021",
+      "pickup": [
+        1,
+        11
+      ],
+      "dropoff": [
+        38,
+        14
+      ],
+      "priority": 1,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-022",
+      "pickup": [
+        1,
+        8
+      ],
+      "dropoff": [
+        38,
+        11
+      ],
+      "priority": 2,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-023",
+      "pickup": [
+        1,
+        23
+      ],
+      "dropoff": [
+        38,
+        20
+      ],
+      "priority": 3,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-024",
+      "pickup": [
+        1,
+        11
+      ],
+      "dropoff": [
+        38,
+        17
+      ],
+      "priority": 1,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-025",
+      "pickup": [
+        1,
+        11
+      ],
+      "dropoff": [
+        38,
+        2
+      ],
+      "priority": 3,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-026",
+      "pickup": [
+        1,
+        20
+      ],
+      "dropoff": [
+        38,
+        14
+      ],
+      "priority": 1,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-027",
+      "pickup": [
+        1,
+        11
+      ],
+      "dropoff": [
+        38,
+        17
+      ],
+      "priority": 2,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-028",
+      "pickup": [
+        1,
+        23
+      ],
+      "dropoff": [
+        38,
+        20
+      ],
+      "priority": 4,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-029",
+      "pickup": [
+        1,
+        8
+      ],
+      "dropoff": [
+        38,
+        14
+      ],
+      "priority": 2,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-030",
+      "pickup": [
+        1,
+        11
+      ],
+      "dropoff": [
+        38,
+        14
+      ],
+      "priority": 5,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-031",
+      "pickup": [
+        1,
+        20
+      ],
+      "dropoff": [
+        38,
+        20
+      ],
+      "priority": 3,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-032",
+      "pickup": [
+        1,
+        11
+      ],
+      "dropoff": [
+        38,
+        8
+      ],
+      "priority": 5,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-033",
+      "pickup": [
+        1,
+        23
+      ],
+      "dropoff": [
+        38,
+        5
+      ],
+      "priority": 1,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-034",
+      "pickup": [
+        1,
+        5
+      ],
+      "dropoff": [
+        38,
+        8
+      ],
+      "priority": 2,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-035",
+      "pickup": [
+        1,
+        20
+      ],
+      "dropoff": [
+        38,
+        5
+      ],
+      "priority": 4,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-036",
+      "pickup": [
+        1,
+        20
+      ],
+      "dropoff": [
+        38,
+        23
+      ],
+      "priority": 5,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-037",
+      "pickup": [
+        1,
+        14
+      ],
+      "dropoff": [
+        38,
+        2
+      ],
+      "priority": 1,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-038",
+      "pickup": [
+        1,
+        14
+      ],
+      "dropoff": [
+        38,
+        17
+      ],
+      "priority": 1,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-039",
+      "pickup": [
+        1,
+        14
+      ],
+      "dropoff": [
+        38,
+        20
+      ],
+      "priority": 2,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    },
+    {
+      "id": "T-040",
+      "pickup": [
+        1,
+        23
+      ],
+      "dropoff": [
+        38,
+        2
+      ],
+      "priority": 3,
+      "created_tick": 0,
+      "assigned_robot": null,
+      "status": "PENDING",
+      "load_duration": 2,
+      "unload_duration": 2,
+      "assigned_tick": null,
+      "pickup_tick": null,
+      "completed_tick": null,
+      "deadline": null,
+      "payload_weight": 10.0
+    }
+  ],
+  "seed": 42,
+  "config": {
+    "planner": "adaptive",
+    "scheduler": "priority",
+    "horizon": 128,
+    "max_nodes": 2000,
+    "timeout_seconds": 2.0,
+    "move_energy": 0.4,
+    "wait_energy": 0.0,
+    "handling_energy": 0.1,
+    "charging_rate": 4.0,
+    "critical_threshold": 15.0,
+    "tick_seconds": 1.0
+  }
+}

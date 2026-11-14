@@ -1,0 +1,351 @@
+{
+  "previous_study_replays": {
+    "1130011": {
+      "active": {
+        "status": "FAILED",
+        "ticks": 345,
+        "finished_tasks": 18,
+        "rejections": 1316,
+        "counts": {
+          "task": 23,
+          "move": 1666,
+          "passage_move_away": 110,
+          "wait": 1180,
+          "passage_wait": 862,
+          "charge": 14,
+          "park": 2
+        }
+      },
+      "speed": {
+        "status": "COMPLETED",
+        "ticks": 300,
+        "finished_tasks": 24,
+        "rejections": 199,
+        "counts": {
+          "task": 24,
+          "move": 1795,
+          "wait": 306,
+          "passage_move_away": 40,
+          "passage_wait": 177,
+          "charge": 21,
+          "park": 3
+        }
+      }
+    },
+    "1130016": {
+      "active": {
+        "status": "COMPLETED",
+        "ticks": 408,
+        "finished_tasks": 20,
+        "rejections": 25,
+        "counts": {
+          "charge": 7,
+          "task": 20,
+          "move": 1185,
+          "wait": 32,
+          "passage_move_away": 2,
+          "park": 3
+        }
+      },
+      "speed": {
+        "status": "READY",
+        "ticks": 1600,
+        "finished_tasks": 16,
+        "rejections": 4022,
+        "counts": {
+          "charge": 261,
+          "task": 19,
+          "move": 1960,
+          "wait": 4029,
+          "passage_move_away": 14,
+          "passage_wait": 2697,
+          "park": 260
+        }
+      }
+    },
+    "1130019": {
+      "active": {
+        "status": "COMPLETED",
+        "ticks": 381,
+        "finished_tasks": 20,
+        "rejections": 151,
+        "counts": {
+          "task": 20,
+          "move": 1676,
+          "wait": 165,
+          "passage_move_away": 45,
+          "passage_wait": 101,
+          "charge": 18,
+          "park": 3
+        }
+      },
+      "speed": {
+        "status": "FAILED",
+        "ticks": 234,
+        "finished_tasks": 10,
+        "rejections": 918,
+        "counts": {
+          "task": 16,
+          "move": 977,
+          "passage_move_away": 49,
+          "wait": 1146,
+          "passage_wait": 902,
+          "charge": 9,
+          "park": 2
+        }
+      }
+    },
+    "1130033": {
+      "active": {
+        "status": "FAILED",
+        "ticks": 351,
+        "finished_tasks": 17,
+        "rejections": 539,
+        "counts": {
+          "task": 22,
+          "move": 1350,
+          "passage_move_away": 47,
+          "wait": 541,
+          "passage_wait": 467,
+          "charge": 4,
+          "park": 1
+        }
+      },
+      "speed": {
+        "status": "FAILED",
+        "ticks": 385,
+        "finished_tasks": 19,
+        "rejections": 812,
+        "counts": {
+          "task": 23,
+          "move": 1346,
+          "passage_move_away": 58,
+          "wait": 806,
+          "passage_wait": 635,
+          "charge": 3,
+          "park": 2
+        }
+      }
+    },
+    "1130042": {
+      "active": {
+        "status": "COMPLETED",
+        "ticks": 302,
+        "finished_tasks": 20,
+        "rejections": 120,
+        "counts": {
+          "task": 20,
+          "move": 1265,
+          "wait": 142,
+          "passage_wait": 42,
+          "passage_move_away": 28,
+          "charge": 22,
+          "park": 9
+        }
+      },
+      "speed": {
+        "status": "FAILED",
+        "ticks": 382,
+        "finished_tasks": 13,
+        "rejections": 1418,
+        "counts": {
+          "task": 16,
+          "move": 1017,
+          "wait": 1527,
+          "passage_wait": 1147,
+          "passage_move_away": 43,
+          "charge": 13,
+          "park": 5
+        }
+      }
+    },
+    "1130059": {
+      "active": {
+        "status": "READY",
+        "ticks": 1600,
+        "finished_tasks": 11,
+        "rejections": 12962,
+        "counts": {
+          "task": 18,
+          "move": 1457,
+          "wait": 12772,
+          "passage_move_away": 249,
+          "passage_wait": 8419,
+          "charge": 8,
+          "park": 2
+        }
+      },
+      "speed": {
+        "status": "FAILED",
+        "ticks": 323,
+        "finished_tasks": 13,
+        "rejections": 1449,
+        "counts": {
+          "task": 20,
+          "move": 1396,
+          "wait": 1423,
+          "passage_move_away": 56,
+          "passage_wait": 793,
+          "charge": 13,
+          "park": 6
+        }
+      }
+    }
+  },
+  "opposite_move_proposals": {
+    "1130019": {
+      "final_tick": 234,
+      "direct_swaps_final_30_ticks": 30,
+      "example": {
+        "tick": 234,
+        "robots": [
+          {
+            "id": "R-06",
+            "origin": [
+              9,
+              3
+            ],
+            "ranked_choices": [
+              [
+                4.721048226145819,
+                [
+                  10,
+                  3
+                ]
+              ],
+              [
+                -14.705862364927338,
+                [
+                  9,
+                  3
+                ]
+              ],
+              [
+                -24.092687628406022,
+                [
+                  8,
+                  3
+                ]
+              ]
+            ],
+            "executed": [
+              9,
+              3
+            ]
+          },
+          {
+            "id": "R-11",
+            "origin": [
+              10,
+              3
+            ],
+            "ranked_choices": [
+              [
+                -0.9006857628828514,
+                [
+                  9,
+                  3
+                ]
+              ],
+              [
+                -15.552815067550572,
+                [
+                  10,
+                  3
+                ]
+              ],
+              [
+                -18.861474911892277,
+                [
+                  11,
+                  3
+                ]
+              ]
+            ],
+            "executed": [
+              10,
+              3
+            ]
+          }
+        ]
+      }
+    },
+    "1130042": {
+      "final_tick": 382,
+      "direct_swaps_final_30_ticks": 30,
+      "example": {
+        "tick": 382,
+        "robots": [
+          {
+            "id": "R-03",
+            "origin": [
+              10,
+              3
+            ],
+            "ranked_choices": [
+              [
+                -0.9557189093057606,
+                [
+                  9,
+                  3
+                ]
+              ],
+              [
+                -17.405717070007654,
+                [
+                  10,
+                  3
+                ]
+              ],
+              [
+                -21.259142684363347,
+                [
+                  11,
+                  3
+                ]
+              ]
+            ],
+            "executed": [
+              10,
+              3
+            ]
+          },
+          {
+            "id": "R-05",
+            "origin": [
+              9,
+              3
+            ],
+            "ranked_choices": [
+              [
+                5.865114575355316,
+                [
+                  10,
+                  3
+                ]
+              ],
+              [
+                -14.846513442769574,
+                [
+                  9,
+                  3
+                ]
+              ],
+              [
+                -25.54593779583129,
+                [
+                  8,
+                  3
+                ]
+              ]
+            ],
+            "executed": [
+              9,
+              3
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

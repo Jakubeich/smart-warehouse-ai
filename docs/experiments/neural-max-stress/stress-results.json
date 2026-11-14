@@ -1,0 +1,3641 @@
+{
+  "tick_limit": 4000,
+  "cases": [
+    {
+      "case": "reported",
+      "generator": {
+        "name": "zkou\u0161ka generov\u00e1n\u00ed slo\u017eit\u00e9ho skladu",
+        "width": 64,
+        "height": 64,
+        "density": 0.4,
+        "layout": "mixed",
+        "robot_count": 17,
+        "task_count": 200,
+        "seed": 3318493664,
+        "bottlenecks": true,
+        "passage_width": 1,
+        "passage_count": 2,
+        "traffic": "bidirectional"
+      },
+      "model": "nn-6a76bd3c5cfa",
+      "status": "FAILED",
+      "error": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 382,
+      "completed": 5,
+      "task_statuses": {
+        "PENDING": 178,
+        "ASSIGNED": 2,
+        "IN_PROGRESS": 15,
+        "COMPLETED": 5
+      },
+      "rejected_proposals": 3523,
+      "executed_collisions": 0,
+      "stall": true,
+      "min_battery_percent": 33.24999999999909,
+      "planning_time_ms": 3531.2529713846743,
+      "cpu_seconds": 3.6233020000000002,
+      "elapsed_seconds": 3.8263106249505654,
+      "final_robots": [
+        {
+          "id": "R-01",
+          "position": [
+            33,
+            39
+          ],
+          "goal": [
+            62,
+            56
+          ],
+          "mode": "DROPOFF",
+          "wait": 316
+        },
+        {
+          "id": "R-02",
+          "position": [
+            33,
+            41
+          ],
+          "goal": [
+            1,
+            18
+          ],
+          "mode": "DROPOFF",
+          "wait": 315
+        },
+        {
+          "id": "R-03",
+          "position": [
+            34,
+            37
+          ],
+          "goal": [
+            1,
+            51
+          ],
+          "mode": "DROPOFF",
+          "wait": 206
+        },
+        {
+          "id": "R-04",
+          "position": [
+            35,
+            41
+          ],
+          "goal": [
+            1,
+            48
+          ],
+          "mode": "DROPOFF",
+          "wait": 309
+        },
+        {
+          "id": "R-05",
+          "position": [
+            33,
+            38
+          ],
+          "goal": [
+            62,
+            47
+          ],
+          "mode": "DROPOFF",
+          "wait": 293
+        },
+        {
+          "id": "R-06",
+          "position": [
+            31,
+            38
+          ],
+          "goal": [
+            62,
+            23
+          ],
+          "mode": "DROPOFF",
+          "wait": 251
+        },
+        {
+          "id": "R-07",
+          "position": [
+            30,
+            37
+          ],
+          "goal": [
+            62,
+            21
+          ],
+          "mode": "PICKUP",
+          "wait": 133
+        },
+        {
+          "id": "R-08",
+          "position": [
+            30,
+            34
+          ],
+          "goal": [
+            62,
+            59
+          ],
+          "mode": "DROPOFF",
+          "wait": 215
+        },
+        {
+          "id": "R-09",
+          "position": [
+            32,
+            38
+          ],
+          "goal": [
+            62,
+            8
+          ],
+          "mode": "DROPOFF",
+          "wait": 289
+        },
+        {
+          "id": "R-10",
+          "position": [
+            33,
+            37
+          ],
+          "goal": [
+            1,
+            9
+          ],
+          "mode": "DROPOFF",
+          "wait": 288
+        },
+        {
+          "id": "R-11",
+          "position": [
+            30,
+            36
+          ],
+          "goal": [
+            62,
+            36
+          ],
+          "mode": "PICKUP",
+          "wait": 152
+        },
+        {
+          "id": "R-12",
+          "position": [
+            34,
+            41
+          ],
+          "goal": [
+            1,
+            30
+          ],
+          "mode": "DROPOFF",
+          "wait": 313
+        },
+        {
+          "id": "R-13",
+          "position": [
+            30,
+            38
+          ],
+          "goal": [
+            62,
+            53
+          ],
+          "mode": "DROPOFF",
+          "wait": 241
+        },
+        {
+          "id": "R-14",
+          "position": [
+            30,
+            39
+          ],
+          "goal": [
+            62,
+            11
+          ],
+          "mode": "DROPOFF",
+          "wait": 242
+        },
+        {
+          "id": "R-15",
+          "position": [
+            33,
+            36
+          ],
+          "goal": [
+            1,
+            39
+          ],
+          "mode": "DROPOFF",
+          "wait": 40
+        },
+        {
+          "id": "R-16",
+          "position": [
+            33,
+            40
+          ],
+          "goal": [
+            1,
+            60
+          ],
+          "mode": "DROPOFF",
+          "wait": 316
+        },
+        {
+          "id": "R-17",
+          "position": [
+            30,
+            35
+          ],
+          "goal": [
+            62,
+            50
+          ],
+          "mode": "DROPOFF",
+          "wait": 131
+        }
+      ]
+    },
+    {
+      "case": "wider-3-17",
+      "generator": {
+        "name": "zkou\u0161ka generov\u00e1n\u00ed slo\u017eit\u00e9ho skladu",
+        "width": 64,
+        "height": 64,
+        "density": 0.4,
+        "layout": "mixed",
+        "robot_count": 17,
+        "task_count": 200,
+        "seed": 3318493664,
+        "bottlenecks": true,
+        "passage_width": 3,
+        "passage_count": 2,
+        "traffic": "bidirectional"
+      },
+      "model": "nn-6a76bd3c5cfa",
+      "status": "FAILED",
+      "error": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 453,
+      "completed": 15,
+      "task_statuses": {
+        "COMPLETED": 15,
+        "PENDING": 170,
+        "IN_PROGRESS": 12,
+        "ASSIGNED": 3
+      },
+      "rejected_proposals": 3454,
+      "executed_collisions": 0,
+      "stall": true,
+      "min_battery_percent": 20.99999999999912,
+      "planning_time_ms": 5136.911206529476,
+      "cpu_seconds": 5.20503,
+      "elapsed_seconds": 5.4755192920565605,
+      "final_robots": [
+        {
+          "id": "R-01",
+          "position": [
+            33,
+            40
+          ],
+          "goal": [
+            62,
+            56
+          ],
+          "mode": "DROPOFF",
+          "wait": 386
+        },
+        {
+          "id": "R-02",
+          "position": [
+            33,
+            41
+          ],
+          "goal": [
+            1,
+            18
+          ],
+          "mode": "DROPOFF",
+          "wait": 386
+        },
+        {
+          "id": "R-03",
+          "position": [
+            35,
+            37
+          ],
+          "goal": [
+            1,
+            54
+          ],
+          "mode": "DROPOFF",
+          "wait": 54
+        },
+        {
+          "id": "R-04",
+          "position": [
+            35,
+            41
+          ],
+          "goal": [
+            1,
+            48
+          ],
+          "mode": "DROPOFF",
+          "wait": 380
+        },
+        {
+          "id": "R-05",
+          "position": [
+            33,
+            36
+          ],
+          "goal": [
+            1,
+            39
+          ],
+          "mode": "DROPOFF",
+          "wait": 153
+        },
+        {
+          "id": "R-06",
+          "position": [
+            62,
+            33
+          ],
+          "goal": [
+            3,
+            61
+          ],
+          "mode": "RETURN",
+          "wait": 63
+        },
+        {
+          "id": "R-07",
+          "position": [
+            33,
+            39
+          ],
+          "goal": [
+            62,
+            53
+          ],
+          "mode": "DROPOFF",
+          "wait": 314
+        },
+        {
+          "id": "R-08",
+          "position": [
+            33,
+            37
+          ],
+          "goal": [
+            1,
+            14
+          ],
+          "mode": "PICKUP",
+          "wait": 172
+        },
+        {
+          "id": "R-09",
+          "position": [
+            31,
+            40
+          ],
+          "goal": [
+            62,
+            47
+          ],
+          "mode": "DROPOFF",
+          "wait": 145
+        },
+        {
+          "id": "R-10",
+          "position": [
+            25,
+            6
+          ],
+          "goal": [
+            53,
+            61
+          ],
+          "mode": "RETURN",
+          "wait": 43
+        },
+        {
+          "id": "R-11",
+          "position": [
+            34,
+            36
+          ],
+          "goal": [
+            1,
+            33
+          ],
+          "mode": "DROPOFF",
+          "wait": 111
+        },
+        {
+          "id": "R-12",
+          "position": [
+            34,
+            41
+          ],
+          "goal": [
+            1,
+            30
+          ],
+          "mode": "DROPOFF",
+          "wait": 384
+        },
+        {
+          "id": "R-13",
+          "position": [
+            34,
+            37
+          ],
+          "goal": [
+            1,
+            42
+          ],
+          "mode": "DROPOFF",
+          "wait": 119
+        },
+        {
+          "id": "R-14",
+          "position": [
+            33,
+            38
+          ],
+          "goal": [
+            62,
+            45
+          ],
+          "mode": "PICKUP",
+          "wait": 258
+        },
+        {
+          "id": "R-15",
+          "position": [
+            32,
+            39
+          ],
+          "goal": [
+            62,
+            50
+          ],
+          "mode": "DROPOFF",
+          "wait": 179
+        },
+        {
+          "id": "R-16",
+          "position": [
+            32,
+            40
+          ],
+          "goal": [
+            62,
+            54
+          ],
+          "mode": "PICKUP",
+          "wait": 260
+        },
+        {
+          "id": "R-17",
+          "position": [
+            32,
+            38
+          ],
+          "goal": [
+            62,
+            17
+          ],
+          "mode": "DROPOFF",
+          "wait": 167
+        }
+      ]
+    },
+    {
+      "case": "wider-2-17",
+      "generator": {
+        "name": "zkou\u0161ka generov\u00e1n\u00ed slo\u017eit\u00e9ho skladu",
+        "width": 64,
+        "height": 64,
+        "density": 0.4,
+        "layout": "mixed",
+        "robot_count": 17,
+        "task_count": 200,
+        "seed": 3318493664,
+        "bottlenecks": true,
+        "passage_width": 2,
+        "passage_count": 2,
+        "traffic": "bidirectional"
+      },
+      "model": "nn-6a76bd3c5cfa",
+      "status": "FAILED",
+      "error": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 849,
+      "completed": 36,
+      "task_statuses": {
+        "COMPLETED": 36,
+        "PENDING": 152,
+        "ASSIGNED": 6,
+        "IN_PROGRESS": 6
+      },
+      "rejected_proposals": 4264,
+      "executed_collisions": 0,
+      "stall": true,
+      "min_battery_percent": 0.5499999999991445,
+      "planning_time_ms": 9520.717967068776,
+      "cpu_seconds": 9.831654,
+      "elapsed_seconds": 10.245971583062783,
+      "final_robots": [
+        {
+          "id": "R-01",
+          "position": [
+            33,
+            40
+          ],
+          "goal": [
+            1,
+            11
+          ],
+          "mode": "PICKUP",
+          "wait": 305
+        },
+        {
+          "id": "R-02",
+          "position": [
+            29,
+            8
+          ],
+          "goal": [
+            38,
+            61
+          ],
+          "mode": "RETURN",
+          "wait": 471
+        },
+        {
+          "id": "R-03",
+          "position": [
+            34,
+            41
+          ],
+          "goal": [
+            3,
+            61
+          ],
+          "mode": "RETURN",
+          "wait": 413
+        },
+        {
+          "id": "R-04",
+          "position": [
+            30,
+            8
+          ],
+          "goal": [
+            62,
+            59
+          ],
+          "mode": "DROPOFF",
+          "wait": 705
+        },
+        {
+          "id": "R-05",
+          "position": [
+            29,
+            9
+          ],
+          "goal": [
+            40,
+            62
+          ],
+          "mode": "RETURN",
+          "wait": 444
+        },
+        {
+          "id": "R-06",
+          "position": [
+            32,
+            38
+          ],
+          "goal": [
+            62,
+            32
+          ],
+          "mode": "DROPOFF",
+          "wait": 107
+        },
+        {
+          "id": "R-07",
+          "position": [
+            33,
+            41
+          ],
+          "goal": [
+            1,
+            23
+          ],
+          "mode": "PICKUP",
+          "wait": 307
+        },
+        {
+          "id": "R-08",
+          "position": [
+            33,
+            39
+          ],
+          "goal": [
+            53,
+            61
+          ],
+          "mode": "RETURN",
+          "wait": 423
+        },
+        {
+          "id": "R-09",
+          "position": [
+            28,
+            8
+          ],
+          "goal": [
+            62,
+            54
+          ],
+          "mode": "PICKUP",
+          "wait": 142
+        },
+        {
+          "id": "R-10",
+          "position": [
+            33,
+            38
+          ],
+          "goal": [
+            62,
+            53
+          ],
+          "mode": "DROPOFF",
+          "wait": 220
+        },
+        {
+          "id": "R-11",
+          "position": [
+            35,
+            41
+          ],
+          "goal": [
+            1,
+            15
+          ],
+          "mode": "DROPOFF",
+          "wait": 224
+        },
+        {
+          "id": "R-12",
+          "position": [
+            30,
+            10
+          ],
+          "goal": [
+            62,
+            3
+          ],
+          "mode": "PICKUP",
+          "wait": 681
+        },
+        {
+          "id": "R-13",
+          "position": [
+            33,
+            42
+          ],
+          "goal": [
+            1,
+            20
+          ],
+          "mode": "PICKUP",
+          "wait": 294
+        },
+        {
+          "id": "R-14",
+          "position": [
+            30,
+            9
+          ],
+          "goal": [
+            62,
+            57
+          ],
+          "mode": "PICKUP",
+          "wait": 684
+        },
+        {
+          "id": "R-15",
+          "position": [
+            32,
+            39
+          ],
+          "goal": [
+            43,
+            61
+          ],
+          "mode": "RETURN",
+          "wait": 345
+        },
+        {
+          "id": "R-16",
+          "position": [
+            27,
+            8
+          ],
+          "goal": [
+            62,
+            11
+          ],
+          "mode": "DROPOFF",
+          "wait": 31
+        },
+        {
+          "id": "R-17",
+          "position": [
+            28,
+            7
+          ],
+          "goal": [
+            1,
+            30
+          ],
+          "mode": "DROPOFF",
+          "wait": 208
+        }
+      ]
+    },
+    {
+      "case": "reported-geometry-32",
+      "generator": {
+        "name": "zkou\u0161ka generov\u00e1n\u00ed slo\u017eit\u00e9ho skladu",
+        "width": 64,
+        "height": 64,
+        "density": 0.4,
+        "layout": "mixed",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 3318493664,
+        "bottlenecks": true,
+        "passage_width": 1,
+        "passage_count": 2,
+        "traffic": "bidirectional"
+      },
+      "model": "nn-6a76bd3c5cfa",
+      "status": "FAILED",
+      "error": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 30,
+      "completed": 0,
+      "task_statuses": {
+        "PENDING": 200
+      },
+      "rejected_proposals": 0,
+      "executed_collisions": 0,
+      "stall": true,
+      "min_battery_percent": 100.0,
+      "planning_time_ms": 11188.577710767277,
+      "cpu_seconds": 10.806864000000001,
+      "elapsed_seconds": 11.22403016698081,
+      "final_robots": [
+        {
+          "id": "R-01",
+          "position": [
+            9,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-02",
+          "position": [
+            47,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-03",
+          "position": [
+            28,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-04",
+          "position": [
+            40,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-05",
+          "position": [
+            22,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-06",
+          "position": [
+            34,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-07",
+          "position": [
+            23,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-08",
+          "position": [
+            37,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-09",
+          "position": [
+            25,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-10",
+          "position": [
+            38,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-11",
+          "position": [
+            17,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-12",
+          "position": [
+            43,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-13",
+          "position": [
+            24,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-14",
+          "position": [
+            53,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-15",
+          "position": [
+            18,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-16",
+          "position": [
+            49,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-17",
+          "position": [
+            3,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-18",
+          "position": [
+            61,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-19",
+          "position": [
+            30,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-20",
+          "position": [
+            33,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-21",
+          "position": [
+            16,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-22",
+          "position": [
+            48,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-23",
+          "position": [
+            27,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-24",
+          "position": [
+            37,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-25",
+          "position": [
+            9,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-26",
+          "position": [
+            57,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-27",
+          "position": [
+            11,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-28",
+          "position": [
+            36,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-29",
+          "position": [
+            24,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-30",
+          "position": [
+            45,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-31",
+          "position": [
+            7,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-32",
+          "position": [
+            62,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        }
+      ]
+    },
+    {
+      "case": "one-way-17",
+      "generator": {
+        "name": "zkou\u0161ka generov\u00e1n\u00ed slo\u017eit\u00e9ho skladu",
+        "width": 64,
+        "height": 64,
+        "density": 0.4,
+        "layout": "mixed",
+        "robot_count": 17,
+        "task_count": 200,
+        "seed": 3318493664,
+        "bottlenecks": true,
+        "passage_width": 1,
+        "passage_count": 2,
+        "traffic": "one_way"
+      },
+      "model": "nn-6a76bd3c5cfa",
+      "status": "FAILED",
+      "error": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 562,
+      "completed": 16,
+      "task_statuses": {
+        "PENDING": 171,
+        "ASSIGNED": 8,
+        "IN_PROGRESS": 5,
+        "COMPLETED": 16
+      },
+      "rejected_proposals": 5600,
+      "executed_collisions": 0,
+      "stall": true,
+      "min_battery_percent": 9.29999999999913,
+      "planning_time_ms": 4872.881628689356,
+      "cpu_seconds": 5.037370000000001,
+      "elapsed_seconds": 5.299127917038277,
+      "final_robots": [
+        {
+          "id": "R-01",
+          "position": [
+            34,
+            36
+          ],
+          "goal": [
+            1,
+            47
+          ],
+          "mode": "PICKUP",
+          "wait": 373
+        },
+        {
+          "id": "R-02",
+          "position": [
+            36,
+            37
+          ],
+          "goal": [
+            9,
+            62
+          ],
+          "mode": "RETURN",
+          "wait": 113
+        },
+        {
+          "id": "R-03",
+          "position": [
+            35,
+            36
+          ],
+          "goal": [
+            1,
+            44
+          ],
+          "mode": "PICKUP",
+          "wait": 184
+        },
+        {
+          "id": "R-04",
+          "position": [
+            37,
+            37
+          ],
+          "goal": [
+            18,
+            62
+          ],
+          "mode": "RETURN",
+          "wait": 96
+        },
+        {
+          "id": "R-05",
+          "position": [
+            30,
+            38
+          ],
+          "goal": [
+            62,
+            53
+          ],
+          "mode": "DROPOFF",
+          "wait": 426
+        },
+        {
+          "id": "R-06",
+          "position": [
+            32,
+            38
+          ],
+          "goal": [
+            62,
+            41
+          ],
+          "mode": "DROPOFF",
+          "wait": 405
+        },
+        {
+          "id": "R-07",
+          "position": [
+            33,
+            38
+          ],
+          "goal": [
+            1,
+            59
+          ],
+          "mode": "PICKUP",
+          "wait": 403
+        },
+        {
+          "id": "R-08",
+          "position": [
+            31,
+            38
+          ],
+          "goal": [
+            62,
+            50
+          ],
+          "mode": "DROPOFF",
+          "wait": 385
+        },
+        {
+          "id": "R-09",
+          "position": [
+            62,
+            33
+          ],
+          "goal": [
+            3,
+            61
+          ],
+          "mode": "RETURN",
+          "wait": 174
+        },
+        {
+          "id": "R-10",
+          "position": [
+            30,
+            37
+          ],
+          "goal": [
+            62,
+            38
+          ],
+          "mode": "DROPOFF",
+          "wait": 389
+        },
+        {
+          "id": "R-11",
+          "position": [
+            33,
+            36
+          ],
+          "goal": [
+            1,
+            26
+          ],
+          "mode": "PICKUP",
+          "wait": 398
+        },
+        {
+          "id": "R-12",
+          "position": [
+            35,
+            37
+          ],
+          "goal": [
+            1,
+            38
+          ],
+          "mode": "PICKUP",
+          "wait": 331
+        },
+        {
+          "id": "R-13",
+          "position": [
+            34,
+            37
+          ],
+          "goal": [
+            1,
+            41
+          ],
+          "mode": "PICKUP",
+          "wait": 379
+        },
+        {
+          "id": "R-14",
+          "position": [
+            63,
+            33
+          ],
+          "goal": [
+            17,
+            62
+          ],
+          "mode": "RETURN",
+          "wait": 163
+        },
+        {
+          "id": "R-15",
+          "position": [
+            33,
+            37
+          ],
+          "goal": [
+            1,
+            50
+          ],
+          "mode": "PICKUP",
+          "wait": 384
+        },
+        {
+          "id": "R-16",
+          "position": [
+            30,
+            36
+          ],
+          "goal": [
+            62,
+            59
+          ],
+          "mode": "DROPOFF",
+          "wait": 381
+        },
+        {
+          "id": "R-17",
+          "position": [
+            33,
+            39
+          ],
+          "goal": [
+            1,
+            56
+          ],
+          "mode": "PICKUP",
+          "wait": 402
+        }
+      ]
+    },
+    {
+      "case": "wider-and-extra-17",
+      "generator": {
+        "name": "zkou\u0161ka generov\u00e1n\u00ed slo\u017eit\u00e9ho skladu",
+        "width": 64,
+        "height": 64,
+        "density": 0.4,
+        "layout": "mixed",
+        "robot_count": 17,
+        "task_count": 200,
+        "seed": 3318493664,
+        "bottlenecks": true,
+        "passage_width": 3,
+        "passage_count": 3,
+        "traffic": "bidirectional"
+      },
+      "model": "nn-6a76bd3c5cfa",
+      "status": "FAILED",
+      "error": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 1419,
+      "completed": 58,
+      "task_statuses": {
+        "PENDING": 128,
+        "COMPLETED": 58,
+        "IN_PROGRESS": 11,
+        "ASSIGNED": 3
+      },
+      "rejected_proposals": 6604,
+      "executed_collisions": 0,
+      "stall": true,
+      "min_battery_percent": 0.0499999999991359,
+      "planning_time_ms": 14396.903579938225,
+      "cpu_seconds": 15.207227999999999,
+      "elapsed_seconds": 15.762895749998279,
+      "final_robots": [
+        {
+          "id": "R-01",
+          "position": [
+            44,
+            41
+          ],
+          "goal": [
+            1,
+            59
+          ],
+          "mode": "PICKUP",
+          "wait": 663
+        },
+        {
+          "id": "R-02",
+          "position": [
+            46,
+            29
+          ],
+          "goal": [
+            1,
+            12
+          ],
+          "mode": "DROPOFF",
+          "wait": 737
+        },
+        {
+          "id": "R-03",
+          "position": [
+            49,
+            29
+          ],
+          "goal": [
+            1,
+            6
+          ],
+          "mode": "DROPOFF",
+          "wait": 599
+        },
+        {
+          "id": "R-04",
+          "position": [
+            43,
+            41
+          ],
+          "goal": [
+            62,
+            42
+          ],
+          "mode": "PICKUP",
+          "wait": 628
+        },
+        {
+          "id": "R-05",
+          "position": [
+            48,
+            29
+          ],
+          "goal": [
+            1,
+            48
+          ],
+          "mode": "DROPOFF",
+          "wait": 568
+        },
+        {
+          "id": "R-06",
+          "position": [
+            44,
+            29
+          ],
+          "goal": [
+            1,
+            30
+          ],
+          "mode": "DROPOFF",
+          "wait": 827
+        },
+        {
+          "id": "R-07",
+          "position": [
+            55,
+            49
+          ],
+          "goal": [
+            62,
+            56
+          ],
+          "mode": "DROPOFF",
+          "wait": 559
+        },
+        {
+          "id": "R-08",
+          "position": [
+            50,
+            29
+          ],
+          "goal": [
+            1,
+            21
+          ],
+          "mode": "DROPOFF",
+          "wait": 606
+        },
+        {
+          "id": "R-09",
+          "position": [
+            42,
+            29
+          ],
+          "goal": [
+            62,
+            47
+          ],
+          "mode": "DROPOFF",
+          "wait": 718
+        },
+        {
+          "id": "R-10",
+          "position": [
+            56,
+            49
+          ],
+          "goal": [
+            1,
+            42
+          ],
+          "mode": "DROPOFF",
+          "wait": 581
+        },
+        {
+          "id": "R-11",
+          "position": [
+            45,
+            41
+          ],
+          "goal": [
+            18,
+            62
+          ],
+          "mode": "RETURN",
+          "wait": 546
+        },
+        {
+          "id": "R-12",
+          "position": [
+            47,
+            41
+          ],
+          "goal": [
+            9,
+            62
+          ],
+          "mode": "RETURN",
+          "wait": 444
+        },
+        {
+          "id": "R-13",
+          "position": [
+            43,
+            29
+          ],
+          "goal": [
+            62,
+            38
+          ],
+          "mode": "DROPOFF",
+          "wait": 718
+        },
+        {
+          "id": "R-14",
+          "position": [
+            45,
+            29
+          ],
+          "goal": [
+            1,
+            45
+          ],
+          "mode": "DROPOFF",
+          "wait": 796
+        },
+        {
+          "id": "R-15",
+          "position": [
+            47,
+            29
+          ],
+          "goal": [
+            1,
+            17
+          ],
+          "mode": "PICKUP",
+          "wait": 704
+        },
+        {
+          "id": "R-16",
+          "position": [
+            51,
+            29
+          ],
+          "goal": [
+            1,
+            33
+          ],
+          "mode": "DROPOFF",
+          "wait": 336
+        },
+        {
+          "id": "R-17",
+          "position": [
+            57,
+            49
+          ],
+          "goal": [
+            17,
+            62
+          ],
+          "mode": "RETURN",
+          "wait": 458
+        }
+      ]
+    },
+    {
+      "case": "open-32",
+      "generator": {
+        "name": "zkou\u0161ka generov\u00e1n\u00ed slo\u017eit\u00e9ho skladu",
+        "width": 64,
+        "height": 64,
+        "density": 0.4,
+        "layout": "mixed",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 3318493664,
+        "bottlenecks": false,
+        "passage_width": 1,
+        "passage_count": 2,
+        "traffic": "bidirectional"
+      },
+      "model": "nn-6a76bd3c5cfa",
+      "status": "FAILED",
+      "error": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 30,
+      "completed": 0,
+      "task_statuses": {
+        "PENDING": 200
+      },
+      "rejected_proposals": 0,
+      "executed_collisions": 0,
+      "stall": true,
+      "min_battery_percent": 100.0,
+      "planning_time_ms": 10932.880043168552,
+      "cpu_seconds": 10.613329,
+      "elapsed_seconds": 10.965737749938853,
+      "final_robots": [
+        {
+          "id": "R-01",
+          "position": [
+            9,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-02",
+          "position": [
+            62,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-03",
+          "position": [
+            22,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-04",
+          "position": [
+            38,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-05",
+          "position": [
+            28,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-06",
+          "position": [
+            35,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-07",
+          "position": [
+            23,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-08",
+          "position": [
+            35,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-09",
+          "position": [
+            24,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-10",
+          "position": [
+            61,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-11",
+          "position": [
+            17,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-12",
+          "position": [
+            33,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-13",
+          "position": [
+            24,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-14",
+          "position": [
+            50,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-15",
+          "position": [
+            31,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-16",
+          "position": [
+            49,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-17",
+          "position": [
+            18,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-18",
+          "position": [
+            49,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-19",
+          "position": [
+            20,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-20",
+          "position": [
+            48,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-21",
+          "position": [
+            16,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-22",
+          "position": [
+            45,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-23",
+          "position": [
+            27,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-24",
+          "position": [
+            46,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-25",
+          "position": [
+            30,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-26",
+          "position": [
+            60,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-27",
+          "position": [
+            8,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-28",
+          "position": [
+            42,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-29",
+          "position": [
+            1,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-30",
+          "position": [
+            55,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-31",
+          "position": [
+            11,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-32",
+          "position": [
+            56,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        }
+      ]
+    },
+    {
+      "case": "new-narrow-32-a",
+      "generator": {
+        "name": "zkou\u0161ka generov\u00e1n\u00ed slo\u017eit\u00e9ho skladu",
+        "width": 64,
+        "height": 64,
+        "density": 0.4,
+        "layout": "mixed",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 3318493665,
+        "bottlenecks": true,
+        "passage_width": 1,
+        "passage_count": 2,
+        "traffic": "bidirectional"
+      },
+      "model": "nn-6a76bd3c5cfa",
+      "status": "FAILED",
+      "error": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 30,
+      "completed": 0,
+      "task_statuses": {
+        "PENDING": 200
+      },
+      "rejected_proposals": 0,
+      "executed_collisions": 0,
+      "stall": true,
+      "min_battery_percent": 100.0,
+      "planning_time_ms": 12305.738457478583,
+      "cpu_seconds": 11.708848,
+      "elapsed_seconds": 12.341969250002876,
+      "final_robots": [
+        {
+          "id": "R-01",
+          "position": [
+            4,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-02",
+          "position": [
+            56,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-03",
+          "position": [
+            16,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-04",
+          "position": [
+            59,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-05",
+          "position": [
+            16,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-06",
+          "position": [
+            37,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-07",
+          "position": [
+            4,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-08",
+          "position": [
+            55,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-09",
+          "position": [
+            19,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-10",
+          "position": [
+            43,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-11",
+          "position": [
+            15,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-12",
+          "position": [
+            53,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-13",
+          "position": [
+            26,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-14",
+          "position": [
+            48,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-15",
+          "position": [
+            21,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-16",
+          "position": [
+            44,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-17",
+          "position": [
+            17,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-18",
+          "position": [
+            57,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-19",
+          "position": [
+            11,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-20",
+          "position": [
+            62,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-21",
+          "position": [
+            28,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-22",
+          "position": [
+            36,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-23",
+          "position": [
+            2,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-24",
+          "position": [
+            51,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-25",
+          "position": [
+            26,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-26",
+          "position": [
+            51,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-27",
+          "position": [
+            17,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-28",
+          "position": [
+            35,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-29",
+          "position": [
+            13,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-30",
+          "position": [
+            46,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-31",
+          "position": [
+            3,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-32",
+          "position": [
+            45,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        }
+      ]
+    },
+    {
+      "case": "new-narrow-32-b",
+      "generator": {
+        "name": "zkou\u0161ka generov\u00e1n\u00ed slo\u017eit\u00e9ho skladu",
+        "width": 64,
+        "height": 64,
+        "density": 0.4,
+        "layout": "aisles",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 3318493666,
+        "bottlenecks": true,
+        "passage_width": 1,
+        "passage_count": 2,
+        "traffic": "bidirectional"
+      },
+      "model": "nn-6a76bd3c5cfa",
+      "status": "FAILED",
+      "error": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 30,
+      "completed": 0,
+      "task_statuses": {
+        "PENDING": 200
+      },
+      "rejected_proposals": 0,
+      "executed_collisions": 0,
+      "stall": true,
+      "min_battery_percent": 100.0,
+      "planning_time_ms": 13811.126127140597,
+      "cpu_seconds": 13.043791999999996,
+      "elapsed_seconds": 13.853503249934874,
+      "final_robots": [
+        {
+          "id": "R-01",
+          "position": [
+            12,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-02",
+          "position": [
+            50,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-03",
+          "position": [
+            7,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-04",
+          "position": [
+            43,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-05",
+          "position": [
+            2,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-06",
+          "position": [
+            48,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-07",
+          "position": [
+            14,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-08",
+          "position": [
+            34,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-09",
+          "position": [
+            17,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-10",
+          "position": [
+            37,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-11",
+          "position": [
+            28,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-12",
+          "position": [
+            37,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-13",
+          "position": [
+            5,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-14",
+          "position": [
+            39,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-15",
+          "position": [
+            9,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-16",
+          "position": [
+            60,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-17",
+          "position": [
+            18,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-18",
+          "position": [
+            56,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-19",
+          "position": [
+            16,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-20",
+          "position": [
+            59,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-21",
+          "position": [
+            22,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-22",
+          "position": [
+            42,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-23",
+          "position": [
+            6,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-24",
+          "position": [
+            44,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-25",
+          "position": [
+            8,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-26",
+          "position": [
+            62,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-27",
+          "position": [
+            21,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-28",
+          "position": [
+            46,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-29",
+          "position": [
+            4,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-30",
+          "position": [
+            33,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-31",
+          "position": [
+            30,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-32",
+          "position": [
+            47,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        }
+      ]
+    },
+    {
+      "case": "new-wide-32-a",
+      "generator": {
+        "name": "zkou\u0161ka generov\u00e1n\u00ed slo\u017eit\u00e9ho skladu",
+        "width": 64,
+        "height": 64,
+        "density": 0.4,
+        "layout": "mixed",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 3318493665,
+        "bottlenecks": true,
+        "passage_width": 3,
+        "passage_count": 2,
+        "traffic": "bidirectional"
+      },
+      "model": "nn-6a76bd3c5cfa",
+      "status": "FAILED",
+      "error": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 30,
+      "completed": 0,
+      "task_statuses": {
+        "PENDING": 200
+      },
+      "rejected_proposals": 0,
+      "executed_collisions": 0,
+      "stall": true,
+      "min_battery_percent": 100.0,
+      "planning_time_ms": 12828.948376118205,
+      "cpu_seconds": 12.075181999999998,
+      "elapsed_seconds": 12.865483541972935,
+      "final_robots": [
+        {
+          "id": "R-01",
+          "position": [
+            4,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-02",
+          "position": [
+            56,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-03",
+          "position": [
+            16,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-04",
+          "position": [
+            59,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-05",
+          "position": [
+            16,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-06",
+          "position": [
+            37,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-07",
+          "position": [
+            4,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-08",
+          "position": [
+            55,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-09",
+          "position": [
+            19,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-10",
+          "position": [
+            43,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-11",
+          "position": [
+            15,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-12",
+          "position": [
+            53,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-13",
+          "position": [
+            26,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-14",
+          "position": [
+            48,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-15",
+          "position": [
+            21,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-16",
+          "position": [
+            44,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-17",
+          "position": [
+            17,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-18",
+          "position": [
+            57,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-19",
+          "position": [
+            11,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-20",
+          "position": [
+            62,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-21",
+          "position": [
+            28,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-22",
+          "position": [
+            36,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-23",
+          "position": [
+            2,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-24",
+          "position": [
+            51,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-25",
+          "position": [
+            26,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-26",
+          "position": [
+            51,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-27",
+          "position": [
+            17,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-28",
+          "position": [
+            35,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-29",
+          "position": [
+            13,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-30",
+          "position": [
+            46,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-31",
+          "position": [
+            3,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-32",
+          "position": [
+            45,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        }
+      ]
+    },
+    {
+      "case": "new-wide-32-b",
+      "generator": {
+        "name": "zkou\u0161ka generov\u00e1n\u00ed slo\u017eit\u00e9ho skladu",
+        "width": 64,
+        "height": 64,
+        "density": 0.4,
+        "layout": "aisles",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 3318493666,
+        "bottlenecks": true,
+        "passage_width": 3,
+        "passage_count": 2,
+        "traffic": "bidirectional"
+      },
+      "model": "nn-6a76bd3c5cfa",
+      "status": "FAILED",
+      "error": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 30,
+      "completed": 0,
+      "task_statuses": {
+        "PENDING": 200
+      },
+      "rejected_proposals": 0,
+      "executed_collisions": 0,
+      "stall": true,
+      "min_battery_percent": 100.0,
+      "planning_time_ms": 11790.311127319,
+      "cpu_seconds": 11.403278,
+      "elapsed_seconds": 11.824688374996185,
+      "final_robots": [
+        {
+          "id": "R-01",
+          "position": [
+            8,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-02",
+          "position": [
+            42,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-03",
+          "position": [
+            14,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-04",
+          "position": [
+            40,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-05",
+          "position": [
+            2,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-06",
+          "position": [
+            58,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-07",
+          "position": [
+            12,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-08",
+          "position": [
+            37,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-09",
+          "position": [
+            17,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-10",
+          "position": [
+            59,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-11",
+          "position": [
+            1,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-12",
+          "position": [
+            62,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-13",
+          "position": [
+            17,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-14",
+          "position": [
+            36,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-15",
+          "position": [
+            28,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-16",
+          "position": [
+            39,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-17",
+          "position": [
+            9,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-18",
+          "position": [
+            38,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-19",
+          "position": [
+            21,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-20",
+          "position": [
+            51,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-21",
+          "position": [
+            14,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-22",
+          "position": [
+            54,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-23",
+          "position": [
+            7,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-24",
+          "position": [
+            37,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-25",
+          "position": [
+            15,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-26",
+          "position": [
+            56,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-27",
+          "position": [
+            8,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-28",
+          "position": [
+            43,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-29",
+          "position": [
+            6,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-30",
+          "position": [
+            45,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-31",
+          "position": [
+            4,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        },
+        {
+          "id": "R-32",
+          "position": [
+            48,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 0
+        }
+      ]
+    },
+    {
+      "case": "open-17",
+      "generator": {
+        "name": "zkou\u0161ka generov\u00e1n\u00ed slo\u017eit\u00e9ho skladu",
+        "width": 64,
+        "height": 64,
+        "density": 0.4,
+        "layout": "mixed",
+        "robot_count": 17,
+        "task_count": 200,
+        "seed": 3318493664,
+        "bottlenecks": false,
+        "passage_width": 1,
+        "passage_count": 2,
+        "traffic": "bidirectional"
+      },
+      "model": "nn-6a76bd3c5cfa",
+      "status": "FAILED",
+      "error": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 2925,
+      "completed": 191,
+      "task_statuses": {
+        "COMPLETED": 191,
+        "PENDING": 6,
+        "IN_PROGRESS": 2,
+        "ASSIGNED": 1
+      },
+      "rejected_proposals": 3998,
+      "executed_collisions": 0,
+      "stall": true,
+      "min_battery_percent": 0.049999999999128804,
+      "planning_time_ms": 40254.776135785505,
+      "cpu_seconds": 42.385311,
+      "elapsed_seconds": 44.02239041705616,
+      "final_robots": [
+        {
+          "id": "R-01",
+          "position": [
+            50,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 43
+        },
+        {
+          "id": "R-02",
+          "position": [
+            18,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 1226
+        },
+        {
+          "id": "R-03",
+          "position": [
+            62,
+            49
+          ],
+          "goal": [
+            62,
+            61
+          ],
+          "mode": "RETURN",
+          "wait": 1945
+        },
+        {
+          "id": "R-04",
+          "position": [
+            9,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 2
+        },
+        {
+          "id": "R-05",
+          "position": [
+            24,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 26
+        },
+        {
+          "id": "R-06",
+          "position": [
+            17,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 837
+        },
+        {
+          "id": "R-07",
+          "position": [
+            24,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 9
+        },
+        {
+          "id": "R-08",
+          "position": [
+            31,
+            49
+          ],
+          "goal": [
+            62,
+            56
+          ],
+          "mode": "DROPOFF",
+          "wait": 520
+        },
+        {
+          "id": "R-09",
+          "position": [
+            32,
+            49
+          ],
+          "goal": [
+            1,
+            54
+          ],
+          "mode": "DROPOFF",
+          "wait": 536
+        },
+        {
+          "id": "R-10",
+          "position": [
+            26,
+            62
+          ],
+          "goal": [
+            23,
+            62
+          ],
+          "mode": "RETURN",
+          "wait": 1380
+        },
+        {
+          "id": "R-11",
+          "position": [
+            30,
+            49
+          ],
+          "goal": [
+            62,
+            57
+          ],
+          "mode": "PICKUP",
+          "wait": 377
+        },
+        {
+          "id": "R-12",
+          "position": [
+            31,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 3
+        },
+        {
+          "id": "R-13",
+          "position": [
+            49,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 11
+        },
+        {
+          "id": "R-14",
+          "position": [
+            38,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 21
+        },
+        {
+          "id": "R-15",
+          "position": [
+            61,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 3
+        },
+        {
+          "id": "R-16",
+          "position": [
+            28,
+            62
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 160
+        },
+        {
+          "id": "R-17",
+          "position": [
+            22,
+            61
+          ],
+          "goal": null,
+          "mode": "IDLE",
+          "wait": 5
+        }
+      ]
+    }
+  ]
+}

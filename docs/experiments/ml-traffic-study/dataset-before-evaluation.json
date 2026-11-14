@@ -1,0 +1,9 @@
+{
+  "episodes": 114,
+  "samples": 9036,
+  "layouts": 109,
+  "unfinished": 10,
+  "failed_runs": 0,
+  "min_samples": 60,
+  "min_layouts": 5
+}

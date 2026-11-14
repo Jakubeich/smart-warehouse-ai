@@ -1,0 +1,12 @@
+{
+  "jobs": {
+    "training-1": "5b7fe485-5338-4a54-a70c-a0a2ecfc83e3",
+    "training-2": "884a65d7-5e40-4910-a247-3779d4c751d9",
+    "training-3": "93957eec-8b7e-49b7-baaf-6ac523db8724",
+    "comparison-4-robots": "f15cec2e-ab0b-43f2-91bc-45cdbb481a06",
+    "comparison-8-robots": "bbba53c0-a900-485f-93ed-a19c22bd48ef",
+    "comparison-12-robots": "61d915e4-97d8-4d00-b69f-26c66c4d72ee",
+    "comparison-16-robots": "2be5e141-1a59-4a36-9de5-b9bf011329d4"
+  },
+  "model_id": "439b6df4-eafa-4f98-a817-f7e68c001ac8"
+}

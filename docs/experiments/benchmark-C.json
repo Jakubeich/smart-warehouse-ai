@@ -1,0 +1,6613 @@
+{
+  "config": {
+    "name": "high-congestion",
+    "scenario_id": "demo-small",
+    "mode": "mapf",
+    "benchmark": "C",
+    "algorithms": [
+      "astar",
+      "prioritized",
+      "cbs",
+      "adaptive"
+    ],
+    "schedulers": [
+      "priority"
+    ],
+    "robot_counts": [
+      6
+    ],
+    "task_count": 12,
+    "repetitions": 3,
+    "max_run_seconds": 30.0,
+    "max_ticks": 500,
+    "seed": 42,
+    "config": {
+      "planner": "adaptive",
+      "scheduler": "priority",
+      "horizon": 128,
+      "max_nodes": 2000,
+      "timeout_seconds": 2.0,
+      "move_energy": 0.4,
+      "wait_energy": 0.0,
+      "handling_energy": 0.1,
+      "charging_rate": 4.0,
+      "critical_threshold": 15.0,
+      "tick_seconds": 1.0
+    }
+  },
+  "scenario": {
+    "schema_version": 1,
+    "id": "demo-small",
+    "name": "Small Warehouse",
+    "warehouse": {
+      "schema_version": 1,
+      "id": "warehouse-small",
+      "name": "Small Warehouse",
+      "width": 20,
+      "height": 14,
+      "cell_size": 1.0,
+      "cells": [
+        {
+          "x": 1,
+          "y": 2,
+          "type": "PICKUP"
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "type": "PICKUP"
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "type": "PICKUP"
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "type": "CHARGER"
+        },
+        {
+          "x": 2,
+          "y": 12,
+          "type": "CHARGER"
+        },
+        {
+          "x": 3,
+          "y": 12,
+          "type": "CHARGER"
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "type": "SHELF"
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "type": "SHELF"
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "type": "SHELF"
+        },
+        {
+          "x": 4,
+          "y": 6,
+          "type": "SHELF"
+        },
+        {
+          "x": 4,
+          "y": 8,
+          "type": "SHELF"
+        },
+        {
+          "x": 4,
+          "y": 9,
+          "type": "SHELF"
+        },
+        {
+          "x": 4,
+          "y": 12,
+          "type": "CHARGER"
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "type": "SHELF"
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "type": "SHELF"
+        },
+        {
+          "x": 5,
+          "y": 5,
+          "type": "SHELF"
+        },
+        {
+          "x": 5,
+          "y": 6,
+          "type": "SHELF"
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "type": "SHELF"
+        },
+        {
+          "x": 5,
+          "y": 9,
+          "type": "SHELF"
+        },
+        {
+          "x": 8,
+          "y": 3,
+          "type": "SHELF"
+        },
+        {
+          "x": 8,
+          "y": 4,
+          "type": "SHELF"
+        },
+        {
+          "x": 8,
+          "y": 5,
+          "type": "SHELF"
+        },
+        {
+          "x": 8,
+          "y": 6,
+          "type": "SHELF"
+        },
+        {
+          "x": 8,
+          "y": 8,
+          "type": "SHELF"
+        },
+        {
+          "x": 8,
+          "y": 9,
+          "type": "SHELF"
+        },
+        {
+          "x": 9,
+          "y": 3,
+          "type": "SHELF"
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "type": "SHELF"
+        },
+        {
+          "x": 9,
+          "y": 5,
+          "type": "SHELF"
+        },
+        {
+          "x": 9,
+          "y": 6,
+          "type": "SHELF"
+        },
+        {
+          "x": 9,
+          "y": 8,
+          "type": "SHELF"
+        },
+        {
+          "x": 9,
+          "y": 9,
+          "type": "SHELF"
+        },
+        {
+          "x": 12,
+          "y": 3,
+          "type": "SHELF"
+        },
+        {
+          "x": 12,
+          "y": 4,
+          "type": "SHELF"
+        },
+        {
+          "x": 12,
+          "y": 5,
+          "type": "SHELF"
+        },
+        {
+          "x": 12,
+          "y": 6,
+          "type": "SHELF"
+        },
+        {
+          "x": 12,
+          "y": 8,
+          "type": "SHELF"
+        },
+        {
+          "x": 12,
+          "y": 9,
+          "type": "SHELF"
+        },
+        {
+          "x": 13,
+          "y": 3,
+          "type": "SHELF"
+        },
+        {
+          "x": 13,
+          "y": 4,
+          "type": "SHELF"
+        },
+        {
+          "x": 13,
+          "y": 5,
+          "type": "SHELF"
+        },
+        {
+          "x": 13,
+          "y": 6,
+          "type": "SHELF"
+        },
+        {
+          "x": 13,
+          "y": 8,
+          "type": "SHELF"
+        },
+        {
+          "x": 13,
+          "y": 9,
+          "type": "SHELF"
+        },
+        {
+          "x": 16,
+          "y": 3,
+          "type": "SHELF"
+        },
+        {
+          "x": 16,
+          "y": 4,
+          "type": "SHELF"
+        },
+        {
+          "x": 16,
+          "y": 5,
+          "type": "SHELF"
+        },
+        {
+          "x": 16,
+          "y": 6,
+          "type": "SHELF"
+        },
+        {
+          "x": 16,
+          "y": 8,
+          "type": "SHELF"
+        },
+        {
+          "x": 16,
+          "y": 9,
+          "type": "SHELF"
+        },
+        {
+          "x": 17,
+          "y": 3,
+          "type": "SHELF"
+        },
+        {
+          "x": 17,
+          "y": 4,
+          "type": "SHELF"
+        },
+        {
+          "x": 17,
+          "y": 5,
+          "type": "SHELF"
+        },
+        {
+          "x": 17,
+          "y": 6,
+          "type": "SHELF"
+        },
+        {
+          "x": 17,
+          "y": 8,
+          "type": "SHELF"
+        },
+        {
+          "x": 17,
+          "y": 9,
+          "type": "SHELF"
+        },
+        {
+          "x": 18,
+          "y": 2,
+          "type": "DROPOFF"
+        },
+        {
+          "x": 18,
+          "y": 5,
+          "type": "DROPOFF"
+        },
+        {
+          "x": 18,
+          "y": 8,
+          "type": "DROPOFF"
+        }
+      ],
+      "metadata": {}
+    },
+    "robots": [
+      {
+        "id": "R-01",
+        "name": "Atlas 01",
+        "position": [
+          1,
+          12
+        ],
+        "home": [
+          1,
+          12
+        ],
+        "orientation": 0,
+        "status": "IDLE",
+        "task_id": null,
+        "path": [],
+        "path_index": 0,
+        "battery_capacity": 100.0,
+        "battery": 100.0,
+        "capacity": 50.0,
+        "load": 0.0,
+        "completed_tasks": 0,
+        "distance": 0,
+        "waiting": 0,
+        "busy_ticks": 0,
+        "mode": "IDLE",
+        "service_remaining": 0,
+        "goal": null
+      },
+      {
+        "id": "R-02",
+        "name": "Atlas 02",
+        "position": [
+          2,
+          12
+        ],
+        "home": [
+          2,
+          12
+        ],
+        "orientation": 0,
+        "status": "IDLE",
+        "task_id": null,
+        "path": [],
+        "path_index": 0,
+        "battery_capacity": 100.0,
+        "battery": 100.0,
+        "capacity": 50.0,
+        "load": 0.0,
+        "completed_tasks": 0,
+        "distance": 0,
+        "waiting": 0,
+        "busy_ticks": 0,
+        "mode": "IDLE",
+        "service_remaining": 0,
+        "goal": null
+      },
+      {
+        "id": "R-03",
+        "name": "Atlas 03",
+        "position": [
+          3,
+          12
+        ],
+        "home": [
+          3,
+          12
+        ],
+        "orientation": 0,
+        "status": "IDLE",
+        "task_id": null,
+        "path": [],
+        "path_index": 0,
+        "battery_capacity": 100.0,
+        "battery": 100.0,
+        "capacity": 50.0,
+        "load": 0.0,
+        "completed_tasks": 0,
+        "distance": 0,
+        "waiting": 0,
+        "busy_ticks": 0,
+        "mode": "IDLE",
+        "service_remaining": 0,
+        "goal": null
+      },
+      {
+        "id": "R-04",
+        "name": "Atlas 04",
+        "position": [
+          4,
+          12
+        ],
+        "home": [
+          4,
+          12
+        ],
+        "orientation": 0,
+        "status": "IDLE",
+        "task_id": null,
+        "path": [],
+        "path_index": 0,
+        "battery_capacity": 100.0,
+        "battery": 100.0,
+        "capacity": 50.0,
+        "load": 0.0,
+        "completed_tasks": 0,
+        "distance": 0,
+        "waiting": 0,
+        "busy_ticks": 0,
+        "mode": "IDLE",
+        "service_remaining": 0,
+        "goal": null
+      }
+    ],
+    "tasks": [
+      {
+        "id": "T-001",
+        "pickup": [
+          1,
+          8
+        ],
+        "dropoff": [
+          18,
+          2
+        ],
+        "priority": 1,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-002",
+        "pickup": [
+          1,
+          8
+        ],
+        "dropoff": [
+          18,
+          5
+        ],
+        "priority": 2,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-003",
+        "pickup": [
+          1,
+          2
+        ],
+        "dropoff": [
+          18,
+          2
+        ],
+        "priority": 1,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-004",
+        "pickup": [
+          1,
+          8
+        ],
+        "dropoff": [
+          18,
+          8
+        ],
+        "priority": 5,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-005",
+        "pickup": [
+          1,
+          2
+        ],
+        "dropoff": [
+          18,
+          8
+        ],
+        "priority": 4,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-006",
+        "pickup": [
+          1,
+          2
+        ],
+        "dropoff": [
+          18,
+          2
+        ],
+        "priority": 1,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-007",
+        "pickup": [
+          1,
+          2
+        ],
+        "dropoff": [
+          18,
+          2
+        ],
+        "priority": 5,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-008",
+        "pickup": [
+          1,
+          8
+        ],
+        "dropoff": [
+          18,
+          2
+        ],
+        "priority": 5,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-009",
+        "pickup": [
+          1,
+          2
+        ],
+        "dropoff": [
+          18,
+          8
+        ],
+        "priority": 5,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-010",
+        "pickup": [
+          1,
+          5
+        ],
+        "dropoff": [
+          18,
+          2
+        ],
+        "priority": 4,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-011",
+        "pickup": [
+          1,
+          8
+        ],
+        "dropoff": [
+          18,
+          5
+        ],
+        "priority": 1,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-012",
+        "pickup": [
+          1,
+          2
+        ],
+        "dropoff": [
+          18,
+          8
+        ],
+        "priority": 4,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      }
+    ],
+    "seed": 42,
+    "config": {
+      "planner": "adaptive",
+      "scheduler": "priority",
+      "horizon": 128,
+      "max_nodes": 2000,
+      "timeout_seconds": 2.0,
+      "move_energy": 0.4,
+      "wait_energy": 0.0,
+      "handling_energy": 0.1,
+      "charging_rate": 4.0,
+      "critical_threshold": 15.0,
+      "tick_seconds": 1.0
+    }
+  },
+  "environment": {
+    "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "timer": "time.perf_counter",
+    "engine_version": "0.1.0"
+  },
+  "results": [
+    {
+      "algorithm": "astar",
+      "scheduler": "priority",
+      "seed": 42,
+      "robots": 6,
+      "mode": "mapf",
+      "benchmark": "C",
+      "source": "measured",
+      "optimal": false,
+      "status": "CONFLICT",
+      "reason": "Independent A* routes conflict",
+      "success": false,
+      "starts": {
+        "R-01": [
+          0,
+          13
+        ],
+        "R-02": [
+          1,
+          13
+        ],
+        "R-03": [
+          2,
+          13
+        ],
+        "R-04": [
+          3,
+          13
+        ],
+        "R-05": [
+          4,
+          13
+        ],
+        "R-06": [
+          5,
+          13
+        ]
+      },
+      "goals": {
+        "R-01": [
+          11,
+          10
+        ],
+        "R-02": [
+          8,
+          1
+        ],
+        "R-03": [
+          6,
+          0
+        ],
+        "R-04": [
+          17,
+          11
+        ],
+        "R-05": [
+          18,
+          3
+        ],
+        "R-06": [
+          2,
+          3
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            11,
+            10
+          ]
+        ],
+        "R-02": [
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            8,
+            1
+          ]
+        ],
+        "R-03": [
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "R-04": [
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            15,
+            13
+          ],
+          [
+            16,
+            13
+          ],
+          [
+            17,
+            13
+          ],
+          [
+            17,
+            12
+          ],
+          [
+            17,
+            11
+          ]
+        ],
+        "R-05": [
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            15,
+            13
+          ],
+          [
+            16,
+            13
+          ],
+          [
+            17,
+            13
+          ],
+          [
+            18,
+            13
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            18,
+            11
+          ],
+          [
+            18,
+            10
+          ],
+          [
+            18,
+            9
+          ],
+          [
+            18,
+            8
+          ],
+          [
+            18,
+            7
+          ],
+          [
+            18,
+            6
+          ],
+          [
+            18,
+            5
+          ],
+          [
+            18,
+            4
+          ],
+          [
+            18,
+            3
+          ]
+        ],
+        "R-06": [
+          [
+            5,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 0,
+        "sum_of_costs": 0,
+        "completed_tasks": 0,
+        "task_completion_rate": 0,
+        "average_task_completion_time": 0,
+        "total_distance": 0.0,
+        "total_waiting": 0,
+        "planning_time_ms": 0.4462080541998148,
+        "replans": 0,
+        "planning_conflicts": 1,
+        "executed_collisions": 0,
+        "success": false
+      },
+      "first_conflict": {
+        "a": "R-04",
+        "b": "R-06",
+        "time": 1,
+        "vertex": [
+          4,
+          13
+        ],
+        "a_edge": null,
+        "b_edge": null
+      },
+      "wall_time_ms": 0.5243750056251884
+    },
+    {
+      "algorithm": "prioritized",
+      "scheduler": "priority",
+      "seed": 42,
+      "robots": 6,
+      "mode": "mapf",
+      "benchmark": "C",
+      "source": "measured",
+      "optimal": false,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          0,
+          13
+        ],
+        "R-02": [
+          1,
+          13
+        ],
+        "R-03": [
+          2,
+          13
+        ],
+        "R-04": [
+          3,
+          13
+        ],
+        "R-05": [
+          4,
+          13
+        ],
+        "R-06": [
+          5,
+          13
+        ]
+      },
+      "goals": {
+        "R-01": [
+          11,
+          10
+        ],
+        "R-02": [
+          8,
+          1
+        ],
+        "R-03": [
+          6,
+          0
+        ],
+        "R-04": [
+          17,
+          11
+        ],
+        "R-05": [
+          18,
+          3
+        ],
+        "R-06": [
+          2,
+          3
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            11,
+            10
+          ]
+        ],
+        "R-02": [
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            8,
+            1
+          ]
+        ],
+        "R-03": [
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "R-04": [
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            15,
+            13
+          ],
+          [
+            16,
+            13
+          ],
+          [
+            17,
+            13
+          ],
+          [
+            17,
+            12
+          ],
+          [
+            17,
+            11
+          ]
+        ],
+        "R-05": [
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            15,
+            13
+          ],
+          [
+            16,
+            13
+          ],
+          [
+            17,
+            13
+          ],
+          [
+            18,
+            13
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            18,
+            11
+          ],
+          [
+            18,
+            10
+          ],
+          [
+            18,
+            9
+          ],
+          [
+            18,
+            8
+          ],
+          [
+            18,
+            7
+          ],
+          [
+            18,
+            6
+          ],
+          [
+            18,
+            5
+          ],
+          [
+            18,
+            4
+          ],
+          [
+            18,
+            3
+          ]
+        ],
+        "R-06": [
+          [
+            5,
+            13
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 24,
+        "sum_of_costs": 103,
+        "completed_tasks": 6,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 17.166666666666668,
+        "total_distance": 103.0,
+        "total_waiting": 0,
+        "planning_time_ms": 2.0804170053452253,
+        "replans": 0,
+        "planning_conflicts": 0,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 2.160582924261689
+    },
+    {
+      "algorithm": "cbs",
+      "scheduler": "priority",
+      "seed": 42,
+      "robots": 6,
+      "mode": "mapf",
+      "benchmark": "C",
+      "source": "measured",
+      "optimal": true,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          0,
+          13
+        ],
+        "R-02": [
+          1,
+          13
+        ],
+        "R-03": [
+          2,
+          13
+        ],
+        "R-04": [
+          3,
+          13
+        ],
+        "R-05": [
+          4,
+          13
+        ],
+        "R-06": [
+          5,
+          13
+        ]
+      },
+      "goals": {
+        "R-01": [
+          11,
+          10
+        ],
+        "R-02": [
+          8,
+          1
+        ],
+        "R-03": [
+          6,
+          0
+        ],
+        "R-04": [
+          17,
+          11
+        ],
+        "R-05": [
+          18,
+          3
+        ],
+        "R-06": [
+          2,
+          3
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            11,
+            10
+          ]
+        ],
+        "R-02": [
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            8,
+            1
+          ]
+        ],
+        "R-03": [
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "R-04": [
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            15,
+            13
+          ],
+          [
+            16,
+            13
+          ],
+          [
+            17,
+            13
+          ],
+          [
+            17,
+            12
+          ],
+          [
+            17,
+            11
+          ]
+        ],
+        "R-05": [
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            15,
+            13
+          ],
+          [
+            16,
+            13
+          ],
+          [
+            17,
+            13
+          ],
+          [
+            18,
+            13
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            18,
+            11
+          ],
+          [
+            18,
+            10
+          ],
+          [
+            18,
+            9
+          ],
+          [
+            18,
+            8
+          ],
+          [
+            18,
+            7
+          ],
+          [
+            18,
+            6
+          ],
+          [
+            18,
+            5
+          ],
+          [
+            18,
+            4
+          ],
+          [
+            18,
+            3
+          ]
+        ],
+        "R-06": [
+          [
+            5,
+            13
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expanded": 3,
+      "metrics": {
+        "makespan": 24,
+        "sum_of_costs": 103,
+        "completed_tasks": 6,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 17.166666666666668,
+        "total_distance": 103.0,
+        "total_waiting": 0,
+        "planning_time_ms": 2.5827089557424188,
+        "replans": 0,
+        "planning_conflicts": 2,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 2.6541249826550484
+    },
+    {
+      "algorithm": "adaptive",
+      "scheduler": "priority",
+      "seed": 42,
+      "robots": 6,
+      "mode": "mapf",
+      "benchmark": "C",
+      "source": "measured",
+      "optimal": false,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          0,
+          13
+        ],
+        "R-02": [
+          1,
+          13
+        ],
+        "R-03": [
+          2,
+          13
+        ],
+        "R-04": [
+          3,
+          13
+        ],
+        "R-05": [
+          4,
+          13
+        ],
+        "R-06": [
+          5,
+          13
+        ]
+      },
+      "goals": {
+        "R-01": [
+          11,
+          10
+        ],
+        "R-02": [
+          8,
+          1
+        ],
+        "R-03": [
+          6,
+          0
+        ],
+        "R-04": [
+          17,
+          11
+        ],
+        "R-05": [
+          18,
+          3
+        ],
+        "R-06": [
+          2,
+          3
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            11,
+            10
+          ]
+        ],
+        "R-02": [
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            8,
+            1
+          ]
+        ],
+        "R-03": [
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "R-04": [
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            15,
+            13
+          ],
+          [
+            16,
+            13
+          ],
+          [
+            17,
+            13
+          ],
+          [
+            17,
+            12
+          ],
+          [
+            17,
+            11
+          ]
+        ],
+        "R-05": [
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            15,
+            13
+          ],
+          [
+            16,
+            13
+          ],
+          [
+            17,
+            13
+          ],
+          [
+            18,
+            13
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            18,
+            11
+          ],
+          [
+            18,
+            10
+          ],
+          [
+            18,
+            9
+          ],
+          [
+            18,
+            8
+          ],
+          [
+            18,
+            7
+          ],
+          [
+            18,
+            6
+          ],
+          [
+            18,
+            5
+          ],
+          [
+            18,
+            4
+          ],
+          [
+            18,
+            3
+          ]
+        ],
+        "R-06": [
+          [
+            5,
+            13
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 24,
+        "sum_of_costs": 103,
+        "completed_tasks": 6,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 17.166666666666668,
+        "total_distance": 103.0,
+        "total_waiting": 0,
+        "planning_time_ms": 1.9932080758735538,
+        "replans": 0,
+        "planning_conflicts": 0,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 2.0667080534622073
+    },
+    {
+      "algorithm": "astar",
+      "scheduler": "priority",
+      "seed": 43,
+      "robots": 6,
+      "mode": "mapf",
+      "benchmark": "C",
+      "source": "measured",
+      "optimal": false,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          0,
+          13
+        ],
+        "R-02": [
+          1,
+          13
+        ],
+        "R-03": [
+          2,
+          13
+        ],
+        "R-04": [
+          3,
+          13
+        ],
+        "R-05": [
+          4,
+          13
+        ],
+        "R-06": [
+          5,
+          13
+        ]
+      },
+      "goals": {
+        "R-01": [
+          9,
+          0
+        ],
+        "R-02": [
+          1,
+          4
+        ],
+        "R-03": [
+          6,
+          11
+        ],
+        "R-04": [
+          3,
+          12
+        ],
+        "R-05": [
+          16,
+          1
+        ],
+        "R-06": [
+          10,
+          7
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "R-02": [
+          [
+            1,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "R-03": [
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ]
+        ],
+        "R-04": [
+          [
+            3,
+            13
+          ],
+          [
+            3,
+            12
+          ]
+        ],
+        "R-05": [
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            15,
+            13
+          ],
+          [
+            15,
+            12
+          ],
+          [
+            15,
+            11
+          ],
+          [
+            15,
+            10
+          ],
+          [
+            15,
+            9
+          ],
+          [
+            15,
+            8
+          ],
+          [
+            15,
+            7
+          ],
+          [
+            15,
+            6
+          ],
+          [
+            15,
+            5
+          ],
+          [
+            15,
+            4
+          ],
+          [
+            15,
+            3
+          ],
+          [
+            15,
+            2
+          ],
+          [
+            16,
+            2
+          ],
+          [
+            16,
+            1
+          ]
+        ],
+        "R-06": [
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            10,
+            7
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 24,
+        "sum_of_costs": 73,
+        "completed_tasks": 6,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 12.166666666666666,
+        "total_distance": 73.0,
+        "total_waiting": 0,
+        "planning_time_ms": 0.47612504567950964,
+        "replans": 0,
+        "planning_conflicts": 0,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 0.5427500000223517
+    },
+    {
+      "algorithm": "prioritized",
+      "scheduler": "priority",
+      "seed": 43,
+      "robots": 6,
+      "mode": "mapf",
+      "benchmark": "C",
+      "source": "measured",
+      "optimal": false,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          0,
+          13
+        ],
+        "R-02": [
+          1,
+          13
+        ],
+        "R-03": [
+          2,
+          13
+        ],
+        "R-04": [
+          3,
+          13
+        ],
+        "R-05": [
+          4,
+          13
+        ],
+        "R-06": [
+          5,
+          13
+        ]
+      },
+      "goals": {
+        "R-01": [
+          9,
+          0
+        ],
+        "R-02": [
+          1,
+          4
+        ],
+        "R-03": [
+          6,
+          11
+        ],
+        "R-04": [
+          3,
+          12
+        ],
+        "R-05": [
+          16,
+          1
+        ],
+        "R-06": [
+          10,
+          7
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "R-02": [
+          [
+            1,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "R-03": [
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ]
+        ],
+        "R-04": [
+          [
+            3,
+            13
+          ],
+          [
+            3,
+            12
+          ]
+        ],
+        "R-05": [
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            15,
+            13
+          ],
+          [
+            15,
+            12
+          ],
+          [
+            15,
+            11
+          ],
+          [
+            15,
+            10
+          ],
+          [
+            15,
+            9
+          ],
+          [
+            15,
+            8
+          ],
+          [
+            15,
+            7
+          ],
+          [
+            15,
+            6
+          ],
+          [
+            15,
+            5
+          ],
+          [
+            15,
+            4
+          ],
+          [
+            15,
+            3
+          ],
+          [
+            15,
+            2
+          ],
+          [
+            16,
+            2
+          ],
+          [
+            16,
+            1
+          ]
+        ],
+        "R-06": [
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            10,
+            7
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 24,
+        "sum_of_costs": 73,
+        "completed_tasks": 6,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 12.166666666666666,
+        "total_distance": 73.0,
+        "total_waiting": 0,
+        "planning_time_ms": 1.8014999805018306,
+        "replans": 0,
+        "planning_conflicts": 0,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 1.8704159883782268
+    },
+    {
+      "algorithm": "cbs",
+      "scheduler": "priority",
+      "seed": 43,
+      "robots": 6,
+      "mode": "mapf",
+      "benchmark": "C",
+      "source": "measured",
+      "optimal": true,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          0,
+          13
+        ],
+        "R-02": [
+          1,
+          13
+        ],
+        "R-03": [
+          2,
+          13
+        ],
+        "R-04": [
+          3,
+          13
+        ],
+        "R-05": [
+          4,
+          13
+        ],
+        "R-06": [
+          5,
+          13
+        ]
+      },
+      "goals": {
+        "R-01": [
+          9,
+          0
+        ],
+        "R-02": [
+          1,
+          4
+        ],
+        "R-03": [
+          6,
+          11
+        ],
+        "R-04": [
+          3,
+          12
+        ],
+        "R-05": [
+          16,
+          1
+        ],
+        "R-06": [
+          10,
+          7
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "R-02": [
+          [
+            1,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "R-03": [
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ]
+        ],
+        "R-04": [
+          [
+            3,
+            13
+          ],
+          [
+            3,
+            12
+          ]
+        ],
+        "R-05": [
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            15,
+            13
+          ],
+          [
+            15,
+            12
+          ],
+          [
+            15,
+            11
+          ],
+          [
+            15,
+            10
+          ],
+          [
+            15,
+            9
+          ],
+          [
+            15,
+            8
+          ],
+          [
+            15,
+            7
+          ],
+          [
+            15,
+            6
+          ],
+          [
+            15,
+            5
+          ],
+          [
+            15,
+            4
+          ],
+          [
+            15,
+            3
+          ],
+          [
+            15,
+            2
+          ],
+          [
+            16,
+            2
+          ],
+          [
+            16,
+            1
+          ]
+        ],
+        "R-06": [
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            10,
+            7
+          ]
+        ]
+      },
+      "expanded": 1,
+      "metrics": {
+        "makespan": 24,
+        "sum_of_costs": 73,
+        "completed_tasks": 6,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 12.166666666666666,
+        "total_distance": 73.0,
+        "total_waiting": 0,
+        "planning_time_ms": 1.8101249588653445,
+        "replans": 0,
+        "planning_conflicts": 0,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 1.8777920631691813
+    },
+    {
+      "algorithm": "adaptive",
+      "scheduler": "priority",
+      "seed": 43,
+      "robots": 6,
+      "mode": "mapf",
+      "benchmark": "C",
+      "source": "measured",
+      "optimal": false,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          0,
+          13
+        ],
+        "R-02": [
+          1,
+          13
+        ],
+        "R-03": [
+          2,
+          13
+        ],
+        "R-04": [
+          3,
+          13
+        ],
+        "R-05": [
+          4,
+          13
+        ],
+        "R-06": [
+          5,
+          13
+        ]
+      },
+      "goals": {
+        "R-01": [
+          9,
+          0
+        ],
+        "R-02": [
+          1,
+          4
+        ],
+        "R-03": [
+          6,
+          11
+        ],
+        "R-04": [
+          3,
+          12
+        ],
+        "R-05": [
+          16,
+          1
+        ],
+        "R-06": [
+          10,
+          7
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "R-02": [
+          [
+            1,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "R-03": [
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ]
+        ],
+        "R-04": [
+          [
+            3,
+            13
+          ],
+          [
+            3,
+            12
+          ]
+        ],
+        "R-05": [
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            15,
+            13
+          ],
+          [
+            15,
+            12
+          ],
+          [
+            15,
+            11
+          ],
+          [
+            15,
+            10
+          ],
+          [
+            15,
+            9
+          ],
+          [
+            15,
+            8
+          ],
+          [
+            15,
+            7
+          ],
+          [
+            15,
+            6
+          ],
+          [
+            15,
+            5
+          ],
+          [
+            15,
+            4
+          ],
+          [
+            15,
+            3
+          ],
+          [
+            15,
+            2
+          ],
+          [
+            16,
+            2
+          ],
+          [
+            16,
+            1
+          ]
+        ],
+        "R-06": [
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            10,
+            7
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 24,
+        "sum_of_costs": 73,
+        "completed_tasks": 6,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 12.166666666666666,
+        "total_distance": 73.0,
+        "total_waiting": 0,
+        "planning_time_ms": 1.7797499895095825,
+        "replans": 0,
+        "planning_conflicts": 0,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 1.8486250191926956
+    },
+    {
+      "algorithm": "astar",
+      "scheduler": "priority",
+      "seed": 44,
+      "robots": 6,
+      "mode": "mapf",
+      "benchmark": "C",
+      "source": "measured",
+      "optimal": false,
+      "status": "CONFLICT",
+      "reason": "Independent A* routes conflict",
+      "success": false,
+      "starts": {
+        "R-01": [
+          0,
+          13
+        ],
+        "R-02": [
+          1,
+          13
+        ],
+        "R-03": [
+          2,
+          13
+        ],
+        "R-04": [
+          3,
+          13
+        ],
+        "R-05": [
+          4,
+          13
+        ],
+        "R-06": [
+          5,
+          13
+        ]
+      },
+      "goals": {
+        "R-01": [
+          14,
+          6
+        ],
+        "R-02": [
+          7,
+          8
+        ],
+        "R-03": [
+          18,
+          8
+        ],
+        "R-04": [
+          7,
+          11
+        ],
+        "R-05": [
+          8,
+          13
+        ],
+        "R-06": [
+          9,
+          1
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            14,
+            11
+          ],
+          [
+            14,
+            10
+          ],
+          [
+            14,
+            9
+          ],
+          [
+            14,
+            8
+          ],
+          [
+            14,
+            7
+          ],
+          [
+            14,
+            6
+          ]
+        ],
+        "R-02": [
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "R-03": [
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            15,
+            13
+          ],
+          [
+            16,
+            13
+          ],
+          [
+            17,
+            13
+          ],
+          [
+            18,
+            13
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            18,
+            11
+          ],
+          [
+            18,
+            10
+          ],
+          [
+            18,
+            9
+          ],
+          [
+            18,
+            8
+          ]
+        ],
+        "R-04": [
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ]
+        ],
+        "R-05": [
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ]
+        ],
+        "R-06": [
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            1
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 0,
+        "sum_of_costs": 0,
+        "completed_tasks": 0,
+        "task_completion_rate": 0,
+        "average_task_completion_time": 0,
+        "total_distance": 0.0,
+        "total_waiting": 0,
+        "planning_time_ms": 0.36287494003772736,
+        "replans": 0,
+        "planning_conflicts": 1,
+        "executed_collisions": 0,
+        "success": false
+      },
+      "first_conflict": {
+        "a": "R-03",
+        "b": "R-05",
+        "time": 6,
+        "vertex": [
+          8,
+          13
+        ],
+        "a_edge": null,
+        "b_edge": null
+      },
+      "wall_time_ms": 0.42120798025280237
+    },
+    {
+      "algorithm": "prioritized",
+      "scheduler": "priority",
+      "seed": 44,
+      "robots": 6,
+      "mode": "mapf",
+      "benchmark": "C",
+      "source": "measured",
+      "optimal": false,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          0,
+          13
+        ],
+        "R-02": [
+          1,
+          13
+        ],
+        "R-03": [
+          2,
+          13
+        ],
+        "R-04": [
+          3,
+          13
+        ],
+        "R-05": [
+          4,
+          13
+        ],
+        "R-06": [
+          5,
+          13
+        ]
+      },
+      "goals": {
+        "R-01": [
+          14,
+          6
+        ],
+        "R-02": [
+          7,
+          8
+        ],
+        "R-03": [
+          18,
+          8
+        ],
+        "R-04": [
+          7,
+          11
+        ],
+        "R-05": [
+          8,
+          13
+        ],
+        "R-06": [
+          9,
+          1
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            14,
+            11
+          ],
+          [
+            14,
+            10
+          ],
+          [
+            14,
+            9
+          ],
+          [
+            14,
+            8
+          ],
+          [
+            14,
+            7
+          ],
+          [
+            14,
+            6
+          ]
+        ],
+        "R-02": [
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "R-03": [
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            15,
+            13
+          ],
+          [
+            16,
+            13
+          ],
+          [
+            17,
+            13
+          ],
+          [
+            18,
+            13
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            18,
+            11
+          ],
+          [
+            18,
+            10
+          ],
+          [
+            18,
+            9
+          ],
+          [
+            18,
+            8
+          ]
+        ],
+        "R-04": [
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            7,
+            11
+          ]
+        ],
+        "R-05": [
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            8,
+            13
+          ]
+        ],
+        "R-06": [
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            1
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 21,
+        "sum_of_costs": 87,
+        "completed_tasks": 6,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 14.5,
+        "total_distance": 85.0,
+        "total_waiting": 2,
+        "planning_time_ms": 1.9653330091387033,
+        "replans": 0,
+        "planning_conflicts": 0,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 2.0353749860078096
+    },
+    {
+      "algorithm": "cbs",
+      "scheduler": "priority",
+      "seed": 44,
+      "robots": 6,
+      "mode": "mapf",
+      "benchmark": "C",
+      "source": "measured",
+      "optimal": true,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          0,
+          13
+        ],
+        "R-02": [
+          1,
+          13
+        ],
+        "R-03": [
+          2,
+          13
+        ],
+        "R-04": [
+          3,
+          13
+        ],
+        "R-05": [
+          4,
+          13
+        ],
+        "R-06": [
+          5,
+          13
+        ]
+      },
+      "goals": {
+        "R-01": [
+          14,
+          6
+        ],
+        "R-02": [
+          7,
+          8
+        ],
+        "R-03": [
+          18,
+          8
+        ],
+        "R-04": [
+          7,
+          11
+        ],
+        "R-05": [
+          8,
+          13
+        ],
+        "R-06": [
+          9,
+          1
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            12,
+            12
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            14,
+            11
+          ],
+          [
+            14,
+            10
+          ],
+          [
+            14,
+            9
+          ],
+          [
+            14,
+            8
+          ],
+          [
+            14,
+            7
+          ],
+          [
+            14,
+            6
+          ]
+        ],
+        "R-02": [
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "R-03": [
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            12,
+            12
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            15,
+            12
+          ],
+          [
+            16,
+            12
+          ],
+          [
+            17,
+            12
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            18,
+            11
+          ],
+          [
+            18,
+            10
+          ],
+          [
+            18,
+            9
+          ],
+          [
+            18,
+            8
+          ]
+        ],
+        "R-04": [
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ]
+        ],
+        "R-05": [
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ]
+        ],
+        "R-06": [
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            1
+          ]
+        ]
+      },
+      "expanded": 4,
+      "metrics": {
+        "makespan": 21,
+        "sum_of_costs": 79,
+        "completed_tasks": 6,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 13.166666666666666,
+        "total_distance": 79.0,
+        "total_waiting": 0,
+        "planning_time_ms": 2.7901249704882503,
+        "replans": 0,
+        "planning_conflicts": 3,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 2.85633304156363
+    },
+    {
+      "algorithm": "adaptive",
+      "scheduler": "priority",
+      "seed": 44,
+      "robots": 6,
+      "mode": "mapf",
+      "benchmark": "C",
+      "source": "measured",
+      "optimal": false,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          0,
+          13
+        ],
+        "R-02": [
+          1,
+          13
+        ],
+        "R-03": [
+          2,
+          13
+        ],
+        "R-04": [
+          3,
+          13
+        ],
+        "R-05": [
+          4,
+          13
+        ],
+        "R-06": [
+          5,
+          13
+        ]
+      },
+      "goals": {
+        "R-01": [
+          14,
+          6
+        ],
+        "R-02": [
+          7,
+          8
+        ],
+        "R-03": [
+          18,
+          8
+        ],
+        "R-04": [
+          7,
+          11
+        ],
+        "R-05": [
+          8,
+          13
+        ],
+        "R-06": [
+          9,
+          1
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            14,
+            11
+          ],
+          [
+            14,
+            10
+          ],
+          [
+            14,
+            9
+          ],
+          [
+            14,
+            8
+          ],
+          [
+            14,
+            7
+          ],
+          [
+            14,
+            6
+          ]
+        ],
+        "R-02": [
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "R-03": [
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            14,
+            13
+          ],
+          [
+            15,
+            13
+          ],
+          [
+            16,
+            13
+          ],
+          [
+            17,
+            13
+          ],
+          [
+            18,
+            13
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            18,
+            11
+          ],
+          [
+            18,
+            10
+          ],
+          [
+            18,
+            9
+          ],
+          [
+            18,
+            8
+          ]
+        ],
+        "R-04": [
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            7,
+            11
+          ]
+        ],
+        "R-05": [
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            8,
+            13
+          ]
+        ],
+        "R-06": [
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            1
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 21,
+        "sum_of_costs": 87,
+        "completed_tasks": 6,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 14.5,
+        "total_distance": 85.0,
+        "total_waiting": 2,
+        "planning_time_ms": 1.9751249346882105,
+        "replans": 0,
+        "planning_conflicts": 0,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 2.05120793543756
+    }
+  ],
+  "summary": [
+    {
+      "algorithm": "astar",
+      "scheduler": "priority",
+      "robots": 6,
+      "runs": 3,
+      "successful_runs": 1,
+      "success_rate": 0.3333333333333333,
+      "metrics": {
+        "makespan": {
+          "mean": 24,
+          "std": 0.0,
+          "n": 1
+        },
+        "sum_of_costs": {
+          "mean": 73,
+          "std": 0.0,
+          "n": 1
+        },
+        "completed_tasks": {
+          "mean": 6,
+          "std": 0.0,
+          "n": 1
+        },
+        "task_completion_rate": {
+          "mean": 1,
+          "std": 0.0,
+          "n": 1
+        },
+        "average_task_completion_time": {
+          "mean": 12.166666666666666,
+          "std": 0.0,
+          "n": 1
+        },
+        "total_distance": {
+          "mean": 73.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "total_waiting": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 1
+        },
+        "planning_time_ms": {
+          "mean": 0.4284026799723506,
+          "std": 0.04791777763700195,
+          "n": 3
+        },
+        "replans": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 1
+        },
+        "planning_conflicts": {
+          "mean": 0.6666666666666666,
+          "std": 0.4714045207910317,
+          "n": 3
+        },
+        "executed_collisions": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 1
+        }
+      }
+    },
+    {
+      "algorithm": "prioritized",
+      "scheduler": "priority",
+      "robots": 6,
+      "runs": 3,
+      "successful_runs": 3,
+      "success_rate": 1.0,
+      "metrics": {
+        "makespan": {
+          "mean": 23,
+          "std": 1.4142135623730951,
+          "n": 3
+        },
+        "sum_of_costs": {
+          "mean": 87.66666666666667,
+          "std": 12.256517540566824,
+          "n": 3
+        },
+        "completed_tasks": {
+          "mean": 6,
+          "std": 0.0,
+          "n": 3
+        },
+        "task_completion_rate": {
+          "mean": 1,
+          "std": 0.0,
+          "n": 3
+        },
+        "average_task_completion_time": {
+          "mean": 14.61111111111111,
+          "std": 2.0427529234278046,
+          "n": 3
+        },
+        "total_distance": {
+          "mean": 87.0,
+          "std": 12.328828005937952,
+          "n": 3
+        },
+        "total_waiting": {
+          "mean": 0.6666666666666666,
+          "std": 0.9428090415820634,
+          "n": 3
+        },
+        "planning_time_ms": {
+          "mean": 1.9490833316619198,
+          "std": 0.11444566600341356,
+          "n": 3
+        },
+        "replans": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        },
+        "planning_conflicts": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        },
+        "executed_collisions": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        }
+      }
+    },
+    {
+      "algorithm": "cbs",
+      "scheduler": "priority",
+      "robots": 6,
+      "runs": 3,
+      "successful_runs": 3,
+      "success_rate": 1.0,
+      "metrics": {
+        "makespan": {
+          "mean": 23,
+          "std": 1.4142135623730951,
+          "n": 3
+        },
+        "sum_of_costs": {
+          "mean": 85,
+          "std": 12.96148139681572,
+          "n": 3
+        },
+        "completed_tasks": {
+          "mean": 6,
+          "std": 0.0,
+          "n": 3
+        },
+        "task_completion_rate": {
+          "mean": 1,
+          "std": 0.0,
+          "n": 3
+        },
+        "average_task_completion_time": {
+          "mean": 14.166666666666666,
+          "std": 2.1602468994692874,
+          "n": 3
+        },
+        "total_distance": {
+          "mean": 85.0,
+          "std": 12.96148139681572,
+          "n": 3
+        },
+        "total_waiting": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        },
+        "planning_time_ms": {
+          "mean": 2.394319628365338,
+          "std": 0.42167753058264446,
+          "n": 3
+        },
+        "replans": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        },
+        "planning_conflicts": {
+          "mean": 1.6666666666666667,
+          "std": 1.247219128924647,
+          "n": 3
+        },
+        "executed_collisions": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        }
+      }
+    },
+    {
+      "algorithm": "adaptive",
+      "scheduler": "priority",
+      "robots": 6,
+      "runs": 3,
+      "successful_runs": 3,
+      "success_rate": 1.0,
+      "metrics": {
+        "makespan": {
+          "mean": 23,
+          "std": 1.4142135623730951,
+          "n": 3
+        },
+        "sum_of_costs": {
+          "mean": 87.66666666666667,
+          "std": 12.256517540566824,
+          "n": 3
+        },
+        "completed_tasks": {
+          "mean": 6,
+          "std": 0.0,
+          "n": 3
+        },
+        "task_completion_rate": {
+          "mean": 1,
+          "std": 0.0,
+          "n": 3
+        },
+        "average_task_completion_time": {
+          "mean": 14.61111111111111,
+          "std": 2.0427529234278046,
+          "n": 3
+        },
+        "total_distance": {
+          "mean": 87.0,
+          "std": 12.328828005937952,
+          "n": 3
+        },
+        "total_waiting": {
+          "mean": 0.6666666666666666,
+          "std": 0.9428090415820634,
+          "n": 3
+        },
+        "planning_time_ms": {
+          "mean": 1.916027666690449,
+          "std": 0.09664524120769938,
+          "n": 3
+        },
+        "replans": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        },
+        "planning_conflicts": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        },
+        "executed_collisions": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        }
+      }
+    }
+  ]
+}

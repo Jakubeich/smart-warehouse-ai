@@ -1,0 +1,6413 @@
+{
+  "id": "5c302db9-25d6-48ea-812f-0df71fbef3e5",
+  "action": "compare",
+  "status": "COMPLETED",
+  "created_at": "2026-11-13T19:44:11.082348+00:00",
+  "config": {
+    "action": "compare",
+    "maps": 6,
+    "seed": 9026,
+    "generator": {
+      "name": "Generovaný sklad",
+      "width": 20,
+      "height": 16,
+      "density": 0.25,
+      "layout": "mixed",
+      "robot_count": 4,
+      "task_count": 24,
+      "seed": 42
+    },
+    "vary_layouts": true,
+    "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+    "scenario_id": null,
+    "baseline": "priority",
+    "max_ticks": 1800
+  },
+  "progress": 6,
+  "total": 6,
+  "message": "Párové porovnání je dokončené.",
+  "runs": [],
+  "pairs": [
+    {
+      "seed": 9026,
+      "layout_key": "ff93a063419a1965ff80301d",
+      "unseen_layout": true,
+      "scenario": {
+        "schema_version": 1,
+        "id": "generated-52ede0172a6f3473",
+        "name": "Generovaný sklad",
+        "warehouse": {
+          "schema_version": 1,
+          "id": "generated-map-52ede0172a6f3473",
+          "name": "Generovaný sklad",
+          "width": 16,
+          "height": 14,
+          "cell_size": 1.0,
+          "cells": [
+            {
+              "x": 1,
+              "y": 2,
+              "type": "PICKUP"
+            },
+            {
+              "x": 1,
+              "y": 5,
+              "type": "PICKUP"
+            },
+            {
+              "x": 1,
+              "y": 8,
+              "type": "PICKUP"
+            },
+            {
+              "x": 3,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "type": "SHELF"
+            },
+            {
+              "x": 3,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 3,
+              "y": 9,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 9,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 12,
+              "type": "CHARGER"
+            },
+            {
+              "x": 6,
+              "y": 12,
+              "type": "CHARGER"
+            },
+            {
+              "x": 7,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 5,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 9,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 5,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 9,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 12,
+              "type": "CHARGER"
+            },
+            {
+              "x": 11,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 11,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 11,
+              "y": 5,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 5,
+              "type": "SHELF"
+            },
+            {
+              "x": 14,
+              "y": 2,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 14,
+              "y": 5,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 14,
+              "y": 8,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 14,
+              "y": 12,
+              "type": "CHARGER"
+            }
+          ],
+          "metadata": {
+            "generator_version": "1",
+            "generator": "{\"name\":\"Generovaný sklad\",\"width\":16,\"height\":14,\"density\":0.12,\"layout\":\"aisles\",\"robot_count\":4,\"task_count\":24,\"seed\":9026}",
+            "shelf_coverage": "0.1161"
+          }
+        },
+        "robots": [
+          {
+            "id": "R-01",
+            "name": "Robot 01",
+            "position": [
+              14,
+              12
+            ],
+            "home": [
+              14,
+              12
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-02",
+            "name": "Robot 02",
+            "position": [
+              8,
+              12
+            ],
+            "home": [
+              8,
+              12
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-03",
+            "name": "Robot 03",
+            "position": [
+              6,
+              12
+            ],
+            "home": [
+              6,
+              12
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-04",
+            "name": "Robot 04",
+            "position": [
+              4,
+              12
+            ],
+            "home": [
+              4,
+              12
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          }
+        ],
+        "tasks": [
+          {
+            "id": "T-001",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-002",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-003",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-004",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-005",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-006",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-007",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-008",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-009",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-010",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-011",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-012",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-013",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-014",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-015",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-016",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              2
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-017",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-018",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-019",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-020",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              2
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-021",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-022",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              2
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-023",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-024",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              14,
+              2
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          }
+        ],
+        "seed": 9026,
+        "config": {
+          "planner": "adaptive",
+          "scheduler": "priority",
+          "ml_model_id": null,
+          "horizon": 128,
+          "max_nodes": 2000,
+          "timeout_seconds": 2.0,
+          "move_energy": 0.4,
+          "wait_energy": 0.0,
+          "handling_energy": 0.1,
+          "charging_rate": 4.0,
+          "critical_threshold": 15.0,
+          "tick_seconds": 1.0
+        }
+      },
+      "baseline": {
+        "scheduler": "priority",
+        "seed": 9026,
+        "status": "COMPLETED",
+        "reason": null,
+        "source": "measured",
+        "metrics": {
+          "makespan": 424,
+          "sum_of_costs": 1006,
+          "completed_tasks": 24,
+          "task_completion_rate": 1.0,
+          "average_task_completion_time": 208.58333333333334,
+          "total_distance": 1003.0,
+          "total_waiting": 3,
+          "planning_time_ms": 85.01075953245163,
+          "replans": 125,
+          "planning_conflicts": 0,
+          "executed_collisions": 0,
+          "success": true,
+          "throughput": 0.05660377358490566
+        },
+        "wall_time_ms": 173.50954201538116,
+        "mean_transport_ticks": 34.958333333333336,
+        "assignments": {
+          "T-001": "R-04",
+          "T-002": "R-04",
+          "T-003": "R-04",
+          "T-004": "R-03",
+          "T-005": "R-04",
+          "T-006": "R-01",
+          "T-007": "R-03",
+          "T-008": "R-04",
+          "T-009": "R-03",
+          "T-010": "R-01",
+          "T-011": "R-03",
+          "T-012": "R-02",
+          "T-013": "R-01",
+          "T-014": "R-02",
+          "T-015": "R-02",
+          "T-016": "R-04",
+          "T-017": "R-03",
+          "T-018": "R-04",
+          "T-019": "R-01",
+          "T-020": "R-02",
+          "T-021": "R-01",
+          "T-022": "R-03",
+          "T-023": "R-02",
+          "T-024": "R-03"
+        },
+        "decision_examples": []
+      },
+      "learned": {
+        "scheduler": "learned",
+        "seed": 9026,
+        "status": "COMPLETED",
+        "reason": null,
+        "source": "measured",
+        "metrics": {
+          "makespan": 424,
+          "sum_of_costs": 1006,
+          "completed_tasks": 24,
+          "task_completion_rate": 1.0,
+          "average_task_completion_time": 208.58333333333334,
+          "total_distance": 1003.0,
+          "total_waiting": 3,
+          "planning_time_ms": 77.48866791371256,
+          "replans": 125,
+          "planning_conflicts": 0,
+          "executed_collisions": 0,
+          "success": true,
+          "throughput": 0.05660377358490566
+        },
+        "wall_time_ms": 151.07958402950317,
+        "mean_transport_ticks": 34.958333333333336,
+        "assignments": {
+          "T-001": "R-04",
+          "T-002": "R-04",
+          "T-003": "R-04",
+          "T-004": "R-03",
+          "T-005": "R-04",
+          "T-006": "R-01",
+          "T-007": "R-03",
+          "T-008": "R-04",
+          "T-009": "R-03",
+          "T-010": "R-01",
+          "T-011": "R-03",
+          "T-012": "R-02",
+          "T-013": "R-01",
+          "T-014": "R-02",
+          "T-015": "R-02",
+          "T-016": "R-04",
+          "T-017": "R-03",
+          "T-018": "R-04",
+          "T-019": "R-01",
+          "T-020": "R-02",
+          "T-021": "R-01",
+          "T-022": "R-03",
+          "T-023": "R-02",
+          "T-024": "R-03"
+        },
+        "decision_examples": [
+          {
+            "task_id": "T-004",
+            "robot_id": "R-03",
+            "tick": 337,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-02",
+                "predicted_ticks": 33.0,
+                "geometric_ticks": 33.0
+              },
+              {
+                "robot_id": "R-03",
+                "predicted_ticks": 31.0,
+                "geometric_ticks": 31.0
+              }
+            ]
+          },
+          {
+            "task_id": "T-008",
+            "robot_id": "R-04",
+            "tick": 368,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-01",
+                "predicted_ticks": 37.11185515873016,
+                "geometric_ticks": 37.0
+              },
+              {
+                "robot_id": "R-02",
+                "predicted_ticks": 31.0125,
+                "geometric_ticks": 31.0
+              },
+              {
+                "robot_id": "R-04",
+                "predicted_ticks": 27.0125,
+                "geometric_ticks": 27.0
+              }
+            ]
+          },
+          {
+            "task_id": "T-009",
+            "robot_id": "R-03",
+            "tick": 395,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-01",
+                "predicted_ticks": 37.0,
+                "geometric_ticks": 37.0
+              },
+              {
+                "robot_id": "R-02",
+                "predicted_ticks": 31.0,
+                "geometric_ticks": 31.0
+              },
+              {
+                "robot_id": "R-03",
+                "predicted_ticks": 29.0,
+                "geometric_ticks": 29.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "seed": 9027,
+      "layout_key": "695f19398484187b9e2c012b",
+      "unseen_layout": true,
+      "scenario": {
+        "schema_version": 1,
+        "id": "generated-4655196bd6eb8d30",
+        "name": "Generovaný sklad",
+        "warehouse": {
+          "schema_version": 1,
+          "id": "generated-map-4655196bd6eb8d30",
+          "name": "Generovaný sklad",
+          "width": 20,
+          "height": 14,
+          "cell_size": 1.0,
+          "cells": [
+            {
+              "x": 1,
+              "y": 2,
+              "type": "PICKUP"
+            },
+            {
+              "x": 1,
+              "y": 5,
+              "type": "PICKUP"
+            },
+            {
+              "x": 1,
+              "y": 8,
+              "type": "PICKUP"
+            },
+            {
+              "x": 2,
+              "y": 12,
+              "type": "CHARGER"
+            },
+            {
+              "x": 3,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 3,
+              "y": 12,
+              "type": "CHARGER"
+            },
+            {
+              "x": 4,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 6,
+              "y": 12,
+              "type": "CHARGER"
+            },
+            {
+              "x": 7,
+              "y": 2,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 6,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 2,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 6,
+              "type": "SHELF"
+            },
+            {
+              "x": 11,
+              "y": 2,
+              "type": "SHELF"
+            },
+            {
+              "x": 11,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 11,
+              "y": 6,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 2,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 6,
+              "type": "SHELF"
+            },
+            {
+              "x": 13,
+              "y": 11,
+              "type": "CHARGER"
+            },
+            {
+              "x": 15,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 15,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 15,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 18,
+              "y": 2,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 18,
+              "y": 5,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 18,
+              "y": 8,
+              "type": "DROPOFF"
+            }
+          ],
+          "metadata": {
+            "generator_version": "1",
+            "generator": "{\"name\":\"Generovaný sklad\",\"width\":20,\"height\":14,\"density\":0.12,\"layout\":\"islands\",\"robot_count\":4,\"task_count\":24,\"seed\":9027}",
+            "shelf_coverage": "0.0714"
+          }
+        },
+        "robots": [
+          {
+            "id": "R-01",
+            "name": "Robot 01",
+            "position": [
+              13,
+              11
+            ],
+            "home": [
+              13,
+              11
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-02",
+            "name": "Robot 02",
+            "position": [
+              2,
+              12
+            ],
+            "home": [
+              2,
+              12
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-03",
+            "name": "Robot 03",
+            "position": [
+              3,
+              12
+            ],
+            "home": [
+              3,
+              12
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-04",
+            "name": "Robot 04",
+            "position": [
+              6,
+              12
+            ],
+            "home": [
+              6,
+              12
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          }
+        ],
+        "tasks": [
+          {
+            "id": "T-001",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              18,
+              8
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-002",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              18,
+              5
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-003",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              18,
+              5
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-004",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              18,
+              5
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-005",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              18,
+              2
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-006",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              18,
+              8
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-007",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              18,
+              5
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-008",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              18,
+              8
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-009",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              18,
+              5
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-010",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              18,
+              8
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-011",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              18,
+              5
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-012",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              18,
+              5
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-013",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              18,
+              5
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-014",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              18,
+              2
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-015",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              18,
+              2
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-016",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              18,
+              5
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-017",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              18,
+              5
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-018",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              18,
+              2
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-019",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              18,
+              8
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-020",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              18,
+              8
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-021",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              18,
+              2
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-022",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              18,
+              2
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-023",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              18,
+              8
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-024",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              18,
+              5
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          }
+        ],
+        "seed": 9027,
+        "config": {
+          "planner": "adaptive",
+          "scheduler": "priority",
+          "ml_model_id": null,
+          "horizon": 128,
+          "max_nodes": 2000,
+          "timeout_seconds": 2.0,
+          "move_energy": 0.4,
+          "wait_energy": 0.0,
+          "handling_energy": 0.1,
+          "charging_rate": 4.0,
+          "critical_threshold": 15.0,
+          "tick_seconds": 1.0
+        }
+      },
+      "baseline": {
+        "scheduler": "priority",
+        "seed": 9027,
+        "status": "COMPLETED",
+        "reason": null,
+        "source": "measured",
+        "metrics": {
+          "makespan": 414,
+          "sum_of_costs": 1185,
+          "completed_tasks": 24,
+          "task_completion_rate": 1.0,
+          "average_task_completion_time": 202.875,
+          "total_distance": 1183.0,
+          "total_waiting": 2,
+          "planning_time_ms": 113.28779684845358,
+          "replans": 123,
+          "planning_conflicts": 0,
+          "executed_collisions": 0,
+          "success": true,
+          "throughput": 0.057971014492753624
+        },
+        "wall_time_ms": 181.40400003176183,
+        "mean_transport_ticks": 35.583333333333336,
+        "assignments": {
+          "T-001": "R-03",
+          "T-002": "R-01",
+          "T-003": "R-02",
+          "T-004": "R-03",
+          "T-005": "R-04",
+          "T-006": "R-04",
+          "T-007": "R-04",
+          "T-008": "R-02",
+          "T-009": "R-03",
+          "T-010": "R-02",
+          "T-011": "R-02",
+          "T-012": "R-03",
+          "T-013": "R-02",
+          "T-014": "R-03",
+          "T-015": "R-03",
+          "T-016": "R-01",
+          "T-017": "R-01",
+          "T-018": "R-01",
+          "T-019": "R-04",
+          "T-020": "R-04",
+          "T-021": "R-04",
+          "T-022": "R-02",
+          "T-023": "R-01",
+          "T-024": "R-02"
+        },
+        "decision_examples": []
+      },
+      "learned": {
+        "scheduler": "learned",
+        "seed": 9027,
+        "status": "COMPLETED",
+        "reason": null,
+        "source": "measured",
+        "metrics": {
+          "makespan": 414,
+          "sum_of_costs": 1185,
+          "completed_tasks": 24,
+          "task_completion_rate": 1.0,
+          "average_task_completion_time": 202.875,
+          "total_distance": 1183.0,
+          "total_waiting": 2,
+          "planning_time_ms": 160.10675684083253,
+          "replans": 123,
+          "planning_conflicts": 0,
+          "executed_collisions": 0,
+          "success": true,
+          "throughput": 0.057971014492753624
+        },
+        "wall_time_ms": 227.05266694538295,
+        "mean_transport_ticks": 35.583333333333336,
+        "assignments": {
+          "T-001": "R-03",
+          "T-002": "R-01",
+          "T-003": "R-02",
+          "T-004": "R-03",
+          "T-005": "R-04",
+          "T-006": "R-04",
+          "T-007": "R-04",
+          "T-008": "R-02",
+          "T-009": "R-03",
+          "T-010": "R-02",
+          "T-011": "R-02",
+          "T-012": "R-03",
+          "T-013": "R-02",
+          "T-014": "R-03",
+          "T-015": "R-03",
+          "T-016": "R-01",
+          "T-017": "R-01",
+          "T-018": "R-01",
+          "T-019": "R-04",
+          "T-020": "R-04",
+          "T-021": "R-04",
+          "T-022": "R-02",
+          "T-023": "R-01",
+          "T-024": "R-02"
+        },
+        "decision_examples": [
+          {
+            "task_id": "T-003",
+            "robot_id": "R-02",
+            "tick": 321,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-02",
+                "predicted_ticks": 27.0,
+                "geometric_ticks": 27.0
+              },
+              {
+                "robot_id": "R-03",
+                "predicted_ticks": 28.0,
+                "geometric_ticks": 28.0
+              }
+            ]
+          },
+          {
+            "task_id": "T-004",
+            "robot_id": "R-03",
+            "tick": 348,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-01",
+                "predicted_ticks": 43.0234375,
+                "geometric_ticks": 43.0
+              },
+              {
+                "robot_id": "R-03",
+                "predicted_ticks": 34.0,
+                "geometric_ticks": 34.0
+              }
+            ]
+          },
+          {
+            "task_id": "T-013",
+            "robot_id": "R-02",
+            "tick": 382,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-01",
+                "predicted_ticks": 42.00416666666667,
+                "geometric_ticks": 42.0
+              },
+              {
+                "robot_id": "R-02",
+                "predicted_ticks": 32.0,
+                "geometric_ticks": 32.0
+              },
+              {
+                "robot_id": "R-04",
+                "predicted_ticks": 36.0,
+                "geometric_ticks": 36.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "seed": 9028,
+      "layout_key": "05c67b5e8428fed84e3185df",
+      "unseen_layout": true,
+      "scenario": {
+        "schema_version": 1,
+        "id": "generated-a19fe79dbe611d9f",
+        "name": "Generovaný sklad",
+        "warehouse": {
+          "schema_version": 1,
+          "id": "generated-map-a19fe79dbe611d9f",
+          "name": "Generovaný sklad",
+          "width": 24,
+          "height": 14,
+          "cell_size": 1.0,
+          "cells": [
+            {
+              "x": 1,
+              "y": 2,
+              "type": "PICKUP"
+            },
+            {
+              "x": 1,
+              "y": 5,
+              "type": "PICKUP"
+            },
+            {
+              "x": 1,
+              "y": 8,
+              "type": "PICKUP"
+            },
+            {
+              "x": 3,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 3,
+              "y": 9,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 9,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 2,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 6,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 2,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 6,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 11,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 11,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 11,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 11,
+              "y": 9,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 9,
+              "type": "SHELF"
+            },
+            {
+              "x": 13,
+              "y": 11,
+              "type": "CHARGER"
+            },
+            {
+              "x": 15,
+              "y": 2,
+              "type": "SHELF"
+            },
+            {
+              "x": 15,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 15,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 15,
+              "y": 6,
+              "type": "SHELF"
+            },
+            {
+              "x": 15,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 2,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 6,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 11,
+              "type": "CHARGER"
+            },
+            {
+              "x": 16,
+              "y": 12,
+              "type": "CHARGER"
+            },
+            {
+              "x": 19,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 19,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 19,
+              "y": 5,
+              "type": "SHELF"
+            },
+            {
+              "x": 19,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 19,
+              "y": 9,
+              "type": "SHELF"
+            },
+            {
+              "x": 20,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 20,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 20,
+              "y": 5,
+              "type": "SHELF"
+            },
+            {
+              "x": 20,
+              "y": 8,
+              "type": "SHELF"
+            },
+            {
+              "x": 20,
+              "y": 9,
+              "type": "SHELF"
+            },
+            {
+              "x": 22,
+              "y": 2,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 22,
+              "y": 5,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 22,
+              "y": 8,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 22,
+              "y": 12,
+              "type": "CHARGER"
+            }
+          ],
+          "metadata": {
+            "generator_version": "1",
+            "generator": "{\"name\":\"Generovaný sklad\",\"width\":24,\"height\":14,\"density\":0.12,\"layout\":\"mixed\",\"robot_count\":4,\"task_count\":24,\"seed\":9028}",
+            "shelf_coverage": "0.125"
+          }
+        },
+        "robots": [
+          {
+            "id": "R-01",
+            "name": "Robot 01",
+            "position": [
+              16,
+              11
+            ],
+            "home": [
+              16,
+              11
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-02",
+            "name": "Robot 02",
+            "position": [
+              22,
+              12
+            ],
+            "home": [
+              22,
+              12
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-03",
+            "name": "Robot 03",
+            "position": [
+              16,
+              12
+            ],
+            "home": [
+              16,
+              12
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-04",
+            "name": "Robot 04",
+            "position": [
+              13,
+              11
+            ],
+            "home": [
+              13,
+              11
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          }
+        ],
+        "tasks": [
+          {
+            "id": "T-001",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              22,
+              5
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-002",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              22,
+              5
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-003",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-004",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-005",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              22,
+              5
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-006",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-007",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              22,
+              8
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-008",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              22,
+              8
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-009",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              22,
+              5
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-010",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-011",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              22,
+              5
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-012",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              22,
+              5
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-013",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-014",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              22,
+              5
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-015",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              22,
+              5
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-016",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-017",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-018",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-019",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              22,
+              5
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-020",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-021",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-022",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              22,
+              8
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-023",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-024",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          }
+        ],
+        "seed": 9028,
+        "config": {
+          "planner": "adaptive",
+          "scheduler": "priority",
+          "ml_model_id": null,
+          "horizon": 128,
+          "max_nodes": 2000,
+          "timeout_seconds": 2.0,
+          "move_energy": 0.4,
+          "wait_energy": 0.0,
+          "handling_energy": 0.1,
+          "charging_rate": 4.0,
+          "critical_threshold": 15.0,
+          "tick_seconds": 1.0
+        }
+      },
+      "baseline": {
+        "scheduler": "priority",
+        "seed": 9028,
+        "status": "COMPLETED",
+        "reason": null,
+        "source": "measured",
+        "metrics": {
+          "makespan": 672,
+          "sum_of_costs": 1434,
+          "completed_tasks": 24,
+          "task_completion_rate": 1.0,
+          "average_task_completion_time": 296.25,
+          "total_distance": 1433.0,
+          "total_waiting": 1,
+          "planning_time_ms": 94.62103433907032,
+          "replans": 126,
+          "planning_conflicts": 0,
+          "executed_collisions": 0,
+          "success": true,
+          "throughput": 0.03571428571428571
+        },
+        "wall_time_ms": 222.08220802713186,
+        "mean_transport_ticks": 52.083333333333336,
+        "assignments": {
+          "T-001": "R-01",
+          "T-002": "R-04",
+          "T-003": "R-04",
+          "T-004": "R-02",
+          "T-005": "R-03",
+          "T-006": "R-01",
+          "T-007": "R-03",
+          "T-008": "R-03",
+          "T-009": "R-04",
+          "T-010": "R-03",
+          "T-011": "R-04",
+          "T-012": "R-01",
+          "T-013": "R-03",
+          "T-014": "R-01",
+          "T-015": "R-02",
+          "T-016": "R-01",
+          "T-017": "R-02",
+          "T-018": "R-01",
+          "T-019": "R-02",
+          "T-020": "R-04",
+          "T-021": "R-04",
+          "T-022": "R-01",
+          "T-023": "R-04",
+          "T-024": "R-01"
+        },
+        "decision_examples": []
+      },
+      "learned": {
+        "scheduler": "learned",
+        "seed": 9028,
+        "status": "COMPLETED",
+        "reason": null,
+        "source": "measured",
+        "metrics": {
+          "makespan": 672,
+          "sum_of_costs": 1434,
+          "completed_tasks": 24,
+          "task_completion_rate": 1.0,
+          "average_task_completion_time": 296.25,
+          "total_distance": 1433.0,
+          "total_waiting": 1,
+          "planning_time_ms": 105.24928837548941,
+          "replans": 126,
+          "planning_conflicts": 0,
+          "executed_collisions": 0,
+          "success": true,
+          "throughput": 0.03571428571428571
+        },
+        "wall_time_ms": 248.08304093312472,
+        "mean_transport_ticks": 52.083333333333336,
+        "assignments": {
+          "T-001": "R-01",
+          "T-002": "R-04",
+          "T-003": "R-04",
+          "T-004": "R-02",
+          "T-005": "R-03",
+          "T-006": "R-01",
+          "T-007": "R-03",
+          "T-008": "R-03",
+          "T-009": "R-04",
+          "T-010": "R-03",
+          "T-011": "R-04",
+          "T-012": "R-01",
+          "T-013": "R-03",
+          "T-014": "R-01",
+          "T-015": "R-02",
+          "T-016": "R-01",
+          "T-017": "R-02",
+          "T-018": "R-01",
+          "T-019": "R-02",
+          "T-020": "R-04",
+          "T-021": "R-04",
+          "T-022": "R-01",
+          "T-023": "R-04",
+          "T-024": "R-01"
+        },
+        "decision_examples": [
+          {
+            "task_id": "T-016",
+            "robot_id": "R-01",
+            "tick": 523,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-01",
+                "predicted_ticks": 52.05604332010582,
+                "geometric_ticks": 52.0
+              },
+              {
+                "robot_id": "R-02",
+                "predicted_ticks": 59.11058201058201,
+                "geometric_ticks": 59.0
+              },
+              {
+                "robot_id": "R-03",
+                "predicted_ticks": 53.05777943121693,
+                "geometric_ticks": 53.0
+              }
+            ]
+          },
+          {
+            "task_id": "T-021",
+            "robot_id": "R-04",
+            "tick": 575,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-02",
+                "predicted_ticks": 58.08086970899471,
+                "geometric_ticks": 58.0
+              },
+              {
+                "robot_id": "R-03",
+                "predicted_ticks": 52.028067129629626,
+                "geometric_ticks": 52.0
+              },
+              {
+                "robot_id": "R-04",
+                "predicted_ticks": 48.011574074074076,
+                "geometric_ticks": 48.0
+              }
+            ]
+          },
+          {
+            "task_id": "T-024",
+            "robot_id": "R-01",
+            "tick": 623,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-01",
+                "predicted_ticks": 49.03347387566138,
+                "geometric_ticks": 49.0
+              },
+              {
+                "robot_id": "R-02",
+                "predicted_ticks": 56.088012566137564,
+                "geometric_ticks": 56.0
+              },
+              {
+                "robot_id": "R-03",
+                "predicted_ticks": 50.035209986772486,
+                "geometric_ticks": 50.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "seed": 9029,
+      "layout_key": "4dedc05da0a8ad9e95278629",
+      "unseen_layout": true,
+      "scenario": {
+        "schema_version": 1,
+        "id": "generated-658dd1721e1e2a54",
+        "name": "Generovaný sklad",
+        "warehouse": {
+          "schema_version": 1,
+          "id": "generated-map-658dd1721e1e2a54",
+          "name": "Generovaný sklad",
+          "width": 16,
+          "height": 16,
+          "cell_size": 1.0,
+          "cells": [
+            {
+              "x": 1,
+              "y": 2,
+              "type": "PICKUP"
+            },
+            {
+              "x": 1,
+              "y": 5,
+              "type": "PICKUP"
+            },
+            {
+              "x": 1,
+              "y": 8,
+              "type": "PICKUP"
+            },
+            {
+              "x": 1,
+              "y": 11,
+              "type": "PICKUP"
+            },
+            {
+              "x": 3,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "type": "SHELF"
+            },
+            {
+              "x": 3,
+              "y": 9,
+              "type": "SHELF"
+            },
+            {
+              "x": 3,
+              "y": 10,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 9,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 10,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 5,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 9,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 10,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 5,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 9,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 10,
+              "type": "SHELF"
+            },
+            {
+              "x": 9,
+              "y": 13,
+              "type": "CHARGER"
+            },
+            {
+              "x": 10,
+              "y": 13,
+              "type": "CHARGER"
+            },
+            {
+              "x": 11,
+              "y": 9,
+              "type": "SHELF"
+            },
+            {
+              "x": 11,
+              "y": 10,
+              "type": "SHELF"
+            },
+            {
+              "x": 11,
+              "y": 13,
+              "type": "CHARGER"
+            },
+            {
+              "x": 12,
+              "y": 9,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 10,
+              "type": "SHELF"
+            },
+            {
+              "x": 14,
+              "y": 2,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 14,
+              "y": 5,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 14,
+              "y": 8,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 14,
+              "y": 11,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 14,
+              "y": 13,
+              "type": "CHARGER"
+            }
+          ],
+          "metadata": {
+            "generator_version": "1",
+            "generator": "{\"name\":\"Generovaný sklad\",\"width\":16,\"height\":16,\"density\":0.22,\"layout\":\"aisles\",\"robot_count\":4,\"task_count\":24,\"seed\":9029}",
+            "shelf_coverage": "0.0938"
+          }
+        },
+        "robots": [
+          {
+            "id": "R-01",
+            "name": "Robot 01",
+            "position": [
+              11,
+              13
+            ],
+            "home": [
+              11,
+              13
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-02",
+            "name": "Robot 02",
+            "position": [
+              10,
+              13
+            ],
+            "home": [
+              10,
+              13
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-03",
+            "name": "Robot 03",
+            "position": [
+              9,
+              13
+            ],
+            "home": [
+              9,
+              13
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-04",
+            "name": "Robot 04",
+            "position": [
+              14,
+              13
+            ],
+            "home": [
+              14,
+              13
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          }
+        ],
+        "tasks": [
+          {
+            "id": "T-001",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              14,
+              2
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-002",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              14,
+              2
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-003",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              14,
+              2
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-004",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-005",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-006",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-007",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-008",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-009",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-010",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              14,
+              11
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-011",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-012",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-013",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-014",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-015",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-016",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-017",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              2
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-018",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-019",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-020",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              14,
+              11
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-021",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              14,
+              8
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-022",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-023",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              14,
+              5
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-024",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              14,
+              2
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          }
+        ],
+        "seed": 9029,
+        "config": {
+          "planner": "adaptive",
+          "scheduler": "priority",
+          "ml_model_id": null,
+          "horizon": 128,
+          "max_nodes": 2000,
+          "timeout_seconds": 2.0,
+          "move_energy": 0.4,
+          "wait_energy": 0.0,
+          "handling_energy": 0.1,
+          "charging_rate": 4.0,
+          "critical_threshold": 15.0,
+          "tick_seconds": 1.0
+        }
+      },
+      "baseline": {
+        "scheduler": "priority",
+        "seed": 9029,
+        "status": "COMPLETED",
+        "reason": null,
+        "source": "measured",
+        "metrics": {
+          "makespan": 398,
+          "sum_of_costs": 1029,
+          "completed_tasks": 24,
+          "task_completion_rate": 1.0,
+          "average_task_completion_time": 189.16666666666666,
+          "total_distance": 1029.0,
+          "total_waiting": 0,
+          "planning_time_ms": 85.83966211881489,
+          "replans": 123,
+          "planning_conflicts": 0,
+          "executed_collisions": 0,
+          "success": true,
+          "throughput": 0.06030150753768844
+        },
+        "wall_time_ms": 153.25850003864616,
+        "mean_transport_ticks": 37.625,
+        "assignments": {
+          "T-001": "R-04",
+          "T-002": "R-03",
+          "T-003": "R-04",
+          "T-004": "R-01",
+          "T-005": "R-02",
+          "T-006": "R-03",
+          "T-007": "R-02",
+          "T-008": "R-02",
+          "T-009": "R-01",
+          "T-010": "R-02",
+          "T-011": "R-04",
+          "T-012": "R-03",
+          "T-013": "R-04",
+          "T-014": "R-03",
+          "T-015": "R-01",
+          "T-016": "R-03",
+          "T-017": "R-02",
+          "T-018": "R-02",
+          "T-019": "R-03",
+          "T-020": "R-04",
+          "T-021": "R-01",
+          "T-022": "R-03",
+          "T-023": "R-01",
+          "T-024": "R-01"
+        },
+        "decision_examples": []
+      },
+      "learned": {
+        "scheduler": "learned",
+        "seed": 9029,
+        "status": "COMPLETED",
+        "reason": null,
+        "source": "measured",
+        "metrics": {
+          "makespan": 398,
+          "sum_of_costs": 1029,
+          "completed_tasks": 24,
+          "task_completion_rate": 1.0,
+          "average_task_completion_time": 189.16666666666666,
+          "total_distance": 1029.0,
+          "total_waiting": 0,
+          "planning_time_ms": 78.1940440647304,
+          "replans": 123,
+          "planning_conflicts": 0,
+          "executed_collisions": 0,
+          "success": true,
+          "throughput": 0.06030150753768844
+        },
+        "wall_time_ms": 139.0532919904217,
+        "mean_transport_ticks": 37.625,
+        "assignments": {
+          "T-001": "R-04",
+          "T-002": "R-03",
+          "T-003": "R-04",
+          "T-004": "R-01",
+          "T-005": "R-02",
+          "T-006": "R-03",
+          "T-007": "R-02",
+          "T-008": "R-02",
+          "T-009": "R-01",
+          "T-010": "R-02",
+          "T-011": "R-04",
+          "T-012": "R-03",
+          "T-013": "R-04",
+          "T-014": "R-03",
+          "T-015": "R-01",
+          "T-016": "R-03",
+          "T-017": "R-02",
+          "T-018": "R-02",
+          "T-019": "R-03",
+          "T-020": "R-04",
+          "T-021": "R-01",
+          "T-022": "R-03",
+          "T-023": "R-01",
+          "T-024": "R-01"
+        },
+        "decision_examples": [
+          {
+            "task_id": "T-007",
+            "robot_id": "R-02",
+            "tick": 291,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-01",
+                "predicted_ticks": 48.033482142857146,
+                "geometric_ticks": 48.0
+              },
+              {
+                "robot_id": "R-02",
+                "predicted_ticks": 47.007440476190474,
+                "geometric_ticks": 47.0
+              }
+            ]
+          },
+          {
+            "task_id": "T-023",
+            "robot_id": "R-01",
+            "tick": 323,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-01",
+                "predicted_ticks": 33.0,
+                "geometric_ticks": 33.0
+              },
+              {
+                "robot_id": "R-04",
+                "predicted_ticks": 36.0,
+                "geometric_ticks": 36.0
+              }
+            ]
+          },
+          {
+            "task_id": "T-022",
+            "robot_id": "R-03",
+            "tick": 356,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-02",
+                "predicted_ticks": 43.007440476190474,
+                "geometric_ticks": 43.0
+              },
+              {
+                "robot_id": "R-03",
+                "predicted_ticks": 42.007440476190474,
+                "geometric_ticks": 42.0
+              },
+              {
+                "robot_id": "R-04",
+                "predicted_ticks": 47.089814814814815,
+                "geometric_ticks": 47.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "seed": 9030,
+      "layout_key": "fedb0037ae6e6b6fa14e15e6",
+      "unseen_layout": true,
+      "scenario": {
+        "schema_version": 1,
+        "id": "generated-30998a48e2cf7d9a",
+        "name": "Generovaný sklad",
+        "warehouse": {
+          "schema_version": 1,
+          "id": "generated-map-30998a48e2cf7d9a",
+          "name": "Generovaný sklad",
+          "width": 20,
+          "height": 16,
+          "cell_size": 1.0,
+          "cells": [
+            {
+              "x": 1,
+              "y": 2,
+              "type": "PICKUP"
+            },
+            {
+              "x": 1,
+              "y": 5,
+              "type": "PICKUP"
+            },
+            {
+              "x": 1,
+              "y": 8,
+              "type": "PICKUP"
+            },
+            {
+              "x": 1,
+              "y": 11,
+              "type": "PICKUP"
+            },
+            {
+              "x": 1,
+              "y": 13,
+              "type": "CHARGER"
+            },
+            {
+              "x": 3,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 3,
+              "y": 11,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 11,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 11,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 11,
+              "type": "SHELF"
+            },
+            {
+              "x": 9,
+              "y": 13,
+              "type": "CHARGER"
+            },
+            {
+              "x": 11,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 11,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 11,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 11,
+              "y": 11,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 11,
+              "type": "SHELF"
+            },
+            {
+              "x": 13,
+              "y": 14,
+              "type": "CHARGER"
+            },
+            {
+              "x": 15,
+              "y": 2,
+              "type": "SHELF"
+            },
+            {
+              "x": 15,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 15,
+              "y": 6,
+              "type": "SHELF"
+            },
+            {
+              "x": 15,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 15,
+              "y": 10,
+              "type": "SHELF"
+            },
+            {
+              "x": 15,
+              "y": 11,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 2,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 6,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 10,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 11,
+              "type": "SHELF"
+            },
+            {
+              "x": 17,
+              "y": 13,
+              "type": "CHARGER"
+            },
+            {
+              "x": 18,
+              "y": 2,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 18,
+              "y": 5,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 18,
+              "y": 8,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 18,
+              "y": 11,
+              "type": "DROPOFF"
+            }
+          ],
+          "metadata": {
+            "generator_version": "1",
+            "generator": "{\"name\":\"Generovaný sklad\",\"width\":20,\"height\":16,\"density\":0.22,\"layout\":\"islands\",\"robot_count\":4,\"task_count\":24,\"seed\":9030}",
+            "shelf_coverage": "0.1"
+          }
+        },
+        "robots": [
+          {
+            "id": "R-01",
+            "name": "Robot 01",
+            "position": [
+              1,
+              13
+            ],
+            "home": [
+              1,
+              13
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-02",
+            "name": "Robot 02",
+            "position": [
+              9,
+              13
+            ],
+            "home": [
+              9,
+              13
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-03",
+            "name": "Robot 03",
+            "position": [
+              17,
+              13
+            ],
+            "home": [
+              17,
+              13
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-04",
+            "name": "Robot 04",
+            "position": [
+              13,
+              14
+            ],
+            "home": [
+              13,
+              14
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          }
+        ],
+        "tasks": [
+          {
+            "id": "T-001",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              18,
+              11
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-002",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              18,
+              5
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-003",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              18,
+              8
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-004",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              18,
+              2
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-005",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              18,
+              8
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-006",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              18,
+              11
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-007",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              18,
+              2
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-008",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              18,
+              2
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-009",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              18,
+              11
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-010",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              18,
+              8
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-011",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              18,
+              8
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-012",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              18,
+              11
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-013",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              18,
+              11
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-014",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              18,
+              5
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-015",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              18,
+              11
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-016",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              18,
+              5
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-017",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              18,
+              8
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-018",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              18,
+              11
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-019",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              18,
+              11
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-020",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              18,
+              2
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-021",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              18,
+              2
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-022",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              18,
+              11
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-023",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              18,
+              5
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-024",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              18,
+              2
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          }
+        ],
+        "seed": 9030,
+        "config": {
+          "planner": "adaptive",
+          "scheduler": "priority",
+          "ml_model_id": null,
+          "horizon": 128,
+          "max_nodes": 2000,
+          "timeout_seconds": 2.0,
+          "move_energy": 0.4,
+          "wait_energy": 0.0,
+          "handling_energy": 0.1,
+          "charging_rate": 4.0,
+          "critical_threshold": 15.0,
+          "tick_seconds": 1.0
+        }
+      },
+      "baseline": {
+        "scheduler": "priority",
+        "seed": 9030,
+        "status": "COMPLETED",
+        "reason": null,
+        "source": "measured",
+        "metrics": {
+          "makespan": 428,
+          "sum_of_costs": 1201,
+          "completed_tasks": 24,
+          "task_completion_rate": 1.0,
+          "average_task_completion_time": 209.54166666666666,
+          "total_distance": 1199.0,
+          "total_waiting": 2,
+          "planning_time_ms": 109.04428630601615,
+          "replans": 127,
+          "planning_conflicts": 0,
+          "executed_collisions": 0,
+          "success": true,
+          "throughput": 0.056074766355140186
+        },
+        "wall_time_ms": 176.9626250024885,
+        "mean_transport_ticks": 41.291666666666664,
+        "assignments": {
+          "T-001": "R-03",
+          "T-002": "R-01",
+          "T-003": "R-01",
+          "T-004": "R-04",
+          "T-005": "R-01",
+          "T-006": "R-01",
+          "T-007": "R-01",
+          "T-008": "R-03",
+          "T-009": "R-03",
+          "T-010": "R-02",
+          "T-011": "R-02",
+          "T-012": "R-04",
+          "T-013": "R-04",
+          "T-014": "R-03",
+          "T-015": "R-02",
+          "T-016": "R-03",
+          "T-017": "R-02",
+          "T-018": "R-02",
+          "T-019": "R-04",
+          "T-020": "R-03",
+          "T-021": "R-04",
+          "T-022": "R-02",
+          "T-023": "R-04",
+          "T-024": "R-01"
+        },
+        "decision_examples": []
+      },
+      "learned": {
+        "scheduler": "learned",
+        "seed": 9030,
+        "status": "COMPLETED",
+        "reason": null,
+        "source": "measured",
+        "metrics": {
+          "makespan": 428,
+          "sum_of_costs": 1201,
+          "completed_tasks": 24,
+          "task_completion_rate": 1.0,
+          "average_task_completion_time": 209.54166666666666,
+          "total_distance": 1199.0,
+          "total_waiting": 2,
+          "planning_time_ms": 108.85366727598011,
+          "replans": 127,
+          "planning_conflicts": 0,
+          "executed_collisions": 0,
+          "success": true,
+          "throughput": 0.056074766355140186
+        },
+        "wall_time_ms": 177.86320799496025,
+        "mean_transport_ticks": 41.291666666666664,
+        "assignments": {
+          "T-001": "R-03",
+          "T-002": "R-01",
+          "T-003": "R-01",
+          "T-004": "R-04",
+          "T-005": "R-01",
+          "T-006": "R-01",
+          "T-007": "R-01",
+          "T-008": "R-03",
+          "T-009": "R-03",
+          "T-010": "R-02",
+          "T-011": "R-02",
+          "T-012": "R-04",
+          "T-013": "R-04",
+          "T-014": "R-03",
+          "T-015": "R-02",
+          "T-016": "R-03",
+          "T-017": "R-02",
+          "T-018": "R-02",
+          "T-019": "R-04",
+          "T-020": "R-03",
+          "T-021": "R-04",
+          "T-022": "R-02",
+          "T-023": "R-04",
+          "T-024": "R-01"
+        },
+        "decision_examples": [
+          {
+            "task_id": "T-016",
+            "robot_id": "R-03",
+            "tick": 318,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-03",
+                "predicted_ticks": 44.005208333333336,
+                "geometric_ticks": 44.0
+              }
+            ]
+          },
+          {
+            "task_id": "T-019",
+            "robot_id": "R-04",
+            "tick": 360,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-04",
+                "predicted_ticks": 43.0,
+                "geometric_ticks": 43.0
+              }
+            ]
+          },
+          {
+            "task_id": "T-006",
+            "robot_id": "R-01",
+            "tick": 403,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-01",
+                "predicted_ticks": 25.0,
+                "geometric_ticks": 25.0
+              },
+              {
+                "robot_id": "R-02",
+                "predicted_ticks": 33.004960317460316,
+                "geometric_ticks": 33.0
+              },
+              {
+                "robot_id": "R-03",
+                "predicted_ticks": 41.0,
+                "geometric_ticks": 41.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "seed": 9031,
+      "layout_key": "c5417144c59718c5a0310c57",
+      "unseen_layout": true,
+      "scenario": {
+        "schema_version": 1,
+        "id": "generated-91a4798d95c81800",
+        "name": "Generovaný sklad",
+        "warehouse": {
+          "schema_version": 1,
+          "id": "generated-map-91a4798d95c81800",
+          "name": "Generovaný sklad",
+          "width": 24,
+          "height": 16,
+          "cell_size": 1.0,
+          "cells": [
+            {
+              "x": 1,
+              "y": 2,
+              "type": "PICKUP"
+            },
+            {
+              "x": 1,
+              "y": 5,
+              "type": "PICKUP"
+            },
+            {
+              "x": 1,
+              "y": 8,
+              "type": "PICKUP"
+            },
+            {
+              "x": 1,
+              "y": 11,
+              "type": "PICKUP"
+            },
+            {
+              "x": 3,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 3,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 3,
+              "y": 11,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 4,
+              "y": 11,
+              "type": "SHELF"
+            },
+            {
+              "x": 6,
+              "y": 13,
+              "type": "CHARGER"
+            },
+            {
+              "x": 7,
+              "y": 2,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 6,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 10,
+              "type": "SHELF"
+            },
+            {
+              "x": 7,
+              "y": 11,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 2,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 4,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 6,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 10,
+              "type": "SHELF"
+            },
+            {
+              "x": 8,
+              "y": 11,
+              "type": "SHELF"
+            },
+            {
+              "x": 9,
+              "y": 14,
+              "type": "CHARGER"
+            },
+            {
+              "x": 11,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 11,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 11,
+              "y": 11,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 12,
+              "y": 11,
+              "type": "SHELF"
+            },
+            {
+              "x": 15,
+              "y": 2,
+              "type": "SHELF"
+            },
+            {
+              "x": 15,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 15,
+              "y": 6,
+              "type": "SHELF"
+            },
+            {
+              "x": 15,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 15,
+              "y": 10,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 2,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 6,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 16,
+              "y": 10,
+              "type": "SHELF"
+            },
+            {
+              "x": 17,
+              "y": 13,
+              "type": "CHARGER"
+            },
+            {
+              "x": 19,
+              "y": 2,
+              "type": "SHELF"
+            },
+            {
+              "x": 19,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 19,
+              "y": 6,
+              "type": "SHELF"
+            },
+            {
+              "x": 19,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 20,
+              "y": 2,
+              "type": "SHELF"
+            },
+            {
+              "x": 20,
+              "y": 3,
+              "type": "SHELF"
+            },
+            {
+              "x": 20,
+              "y": 6,
+              "type": "SHELF"
+            },
+            {
+              "x": 20,
+              "y": 7,
+              "type": "SHELF"
+            },
+            {
+              "x": 21,
+              "y": 13,
+              "type": "CHARGER"
+            },
+            {
+              "x": 22,
+              "y": 2,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 22,
+              "y": 5,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 22,
+              "y": 8,
+              "type": "DROPOFF"
+            },
+            {
+              "x": 22,
+              "y": 11,
+              "type": "DROPOFF"
+            }
+          ],
+          "metadata": {
+            "generator_version": "1",
+            "generator": "{\"name\":\"Generovaný sklad\",\"width\":24,\"height\":16,\"density\":0.22,\"layout\":\"mixed\",\"robot_count\":4,\"task_count\":24,\"seed\":9031}",
+            "shelf_coverage": "0.1146"
+          }
+        },
+        "robots": [
+          {
+            "id": "R-01",
+            "name": "Robot 01",
+            "position": [
+              21,
+              13
+            ],
+            "home": [
+              21,
+              13
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-02",
+            "name": "Robot 02",
+            "position": [
+              17,
+              13
+            ],
+            "home": [
+              17,
+              13
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-03",
+            "name": "Robot 03",
+            "position": [
+              6,
+              13
+            ],
+            "home": [
+              6,
+              13
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          },
+          {
+            "id": "R-04",
+            "name": "Robot 04",
+            "position": [
+              9,
+              14
+            ],
+            "home": [
+              9,
+              14
+            ],
+            "orientation": 0,
+            "status": "IDLE",
+            "task_id": null,
+            "path": [],
+            "path_index": 0,
+            "battery_capacity": 200.0,
+            "battery": 200.0,
+            "capacity": 50.0,
+            "load": 0.0,
+            "completed_tasks": 0,
+            "distance": 0,
+            "waiting": 0,
+            "busy_ticks": 0,
+            "mode": "IDLE",
+            "service_remaining": 0,
+            "goal": null
+          }
+        ],
+        "tasks": [
+          {
+            "id": "T-001",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-002",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              22,
+              8
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-003",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              22,
+              8
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-004",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-005",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              22,
+              5
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-006",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-007",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-008",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              22,
+              8
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-009",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-010",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              22,
+              11
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-011",
+            "pickup": [
+              1,
+              2
+            ],
+            "dropoff": [
+              22,
+              8
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-012",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              22,
+              8
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 3,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-013",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              22,
+              5
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-014",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              22,
+              5
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-015",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              22,
+              11
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-016",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              22,
+              11
+            ],
+            "priority": 1,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-017",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 5,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-018",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              22,
+              5
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-019",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 4,
+            "unload_duration": 3,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-020",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 5.0
+          },
+          {
+            "id": "T-021",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              22,
+              11
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 4,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 20.0
+          },
+          {
+            "id": "T-022",
+            "pickup": [
+              1,
+              11
+            ],
+            "dropoff": [
+              22,
+              5
+            ],
+            "priority": 4,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 1,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          },
+          {
+            "id": "T-023",
+            "pickup": [
+              1,
+              8
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 2,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 1,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 35.0
+          },
+          {
+            "id": "T-024",
+            "pickup": [
+              1,
+              5
+            ],
+            "dropoff": [
+              22,
+              2
+            ],
+            "priority": 3,
+            "created_tick": 0,
+            "assigned_robot": null,
+            "status": "PENDING",
+            "load_duration": 2,
+            "unload_duration": 2,
+            "assigned_tick": null,
+            "pickup_tick": null,
+            "completed_tick": null,
+            "deadline": null,
+            "payload_weight": 10.0
+          }
+        ],
+        "seed": 9031,
+        "config": {
+          "planner": "adaptive",
+          "scheduler": "priority",
+          "ml_model_id": null,
+          "horizon": 128,
+          "max_nodes": 2000,
+          "timeout_seconds": 2.0,
+          "move_energy": 0.4,
+          "wait_energy": 0.0,
+          "handling_energy": 0.1,
+          "charging_rate": 4.0,
+          "critical_threshold": 15.0,
+          "tick_seconds": 1.0
+        }
+      },
+      "baseline": {
+        "scheduler": "priority",
+        "seed": 9031,
+        "status": "COMPLETED",
+        "reason": null,
+        "source": "measured",
+        "metrics": {
+          "makespan": 544,
+          "sum_of_costs": 1438,
+          "completed_tasks": 24,
+          "task_completion_rate": 1.0,
+          "average_task_completion_time": 265.125,
+          "total_distance": 1435.0,
+          "total_waiting": 3,
+          "planning_time_ms": 126.52237340807915,
+          "replans": 125,
+          "planning_conflicts": 0,
+          "executed_collisions": 0,
+          "success": true,
+          "throughput": 0.04411764705882353
+        },
+        "wall_time_ms": 225.67708289716393,
+        "mean_transport_ticks": 49.125,
+        "assignments": {
+          "T-001": "R-02",
+          "T-002": "R-03",
+          "T-003": "R-02",
+          "T-004": "R-03",
+          "T-005": "R-04",
+          "T-006": "R-03",
+          "T-007": "R-01",
+          "T-008": "R-04",
+          "T-009": "R-04",
+          "T-010": "R-02",
+          "T-011": "R-02",
+          "T-012": "R-04",
+          "T-013": "R-02",
+          "T-014": "R-01",
+          "T-015": "R-04",
+          "T-016": "R-01",
+          "T-017": "R-01",
+          "T-018": "R-03",
+          "T-019": "R-02",
+          "T-020": "R-04",
+          "T-021": "R-03",
+          "T-022": "R-01",
+          "T-023": "R-03",
+          "T-024": "R-03"
+        },
+        "decision_examples": []
+      },
+      "learned": {
+        "scheduler": "learned",
+        "seed": 9031,
+        "status": "COMPLETED",
+        "reason": null,
+        "source": "measured",
+        "metrics": {
+          "makespan": 544,
+          "sum_of_costs": 1438,
+          "completed_tasks": 24,
+          "task_completion_rate": 1.0,
+          "average_task_completion_time": 265.125,
+          "total_distance": 1435.0,
+          "total_waiting": 3,
+          "planning_time_ms": 127.3112038616091,
+          "replans": 125,
+          "planning_conflicts": 0,
+          "executed_collisions": 0,
+          "success": true,
+          "throughput": 0.04411764705882353
+        },
+        "wall_time_ms": 226.7695830669254,
+        "mean_transport_ticks": 49.125,
+        "assignments": {
+          "T-001": "R-02",
+          "T-002": "R-03",
+          "T-003": "R-02",
+          "T-004": "R-03",
+          "T-005": "R-04",
+          "T-006": "R-03",
+          "T-007": "R-01",
+          "T-008": "R-04",
+          "T-009": "R-04",
+          "T-010": "R-02",
+          "T-011": "R-02",
+          "T-012": "R-04",
+          "T-013": "R-02",
+          "T-014": "R-01",
+          "T-015": "R-04",
+          "T-016": "R-01",
+          "T-017": "R-01",
+          "T-018": "R-03",
+          "T-019": "R-02",
+          "T-020": "R-04",
+          "T-021": "R-03",
+          "T-022": "R-01",
+          "T-023": "R-03",
+          "T-024": "R-03"
+        },
+        "decision_examples": [
+          {
+            "task_id": "T-023",
+            "robot_id": "R-03",
+            "tick": 455,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-01",
+                "predicted_ticks": 55.01426091269841,
+                "geometric_ticks": 55.0
+              },
+              {
+                "robot_id": "R-03",
+                "predicted_ticks": 40.004960317460316,
+                "geometric_ticks": 40.0
+              }
+            ]
+          },
+          {
+            "task_id": "T-016",
+            "robot_id": "R-01",
+            "tick": 467,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-01",
+                "predicted_ticks": 63.115625,
+                "geometric_ticks": 63.0
+              }
+            ]
+          },
+          {
+            "task_id": "T-009",
+            "robot_id": "R-04",
+            "tick": 495,
+            "model_id": "47accc59-d559-4892-823d-23edc9a78674",
+            "candidates": [
+              {
+                "robot_id": "R-02",
+                "predicted_ticks": 56.01977513227513,
+                "geometric_ticks": 56.0
+              },
+              {
+                "robot_id": "R-04",
+                "predicted_ticks": 49.0176917989418,
+                "geometric_ticks": 49.0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "pairs": 6,
+    "successful_pairs": 6,
+    "baseline_successes": 6,
+    "learned_successes": 6,
+    "different_assignments": 0,
+    "metrics": {
+      "makespan": {
+        "baseline": 480,
+        "learned": 480,
+        "delta": 0,
+        "improvement_percent": 0.0
+      },
+      "average_task_completion_time": {
+        "baseline": 228.59027777777777,
+        "learned": 228.59027777777777,
+        "delta": 0.0,
+        "improvement_percent": 0.0
+      },
+      "total_waiting": {
+        "baseline": 1.8333333333333333,
+        "learned": 1.8333333333333333,
+        "delta": 0.0,
+        "improvement_percent": 0.0
+      },
+      "total_distance": {
+        "baseline": 1213.6666666666667,
+        "learned": 1213.6666666666667,
+        "delta": 0.0,
+        "improvement_percent": 0.0
+      },
+      "planning_time_ms": {
+        "baseline": 102.38765209214762,
+        "learned": 109.53393805539235,
+        "delta": 7.146285963244736,
+        "improvement_percent": -6.979636525714221
+      }
+    }
+  },
+  "model_id": "47accc59-d559-4892-823d-23edc9a78674"
+}

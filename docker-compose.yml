@@ -1,0 +1,40 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: warehouse
+      POSTGRES_USER: warehouse
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-warehouse}
+    ports: ["127.0.0.1:55432:5432"]
+    volumes: ["warehouse_data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U warehouse"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  backend:
+    build: ./apps/backend
+    environment:
+      DATABASE_URL: postgresql+psycopg://warehouse:${POSTGRES_PASSWORD:-warehouse}@db:5432/warehouse
+    ports: ["127.0.0.1:${API_PORT:-8000}:8000"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    depends_on:
+      db:
+        condition: service_healthy
+  frontend:
+    build: ./apps/frontend
+    ports: ["127.0.0.1:${WEB_PORT:-5173}:80"]
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    depends_on:
+      backend:
+        condition: service_healthy
+volumes:
+  warehouse_data:

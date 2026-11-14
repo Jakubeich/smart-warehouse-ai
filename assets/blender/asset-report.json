@@ -1,0 +1,110 @@
+{
+  "tool": "@gltf-transform/cli@4.5.1",
+  "assets": [
+    {
+      "file": "apps/frontend/public/models/robots/amr.glb",
+      "bytes": 174392,
+      "bytes_before_optimization": 250976,
+      "triangles": 6016,
+      "materials": 4,
+      "primitives": 16,
+      "validation": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "root": "AMR_Root"
+    },
+    {
+      "file": "apps/frontend/public/models/warehouse/charger.glb",
+      "bytes": 23552,
+      "bytes_before_optimization": 30224,
+      "triangles": 361,
+      "materials": 4,
+      "primitives": 4,
+      "validation": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "root": "Charger_Root"
+    },
+    {
+      "file": "apps/frontend/public/models/warehouse/dropoff.glb",
+      "bytes": 23708,
+      "bytes_before_optimization": 30432,
+      "triangles": 358,
+      "materials": 4,
+      "primitives": 4,
+      "validation": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "root": "Dropoff_Root"
+    },
+    {
+      "file": "apps/frontend/public/models/warehouse/obstacle.glb",
+      "bytes": 31064,
+      "bytes_before_optimization": 40068,
+      "triangles": 484,
+      "materials": 3,
+      "primitives": 3,
+      "validation": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "root": "Obstacle_Root"
+    },
+    {
+      "file": "apps/frontend/public/models/warehouse/pallet.glb",
+      "bytes": 31024,
+      "bytes_before_optimization": 40020,
+      "triangles": 488,
+      "materials": 3,
+      "primitives": 3,
+      "validation": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "root": "Pallet_Root"
+    },
+    {
+      "file": "apps/frontend/public/models/warehouse/pickup.glb",
+      "bytes": 23700,
+      "bytes_before_optimization": 30424,
+      "triangles": 358,
+      "materials": 4,
+      "primitives": 4,
+      "validation": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "root": "Pickup_Root"
+    },
+    {
+      "file": "apps/frontend/public/models/warehouse/shelf.glb",
+      "bytes": 72180,
+      "bytes_before_optimization": 93476,
+      "triangles": 1196,
+      "materials": 3,
+      "primitives": 3,
+      "validation": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "root": "Shelf_Root"
+    },
+    {
+      "file": "apps/frontend/public/models/warehouse/wall.glb",
+      "bytes": 9672,
+      "bytes_before_optimization": 12324,
+      "triangles": 132,
+      "materials": 2,
+      "primitives": 2,
+      "validation": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "root": "Wall_Root"
+    }
+  ],
+  "total_bytes": 389292
+}

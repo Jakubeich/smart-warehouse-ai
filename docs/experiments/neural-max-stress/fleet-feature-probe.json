@@ -1,0 +1,546 @@
+[
+  {
+    "robot": "R-01",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.5216158644171152,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.8618267863696636,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-02",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.8034483137975459,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.8314429535820331,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-03",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.4962320504729523,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.4288638333489077,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-04",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.6728938348475182,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.9111253888478668,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-05",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.361232983442638,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.6023071740618038,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-06",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.5031875714271623,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.6813428442389822,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-07",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.3837328279476926,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.5530365489384936,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-08",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.6053943013323624,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.8092001051865128,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-09",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.4017880843724566,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.4885250203289988,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-10",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.6006299988803707,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.9060096548312913,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-11",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.2461936024704114,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.6769443306022465,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-12",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.7134489357773364,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.8750539904877013,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-13",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.4062326724527454,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.4852622892526333,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-14",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.9384473808278588,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.9287128023860538,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-15",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.2705542093337148,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.6782323109468866,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-16",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.8753924353929905,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.8335756329869708,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-17",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.5058308941887135,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.8113644683135106,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-18",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 2.145670491944675,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 2.23248145108401,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-19",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.541231739483058,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.474114221474357,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-20",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.4788269645638554,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.6157828482270347,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-21",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.2390331447325902,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.6756563502576056,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-22",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.825948158302597,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.8301549732373925,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-23",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.4737322059679003,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.4062386392861852,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-24",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.5762693920170687,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.877621244006838,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-25",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.55787409963358,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.8596808798451587,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-26",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 2.055391191433407,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 2.099512845051665,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-27",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.4485717382722758,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.782921980524118,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-28",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.551908785153765,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.8124628362628779,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-29",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.3792882398674042,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.5562421133828486,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-30",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.758448624787443,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.8503623836879999,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-31",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 1.5714301041496899,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 1.8374387345183159,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  },
+  {
+    "robot": "R-32",
+    "outcomes": [
+      {
+        "fleet_size_in_features": 32,
+        "best_task_score": 2.168295686007398,
+        "idle_score": 8.510544908789804,
+        "prefers_task": false
+      },
+      {
+        "fleet_size_in_features": 17,
+        "best_task_score": 2.2657236025920993,
+        "idle_score": 1.1054027355188498,
+        "prefers_task": true
+      }
+    ]
+  }
+]

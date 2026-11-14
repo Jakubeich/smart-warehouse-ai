@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "conditions": [
+    "one-narrow-4",
+    "one-narrow-8",
+    "two-narrow-8",
+    "two-narrow-12",
+    "two-wide-8",
+    "open-8"
+  ],
+  "console_errors": [],
+  "viewports": [
+    "1536x1024",
+    "390x844"
+  ],
+  "model_id": "cea34362-b596-4ff3-bb4c-0b380e7bdbdf"
+}

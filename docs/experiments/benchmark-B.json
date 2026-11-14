@@ -1,0 +1,4476 @@
+{
+  "config": {
+    "name": "narrow-corridors",
+    "scenario_id": "demo-small",
+    "mode": "mapf",
+    "benchmark": "B",
+    "algorithms": [
+      "astar",
+      "prioritized",
+      "cbs",
+      "adaptive"
+    ],
+    "schedulers": [
+      "priority"
+    ],
+    "robot_counts": [
+      4
+    ],
+    "task_count": 12,
+    "repetitions": 3,
+    "max_run_seconds": 30.0,
+    "max_ticks": 500,
+    "seed": 42,
+    "config": {
+      "planner": "adaptive",
+      "scheduler": "priority",
+      "horizon": 128,
+      "max_nodes": 2000,
+      "timeout_seconds": 2.0,
+      "move_energy": 0.4,
+      "wait_energy": 0.0,
+      "handling_energy": 0.1,
+      "charging_rate": 4.0,
+      "critical_threshold": 15.0,
+      "tick_seconds": 1.0
+    }
+  },
+  "scenario": {
+    "schema_version": 1,
+    "id": "demo-small",
+    "name": "Small Warehouse",
+    "warehouse": {
+      "schema_version": 1,
+      "id": "warehouse-small",
+      "name": "Small Warehouse",
+      "width": 20,
+      "height": 14,
+      "cell_size": 1.0,
+      "cells": [
+        {
+          "x": 1,
+          "y": 2,
+          "type": "PICKUP"
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "type": "PICKUP"
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "type": "PICKUP"
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "type": "CHARGER"
+        },
+        {
+          "x": 2,
+          "y": 12,
+          "type": "CHARGER"
+        },
+        {
+          "x": 3,
+          "y": 12,
+          "type": "CHARGER"
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "type": "SHELF"
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "type": "SHELF"
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "type": "SHELF"
+        },
+        {
+          "x": 4,
+          "y": 6,
+          "type": "SHELF"
+        },
+        {
+          "x": 4,
+          "y": 8,
+          "type": "SHELF"
+        },
+        {
+          "x": 4,
+          "y": 9,
+          "type": "SHELF"
+        },
+        {
+          "x": 4,
+          "y": 12,
+          "type": "CHARGER"
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "type": "SHELF"
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "type": "SHELF"
+        },
+        {
+          "x": 5,
+          "y": 5,
+          "type": "SHELF"
+        },
+        {
+          "x": 5,
+          "y": 6,
+          "type": "SHELF"
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "type": "SHELF"
+        },
+        {
+          "x": 5,
+          "y": 9,
+          "type": "SHELF"
+        },
+        {
+          "x": 8,
+          "y": 3,
+          "type": "SHELF"
+        },
+        {
+          "x": 8,
+          "y": 4,
+          "type": "SHELF"
+        },
+        {
+          "x": 8,
+          "y": 5,
+          "type": "SHELF"
+        },
+        {
+          "x": 8,
+          "y": 6,
+          "type": "SHELF"
+        },
+        {
+          "x": 8,
+          "y": 8,
+          "type": "SHELF"
+        },
+        {
+          "x": 8,
+          "y": 9,
+          "type": "SHELF"
+        },
+        {
+          "x": 9,
+          "y": 3,
+          "type": "SHELF"
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "type": "SHELF"
+        },
+        {
+          "x": 9,
+          "y": 5,
+          "type": "SHELF"
+        },
+        {
+          "x": 9,
+          "y": 6,
+          "type": "SHELF"
+        },
+        {
+          "x": 9,
+          "y": 8,
+          "type": "SHELF"
+        },
+        {
+          "x": 9,
+          "y": 9,
+          "type": "SHELF"
+        },
+        {
+          "x": 12,
+          "y": 3,
+          "type": "SHELF"
+        },
+        {
+          "x": 12,
+          "y": 4,
+          "type": "SHELF"
+        },
+        {
+          "x": 12,
+          "y": 5,
+          "type": "SHELF"
+        },
+        {
+          "x": 12,
+          "y": 6,
+          "type": "SHELF"
+        },
+        {
+          "x": 12,
+          "y": 8,
+          "type": "SHELF"
+        },
+        {
+          "x": 12,
+          "y": 9,
+          "type": "SHELF"
+        },
+        {
+          "x": 13,
+          "y": 3,
+          "type": "SHELF"
+        },
+        {
+          "x": 13,
+          "y": 4,
+          "type": "SHELF"
+        },
+        {
+          "x": 13,
+          "y": 5,
+          "type": "SHELF"
+        },
+        {
+          "x": 13,
+          "y": 6,
+          "type": "SHELF"
+        },
+        {
+          "x": 13,
+          "y": 8,
+          "type": "SHELF"
+        },
+        {
+          "x": 13,
+          "y": 9,
+          "type": "SHELF"
+        },
+        {
+          "x": 16,
+          "y": 3,
+          "type": "SHELF"
+        },
+        {
+          "x": 16,
+          "y": 4,
+          "type": "SHELF"
+        },
+        {
+          "x": 16,
+          "y": 5,
+          "type": "SHELF"
+        },
+        {
+          "x": 16,
+          "y": 6,
+          "type": "SHELF"
+        },
+        {
+          "x": 16,
+          "y": 8,
+          "type": "SHELF"
+        },
+        {
+          "x": 16,
+          "y": 9,
+          "type": "SHELF"
+        },
+        {
+          "x": 17,
+          "y": 3,
+          "type": "SHELF"
+        },
+        {
+          "x": 17,
+          "y": 4,
+          "type": "SHELF"
+        },
+        {
+          "x": 17,
+          "y": 5,
+          "type": "SHELF"
+        },
+        {
+          "x": 17,
+          "y": 6,
+          "type": "SHELF"
+        },
+        {
+          "x": 17,
+          "y": 8,
+          "type": "SHELF"
+        },
+        {
+          "x": 17,
+          "y": 9,
+          "type": "SHELF"
+        },
+        {
+          "x": 18,
+          "y": 2,
+          "type": "DROPOFF"
+        },
+        {
+          "x": 18,
+          "y": 5,
+          "type": "DROPOFF"
+        },
+        {
+          "x": 18,
+          "y": 8,
+          "type": "DROPOFF"
+        }
+      ],
+      "metadata": {}
+    },
+    "robots": [
+      {
+        "id": "R-01",
+        "name": "Atlas 01",
+        "position": [
+          1,
+          12
+        ],
+        "home": [
+          1,
+          12
+        ],
+        "orientation": 0,
+        "status": "IDLE",
+        "task_id": null,
+        "path": [],
+        "path_index": 0,
+        "battery_capacity": 100.0,
+        "battery": 100.0,
+        "capacity": 50.0,
+        "load": 0.0,
+        "completed_tasks": 0,
+        "distance": 0,
+        "waiting": 0,
+        "busy_ticks": 0,
+        "mode": "IDLE",
+        "service_remaining": 0,
+        "goal": null
+      },
+      {
+        "id": "R-02",
+        "name": "Atlas 02",
+        "position": [
+          2,
+          12
+        ],
+        "home": [
+          2,
+          12
+        ],
+        "orientation": 0,
+        "status": "IDLE",
+        "task_id": null,
+        "path": [],
+        "path_index": 0,
+        "battery_capacity": 100.0,
+        "battery": 100.0,
+        "capacity": 50.0,
+        "load": 0.0,
+        "completed_tasks": 0,
+        "distance": 0,
+        "waiting": 0,
+        "busy_ticks": 0,
+        "mode": "IDLE",
+        "service_remaining": 0,
+        "goal": null
+      },
+      {
+        "id": "R-03",
+        "name": "Atlas 03",
+        "position": [
+          3,
+          12
+        ],
+        "home": [
+          3,
+          12
+        ],
+        "orientation": 0,
+        "status": "IDLE",
+        "task_id": null,
+        "path": [],
+        "path_index": 0,
+        "battery_capacity": 100.0,
+        "battery": 100.0,
+        "capacity": 50.0,
+        "load": 0.0,
+        "completed_tasks": 0,
+        "distance": 0,
+        "waiting": 0,
+        "busy_ticks": 0,
+        "mode": "IDLE",
+        "service_remaining": 0,
+        "goal": null
+      },
+      {
+        "id": "R-04",
+        "name": "Atlas 04",
+        "position": [
+          4,
+          12
+        ],
+        "home": [
+          4,
+          12
+        ],
+        "orientation": 0,
+        "status": "IDLE",
+        "task_id": null,
+        "path": [],
+        "path_index": 0,
+        "battery_capacity": 100.0,
+        "battery": 100.0,
+        "capacity": 50.0,
+        "load": 0.0,
+        "completed_tasks": 0,
+        "distance": 0,
+        "waiting": 0,
+        "busy_ticks": 0,
+        "mode": "IDLE",
+        "service_remaining": 0,
+        "goal": null
+      }
+    ],
+    "tasks": [
+      {
+        "id": "T-001",
+        "pickup": [
+          1,
+          8
+        ],
+        "dropoff": [
+          18,
+          2
+        ],
+        "priority": 1,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-002",
+        "pickup": [
+          1,
+          8
+        ],
+        "dropoff": [
+          18,
+          5
+        ],
+        "priority": 2,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-003",
+        "pickup": [
+          1,
+          2
+        ],
+        "dropoff": [
+          18,
+          2
+        ],
+        "priority": 1,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-004",
+        "pickup": [
+          1,
+          8
+        ],
+        "dropoff": [
+          18,
+          8
+        ],
+        "priority": 5,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-005",
+        "pickup": [
+          1,
+          2
+        ],
+        "dropoff": [
+          18,
+          8
+        ],
+        "priority": 4,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-006",
+        "pickup": [
+          1,
+          2
+        ],
+        "dropoff": [
+          18,
+          2
+        ],
+        "priority": 1,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-007",
+        "pickup": [
+          1,
+          2
+        ],
+        "dropoff": [
+          18,
+          2
+        ],
+        "priority": 5,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-008",
+        "pickup": [
+          1,
+          8
+        ],
+        "dropoff": [
+          18,
+          2
+        ],
+        "priority": 5,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-009",
+        "pickup": [
+          1,
+          2
+        ],
+        "dropoff": [
+          18,
+          8
+        ],
+        "priority": 5,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-010",
+        "pickup": [
+          1,
+          5
+        ],
+        "dropoff": [
+          18,
+          2
+        ],
+        "priority": 4,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-011",
+        "pickup": [
+          1,
+          8
+        ],
+        "dropoff": [
+          18,
+          5
+        ],
+        "priority": 1,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      },
+      {
+        "id": "T-012",
+        "pickup": [
+          1,
+          2
+        ],
+        "dropoff": [
+          18,
+          8
+        ],
+        "priority": 4,
+        "created_tick": 0,
+        "assigned_robot": null,
+        "status": "PENDING",
+        "load_duration": 2,
+        "unload_duration": 2,
+        "assigned_tick": null,
+        "pickup_tick": null,
+        "completed_tick": null,
+        "deadline": null,
+        "payload_weight": 10.0
+      }
+    ],
+    "seed": 42,
+    "config": {
+      "planner": "adaptive",
+      "scheduler": "priority",
+      "horizon": 128,
+      "max_nodes": 2000,
+      "timeout_seconds": 2.0,
+      "move_energy": 0.4,
+      "wait_energy": 0.0,
+      "handling_energy": 0.1,
+      "charging_rate": 4.0,
+      "critical_threshold": 15.0,
+      "tick_seconds": 1.0
+    }
+  },
+  "environment": {
+    "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "timer": "time.perf_counter",
+    "engine_version": "0.1.0"
+  },
+  "results": [
+    {
+      "algorithm": "astar",
+      "scheduler": "priority",
+      "seed": 42,
+      "robots": 4,
+      "mode": "mapf",
+      "benchmark": "B",
+      "source": "measured",
+      "optimal": false,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          1,
+          12
+        ],
+        "R-02": [
+          2,
+          12
+        ],
+        "R-03": [
+          3,
+          12
+        ],
+        "R-04": [
+          4,
+          12
+        ]
+      },
+      "goals": {
+        "R-01": [
+          11,
+          10
+        ],
+        "R-02": [
+          8,
+          1
+        ],
+        "R-03": [
+          6,
+          0
+        ],
+        "R-04": [
+          17,
+          11
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            11,
+            10
+          ]
+        ],
+        "R-02": [
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            8,
+            1
+          ]
+        ],
+        "R-03": [
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "R-04": [
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            12,
+            12
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            15,
+            12
+          ],
+          [
+            16,
+            12
+          ],
+          [
+            17,
+            12
+          ],
+          [
+            17,
+            11
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 17,
+        "sum_of_costs": 58,
+        "completed_tasks": 4,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 14.5,
+        "total_distance": 58.0,
+        "total_waiting": 0,
+        "planning_time_ms": 0.2693749265745282,
+        "replans": 0,
+        "planning_conflicts": 0,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 0.37695898208767176
+    },
+    {
+      "algorithm": "prioritized",
+      "scheduler": "priority",
+      "seed": 42,
+      "robots": 4,
+      "mode": "mapf",
+      "benchmark": "B",
+      "source": "measured",
+      "optimal": false,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          1,
+          12
+        ],
+        "R-02": [
+          2,
+          12
+        ],
+        "R-03": [
+          3,
+          12
+        ],
+        "R-04": [
+          4,
+          12
+        ]
+      },
+      "goals": {
+        "R-01": [
+          11,
+          10
+        ],
+        "R-02": [
+          8,
+          1
+        ],
+        "R-03": [
+          6,
+          0
+        ],
+        "R-04": [
+          17,
+          11
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            11,
+            10
+          ]
+        ],
+        "R-02": [
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            8,
+            1
+          ]
+        ],
+        "R-03": [
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "R-04": [
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            12,
+            12
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            15,
+            12
+          ],
+          [
+            16,
+            12
+          ],
+          [
+            17,
+            12
+          ],
+          [
+            17,
+            11
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 17,
+        "sum_of_costs": 58,
+        "completed_tasks": 4,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 14.5,
+        "total_distance": 58.0,
+        "total_waiting": 0,
+        "planning_time_ms": 1.160499989055097,
+        "replans": 0,
+        "planning_conflicts": 0,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 1.2345840223133564
+    },
+    {
+      "algorithm": "cbs",
+      "scheduler": "priority",
+      "seed": 42,
+      "robots": 4,
+      "mode": "mapf",
+      "benchmark": "B",
+      "source": "measured",
+      "optimal": true,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          1,
+          12
+        ],
+        "R-02": [
+          2,
+          12
+        ],
+        "R-03": [
+          3,
+          12
+        ],
+        "R-04": [
+          4,
+          12
+        ]
+      },
+      "goals": {
+        "R-01": [
+          11,
+          10
+        ],
+        "R-02": [
+          8,
+          1
+        ],
+        "R-03": [
+          6,
+          0
+        ],
+        "R-04": [
+          17,
+          11
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            11,
+            10
+          ]
+        ],
+        "R-02": [
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            8,
+            1
+          ]
+        ],
+        "R-03": [
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "R-04": [
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            12,
+            12
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            15,
+            12
+          ],
+          [
+            16,
+            12
+          ],
+          [
+            17,
+            12
+          ],
+          [
+            17,
+            11
+          ]
+        ]
+      },
+      "expanded": 1,
+      "metrics": {
+        "makespan": 17,
+        "sum_of_costs": 58,
+        "completed_tasks": 4,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 14.5,
+        "total_distance": 58.0,
+        "total_waiting": 0,
+        "planning_time_ms": 1.0870409896597266,
+        "replans": 0,
+        "planning_conflicts": 0,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 1.161125022917986
+    },
+    {
+      "algorithm": "adaptive",
+      "scheduler": "priority",
+      "seed": 42,
+      "robots": 4,
+      "mode": "mapf",
+      "benchmark": "B",
+      "source": "measured",
+      "optimal": false,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          1,
+          12
+        ],
+        "R-02": [
+          2,
+          12
+        ],
+        "R-03": [
+          3,
+          12
+        ],
+        "R-04": [
+          4,
+          12
+        ]
+      },
+      "goals": {
+        "R-01": [
+          11,
+          10
+        ],
+        "R-02": [
+          8,
+          1
+        ],
+        "R-03": [
+          6,
+          0
+        ],
+        "R-04": [
+          17,
+          11
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            11,
+            10
+          ]
+        ],
+        "R-02": [
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            8,
+            1
+          ]
+        ],
+        "R-03": [
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "R-04": [
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            12,
+            12
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            15,
+            12
+          ],
+          [
+            16,
+            12
+          ],
+          [
+            17,
+            12
+          ],
+          [
+            17,
+            11
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 17,
+        "sum_of_costs": 58,
+        "completed_tasks": 4,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 14.5,
+        "total_distance": 58.0,
+        "total_waiting": 0,
+        "planning_time_ms": 1.114542013965547,
+        "replans": 0,
+        "planning_conflicts": 0,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 1.1816660407930613
+    },
+    {
+      "algorithm": "astar",
+      "scheduler": "priority",
+      "seed": 43,
+      "robots": 4,
+      "mode": "mapf",
+      "benchmark": "B",
+      "source": "measured",
+      "optimal": false,
+      "status": "CONFLICT",
+      "reason": "Independent A* routes conflict",
+      "success": false,
+      "starts": {
+        "R-01": [
+          1,
+          12
+        ],
+        "R-02": [
+          2,
+          12
+        ],
+        "R-03": [
+          3,
+          12
+        ],
+        "R-04": [
+          4,
+          12
+        ]
+      },
+      "goals": {
+        "R-01": [
+          9,
+          0
+        ],
+        "R-02": [
+          1,
+          4
+        ],
+        "R-03": [
+          6,
+          11
+        ],
+        "R-04": [
+          3,
+          12
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "R-02": [
+          [
+            2,
+            12
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "R-03": [
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ]
+        ],
+        "R-04": [
+          [
+            4,
+            12
+          ],
+          [
+            3,
+            12
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 0,
+        "sum_of_costs": 0,
+        "completed_tasks": 0,
+        "task_completion_rate": 0,
+        "average_task_completion_time": 0,
+        "total_distance": 0.0,
+        "total_waiting": 0,
+        "planning_time_ms": 0.15549990348517895,
+        "replans": 0,
+        "planning_conflicts": 1,
+        "executed_collisions": 0,
+        "success": false
+      },
+      "first_conflict": {
+        "a": "R-01",
+        "b": "R-02",
+        "time": 1,
+        "vertex": null,
+        "a_edge": [
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            12
+          ]
+        ],
+        "b_edge": [
+          [
+            2,
+            12
+          ],
+          [
+            1,
+            12
+          ]
+        ]
+      },
+      "wall_time_ms": 0.220834044739604
+    },
+    {
+      "algorithm": "prioritized",
+      "scheduler": "priority",
+      "seed": 43,
+      "robots": 4,
+      "mode": "mapf",
+      "benchmark": "B",
+      "source": "measured",
+      "optimal": false,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          1,
+          12
+        ],
+        "R-02": [
+          2,
+          12
+        ],
+        "R-03": [
+          3,
+          12
+        ],
+        "R-04": [
+          4,
+          12
+        ]
+      },
+      "goals": {
+        "R-01": [
+          9,
+          0
+        ],
+        "R-02": [
+          1,
+          4
+        ],
+        "R-03": [
+          6,
+          11
+        ],
+        "R-04": [
+          3,
+          12
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "R-02": [
+          [
+            2,
+            12
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "R-03": [
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ]
+        ],
+        "R-04": [
+          [
+            4,
+            12
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            3,
+            12
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 20,
+        "sum_of_costs": 36,
+        "completed_tasks": 4,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 9,
+        "total_distance": 36.0,
+        "total_waiting": 0,
+        "planning_time_ms": 0.9964170167222619,
+        "replans": 0,
+        "planning_conflicts": 0,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 1.0633750353008509
+    },
+    {
+      "algorithm": "cbs",
+      "scheduler": "priority",
+      "seed": 43,
+      "robots": 4,
+      "mode": "mapf",
+      "benchmark": "B",
+      "source": "measured",
+      "optimal": true,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          1,
+          12
+        ],
+        "R-02": [
+          2,
+          12
+        ],
+        "R-03": [
+          3,
+          12
+        ],
+        "R-04": [
+          4,
+          12
+        ]
+      },
+      "goals": {
+        "R-01": [
+          9,
+          0
+        ],
+        "R-02": [
+          1,
+          4
+        ],
+        "R-03": [
+          6,
+          11
+        ],
+        "R-04": [
+          3,
+          12
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            1,
+            12
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "R-02": [
+          [
+            2,
+            12
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "R-03": [
+          [
+            3,
+            12
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            11
+          ]
+        ],
+        "R-04": [
+          [
+            4,
+            12
+          ],
+          [
+            3,
+            12
+          ]
+        ]
+      },
+      "expanded": 6,
+      "metrics": {
+        "makespan": 20,
+        "sum_of_costs": 34,
+        "completed_tasks": 4,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 8.5,
+        "total_distance": 34.0,
+        "total_waiting": 0,
+        "planning_time_ms": 1.8917910056188703,
+        "replans": 0,
+        "planning_conflicts": 5,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 1.9552500452846289
+    },
+    {
+      "algorithm": "adaptive",
+      "scheduler": "priority",
+      "seed": 43,
+      "robots": 4,
+      "mode": "mapf",
+      "benchmark": "B",
+      "source": "measured",
+      "optimal": false,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          1,
+          12
+        ],
+        "R-02": [
+          2,
+          12
+        ],
+        "R-03": [
+          3,
+          12
+        ],
+        "R-04": [
+          4,
+          12
+        ]
+      },
+      "goals": {
+        "R-01": [
+          9,
+          0
+        ],
+        "R-02": [
+          1,
+          4
+        ],
+        "R-03": [
+          6,
+          11
+        ],
+        "R-04": [
+          3,
+          12
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "R-02": [
+          [
+            2,
+            12
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "R-03": [
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ]
+        ],
+        "R-04": [
+          [
+            4,
+            12
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            3,
+            12
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 20,
+        "sum_of_costs": 36,
+        "completed_tasks": 4,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 9,
+        "total_distance": 36.0,
+        "total_waiting": 0,
+        "planning_time_ms": 0.9883750462904572,
+        "replans": 0,
+        "planning_conflicts": 0,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 1.0520839132368565
+    },
+    {
+      "algorithm": "astar",
+      "scheduler": "priority",
+      "seed": 44,
+      "robots": 4,
+      "mode": "mapf",
+      "benchmark": "B",
+      "source": "measured",
+      "optimal": false,
+      "status": "CONFLICT",
+      "reason": "Independent A* routes conflict",
+      "success": false,
+      "starts": {
+        "R-01": [
+          1,
+          12
+        ],
+        "R-02": [
+          2,
+          12
+        ],
+        "R-03": [
+          3,
+          12
+        ],
+        "R-04": [
+          4,
+          12
+        ]
+      },
+      "goals": {
+        "R-01": [
+          14,
+          6
+        ],
+        "R-02": [
+          7,
+          8
+        ],
+        "R-03": [
+          18,
+          8
+        ],
+        "R-04": [
+          7,
+          11
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            12,
+            12
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            14,
+            11
+          ],
+          [
+            14,
+            10
+          ],
+          [
+            14,
+            9
+          ],
+          [
+            14,
+            8
+          ],
+          [
+            14,
+            7
+          ],
+          [
+            14,
+            6
+          ]
+        ],
+        "R-02": [
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "R-03": [
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            12,
+            12
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            15,
+            12
+          ],
+          [
+            16,
+            12
+          ],
+          [
+            17,
+            12
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            18,
+            11
+          ],
+          [
+            18,
+            10
+          ],
+          [
+            18,
+            9
+          ],
+          [
+            18,
+            8
+          ]
+        ],
+        "R-04": [
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 0,
+        "sum_of_costs": 0,
+        "completed_tasks": 0,
+        "task_completion_rate": 0,
+        "average_task_completion_time": 0,
+        "total_distance": 0.0,
+        "total_waiting": 0,
+        "planning_time_ms": 0.23966608569025993,
+        "replans": 0,
+        "planning_conflicts": 1,
+        "executed_collisions": 0,
+        "success": false
+      },
+      "first_conflict": {
+        "a": "R-02",
+        "b": "R-04",
+        "time": 6,
+        "vertex": [
+          7,
+          11
+        ],
+        "a_edge": null,
+        "b_edge": null
+      },
+      "wall_time_ms": 0.29608304612338543
+    },
+    {
+      "algorithm": "prioritized",
+      "scheduler": "priority",
+      "seed": 44,
+      "robots": 4,
+      "mode": "mapf",
+      "benchmark": "B",
+      "source": "measured",
+      "optimal": false,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          1,
+          12
+        ],
+        "R-02": [
+          2,
+          12
+        ],
+        "R-03": [
+          3,
+          12
+        ],
+        "R-04": [
+          4,
+          12
+        ]
+      },
+      "goals": {
+        "R-01": [
+          14,
+          6
+        ],
+        "R-02": [
+          7,
+          8
+        ],
+        "R-03": [
+          18,
+          8
+        ],
+        "R-04": [
+          7,
+          11
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            12,
+            12
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            14,
+            11
+          ],
+          [
+            14,
+            10
+          ],
+          [
+            14,
+            9
+          ],
+          [
+            14,
+            8
+          ],
+          [
+            14,
+            7
+          ],
+          [
+            14,
+            6
+          ]
+        ],
+        "R-02": [
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "R-03": [
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            12,
+            12
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            15,
+            12
+          ],
+          [
+            16,
+            12
+          ],
+          [
+            17,
+            12
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            18,
+            11
+          ],
+          [
+            18,
+            10
+          ],
+          [
+            18,
+            9
+          ],
+          [
+            18,
+            8
+          ]
+        ],
+        "R-04": [
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            7,
+            11
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 19,
+        "sum_of_costs": 54,
+        "completed_tasks": 4,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 13.5,
+        "total_distance": 53.0,
+        "total_waiting": 1,
+        "planning_time_ms": 1.2135830475017428,
+        "replans": 0,
+        "planning_conflicts": 0,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 1.2787079904228449
+    },
+    {
+      "algorithm": "cbs",
+      "scheduler": "priority",
+      "seed": 44,
+      "robots": 4,
+      "mode": "mapf",
+      "benchmark": "B",
+      "source": "measured",
+      "optimal": true,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          1,
+          12
+        ],
+        "R-02": [
+          2,
+          12
+        ],
+        "R-03": [
+          3,
+          12
+        ],
+        "R-04": [
+          4,
+          12
+        ]
+      },
+      "goals": {
+        "R-01": [
+          14,
+          6
+        ],
+        "R-02": [
+          7,
+          8
+        ],
+        "R-03": [
+          18,
+          8
+        ],
+        "R-04": [
+          7,
+          11
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            12,
+            12
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            14,
+            11
+          ],
+          [
+            14,
+            10
+          ],
+          [
+            14,
+            9
+          ],
+          [
+            14,
+            8
+          ],
+          [
+            14,
+            7
+          ],
+          [
+            14,
+            6
+          ]
+        ],
+        "R-02": [
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "R-03": [
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            12,
+            12
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            15,
+            12
+          ],
+          [
+            16,
+            12
+          ],
+          [
+            17,
+            12
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            18,
+            11
+          ],
+          [
+            18,
+            10
+          ],
+          [
+            18,
+            9
+          ],
+          [
+            18,
+            8
+          ]
+        ],
+        "R-04": [
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ]
+        ]
+      },
+      "expanded": 2,
+      "metrics": {
+        "makespan": 19,
+        "sum_of_costs": 51,
+        "completed_tasks": 4,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 12.75,
+        "total_distance": 51.0,
+        "total_waiting": 0,
+        "planning_time_ms": 1.297582988627255,
+        "replans": 0,
+        "planning_conflicts": 1,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 1.3597909128293395
+    },
+    {
+      "algorithm": "adaptive",
+      "scheduler": "priority",
+      "seed": 44,
+      "robots": 4,
+      "mode": "mapf",
+      "benchmark": "B",
+      "source": "measured",
+      "optimal": false,
+      "status": "SUCCESS",
+      "reason": "",
+      "success": true,
+      "starts": {
+        "R-01": [
+          1,
+          12
+        ],
+        "R-02": [
+          2,
+          12
+        ],
+        "R-03": [
+          3,
+          12
+        ],
+        "R-04": [
+          4,
+          12
+        ]
+      },
+      "goals": {
+        "R-01": [
+          14,
+          6
+        ],
+        "R-02": [
+          7,
+          8
+        ],
+        "R-03": [
+          18,
+          8
+        ],
+        "R-04": [
+          7,
+          11
+        ]
+      },
+      "paths": {
+        "R-01": [
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            12,
+            12
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            14,
+            11
+          ],
+          [
+            14,
+            10
+          ],
+          [
+            14,
+            9
+          ],
+          [
+            14,
+            8
+          ],
+          [
+            14,
+            7
+          ],
+          [
+            14,
+            6
+          ]
+        ],
+        "R-02": [
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "R-03": [
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            12,
+            12
+          ],
+          [
+            13,
+            12
+          ],
+          [
+            14,
+            12
+          ],
+          [
+            15,
+            12
+          ],
+          [
+            16,
+            12
+          ],
+          [
+            17,
+            12
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            18,
+            11
+          ],
+          [
+            18,
+            10
+          ],
+          [
+            18,
+            9
+          ],
+          [
+            18,
+            8
+          ]
+        ],
+        "R-04": [
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            7,
+            11
+          ]
+        ]
+      },
+      "expanded": 0,
+      "metrics": {
+        "makespan": 19,
+        "sum_of_costs": 54,
+        "completed_tasks": 4,
+        "task_completion_rate": 1,
+        "average_task_completion_time": 13.5,
+        "total_distance": 53.0,
+        "total_waiting": 1,
+        "planning_time_ms": 1.2135000433772802,
+        "replans": 0,
+        "planning_conflicts": 0,
+        "executed_collisions": 0,
+        "success": true
+      },
+      "first_conflict": null,
+      "wall_time_ms": 1.2790419859811664
+    }
+  ],
+  "summary": [
+    {
+      "algorithm": "astar",
+      "scheduler": "priority",
+      "robots": 4,
+      "runs": 3,
+      "successful_runs": 1,
+      "success_rate": 0.3333333333333333,
+      "metrics": {
+        "makespan": {
+          "mean": 17,
+          "std": 0.0,
+          "n": 1
+        },
+        "sum_of_costs": {
+          "mean": 58,
+          "std": 0.0,
+          "n": 1
+        },
+        "completed_tasks": {
+          "mean": 4,
+          "std": 0.0,
+          "n": 1
+        },
+        "task_completion_rate": {
+          "mean": 1,
+          "std": 0.0,
+          "n": 1
+        },
+        "average_task_completion_time": {
+          "mean": 14.5,
+          "std": 0.0,
+          "n": 1
+        },
+        "total_distance": {
+          "mean": 58.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "total_waiting": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 1
+        },
+        "planning_time_ms": {
+          "mean": 0.22151363858332238,
+          "std": 0.048228717053069685,
+          "n": 3
+        },
+        "replans": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 1
+        },
+        "planning_conflicts": {
+          "mean": 0.6666666666666666,
+          "std": 0.4714045207910317,
+          "n": 3
+        },
+        "executed_collisions": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 1
+        }
+      }
+    },
+    {
+      "algorithm": "prioritized",
+      "scheduler": "priority",
+      "robots": 4,
+      "runs": 3,
+      "successful_runs": 3,
+      "success_rate": 1.0,
+      "metrics": {
+        "makespan": {
+          "mean": 18.666666666666668,
+          "std": 1.247219128924647,
+          "n": 3
+        },
+        "sum_of_costs": {
+          "mean": 49.333333333333336,
+          "std": 9.568466729604882,
+          "n": 3
+        },
+        "completed_tasks": {
+          "mean": 4,
+          "std": 0.0,
+          "n": 3
+        },
+        "task_completion_rate": {
+          "mean": 1,
+          "std": 0.0,
+          "n": 3
+        },
+        "average_task_completion_time": {
+          "mean": 12.333333333333334,
+          "std": 2.3921166824012206,
+          "n": 3
+        },
+        "total_distance": {
+          "mean": 49.0,
+          "std": 9.41629792788369,
+          "n": 3
+        },
+        "total_waiting": {
+          "mean": 0.3333333333333333,
+          "std": 0.4714045207910317,
+          "n": 3
+        },
+        "planning_time_ms": {
+          "mean": 1.1235000177597005,
+          "std": 0.09243743699758498,
+          "n": 3
+        },
+        "replans": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        },
+        "planning_conflicts": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        },
+        "executed_collisions": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        }
+      }
+    },
+    {
+      "algorithm": "cbs",
+      "scheduler": "priority",
+      "robots": 4,
+      "runs": 3,
+      "successful_runs": 3,
+      "success_rate": 1.0,
+      "metrics": {
+        "makespan": {
+          "mean": 18.666666666666668,
+          "std": 1.247219128924647,
+          "n": 3
+        },
+        "sum_of_costs": {
+          "mean": 47.666666666666664,
+          "std": 10.077477638553983,
+          "n": 3
+        },
+        "completed_tasks": {
+          "mean": 4,
+          "std": 0.0,
+          "n": 3
+        },
+        "task_completion_rate": {
+          "mean": 1,
+          "std": 0.0,
+          "n": 3
+        },
+        "average_task_completion_time": {
+          "mean": 11.916666666666666,
+          "std": 2.5193694096384958,
+          "n": 3
+        },
+        "total_distance": {
+          "mean": 47.666666666666664,
+          "std": 10.077477638553983,
+          "n": 3
+        },
+        "total_waiting": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        },
+        "planning_time_ms": {
+          "mean": 1.4254716613019507,
+          "std": 0.34075629756511916,
+          "n": 3
+        },
+        "replans": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        },
+        "planning_conflicts": {
+          "mean": 2,
+          "std": 2.160246899469287,
+          "n": 3
+        },
+        "executed_collisions": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        }
+      }
+    },
+    {
+      "algorithm": "adaptive",
+      "scheduler": "priority",
+      "robots": 4,
+      "runs": 3,
+      "successful_runs": 3,
+      "success_rate": 1.0,
+      "metrics": {
+        "makespan": {
+          "mean": 18.666666666666668,
+          "std": 1.247219128924647,
+          "n": 3
+        },
+        "sum_of_costs": {
+          "mean": 49.333333333333336,
+          "std": 9.568466729604882,
+          "n": 3
+        },
+        "completed_tasks": {
+          "mean": 4,
+          "std": 0.0,
+          "n": 3
+        },
+        "task_completion_rate": {
+          "mean": 1,
+          "std": 0.0,
+          "n": 3
+        },
+        "average_task_completion_time": {
+          "mean": 12.333333333333334,
+          "std": 2.3921166824012206,
+          "n": 3
+        },
+        "total_distance": {
+          "mean": 49.0,
+          "std": 9.41629792788369,
+          "n": 3
+        },
+        "total_waiting": {
+          "mean": 0.3333333333333333,
+          "std": 0.4714045207910317,
+          "n": 3
+        },
+        "planning_time_ms": {
+          "mean": 1.1054723678777616,
+          "std": 0.09213037840818766,
+          "n": 3
+        },
+        "replans": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        },
+        "planning_conflicts": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        },
+        "executed_collisions": {
+          "mean": 0,
+          "std": 0.0,
+          "n": 3
+        }
+      }
+    }
+  ]
+}

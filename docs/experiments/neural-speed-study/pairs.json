@@ -1,0 +1,1922 @@
+[
+  {
+    "seed": 1130000,
+    "robots": 4,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 225,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 18,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 2,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 235,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 30,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 13,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 4
+    }
+  },
+  {
+    "seed": 1130001,
+    "robots": 6,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 223,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 14,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 9,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 2
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 256,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 123,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 135,
+      "passage_waits_ge_10": 1,
+      "longest_passage_wait": 11
+    }
+  },
+  {
+    "seed": 1130002,
+    "robots": 8,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 193,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 19,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 17,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 7
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 219,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 76,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 100,
+      "passage_waits_ge_10": 2,
+      "longest_passage_wait": 16
+    }
+  },
+  {
+    "seed": 1130003,
+    "robots": 12,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 262,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 87,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 146,
+      "passage_waits_ge_10": 2,
+      "longest_passage_wait": 16
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 256,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 46,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 36,
+      "passage_waits_ge_10": 1,
+      "longest_passage_wait": 10
+    }
+  },
+  {
+    "seed": 1130004,
+    "robots": 4,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 276,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 29,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 13,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 286,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 20,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 7,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 2
+    }
+  },
+  {
+    "seed": 1130005,
+    "robots": 6,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 263,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 29,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 10,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 248,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 19,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 23,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 6
+    }
+  },
+  {
+    "seed": 1130006,
+    "robots": 8,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 247,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 19,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 7,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 3
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 227,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 35,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 1,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    }
+  },
+  {
+    "seed": 1130007,
+    "robots": 12,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 295,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 512,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 417,
+      "passage_waits_ge_10": 22,
+      "longest_passage_wait": 13
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 261,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 112,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 114,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 9
+    }
+  },
+  {
+    "seed": 1130008,
+    "robots": 4,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 474,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 26,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 12,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 6
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 441,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 35,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 44,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 9
+    }
+  },
+  {
+    "seed": 1130009,
+    "robots": 6,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 296,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 37,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 7,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 318,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 65,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 61,
+      "passage_waits_ge_10": 3,
+      "longest_passage_wait": 12
+    }
+  },
+  {
+    "seed": 1130010,
+    "robots": 8,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 320,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 27,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 13,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 382,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 215,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 233,
+      "passage_waits_ge_10": 7,
+      "longest_passage_wait": 12
+    }
+  },
+  {
+    "seed": 1130011,
+    "robots": 12,
+    "before": {
+      "status": "FAILED",
+      "reason": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 345,
+      "completed_tasks": 18,
+      "executed_collisions": 0,
+      "rejected_moves": 1316,
+      "stall": true,
+      "stall_in_passage_zone": true,
+      "passage_wait_ticks": 862,
+      "passage_waits_ge_10": 18,
+      "longest_passage_wait": 130
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 300,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 199,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 177,
+      "passage_waits_ge_10": 7,
+      "longest_passage_wait": 11
+    }
+  },
+  {
+    "seed": 1130012,
+    "robots": 4,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 208,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 0,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 0,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 0
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 212,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 2,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 0,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 0
+    }
+  },
+  {
+    "seed": 1130013,
+    "robots": 6,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 168,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 25,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 1,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 168,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 7,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 12,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 6
+    }
+  },
+  {
+    "seed": 1130014,
+    "robots": 8,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 143,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 32,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 8,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 6
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 144,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 22,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 35,
+      "passage_waits_ge_10": 2,
+      "longest_passage_wait": 10
+    }
+  },
+  {
+    "seed": 1130015,
+    "robots": 12,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 193,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 12,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 11,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 5
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 236,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 63,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 28,
+      "passage_waits_ge_10": 1,
+      "longest_passage_wait": 10
+    }
+  },
+  {
+    "seed": 1130016,
+    "robots": 4,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 408,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 25,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 0,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 0
+    },
+    "after": {
+      "status": "TICK_LIMIT",
+      "reason": null,
+      "ticks": 1600,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 4022,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 2697,
+      "passage_waits_ge_10": 5,
+      "longest_passage_wait": 1317
+    }
+  },
+  {
+    "seed": 1130017,
+    "robots": 6,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 308,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 46,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 34,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 8
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 296,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 83,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 82,
+      "passage_waits_ge_10": 2,
+      "longest_passage_wait": 12
+    }
+  },
+  {
+    "seed": 1130018,
+    "robots": 8,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 302,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 58,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 50,
+      "passage_waits_ge_10": 2,
+      "longest_passage_wait": 11
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 273,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 37,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 28,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 7
+    }
+  },
+  {
+    "seed": 1130019,
+    "robots": 12,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 381,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 151,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 101,
+      "passage_waits_ge_10": 5,
+      "longest_passage_wait": 12
+    },
+    "after": {
+      "status": "FAILED",
+      "reason": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 234,
+      "completed_tasks": 10,
+      "executed_collisions": 0,
+      "rejected_moves": 918,
+      "stall": true,
+      "stall_in_passage_zone": true,
+      "passage_wait_ticks": 902,
+      "passage_waits_ge_10": 25,
+      "longest_passage_wait": 105
+    }
+  },
+  {
+    "seed": 1130020,
+    "robots": 4,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 352,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 32,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 1,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 374,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 15,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 1,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    }
+  },
+  {
+    "seed": 1130021,
+    "robots": 6,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 289,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 45,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 2,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 379,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 239,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 258,
+      "passage_waits_ge_10": 8,
+      "longest_passage_wait": 12
+    }
+  },
+  {
+    "seed": 1130022,
+    "robots": 8,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 334,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 54,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 2,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 317,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 42,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 41,
+      "passage_waits_ge_10": 2,
+      "longest_passage_wait": 10
+    }
+  },
+  {
+    "seed": 1130023,
+    "robots": 12,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 333,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 23,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 6,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 2
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 309,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 17,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 6,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    }
+  },
+  {
+    "seed": 1130024,
+    "robots": 4,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 239,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 41,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 49,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 8
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 207,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 14,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 11,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 3
+    }
+  },
+  {
+    "seed": 1130025,
+    "robots": 6,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 199,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 17,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 20,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 9
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 184,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 2,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 0,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 0
+    }
+  },
+  {
+    "seed": 1130026,
+    "robots": 8,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 209,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 62,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 53,
+      "passage_waits_ge_10": 3,
+      "longest_passage_wait": 11
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 205,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 38,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 34,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 6
+    }
+  },
+  {
+    "seed": 1130027,
+    "robots": 12,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 192,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 27,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 22,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 5
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 171,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 19,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 10,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 2
+    }
+  },
+  {
+    "seed": 1130028,
+    "robots": 4,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 316,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 18,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 1,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 280,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 9,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 6,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    }
+  },
+  {
+    "seed": 1130029,
+    "robots": 6,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 241,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 20,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 6,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 2
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 259,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 121,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 136,
+      "passage_waits_ge_10": 4,
+      "longest_passage_wait": 11
+    }
+  },
+  {
+    "seed": 1130030,
+    "robots": 8,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 200,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 132,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 141,
+      "passage_waits_ge_10": 2,
+      "longest_passage_wait": 27
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 167,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 12,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 4,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    }
+  },
+  {
+    "seed": 1130031,
+    "robots": 12,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 273,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 216,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 234,
+      "passage_waits_ge_10": 8,
+      "longest_passage_wait": 13
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 275,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 80,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 85,
+      "passage_waits_ge_10": 2,
+      "longest_passage_wait": 11
+    }
+  },
+  {
+    "seed": 1130032,
+    "robots": 4,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 393,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 15,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 3,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 399,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 11,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 2,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    }
+  },
+  {
+    "seed": 1130033,
+    "robots": 6,
+    "before": {
+      "status": "FAILED",
+      "reason": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 351,
+      "completed_tasks": 17,
+      "executed_collisions": 0,
+      "rejected_moves": 539,
+      "stall": true,
+      "stall_in_passage_zone": true,
+      "passage_wait_ticks": 467,
+      "passage_waits_ge_10": 15,
+      "longest_passage_wait": 61
+    },
+    "after": {
+      "status": "FAILED",
+      "reason": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 385,
+      "completed_tasks": 19,
+      "executed_collisions": 0,
+      "rejected_moves": 812,
+      "stall": true,
+      "stall_in_passage_zone": true,
+      "passage_wait_ticks": 635,
+      "passage_waits_ge_10": 18,
+      "longest_passage_wait": 111
+    }
+  },
+  {
+    "seed": 1130034,
+    "robots": 8,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 411,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 53,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 12,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 411,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 129,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 131,
+      "passage_waits_ge_10": 4,
+      "longest_passage_wait": 17
+    }
+  },
+  {
+    "seed": 1130035,
+    "robots": 12,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 458,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 96,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 77,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 9
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 432,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 131,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 105,
+      "passage_waits_ge_10": 2,
+      "longest_passage_wait": 11
+    }
+  },
+  {
+    "seed": 1130036,
+    "robots": 4,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 218,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 27,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 1,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 253,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 53,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 47,
+      "passage_waits_ge_10": 1,
+      "longest_passage_wait": 10
+    }
+  },
+  {
+    "seed": 1130037,
+    "robots": 6,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 168,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 13,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 2,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 205,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 27,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 36,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 9
+    }
+  },
+  {
+    "seed": 1130038,
+    "robots": 8,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 142,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 30,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 50,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 9
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 173,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 38,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 47,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 9
+    }
+  },
+  {
+    "seed": 1130039,
+    "robots": 12,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 218,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 25,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 5,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 214,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 52,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 67,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 9
+    }
+  },
+  {
+    "seed": 1130040,
+    "robots": 4,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 347,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 14,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 3,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 334,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 29,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 39,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 8
+    }
+  },
+  {
+    "seed": 1130041,
+    "robots": 6,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 301,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 85,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 73,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 9
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 327,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 182,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 188,
+      "passage_waits_ge_10": 5,
+      "longest_passage_wait": 12
+    }
+  },
+  {
+    "seed": 1130042,
+    "robots": 8,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 302,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 120,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 42,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 9
+    },
+    "after": {
+      "status": "FAILED",
+      "reason": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 382,
+      "completed_tasks": 13,
+      "executed_collisions": 0,
+      "rejected_moves": 1418,
+      "stall": true,
+      "stall_in_passage_zone": true,
+      "passage_wait_ticks": 1147,
+      "passage_waits_ge_10": 29,
+      "longest_passage_wait": 142
+    }
+  },
+  {
+    "seed": 1130043,
+    "robots": 12,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 376,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 59,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 2,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 382,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 35,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 5,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    }
+  },
+  {
+    "seed": 1130044,
+    "robots": 4,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 430,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 48,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 40,
+      "passage_waits_ge_10": 2,
+      "longest_passage_wait": 14
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 455,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 102,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 106,
+      "passage_waits_ge_10": 5,
+      "longest_passage_wait": 13
+    }
+  },
+  {
+    "seed": 1130045,
+    "robots": 6,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 384,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 23,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 19,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 6
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 361,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 34,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 10,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 7
+    }
+  },
+  {
+    "seed": 1130046,
+    "robots": 8,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 371,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 17,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 5,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 2
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 383,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 18,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 11,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 6
+    }
+  },
+  {
+    "seed": 1130047,
+    "robots": 12,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 310,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 18,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 4,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 328,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 49,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 29,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 9
+    }
+  },
+  {
+    "seed": 1130048,
+    "robots": 4,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 296,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 40,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 22,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 4
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 381,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 232,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 215,
+      "passage_waits_ge_10": 6,
+      "longest_passage_wait": 11
+    }
+  },
+  {
+    "seed": 1130049,
+    "robots": 6,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 169,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 30,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 36,
+      "passage_waits_ge_10": 1,
+      "longest_passage_wait": 11
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 199,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 136,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 168,
+      "passage_waits_ge_10": 5,
+      "longest_passage_wait": 11
+    }
+  },
+  {
+    "seed": 1130050,
+    "robots": 8,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 290,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 32,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 39,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 9
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 275,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 10,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 0,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 0
+    }
+  },
+  {
+    "seed": 1130051,
+    "robots": 12,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 282,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 35,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 4,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 238,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 41,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 44,
+      "passage_waits_ge_10": 1,
+      "longest_passage_wait": 10
+    }
+  },
+  {
+    "seed": 1130052,
+    "robots": 4,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 323,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 43,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 11,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 4
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 325,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 37,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 16,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 7
+    }
+  },
+  {
+    "seed": 1130053,
+    "robots": 6,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 267,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 61,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 50,
+      "passage_waits_ge_10": 1,
+      "longest_passage_wait": 10
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 248,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 15,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 21,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 6
+    }
+  },
+  {
+    "seed": 1130054,
+    "robots": 8,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 217,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 31,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 8,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 2
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 220,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 31,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 12,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    }
+  },
+  {
+    "seed": 1130055,
+    "robots": 12,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 159,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 47,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 8,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 3
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 156,
+      "completed_tasks": 20,
+      "executed_collisions": 0,
+      "rejected_moves": 51,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 8,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 7
+    }
+  },
+  {
+    "seed": 1130056,
+    "robots": 4,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 420,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 27,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 12,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 2
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 447,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 30,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 21,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 9
+    }
+  },
+  {
+    "seed": 1130057,
+    "robots": 6,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 331,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 53,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 25,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 5
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 362,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 64,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 72,
+      "passage_waits_ge_10": 3,
+      "longest_passage_wait": 12
+    }
+  },
+  {
+    "seed": 1130058,
+    "robots": 8,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 336,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 160,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 139,
+      "passage_waits_ge_10": 3,
+      "longest_passage_wait": 10
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 291,
+      "completed_tasks": 24,
+      "executed_collisions": 0,
+      "rejected_moves": 39,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 32,
+      "passage_waits_ge_10": 2,
+      "longest_passage_wait": 11
+    }
+  },
+  {
+    "seed": 1130059,
+    "robots": 12,
+    "before": {
+      "status": "TICK_LIMIT",
+      "reason": null,
+      "ticks": 1600,
+      "completed_tasks": 11,
+      "executed_collisions": 0,
+      "rejected_moves": 12962,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 8419,
+      "passage_waits_ge_10": 107,
+      "longest_passage_wait": 1413
+    },
+    "after": {
+      "status": "FAILED",
+      "reason": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "ticks": 323,
+      "completed_tasks": 13,
+      "executed_collisions": 0,
+      "rejected_moves": 1449,
+      "stall": true,
+      "stall_in_passage_zone": true,
+      "passage_wait_ticks": 793,
+      "passage_waits_ge_10": 19,
+      "longest_passage_wait": 152
+    }
+  },
+  {
+    "seed": 1130060,
+    "robots": 4,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 190,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 5,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 7,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 6
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 190,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 18,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 1,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 1
+    }
+  },
+  {
+    "seed": 1130061,
+    "robots": 6,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 176,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 14,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 26,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 6
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 212,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 20,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 37,
+      "passage_waits_ge_10": 1,
+      "longest_passage_wait": 10
+    }
+  },
+  {
+    "seed": 1130062,
+    "robots": 8,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 152,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 50,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 42,
+      "passage_waits_ge_10": 1,
+      "longest_passage_wait": 10
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 164,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 42,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 40,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 9
+    }
+  },
+  {
+    "seed": 1130063,
+    "robots": 12,
+    "before": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 163,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 4,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 0,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 0
+    },
+    "after": {
+      "status": "COMPLETED",
+      "reason": null,
+      "ticks": 163,
+      "completed_tasks": 16,
+      "executed_collisions": 0,
+      "rejected_moves": 18,
+      "stall": false,
+      "stall_in_passage_zone": false,
+      "passage_wait_ticks": 8,
+      "passage_waits_ge_10": 0,
+      "longest_passage_wait": 2
+    }
+  }
+]

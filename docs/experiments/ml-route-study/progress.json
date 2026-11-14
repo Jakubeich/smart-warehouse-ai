@@ -1,0 +1,17 @@
+{
+  "jobs": {
+    "training-1": "5880d88b-f0a8-4665-a992-a55aa310118c",
+    "training-2": "121244c0-6277-4456-b99d-1eb795edb278",
+    "training-3": "cdf9efa3-d3ed-4a5a-839d-61341fbad8c1",
+    "training-4": "dfd58edd-ab0e-4301-a9d3-d02aa478bb8f",
+    "training-5": "e6401c0c-d8d5-4d3e-b05b-53ccc586fad1",
+    "training-6": "b005e347-d8a1-473d-a585-179f0f744fef",
+    "comparison-one-narrow-4": "d7a67eaf-36da-486d-91d7-6ee601675087",
+    "comparison-one-narrow-8": "4a883169-3acb-4697-a239-9249eba26750",
+    "comparison-two-narrow-8": "1ae90310-4e5d-4227-9450-629cc24b806b",
+    "comparison-two-narrow-12": "0c7ea614-eccf-4179-84b6-1bbb02d582dc",
+    "comparison-two-wide-8": "ae7b76d7-7f1d-4721-bd47-b62ec2bbf426",
+    "comparison-open-8": "f4986692-1478-4a0b-ae11-8fa3b60397b3"
+  },
+  "model_id": "cea34362-b596-4ff3-bb4c-0b380e7bdbdf"
+}

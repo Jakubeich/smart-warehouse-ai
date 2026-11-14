@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "models": {
+    "robot": "/models/robots/amr.glb",
+    "shelf": "/models/warehouse/shelf.glb",
+    "pickup": "/models/warehouse/pickup.glb",
+    "dropoff": "/models/warehouse/dropoff.glb",
+    "charger": "/models/warehouse/charger.glb",
+    "pallet": "/models/warehouse/pallet.glb",
+    "wall": "/models/warehouse/wall.glb",
+    "obstacle": "/models/warehouse/obstacle.glb"
+  }
+}

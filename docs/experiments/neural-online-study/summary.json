@@ -1,0 +1,166 @@
+{
+  "before": {
+    "id": "nn-975367e33160",
+    "initial_model_id": "nn-975367e33160",
+    "updates": 0,
+    "learned_samples": 0,
+    "update_ticks": 64
+  },
+  "after": {
+    "id": "nn-17a7071a6ab3",
+    "initial_model_id": "nn-975367e33160",
+    "updates": 500,
+    "learned_samples": 105505,
+    "update_ticks": 64
+  },
+  "training_statuses": {
+    "COMPLETED": 87,
+    "FAILED": 8,
+    "TICK_LIMIT": 1
+  },
+  "training_completed_tasks": 1851,
+  "all": {
+    "maps": 60,
+    "both_completed": 56,
+    "before": {
+      "completed": 56,
+      "statuses": {
+        "COMPLETED": 56,
+        "FAILED": 3,
+        "TICK_LIMIT": 1
+      },
+      "stalls": 3,
+      "stalls_in_passage_zone": 3,
+      "scenarios_with_passage_wait_ge_10": 13,
+      "passage_waits_ge_10": 184,
+      "mean_ticks_both_completed": 272.9642857142857,
+      "mean_passage_wait_ticks_both_completed": 23.982142857142858,
+      "executed_collisions": 0
+    },
+    "after": {
+      "completed": 60,
+      "statuses": {
+        "COMPLETED": 60
+      },
+      "stalls": 0,
+      "stalls_in_passage_zone": 0,
+      "scenarios_with_passage_wait_ge_10": 9,
+      "passage_waits_ge_10": 30,
+      "mean_ticks_both_completed": 276.375,
+      "mean_passage_wait_ticks_both_completed": 21.410714285714285,
+      "executed_collisions": 0
+    },
+    "only_after_complete": [
+      1020001,
+      1020025,
+      1020026,
+      1020037
+    ],
+    "only_before_complete": []
+  },
+  "groups": {
+    "narrow": {
+      "maps": 40,
+      "both_completed": 36,
+      "before": {
+        "completed": 36,
+        "statuses": {
+          "COMPLETED": 36,
+          "FAILED": 3,
+          "TICK_LIMIT": 1
+        },
+        "stalls": 3,
+        "stalls_in_passage_zone": 3,
+        "scenarios_with_passage_wait_ge_10": 13,
+        "passage_waits_ge_10": 184,
+        "mean_ticks_both_completed": 283.72222222222223,
+        "mean_passage_wait_ticks_both_completed": 37.30555555555556,
+        "executed_collisions": 0
+      },
+      "after": {
+        "completed": 40,
+        "statuses": {
+          "COMPLETED": 40
+        },
+        "stalls": 0,
+        "stalls_in_passage_zone": 0,
+        "scenarios_with_passage_wait_ge_10": 9,
+        "passage_waits_ge_10": 30,
+        "mean_ticks_both_completed": 287.77777777777777,
+        "mean_passage_wait_ticks_both_completed": 33.30555555555556,
+        "executed_collisions": 0
+      },
+      "only_after_complete": [
+        1020001,
+        1020025,
+        1020026,
+        1020037
+      ],
+      "only_before_complete": []
+    },
+    "wide": {
+      "maps": 10,
+      "both_completed": 10,
+      "before": {
+        "completed": 10,
+        "statuses": {
+          "COMPLETED": 10
+        },
+        "stalls": 0,
+        "stalls_in_passage_zone": 0,
+        "scenarios_with_passage_wait_ge_10": 0,
+        "passage_waits_ge_10": 0,
+        "mean_ticks_both_completed": 276.2,
+        "mean_passage_wait_ticks_both_completed": 0,
+        "executed_collisions": 0
+      },
+      "after": {
+        "completed": 10,
+        "statuses": {
+          "COMPLETED": 10
+        },
+        "stalls": 0,
+        "stalls_in_passage_zone": 0,
+        "scenarios_with_passage_wait_ge_10": 0,
+        "passage_waits_ge_10": 0,
+        "mean_ticks_both_completed": 285.9,
+        "mean_passage_wait_ticks_both_completed": 0,
+        "executed_collisions": 0
+      },
+      "only_after_complete": [],
+      "only_before_complete": []
+    },
+    "open": {
+      "maps": 10,
+      "both_completed": 10,
+      "before": {
+        "completed": 10,
+        "statuses": {
+          "COMPLETED": 10
+        },
+        "stalls": 0,
+        "stalls_in_passage_zone": 0,
+        "scenarios_with_passage_wait_ge_10": 0,
+        "passage_waits_ge_10": 0,
+        "mean_ticks_both_completed": 231,
+        "mean_passage_wait_ticks_both_completed": 0,
+        "executed_collisions": 0
+      },
+      "after": {
+        "completed": 10,
+        "statuses": {
+          "COMPLETED": 10
+        },
+        "stalls": 0,
+        "stalls_in_passage_zone": 0,
+        "scenarios_with_passage_wait_ge_10": 0,
+        "passage_waits_ge_10": 0,
+        "mean_ticks_both_completed": 225.8,
+        "mean_passage_wait_ticks_both_completed": 0,
+        "executed_collisions": 0
+      },
+      "only_after_complete": [],
+      "only_before_complete": []
+    }
+  }
+}

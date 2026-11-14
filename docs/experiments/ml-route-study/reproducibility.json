@@ -1,0 +1,31 @@
+{
+  "model_id": "cea34362-b596-4ff3-bb4c-0b380e7bdbdf",
+  "dataset_hash": "c850acf7cd9a6d57a394176f077b35a2a6d2a6d1b9afac9009bcaf9c4fa88005",
+  "checks": {
+    "trees": true,
+    "metrics": true,
+    "dataset_hash": true,
+    "train_layouts": true,
+    "test_layouts": true,
+    "feature_importance": true
+  },
+  "source_hash_matches": {
+    "apps/backend/app/simulation/__init__.py": true,
+    "apps/backend/app/simulation/engine.py": true,
+    "apps/backend/app/simulation/invariants.py": true,
+    "apps/backend/app/simulation/service.py": true,
+    "apps/backend/app/learning/__init__.py": true,
+    "apps/backend/app/learning/features.py": true,
+    "apps/backend/app/learning/model.py": true,
+    "apps/backend/app/learning/runner.py": true,
+    "apps/backend/app/learning/service.py": true,
+    "apps/backend/app/scheduling/__init__.py": true,
+    "apps/backend/app/scheduling/assignment.py": true,
+    "apps/backend/app/algorithms/__init__.py": true,
+    "apps/backend/app/algorithms/mapf.py": true,
+    "apps/backend/app/algorithms/pathfinding.py": true,
+    "apps/backend/app/core/__init__.py": true,
+    "apps/backend/app/core/demos.py": true,
+    "apps/backend/app/core/generator.py": true
+  }
+}

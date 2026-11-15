@@ -1,6 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { Vector3 } from "three";
-import { canInterpolate, worldYaw } from "../src/renderers/shared/scene";
+import {
+  canInterpolate,
+  motionPath,
+  positionOnPath,
+  worldYaw,
+  type RobotPose,
+} from "../src/renderers/shared/scene";
 import { modelManifestSchema } from "../src/renderers/3d/modelSources";
 
 describe("shared simulation → 3D contract", () => {
@@ -52,5 +58,28 @@ describe("shared simulation → 3D contract", () => {
         modelManifestSchema.safeParse({ version: 1, models: { robot } })
           .success,
       ).toBe(false);
+  });
+  it("uses the real turn between batched poses and snaps between attempts", () => {
+    const from: RobotPose = {
+      run: "live",
+      tick: 10,
+      position: [5, 5],
+      episode: "a",
+    };
+    const to: RobotPose = { ...from, tick: 12, position: [6, 6] };
+    const trail = {
+      episode: "a",
+      frames: [
+        [11, [[6, 5]]],
+        [12, [[6, 6]]],
+      ],
+    } satisfies NonNullable<Parameters<typeof motionPath>[2]>;
+    const path = motionPath(from, to, trail, 0);
+    expect(positionOnPath(path, 0.5)).toEqual([6, 5]);
+    expect(positionOnPath(path, 0.75)).toEqual([6, 5.5]);
+    expect(motionPath(from, { ...to, episode: "b" }, trail, 0)).toEqual([
+      [6, 6],
+    ]);
+    expect(motionPath(from, to, undefined, 0)).toEqual([[6, 6]]);
   });
 });

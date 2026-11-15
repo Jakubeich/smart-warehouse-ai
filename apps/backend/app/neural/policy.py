@@ -130,7 +130,6 @@ def dispatch_actions(
 ) -> list[Action]:
     actions = []
     eligible = []
-    chargers = [p for p, kind in grid.cells.items() if kind == CellType.CHARGER]
     for task in pending:
         if {task.pickup, task.dropoff} & (stations | goals) or task.pickup in occupied:
             continue
@@ -169,7 +168,7 @@ def dispatch_actions(
             )
         )
 
-    for point in dict.fromkeys([*chargers, robot.home]):
+    for point in dict.fromkeys([*grid.chargers, robot.home]):
         if point is None or point in goals or point in stations or point in occupied:
             continue
         distance = grid.distance(robot.position, point)

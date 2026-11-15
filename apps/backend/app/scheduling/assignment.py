@@ -3,21 +3,26 @@
 from collections.abc import Callable
 
 from app.domain.grid import Grid
-from app.domain.models import AlgorithmConfig, CellType, Robot, TransportTask
+from app.domain.models import AlgorithmConfig, Robot, TransportTask
 
 INFEASIBLE = 10**9
 
 
 def energy_needed(robot: Robot, task: TransportTask, grid: Grid, config: AlgorithmConfig) -> float:
-    chargers = [p for p, c in grid.cells.items() if c == CellType.CHARGER]
     first = grid.distance(robot.position, task.pickup)
     delivery = grid.distance(task.pickup, task.dropoff)
-    returns = [d for p in chargers if (d := grid.distance(task.dropoff, p)) is not None]
-    if first is None or delivery is None or not returns:
+    if first is None or delivery is None:
         return float("inf")
     # Conservative return to the robot's own charger when available.
-    home_distance = grid.distance(task.dropoff, robot.home) if robot.home else None
-    back = home_distance if robot.home in chargers and home_distance is not None else min(returns)
+    home = robot.home
+    back = grid.distance(task.dropoff, home) if home is not None and home in grid.chargers else None
+    if back is None:
+        back = min(
+            (d for point in grid.chargers if (d := grid.distance(task.dropoff, point)) is not None),
+            default=None,
+        )
+    if back is None:
+        return float("inf")
     return (
         (first + delivery + back) * config.move_energy
         + (task.load_duration + task.unload_duration) * config.handling_energy

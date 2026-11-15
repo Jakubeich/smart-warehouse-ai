@@ -223,6 +223,22 @@ class NeuralDecision(Model):
     score: float
 
 
+class TrainingAttempt(Model):
+    status: Literal["COMPLETED", "FAILED"]
+    ticks: int
+    completed_tasks: int
+    model_updates: int
+    error: str | None = None
+
+
+class TrainingLoop(Model):
+    active: bool = True
+    attempt: int = 1
+    finished_attempts: int = 0
+    best_completed_tasks: int = 0
+    last_result: TrainingAttempt | None = None
+
+
 class SimulationState(Model):
     schema_version: Literal[1] = 1
     id: str
@@ -251,4 +267,5 @@ class SimulationState(Model):
     neural_last_model_id: str | None = None
     neural_updates: int = 0
     neural_learned_samples: int = 0
+    training_loop: TrainingLoop | None = None
     assignment_decisions: list[AssignmentDecision] = Field(default_factory=list)

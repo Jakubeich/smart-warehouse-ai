@@ -373,12 +373,7 @@ def create_app(database: Repository | None = None) -> FastAPI:
         queue: asyncio.Queue[dict[str, object]] = asyncio.Queue(maxsize=1)
         async with session.lock:
             session.clients.add(queue)
-            initial = {
-                "version": 1,
-                "type": "STATE_SNAPSHOT",
-                "sequence": session.engine.state.sequence,
-                "state": session.engine.state.model_dump(mode="json"),
-            }
+            initial = session.snapshot()
 
         async def sender() -> None:
             await websocket.send_json(initial)

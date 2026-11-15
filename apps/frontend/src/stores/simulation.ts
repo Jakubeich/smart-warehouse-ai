@@ -24,11 +24,25 @@ export const useSimulation = create<State>((set) => ({
   error: null,
   setSimulation: (next) => {
     sessionStorage.setItem(activeRunKey, next.id);
-    set((s) =>
-      s.simulation?.id === next.id && s.simulation.sequence > next.sequence
-        ? {}
-        : { simulation: next, error: null },
-    );
+    set((s) => {
+      const previous = s.simulation;
+      if (previous?.id !== next.id) return { simulation: next, error: null };
+      if (previous.sequence > next.sequence) return s;
+      const sameObstacles =
+        previous.obstacles.length === next.obstacles.length &&
+        previous.obstacles.every(
+          ([x, y], i) =>
+            x === next.obstacles[i][0] && y === next.obstacles[i][1],
+        );
+      return {
+        simulation: {
+          ...next,
+          warehouse: previous.warehouse,
+          obstacles: sameObstacles ? previous.obstacles : next.obstacles,
+        },
+        error: null,
+      };
+    });
   },
   selectRobot: (id) => set({ selectedRobot: id, selectedTask: null }),
   selectTask: (id) => set({ selectedTask: id, selectedRobot: null }),

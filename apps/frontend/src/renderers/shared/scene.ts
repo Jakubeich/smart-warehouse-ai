@@ -48,6 +48,69 @@ export function canInterpolate(
       1
   );
 }
+export type RobotPose = {
+  run: string;
+  tick: number;
+  position: Point;
+  episode?: string;
+};
+
+/** Rebuild the real route between snapshots, including turns that happened between them. */
+export function motionPath(
+  previous: RobotPose | undefined,
+  next: RobotPose,
+  motion: Simulation["view_motion"],
+  robotIndex: number,
+): Point[] {
+  if (
+    !previous ||
+    previous.run !== next.run ||
+    previous.tick >= next.tick ||
+    (previous.episode && next.episode && previous.episode !== next.episode)
+  )
+    return [next.position];
+
+  if (motion?.frames.length) {
+    const first = motion.frames[0][0];
+    const path = [previous.position];
+    for (let tick = previous.tick + 1; tick <= next.tick; tick++) {
+      const frame = motion.frames[tick - first];
+      const point = frame?.[1][robotIndex];
+      const [x, y] = path[path.length - 1];
+      if (
+        frame?.[0] !== tick ||
+        !point ||
+        Math.abs(x - point[0]) + Math.abs(y - point[1]) > 1
+      ) {
+        return [next.position];
+      }
+      path.push(point);
+    }
+    const [x, y] = path[path.length - 1];
+    if (x === next.position[0] && y === next.position[1]) return path;
+    return [next.position];
+  }
+  return canInterpolate(previous, next)
+    ? [previous.position, next.position]
+    : [next.position];
+}
+
+export function positionOnPath(path: Point[], progress: number): Point {
+  const segment = (path.length - 1) * Math.min(1, Math.max(0, progress));
+  const from = path[Math.floor(segment)];
+  const to = path[Math.ceil(segment)];
+  const fraction = segment % 1;
+  return [
+    from[0] + (to[0] - from[0]) * fraction,
+    from[1] + (to[1] - from[1]) * fraction,
+  ];
+}
+
+export const motionDuration = (path: Point[], speed: number) =>
+  path.length > 1
+    ? Math.min(250, Math.max(48, (350 * (path.length - 1)) / speed))
+    : 0;
+
 export const robotColors = [
   "#2563eb",
   "#16a34a",

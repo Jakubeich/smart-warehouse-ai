@@ -13,7 +13,7 @@ class CreateSimulation(Model):
 
 
 class SpeedRequest(Model):
-    speed: Finite = Field(ge=0.25, le=16)
+    speed: Finite = Field(ge=0.25, le=512)
 
 
 class ObstacleRequest(Model):

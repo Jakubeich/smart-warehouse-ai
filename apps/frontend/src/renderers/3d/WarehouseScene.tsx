@@ -17,12 +17,15 @@ import {
   Vector3,
 } from "three";
 import type { Layers } from "@/stores/simulation";
-import type { Point, Robot, Warehouse } from "@/types/domain";
+import type { Point, Robot, Simulation, Warehouse } from "@/types/domain";
 import {
-  canInterpolate,
+  motionDuration,
+  motionPath,
+  positionOnPath,
   robotColors,
   worldPosition,
   worldYaw,
+  type RobotPose,
   type WarehouseViewProps,
 } from "../shared/scene";
 import {
@@ -145,14 +148,14 @@ function BoxInstances({ boxes }: { boxes: BoxPart[] }) {
 }
 
 const StaticModels = memo(function StaticModels({
-  cellKey,
-  obstacleKey,
+  cells,
+  obstacles,
   cellSize,
   stations,
   onError,
 }: {
-  cellKey: string;
-  obstacleKey: string;
+  cells: Warehouse["cells"];
+  obstacles?: Point[];
   cellSize: number;
   stations: boolean;
   onError: (kind: ModelKind) => void;
@@ -165,8 +168,8 @@ const StaticModels = memo(function StaticModels({
       { positions: [number, number, number][]; fallback: BoxPart[] }
     >();
     const entries = [
-      ...(JSON.parse(cellKey) as { x: number; y: number; type: string }[]),
-      ...(JSON.parse(obstacleKey) as Point[]).map(([x, y]) => ({
+      ...cells,
+      ...(obstacles ?? []).map(([x, y]) => ({
         x,
         y,
         type: "OBSTACLE",
@@ -195,7 +198,7 @@ const StaticModels = memo(function StaticModels({
       } else boxes.push(...parts);
     }
     return { boxes, batches };
-  }, [cellKey, obstacleKey, cellSize, stations, sources]);
+  }, [cells, obstacles, cellSize, stations, sources]);
   return (
     <>
       <BoxInstances boxes={boxes} />
@@ -218,6 +221,8 @@ function RobotModel({
   run,
   tick,
   speed,
+  viewMotion,
+  index,
   cellSize,
   selected,
   color,
@@ -231,6 +236,8 @@ function RobotModel({
   run: string;
   tick: number;
   speed: number;
+  viewMotion?: Simulation["view_motion"];
+  index: number;
   cellSize: number;
   selected: boolean;
   color: string;
@@ -243,10 +250,9 @@ function RobotModel({
   const root = useRef<Group>(null);
   const body = useRef<Group>(null);
   const invalidate = useThree((state) => state.invalidate);
-  const previous = useRef({ run, tick, position: robot.position });
+  const previous = useRef<RobotPose | undefined>(undefined);
   const motion = useRef({
-    from: new Vector3(),
-    to: new Vector3(),
+    path: [robot.position],
     elapsed: 1,
     duration: 0,
     fromYaw: 0,
@@ -255,33 +261,48 @@ function RobotModel({
   const [x, y] = robot.position;
   const yaw = worldYaw(robot.orientation);
   useLayoutEffect(() => {
-    const next = { run, tick, position: [x, y] as Point };
+    const next: RobotPose = {
+      run,
+      tick,
+      position: [x, y],
+      episode: viewMotion?.episode,
+    };
     const m = motion.current;
-    m.to.set(...worldPosition(next.position, cellSize));
-    m.from.copy(root.current!.position);
+    m.path = motionPath(previous.current, next, viewMotion, index);
     m.fromYaw = body.current!.rotation.y;
     m.toYaw =
       m.fromYaw +
       Math.atan2(Math.sin(yaw - m.fromYaw), Math.cos(yaw - m.fromYaw));
-    m.duration =
-      !reducedMotion && canInterpolate(previous.current, next)
-        ? Math.min(0.25, 0.35 / speed)
-        : 0;
+    m.duration = reducedMotion ? 0 : motionDuration(m.path, speed);
     m.elapsed = 0;
     if (!m.duration) {
-      root.current!.position.copy(m.to);
+      root.current!.position.set(...worldPosition(next.position, cellSize));
       body.current!.rotation.y = yaw;
     }
     previous.current = next;
     invalidate();
-  }, [x, y, yaw, run, tick, speed, cellSize, reducedMotion, invalidate]);
+  }, [
+    x,
+    y,
+    yaw,
+    run,
+    tick,
+    speed,
+    cellSize,
+    viewMotion,
+    index,
+    reducedMotion,
+    invalidate,
+  ]);
   const projected = useRef(new Vector3());
   useFrame((state, delta) => {
     const m = motion.current;
     if (m.elapsed < m.duration) {
       m.elapsed = Math.min(m.duration, m.elapsed + delta);
       const t = m.elapsed / m.duration;
-      root.current!.position.lerpVectors(m.from, m.to, t);
+      root.current!.position.set(
+        ...worldPosition(positionOnPath(m.path, t), cellSize),
+      );
       body.current!.rotation.y = m.fromYaw + (m.toYaw - m.fromYaw) * t;
       invalidate();
     }
@@ -466,7 +487,9 @@ export function WarehouseScene({
       y = Math.floor(event.point.z / unit);
     return x >= 0 && y >= 0 && x < w.width && y < w.height ? [x, y] : null;
   };
-  const maxHeat = Math.max(1, ...Object.values(s?.heatmap ?? {}));
+  const maxHeat = layers.heatmap
+    ? Math.max(1, ...Object.values(s?.heatmap ?? {}))
+    : 1;
   return (
     <>
       <color attach="background" args={["#f4f5f7"]} />
@@ -516,8 +539,8 @@ export function WarehouseScene({
       </mesh>
       {layers.grid && <Lines positions={grid} color="#cbd2d9" />}
       <StaticModels
-        cellKey={JSON.stringify(w.cells)}
-        obstacleKey={JSON.stringify(s?.obstacles ?? [])}
+        cells={w.cells}
+        obstacles={s?.obstacles}
         cellSize={unit}
         stations={layers.stations}
         onError={onModelError}
@@ -594,6 +617,8 @@ export function WarehouseScene({
               run={s?.id ?? w.id}
               tick={s?.tick ?? 0}
               speed={s?.speed ?? 1}
+              viewMotion={s?.view_motion}
+              index={index}
               cellSize={unit}
               selected={frame.selectedRobot === robot.id}
               color={color}

@@ -1,3 +1,4 @@
+import time
 from pathlib import Path
 
 import numpy as np
@@ -5,6 +6,7 @@ import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy.exc import SQLAlchemyError
 
+from app.core.demos import demo
 from app.core.generator import GeneratorRequest, generate
 from app.main import create_app
 from app.neural.online import UPDATE_TICKS, Experience, OnlineLearning
@@ -120,6 +122,68 @@ def test_failed_checkpoint_keeps_previous_weights(
     )
     assert learner.summary()["updates"] == 1
     repo.engine.dispose()
+
+
+@pytest.mark.parametrize("should_complete", [True, False])
+def test_repeated_training_restarts_and_stops(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, should_complete: bool
+) -> None:
+    monkeypatch.setattr("app.simulation.service.TRAINING_TICK_LIMIT", 2)
+    monkeypatch.setattr("app.simulation.service.TRAINING_RESTART_DELAY", 0.15)
+    repo = Repository(f"sqlite:///{tmp_path}/repeat.db")
+    Base.metadata.create_all(repo.engine)
+    scenario = demo("small")
+    if should_complete:
+        scenario.tasks = []
+
+    with TestClient(create_app(repo)) as client:
+        initial = (
+            client.post("/api/simulations", json={"scenario": scenario.model_dump(mode="json")})
+            .raise_for_status()
+            .json()
+        )
+        endpoint = f"/api/simulations/{initial['id']}"
+        client.post(endpoint + "/stop").raise_for_status()
+        archived = repo.get("run", initial["id"])
+        assert archived and archived["status"] == "STOPPED"
+        client.post(endpoint + "/speed", json={"speed": 16}).raise_for_status()
+        first = client.post(endpoint + "/training-start").raise_for_status().json()
+        assert first["training_loop"]["attempt"] == 1 and first["status"] == "RUNNING"
+
+        for _ in range(300):
+            current = client.get(endpoint).raise_for_status().json()
+            if current["training_loop"]["finished_attempts"] == 1:
+                break
+            time.sleep(0.01)
+        assert current["training_loop"]["last_result"]["status"] == (
+            "COMPLETED" if should_complete else "FAILED"
+        )
+        model_id = current["config"]["neural_model_id"]
+        if not should_complete:
+            assert current["training_loop"]["last_result"]["model_updates"] > 0
+            assert model_id != initial["config"]["neural_model_id"]
+            assert repo.get("neural_policy", "live")["model"]["id"] == model_id
+
+        for _ in range(300):
+            restarted = client.get(endpoint).raise_for_status().json()
+            if restarted["training_loop"]["attempt"] == 2:
+                break
+            time.sleep(0.01)
+        assert restarted["training_loop"]["attempt"] == 2
+        assert restarted["sequence"] > current["sequence"]
+        assert restarted["speed"] == 16 and restarted["id"] == initial["id"]
+        assert model_id in {
+            restarted["config"]["neural_model_id"],
+            restarted["neural_last_model_id"],
+        }
+
+        stopped = client.post(endpoint + "/training-stop").raise_for_status().json()
+        assert stopped["training_loop"]["active"] is False
+        time.sleep(0.3)
+        latest = client.get(endpoint).raise_for_status().json()
+        assert latest["training_loop"]["attempt"] == stopped["training_loop"]["attempt"]
+        assert latest["tick"] == stopped["tick"]
+        assert repo.get("run", initial["id"]) == archived
 
 
 def test_collision_filter_uses_next_ranked_neural_actions() -> None:

@@ -178,6 +178,32 @@ export const stateSchema = z.object({
   neural_last_model_id: z.string().nullable().default(null),
   neural_updates: z.number().int().default(0),
   neural_learned_samples: z.number().int().default(0),
+  view_motion: z
+    .object({
+      episode: z.string(),
+      frames: z
+        .array(z.tuple([z.number().int(), z.array(pointSchema)]))
+        .max(32),
+    })
+    .optional(),
+  training_loop: z
+    .object({
+      active: z.boolean(),
+      attempt: z.number().int(),
+      finished_attempts: z.number().int(),
+      best_completed_tasks: z.number().int(),
+      last_result: z
+        .object({
+          status: z.enum(["COMPLETED", "FAILED"]),
+          ticks: z.number().int(),
+          completed_tasks: z.number().int(),
+          model_updates: z.number().int(),
+          error: z.string().nullable(),
+        })
+        .nullable(),
+    })
+    .nullable()
+    .default(null),
   assignment_decisions: z
     .array(
       z.object({

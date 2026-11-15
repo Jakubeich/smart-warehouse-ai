@@ -86,6 +86,8 @@ export default function Warehouse3D(props: WarehouseViewProps) {
     return () => query.removeEventListener("change", update);
   }, []);
   const basic = Object.values(sources).every((src) => !src);
+  const detailed =
+    props.frame.warehouse.width * props.frame.warehouse.height <= 1600;
   return (
     <div className="map-surface map-3d-surface">
       <div
@@ -99,9 +101,9 @@ export default function Warehouse3D(props: WarehouseViewProps) {
           <Unavailable />
         ) : (
           <Canvas
-            shadows="percentage"
+            shadows={detailed ? "percentage" : false}
             frameloop="demand"
-            dpr={[1, 1.5]}
+            dpr={detailed ? [1, 1.5] : 1}
             camera={{ fov: 40, near: 0.1, far: 1000 }}
           >
             <ModelSourcesContext value={sources}>

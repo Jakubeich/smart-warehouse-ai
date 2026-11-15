@@ -229,8 +229,11 @@ const errorMessages: Record<string, string> = {
   "A scenario must contain initial pending tasks created at tick zero":
     "Scénář musí obsahovat počáteční čekající úkoly vytvořené v kroku nula",
   "All transport tasks completed.": "Všechny přepravní úkoly byly dokončeny.",
+  "Training attempt reached its tick limit.": "Pokus dosáhl limitu kroků.",
+  "Training progress could not be saved. Try again.":
+    "Zkušenosti se zatím nepodařilo uložit. Zkuste to znovu.",
   "No progress for 30 ticks: check capacity, energy, station admission or reachability":
-    "Po 30 kroků nedošlo k pokroku. Zkontrolujte nosnost, energii, obsazení a dostupnost stanic.",
+    "Po dobu 30 kroků nedošlo k pokroku. Zkontrolujte nosnost, energii, obsazení a dostupnost stanic.",
   "Task limit reached or duplicate ID":
     "Byl dosažen limit úkolů nebo se opakuje jejich ID",
   "New tasks must be pending and unassigned":

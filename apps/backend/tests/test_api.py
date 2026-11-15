@@ -29,6 +29,15 @@ def test_rest_websocket_and_persistence(tmp_path: Path) -> None:
             assert stepped["tick"] == 1
             assert message["sequence"] > initial["sequence"]
             assert message["state"]["tick"] == 1
+            assert message["state"]["view_motion"]["frames"] == [
+                [1, [robot["position"] for robot in stepped["robots"]]]
+            ]
+            assert (
+                client.post(f"/api/simulations/{sid}/speed", json={"speed": 512}).status_code == 200
+            )
+            assert (
+                client.post(f"/api/simulations/{sid}/speed", json={"speed": 513}).status_code == 422
+            )
         # Disconnect does not kill the simulation.
         for _ in range(100):
             state = client.post(f"/api/simulations/{sid}/step").json()

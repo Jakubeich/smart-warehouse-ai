@@ -12,6 +12,7 @@ class Grid:
         self.width = warehouse.width
         self.height = warehouse.height
         self.cells = {(c.x, c.y): c.type for c in warehouse.cells}
+        self.chargers = tuple(p for p, kind in self.cells.items() if kind == CellType.CHARGER)
         self.blocked = {
             p
             for p, kind in self.cells.items()
@@ -19,6 +20,7 @@ class Grid:
         }
         self.blocked |= obstacles or set()
         self._distances: dict[Point, dict[Point, int]] = {}
+        self._neighbors: dict[Point, tuple[Point, ...]] = {}
 
     def kind(self, p: Point) -> CellType:
         return self.cells.get(p, CellType.FLOOR)
@@ -26,9 +28,13 @@ class Grid:
     def walkable(self, p: Point) -> bool:
         return 0 <= p[0] < self.width and 0 <= p[1] < self.height and p not in self.blocked
 
-    def neighbors(self, p: Point) -> list[Point]:
-        x, y = p
-        return [q for q in [(x + 1, y), (x, y + 1), (x - 1, y), (x, y - 1)] if self.walkable(q)]
+    def neighbors(self, p: Point) -> tuple[Point, ...]:
+        if p not in self._neighbors:
+            x, y = p
+            self._neighbors[p] = tuple(
+                q for q in ((x + 1, y), (x, y + 1), (x - 1, y), (x, y - 1)) if self.walkable(q)
+            )
+        return self._neighbors[p]
 
     def distance(self, start: Point, goal: Point) -> int | None:
         if not self.walkable(start) or not self.walkable(goal):

@@ -1,4 +1,9 @@
-import { counted, displayName, layerLabels, searchText } from "@/lib/i18n";
+import {
+  counted,
+  displayName,
+  layerLabels,
+  searchText,
+} from "@/lib/i18n";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
@@ -9,8 +14,10 @@ import {
   Layers as LayersIcon,
   Pause,
   Play,
+  Repeat,
   RotateCcw,
   SkipForward,
+  Square,
 } from "lucide-react";
 import {
   Button,
@@ -49,6 +56,7 @@ import {
 import { createRun, control } from "@/features/simulation/actions";
 import { EntityInspector } from "@/features/simulation/EntityInspector";
 import { RunDetails } from "@/features/simulation/RunDetails";
+import { TrainingSummary } from "@/features/simulation/TrainingSummary";
 import { WarehouseViewport } from "@/renderers/WarehouseViewport";
 import { robotColors } from "@/renderers/shared/scene";
 import { TaskDialog } from "@/features/tasks/TaskDialog";
@@ -80,6 +88,8 @@ export default function SimulationPage() {
     });
   }
   const terminal = !!s && ["COMPLETED", "FAILED", "STOPPED"].includes(s.status);
+  const training = s?.training_loop;
+  const trainingActive = training?.active ?? false;
   const execute = (action: string, body?: unknown) =>
     void act(() => control(action, body));
   const selectRobot = (id: string) => {
@@ -98,20 +108,36 @@ export default function SimulationPage() {
         title="Živá simulace"
         description={
           s
-            ? `${displayName(s.warehouse.name)} · ${counted(s.robots.length, "robot")} · ${counted(s.tasks.length, "task")}${s.config.control === "neural" ? " · Neuronové řízení" : ""}`
+            ? `${displayName(s.warehouse.name)} · ${counted(s.robots.length, "robot")} · ${counted(s.tasks.length, "task")}`
             : "Vyberte scénář a spusťte simulaci."
         }
       >
-        <Button
-          variant="outline"
-          disabled={!s}
-          onClick={() => s && download(s, `simulation-${s.id}.json`)}
-        >
-          <Download data-icon="inline-start" />
-          Exportovat běh
-        </Button>
+        <div className="inline-actions">
+          <Button
+            variant={trainingActive ? "outline" : "default"}
+            disabled={!s || busy}
+            onClick={() =>
+              execute(trainingActive ? "training-stop" : "training-start")
+            }
+          >
+            {trainingActive ? (
+              <Square data-icon="inline-start" />
+            ) : (
+              <Repeat data-icon="inline-start" />
+            )}
+            {trainingActive ? "Zastavit trénink" : "Spustit opakovaný trénink"}
+          </Button>
+          <Button
+            variant="outline"
+            disabled={!s}
+            onClick={() => s && download(s, `simulation-${s.id}.json`)}
+          >
+            <Download data-icon="inline-start" />
+            Exportovat běh
+          </Button>
+        </div>
       </PageHeader>
-      <ErrorPanel error={error || scenes.error || s?.error} />
+      <ErrorPanel error={error || scenes.error || (!trainingActive && s?.error)} />
       {s && connection !== "connected" && (
         <p className="connection-notice" role="status">
           {connection === "connecting"
@@ -138,7 +164,7 @@ export default function SimulationPage() {
           <Picker
             label="Rychlost simulace"
             value={String(s?.speed ?? 1)}
-            options={[0.25, 0.5, 1, 2, 4, 8, 16].map((v) => ({
+            options={[0.25, 0.5, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512].map((v) => ({
               value: String(v),
               label: `${format(v, 2)}×`,
             }))}
@@ -150,21 +176,23 @@ export default function SimulationPage() {
             size="icon"
             aria-label="Obnovit simulaci"
             title="Obnovit simulaci"
-            disabled={!s || busy}
+            disabled={!s || busy || trainingActive}
             onClick={() => execute("reset")}
           >
             <RotateCcw />
           </Button>
           <Button
             variant="outline"
-            disabled={!s || busy || s.status === "RUNNING" || terminal}
+            disabled={
+              !s || busy || trainingActive || s.status === "RUNNING" || terminal
+            }
             onClick={() => execute("step")}
           >
             <SkipForward data-icon="inline-start" />
             Krok
           </Button>
           <Button
-            disabled={!s || busy || terminal}
+            disabled={!s || busy || trainingActive || terminal}
             onClick={() => execute(s?.status === "RUNNING" ? "pause" : "start")}
           >
             {s?.status === "RUNNING" ? (
@@ -176,6 +204,7 @@ export default function SimulationPage() {
           </Button>
         </div>
       </div>
+      {training && <TrainingSummary training={training} terminal={terminal} />}
       {!s ? (
         <section className="panel">
           <EmptyState

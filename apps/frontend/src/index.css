@@ -403,6 +403,10 @@ a:focus-visible {
   line-height: 1.3;
   margin-top: 1px;
 }
+.training-metrics dd.training-checkpoint {
+  font-size: 13px;
+  font-weight: 500;
+}
 .training-reason {
   display: flex;
   align-items: flex-start;

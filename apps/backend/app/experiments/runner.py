@@ -84,6 +84,7 @@ def run_one(
             "neural_model_id": None,
             "planner": algorithm,
             "scheduler": scheduler,
+            "max_ticks": request.max_ticks or request.config.max_ticks or scene.config.max_ticks,
         }
     )
     began = perf_counter()
@@ -160,10 +161,14 @@ def run_one(
             ),
             None,
         )
-        wall_limited = False
-        for tick in range(request.max_ticks):
-            if perf_counter() - began >= request.max_run_seconds:
-                wall_limited = True
+        interruption = None
+        while engine.state.status not in {"FAILED", "COMPLETED", "STOPPED"}:
+            tick = engine.state.tick
+            if (
+                request.max_run_seconds is not None
+                and perf_counter() - began >= request.max_run_seconds
+            ):
+                interruption = "WALL_LIMIT"
                 break
             if request.benchmark == "D" and tick == 5 and dynamic_point:
                 # Fixed exogenous cell/tick. Rejecting occupancy is an explicit scenario outcome.
@@ -172,11 +177,7 @@ def run_one(
                 except ValueError as exc:
                     engine.fail(f"Dynamic schedule could not be applied: {exc}")
             engine.step()
-            if engine.state.status in {"FAILED", "COMPLETED"}:
-                break
-        status: str = engine.state.status
-        if status not in {"FAILED", "COMPLETED"}:
-            status = "WALL_LIMIT" if wall_limited else "TICK_LIMIT"
+        status = "TICK_LIMIT" if engine.tick_limit_reached else interruption or engine.state.status
         record.update(
             {
                 "status": status,

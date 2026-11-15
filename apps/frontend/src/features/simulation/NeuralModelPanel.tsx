@@ -13,6 +13,13 @@ interface NeuralModel {
   updates: number;
   learned_samples: number;
   update_ticks: number;
+  replay_layouts: number;
+  shared_training?: {
+    id: string | null;
+    round: number;
+    last_accepted: boolean;
+    verification: { maps: number; finished: number; baseline_finished: number } | null;
+  } | null;
   architecture: number[];
   training: { maps: number; rows: number; epochs: number };
   evaluation: {
@@ -34,6 +41,7 @@ export function NeuralModelPanel() {
   });
   const model = query.data;
   const results = model?.evaluation;
+  const shared = model?.shared_training;
 
   return (
     <section
@@ -70,22 +78,50 @@ export function NeuralModelPanel() {
         <>
           <dl className="learning-facts">
             <div>
-              <dt>Aktuální model</dt>
+              <dt>Společný model flotily</dt>
               <dd>{model.id}</dd>
             </div>
             <div>
-              <dt>Automatické aktualizace vah</dt>
+              <dt>Aktualizace vah</dt>
               <dd data-testid="neural-updates">{format(model.updates)}</dd>
             </div>
             <div>
-              <dt>Použité zkušenosti z vlastních jízd</dt>
+              <dt>Získané zkušenosti</dt>
               <dd>{format(model.learned_samples)}</dd>
+            </div>
+            <div>
+              <dt>Mapy v paměti tréninku</dt>
+              <dd>{format(model.replay_layouts ?? 0)}</dd>
             </div>
           </dl>
           <p className="subtle">
-            Váhy se ukládají po každých {model.update_ticks} krocích s novými
-            zkušenostmi a při ukončení běhu.
+            Běžné i opakované simulace přidávají zkušenosti do společného modelu.
+            Nové sklady začínají s jeho aktuálními vahami.
           </p>
+          {shared && (
+            <>
+              <h3>Doplňkový trénink na vygenerovaných mapách</h3>
+              <dl className="learning-facts">
+                <div>
+                  <dt>Vyhodnocená kola</dt>
+                  <dd>{format(shared.round)}</dd>
+                </div>
+                <div>
+                  <dt>Poslední kolo</dt>
+                  <dd>{shared.last_accepted ? "Ověřeno zlepšení" : "Dosavadní výsledek nepřekonán"}</dd>
+                </div>
+                {shared.verification && (
+                  <div>
+                    <dt>Dokončené ověřovací sklady</dt>
+                    <dd>
+                      {shared.verification.finished}/{shared.verification.maps}
+                      <span className="subtle"> dříve {shared.verification.baseline_finished}/{shared.verification.maps}</span>
+                    </dd>
+                  </div>
+                )}
+              </dl>
+            </>
+          )}
         </>
       )}
       {results && (

@@ -73,7 +73,16 @@ Vite a Nginx proxy `/api` a `/ws` na backend. `DATABASE_URL` lze nastavit jako p
 
 V **Strojové učení → Otevřít ukázkový sklad** spustíte simulaci, ve které neuronová síť vybírá úkoly, nabíječky a jednotlivé kroky robotů. Stejné řízení používají vlastní i vygenerované sklady. Simulátor vykonává povolené akce a kontroluje průchodnost, kolize a energii.
 
-Síť se učí z vlastních jízd. Sbírá výsledky pohybů, dokončených přeprav a nabíjení i odmítnuté konfliktní návrhy. Každých 64 kroků s dostupnou zpětnou vazbou aktualizuje váhy a uloží je do PostgreSQL. Další kroky používají nově uložené váhy. Na stránce **Strojové učení** najdete verzi modelu, počet aktualizací a počet použitých zkušeností. V **Podrobnostech běhu** uvidíte zvolené akce a skóre.
+Flotila používá jeden společný model. Běžná simulace i **samoběžný trénink** do něj přidávají zkušenosti z pohybu, přeprav, čekání a nabíjení. Síť se během jízdy aktualizuje každých 64 kroků, pokud má nové zkušenosti. Nové a restartované běhy přebírají aktuální váhy. Vzorky z různých map a společné váhy zůstávají v PostgreSQL i po restartu aplikace. Na stránce **Strojové učení** uvidíte použitý model i počet aktualizací a map v paměti tréninku.
+
+Každý běh má ve výchozím nastavení limit 4 000 kroků. V JSON konfiguraci scénáře ho lze změnit polem `config.max_ticks`. Samoběžný trénink po dosažení limitu ukončí pokus a spustí další se stejným limitem.
+
+Doplňkový proces můžete spustit souběžně s aplikací. Vyhodnocuje další vygenerované mapy a při průběžném učení doplňuje zkušenosti z živých jízd. Po zastavení naváže na poslední kolo uložené v PostgreSQL. `--rounds 1` vyhodnotí jedno kolo a `--dry-run` vynechá ukládání výsledků do databáze.
+
+```bash
+cd apps/backend
+uv run python -m app.neural.shared --continuous --workers 2
+```
 
 Výchozí síť před průběžným učením dokončila 22 z 24 testovacích scénářů. Dva běhy se zastavily v úzkých průjezdech. [Trénink, archivní měření a reprodukce](docs/experiments/neural-fleet/report.md).
 

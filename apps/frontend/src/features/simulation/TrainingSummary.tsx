@@ -5,6 +5,13 @@ import { format } from "@/lib/api";
 import { translateMessage } from "@/lib/i18n";
 import type { Simulation } from "@/types/domain";
 
+const checkpointLabels = {
+  saved: "Společný model aktualizován",
+  kept: "Bez nových zkušeností",
+  changed_scenario: "Scénář se během pokusu změnil",
+  invalid_run: "Pokus nebylo možné vyhodnotit",
+};
+
 export function TrainingSummary({
   training,
   terminal,
@@ -50,7 +57,9 @@ export function TrainingSummary({
             </div>
             <div>
               <dt>Nejvíce hotových úkolů</dt>
-              <dd>{last ? format(training.best_completed_tasks) : "—"}</dd>
+              <dd>
+                {last ? format(training.best_completed_tasks) : "—"}
+              </dd>
             </div>
           </dl>
         </div>
@@ -69,8 +78,10 @@ export function TrainingSummary({
               <dd>{last ? format(last.ticks) : "—"}</dd>
             </div>
             <div>
-              <dt>Aktualizace vah</dt>
-              <dd>{last ? format(last.model_updates) : "—"}</dd>
+              <dt>Výsledek tréninku</dt>
+              <dd className="training-checkpoint">
+                {last?.checkpoint ? checkpointLabels[last.checkpoint] : "—"}
+              </dd>
             </div>
           </dl>
         </div>

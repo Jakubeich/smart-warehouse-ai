@@ -9,17 +9,36 @@ from typing import Any
 import numpy as np
 from sqlalchemy.exc import SQLAlchemyError
 
-from app.neural.policy import NeuralPolicy, load_policy, overview, weight_id
+from app.neural.policy import KINDS, NeuralPolicy, load_policy, overview, weight_id
 from app.persistence.database import Repository
 
 UPDATE_TICKS = 64
 MAX_EXPERIENCES = 256
+REPLAY_LAYOUTS = 16
+MOTION_FEATURE = KINDS.index("move")
+SHARED_TRAINING_KIND = "neural_shared_training"
+SHARED_TRAINING_KEY = "fleet-v1"
 
 
 @dataclass(frozen=True)
 class Experience:
     values: tuple[float, ...]
     reward: float
+
+
+def remember_layout(
+    replay: dict[str, list[Experience]], layout: str, samples: list[Experience]
+) -> None:
+    recent = replay.pop(layout, []) + samples
+    motion = [sample for sample in recent if sample.values[MOTION_FEATURE]]
+    dispatch = [sample for sample in recent if not sample.values[MOTION_FEATURE]]
+    replay[layout] = motion[-32:] + dispatch[-16:]
+    if len(replay) > REPLAY_LAYOUTS:
+        del replay[next(iter(replay))]
+
+
+def read_experiences(samples: list[dict[str, Any]]) -> list[Experience]:
+    return [Experience(tuple(sample["values"]), sample["reward"]) for sample in samples]
 
 
 class ExperienceBuffer:
@@ -53,7 +72,7 @@ class ExperienceBuffer:
 
 
 def update(
-    policy: NeuralPolicy, seed: NeuralPolicy, samples: list[Experience]
+    policy: NeuralPolicy, seed: NeuralPolicy, samples: list[Experience], *, rate: float = 0.003
 ) -> list[dict[str, Any]]:
     """Reward-weighted binary loss on actions with observed outcomes."""
     x = np.asarray([sample.values for sample in samples])
@@ -72,7 +91,7 @@ def update(
         dw = activations[i].T @ error + 0.015 * (weights - initial_weights)
         db = error.sum(axis=0) + 0.015 * (bias - initial_bias)
         # Keep each update small so a single crowded warehouse cannot overwrite the base policy.
-        scale = 0.003 / max(1.0, float(np.linalg.norm(dw) + np.linalg.norm(db)))
+        scale = rate / max(1.0, float(np.linalg.norm(dw) + np.linalg.norm(db)))
         layers.append(
             {"weights": (weights - scale * dw).tolist(), "bias": (bias - scale * db).tolist()}
         )
@@ -90,14 +109,26 @@ class OnlineLearning:
         self._policy = self.seed
         self.updates = 0
         self.samples = 0
+        self.replay: dict[str, list[Experience]] = {}
+        self.generated_round = 0
         self.lock = Lock()
 
-    def restore(self) -> None:
+    def restore(self, bootstrap: NeuralPolicy | None = None) -> None:
         checkpoint = self.repository.get("neural_policy", "live")
         if checkpoint and checkpoint["initial_model_id"] == self.seed.id:
+            if bootstrap is not None and "replay" not in checkpoint:
+                self._policy = bootstrap
+                return
             self._policy = NeuralPolicy(checkpoint["model"])
             self.updates = checkpoint["updates"]
             self.samples = checkpoint["samples"]
+            self.replay = {
+                layout: read_experiences(samples)
+                for layout, samples in checkpoint.get("replay", {}).items()
+            }
+            self.generated_round = checkpoint.get("generated_round", 0)
+        elif bootstrap is not None:
+            self._policy = bootstrap
 
     def current(self) -> NeuralPolicy:
         with self.lock:
@@ -111,31 +142,60 @@ class OnlineLearning:
                 "updates": self.updates,
                 "learned_samples": self.samples,
                 "update_ticks": UPDATE_TICKS,
+                "replay_layouts": len(self.replay),
             }
 
     def overview(self) -> dict[str, Any]:
         base = overview()
         return {**base, **self.summary()}
 
-    def learn(self, samples: list[Experience]) -> NeuralPolicy | None:
+    def learn(self, samples: list[Experience], layout: str | None = None) -> NeuralPolicy | None:
         with self.lock:
-            layers = update(self._policy, self.seed, samples)
-            artifact = {
-                "id": weight_id(layers),
-                "feature_version": self._policy.feature_version,
-                "training": self.seed.training,
-                "layers": layers,
-            }
-            policy = NeuralPolicy(artifact)
             try:
+                replay = self.replay.copy()
+                generated_round = self.generated_round
+                new_samples = len(samples)
+                batch = samples
+                if layout is not None:
+                    generated = self.repository.get(SHARED_TRAINING_KIND, SHARED_TRAINING_KEY)
+                    if generated and generated["round"] > generated_round:
+                        generated_round = generated["round"]
+                        for item in generated.get("live_experience", []):
+                            examples = read_experiences(item["samples"])
+                            if examples:
+                                remember_layout(replay, item["layout"], examples)
+                                new_samples += len(examples)
+                    remember_layout(replay, layout, samples)
+                    batch = [sample for examples in replay.values() for sample in examples]
+                layers = update(self._policy, self.seed, batch, rate=0.001 if layout else 0.003)
+                artifact = {
+                    **self._policy.artifact,
+                    "id": weight_id(
+                        layers,
+                        self._policy.artifact.get("passage_weights"),
+                        self._policy.waiting_weights,
+                        self._policy.charging_weights,
+                        self._policy.coordination_weights,
+                    ),
+                    "layers": layers,
+                }
+                policy = NeuralPolicy(artifact)
                 self.repository.save(
                     "neural_policy",
                     "live",
                     {
                         "initial_model_id": self.seed.id,
                         "updates": self.updates + 1,
-                        "samples": self.samples + len(samples),
+                        "samples": self.samples + new_samples,
                         "model": artifact,
+                        "replay": {
+                            key: [
+                                {"values": sample.values, "reward": sample.reward}
+                                for sample in examples
+                            ]
+                            for key, examples in replay.items()
+                        },
+                        "generated_round": generated_round,
                     },
                 )
             except SQLAlchemyError:
@@ -143,5 +203,7 @@ class OnlineLearning:
                 return None
             self._policy = policy
             self.updates += 1
-            self.samples += len(samples)
+            self.samples += new_samples
+            self.replay = replay
+            self.generated_round = generated_round
             return policy

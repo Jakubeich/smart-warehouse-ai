@@ -97,7 +97,7 @@ export interface LearningJob {
   config: {
     baseline: "priority" | "nearest" | "hungarian";
     seed: number;
-    max_ticks: number;
+    max_ticks: number | null;
     generator?: GeneratorOptions;
     scenario_id?: string | null;
   };

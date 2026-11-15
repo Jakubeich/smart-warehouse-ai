@@ -7,6 +7,8 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 Point = tuple[int, int]
 Finite = Annotated[float, Field(allow_inf_nan=False)]
+DEFAULT_MAX_TICKS = 4000
+NO_PROGRESS_TICK_LIMIT = 30
 
 
 class Model(BaseModel):
@@ -128,6 +130,7 @@ class AlgorithmConfig(Model):
     horizon: int = Field(default=128, ge=8, le=512)
     max_nodes: int = Field(default=2000, ge=1, le=20000)
     timeout_seconds: Finite = Field(default=2.0, ge=0.01, le=10)
+    max_ticks: int | None = Field(default=None, ge=1)
     move_energy: Finite = Field(default=0.4, ge=0, le=10)
     wait_energy: Finite = Field(default=0, ge=0, le=1)
     handling_energy: Finite = Field(default=0.1, ge=0, le=10)
@@ -228,6 +231,7 @@ class TrainingAttempt(Model):
     ticks: int
     completed_tasks: int
     model_updates: int
+    checkpoint: Literal["saved", "kept", "changed_scenario", "invalid_run"] | None = None
     error: str | None = None
 
 
@@ -236,6 +240,7 @@ class TrainingLoop(Model):
     attempt: int = 1
     finished_attempts: int = 0
     best_completed_tasks: int = 0
+    best_model_id: str | None = None
     last_result: TrainingAttempt | None = None
 
 

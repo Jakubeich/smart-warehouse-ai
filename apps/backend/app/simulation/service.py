@@ -6,13 +6,13 @@ from uuid import uuid4
 
 from sqlalchemy.exc import SQLAlchemyError
 
+from app.core.generator import layout_key
 from app.domain.models import Point, Scenario, SimulationState, TrainingAttempt, TrainingLoop
 from app.neural.online import UPDATE_TICKS, Experience, ExperienceBuffer, OnlineLearning
 from app.persistence.database import Repository
 from app.simulation.engine import Engine
 
 TERMINAL = {"COMPLETED", "FAILED", "STOPPED"}
-TRAINING_TICK_LIMIT = 4000
 TRAINING_RESTART_DELAY = 2.0
 SNAPSHOT_INTERVAL = 0.05
 
@@ -27,14 +27,19 @@ class SimulationSession:
         self.online = online
         self.retry_samples: list[Experience] = []
         self.last_update_tick = 0
-        self.training_updates = 0
+        self.attempt_updates = 0
+        self.training_invalid = False
         self.restart_training_at: float | None = None
         scenario = scenario.model_copy(deep=True)
         scenario.config.control = "neural"
         scenario.config.neural_model_id = None
         scenario.config.ml_model_id = None
+        self.layout = layout_key(scenario.warehouse)
         self.engine = Engine(
-            scenario, str(uuid4()), policy=online.current(), experience=ExperienceBuffer()
+            scenario,
+            str(uuid4()),
+            policy=self.online.current(),
+            experience=ExperienceBuffer(),
         )
         self.update_learning_status()
         self.repository = repository
@@ -46,6 +51,12 @@ class SimulationSession:
         self.task: asyncio.Task[None] | None = None
         self.persisted = False
         self.persistence_warning = False
+
+    def sync_policy(self) -> None:
+        policy = self.online.current()
+        self.engine.policy = policy
+        self.engine.state.config.neural_model_id = policy.id
+        self.update_learning_status()
 
     def update_learning_status(self) -> None:
         summary = self.online.summary()
@@ -59,19 +70,18 @@ class SimulationSession:
         if not flush and state.tick - self.last_update_tick < UPDATE_TICKS:
             return
         self.last_update_tick = state.tick
-        samples = (self.retry_samples + experience.drain())[-640:]
+        fresh = experience.drain()
+        samples = (self.retry_samples + ([] if self.training_invalid else fresh))[-640:]
         if not samples:
+            self.sync_policy()
             return
-        policy = await asyncio.to_thread(self.online.learn, samples)
+        policy = await asyncio.to_thread(self.online.learn, samples, self.layout)
         if not policy:
             self.retry_samples = samples
             return
         self.retry_samples = []
-        self.engine.policy = policy
-        state.config.neural_model_id = policy.id
-        if state.training_loop and state.training_loop.active:
-            self.training_updates += 1
-        self.update_learning_status()
+        self.attempt_updates += 1
+        self.sync_policy()
 
     def reset_engine(self, training: TrainingLoop | None = None) -> None:
         previous = self.engine.state
@@ -80,7 +90,9 @@ class SimulationSession:
         self.engine = Engine(
             initial, previous.id, policy=self.online.current(), experience=ExperienceBuffer()
         )
-        self.last_update_tick = self.training_updates = 0
+        self.last_update_tick = 0
+        self.attempt_updates = 0
+        self.training_invalid = False
         self.motion_frames.clear()
         self.restart_training_at = None
         self.update_learning_status()
@@ -103,17 +115,28 @@ class SimulationSession:
             return
         if training.finished_attempts == training.attempt:
             return
-        completed = state.metrics.completed_tasks
+        training.best_completed_tasks = max(
+            training.best_completed_tasks, state.metrics.completed_tasks
+        )
         training.last_result = TrainingAttempt(
             status=state.status,
             ticks=state.tick,
-            completed_tasks=completed,
-            model_updates=self.training_updates,
+            completed_tasks=state.metrics.completed_tasks,
+            model_updates=self.attempt_updates,
+            checkpoint=(
+                "invalid_run"
+                if self.training_invalid
+                else "saved"
+                if self.attempt_updates
+                else "kept"
+            ),
             error=state.error,
         )
         training.finished_attempts = training.attempt
-        training.best_completed_tasks = max(training.best_completed_tasks, completed)
         self.restart_training_at = asyncio.get_running_loop().time() + TRAINING_RESTART_DELAY
+
+    def end_training_view(self) -> None:
+        self.engine.state.training_loop = None
 
     async def publish(self) -> dict[str, object]:
         self.engine.state.sequence += 1
@@ -193,17 +216,12 @@ class SimulationSession:
                         try:
                             await self.step()
                         except Exception as exc:
+                            self.training_invalid = True
                             self.engine.fail(f"Simulation error: {type(exc).__name__}: {exc}")
-                        if (
-                            training
-                            and training.active
-                            and state.status == "RUNNING"
-                            and state.tick >= TRAINING_TICK_LIMIT
-                        ):
-                            self.engine.fail("Training attempt reached its tick limit.")
                         terminal = state.status in TERMINAL
                         await self.learn(flush=terminal)
-                        self.record_training_result()
+                        if terminal:
+                            self.record_training_result()
                         if terminal or (
                             self.clients and clock() - self.last_snapshot_at >= SNAPSHOT_INTERVAL
                         ):
@@ -250,16 +268,18 @@ class SimulationSession:
                     self.start_run()
             elif action == "reset":
                 await self.learn(flush=True)
+                if self.retry_samples:
+                    raise ValueError("Training progress could not be saved. Try again.")
                 self.reset_engine()
             elif action == "start":
                 if state.status in TERMINAL:
                     raise ValueError("Reset a finished run before starting it again")
                 if training and not training.active:
-                    state.training_loop = None
+                    self.end_training_view()
                 self.start_run()
             elif action in {"pause", "training-stop"}:
+                await self.learn(flush=True)
                 if training and training.active:
-                    await self.learn(flush=True)
                     self.record_training_result()
                     training.active = False
                     self.restart_training_at = None
@@ -271,7 +291,7 @@ class SimulationSession:
                     raise ValueError("Pause before single stepping")
                 if state.status in TERMINAL:
                     raise ValueError("Reset a finished simulation before stepping")
-                state.training_loop = None
+                self.end_training_view()
                 state.status = "PAUSED"
                 await self.step()
                 await self.learn(flush=state.status in {"COMPLETED", "FAILED"})

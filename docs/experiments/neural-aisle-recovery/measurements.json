@@ -1,0 +1,95 @@
+{
+  "scenario_id": "generated-87ef9d1c52042d90",
+  "warehouse_size": [
+    64,
+    64
+  ],
+  "robots": 17,
+  "tasks": 200,
+  "baseline_queue": {
+    "rows": [
+      44,
+      47
+    ],
+    "side": "east",
+    "completed": 109,
+    "assigned": 11,
+    "pending": 80,
+    "depleted_robot": {
+      "id": "R-11",
+      "position": [
+        56,
+        44
+      ],
+      "battery": 0.3,
+      "movement_energy": 0.4,
+      "charging_target": [
+        37,
+        62
+      ],
+      "closest_charger_steps": 20
+    }
+  },
+  "paired_tick": 2649,
+  "comparison": [
+    {
+      "model": "nn-0e15779e8354",
+      "status": "FAILED",
+      "completed": 109,
+      "terminal_tick": 2649,
+      "collisions": 0,
+      "passage_crossings": 145,
+      "passage_wait_robot_ticks_at_paired_tick": 47,
+      "longest_passage_wait_at_paired_tick": 13,
+      "longest_ordinary_wait_at_paired_tick": 2601,
+      "longest_ordinary_wait_at_terminal": 2601,
+      "depleted_robots_at_terminal": 1,
+      "passage_stall_at_terminal": false
+    },
+    {
+      "model": "nn-0cd0f112736f",
+      "status": "FAILED",
+      "completed": 120,
+      "terminal_tick": 3420,
+      "collisions": 0,
+      "passage_crossings": 167,
+      "passage_wait_robot_ticks_at_paired_tick": 47,
+      "longest_passage_wait_at_paired_tick": 13,
+      "longest_ordinary_wait_at_paired_tick": 2601,
+      "longest_ordinary_wait_at_terminal": 3372,
+      "depleted_robots_at_terminal": 2,
+      "passage_stall_at_terminal": false
+    }
+  ],
+  "rejected_experimental_variant": {
+    "completed": 140,
+    "tick": 4000,
+    "passage_wait_robot_ticks_at_paired_tick": 152,
+    "longest_passage_wait_full_run": 1341
+  },
+  "tuning_and_evaluation_used_the_same_scenario": true,
+  "live_replay": {
+    "speed": 512.0,
+    "completed": 120,
+    "ticks": 3420,
+    "collisions": 0,
+    "depleted_robots": [
+      {
+        "id": "R-11",
+        "position": [
+          56,
+          44
+        ],
+        "battery": 0.3
+      },
+      {
+        "id": "R-13",
+        "position": [
+          60,
+          47
+        ],
+        "battery": 0.3
+      }
+    ]
+  }
+}

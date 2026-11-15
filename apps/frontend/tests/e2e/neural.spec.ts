@@ -12,6 +12,7 @@ test("neuronová síť řídí živý sklad a výměna pohledu nemění stav", a
   await page.goto("/learning");
   const panel = page.getByRole("region", { name: "Neuronové řízení flotily" });
   await expect(panel.getByRole("table")).toContainText("Dokončené scénáře");
+  await expect(panel.getByText("Společný model flotily")).toBeVisible();
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(panel.getByRole("button")).toBeVisible();
   expect(
@@ -63,12 +64,8 @@ test("neuronová síť řídí živý sklad a výměna pohledu nemění stav", a
     const final = await (await request.get(path)).json();
     expect(final.metrics.completed_tasks).toBe(before.tasks.length);
     expect(final.neural_updates).toBeGreaterThan(before.neural_updates);
-    expect(final.neural_learned_samples).toBeGreaterThan(
-      before.neural_learned_samples,
-    );
-    expect(final.config.neural_model_id).not.toBe(
-      before.config.neural_model_id,
-    );
+    expect(final.neural_learned_samples).toBeGreaterThan(before.neural_learned_samples);
+    expect(final.config.neural_model_id).not.toBe(before.config.neural_model_id);
     await page.goto("/learning");
     await expect(page.getByTestId("neural-updates")).not.toHaveText("0");
     await page.goto("/settings");

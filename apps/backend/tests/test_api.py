@@ -21,6 +21,7 @@ def test_rest_websocket_and_persistence(tmp_path: Path) -> None:
         scene["tasks"] = scene["tasks"][:1]
         response = client.post("/api/simulations", json={"scenario": scene})
         assert response.status_code == 201, response.text
+        assert response.json()["config"]["max_ticks"] == 4000
         sid = response.json()["id"]
         with client.websocket_connect(f"/ws/simulations/{sid}") as ws:
             initial = ws.receive_json()
@@ -64,6 +65,29 @@ def test_rest_websocket_and_persistence(tmp_path: Path) -> None:
         saved = client.post("/api/scenarios", json=scene)
         assert saved.status_code == 201
         assert repo.get("scenario", scene["id"]) is not None
+
+
+def test_scenario_step_limit_survives_live_config_and_can_be_overridden(tmp_path: Path) -> None:
+    repo = Repository(f"sqlite:///{tmp_path}/limit.db")
+    Base.metadata.create_all(repo.engine)
+    with TestClient(create_app(repo)) as client:
+        scene = client.post("/api/demos").raise_for_status().json()[0]
+        scene["config"]["max_ticks"] = 2
+        client.post("/api/scenarios", json=scene).raise_for_status()
+        selected = {"scenario_id": scene["id"], "config": {"planner": "adaptive"}}
+        run = client.post("/api/simulations", json=selected).raise_for_status().json()
+        assert run["config"]["max_ticks"] == 2
+        path = f"/api/simulations/{run['id']}"
+        assert client.post(path + "/step").raise_for_status().json()["status"] == "PAUSED"
+        cutoff = client.post(path + "/step").raise_for_status().json()
+        assert cutoff["tick"] == 2 and cutoff["status"] == "FAILED"
+        assert cutoff["error"] == "Simulation step limit reached."
+        assert client.post(path + "/step").status_code == 422
+        assert client.post(path + "/reset").raise_for_status().json()["config"]["max_ticks"] == 2
+
+        selected["config"]["max_ticks"] = 7
+        overridden = client.post("/api/simulations", json=selected).raise_for_status().json()
+        assert overridden["config"]["max_ticks"] == 7
 
 
 def test_delete_saved_scenario_preserves_its_live_and_archived_runs(tmp_path: Path) -> None:

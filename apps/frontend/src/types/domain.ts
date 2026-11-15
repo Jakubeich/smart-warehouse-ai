@@ -32,6 +32,7 @@ export const configSchema = z.object({
   horizon: z.number(),
   max_nodes: z.number(),
   timeout_seconds: z.number(),
+  max_ticks: z.number().int().positive().nullish(),
   move_energy: z.number(),
   wait_energy: z.number(),
   handling_energy: z.number(),
@@ -192,12 +193,16 @@ export const stateSchema = z.object({
       attempt: z.number().int(),
       finished_attempts: z.number().int(),
       best_completed_tasks: z.number().int(),
+      best_model_id: z.string().nullish(),
       last_result: z
         .object({
           status: z.enum(["COMPLETED", "FAILED"]),
           ticks: z.number().int(),
           completed_tasks: z.number().int(),
           model_updates: z.number().int(),
+          checkpoint: z
+            .enum(["saved", "kept", "changed_scenario", "invalid_run"])
+            .nullish(),
           error: z.string().nullable(),
         })
         .nullable(),

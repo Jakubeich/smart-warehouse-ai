@@ -1,0 +1,151 @@
+{
+  "scenario_id": "generated-87ef9d1c52042d90",
+  "size": [
+    64,
+    64
+  ],
+  "robots": 17,
+  "tasks": 200,
+  "paired_tick": 2192,
+  "tuning_and_evaluation_used_the_same_scenario": true,
+  "baseline_depletion_trace": {
+    "R-11": {
+      "departed": 1377,
+      "position": [
+        62,
+        8
+      ],
+      "battery": 68.29999999999828,
+      "target": [
+        37,
+        62
+      ],
+      "direct_steps": 79,
+      "nearest_free": [
+        62,
+        [
+          53,
+          61
+        ]
+      ],
+      "distance_before": 1209,
+      "end_position": [
+        56,
+        44
+      ],
+      "end_battery": 0.29999999999838134,
+      "moves": 170
+    },
+    "R-13": {
+      "departed": 1914,
+      "position": [
+        62,
+        50
+      ],
+      "battery": 48.69999999999821,
+      "target": [
+        18,
+        62
+      ],
+      "direct_steps": 80,
+      "nearest_free": [
+        20,
+        [
+          53,
+          61
+        ]
+      ],
+      "distance_before": 1690,
+      "end_position": [
+        60,
+        47
+      ],
+      "end_battery": 0.2999999999983174,
+      "moves": 121
+    }
+  },
+  "comparison": [
+    {
+      "model": "nn-0cd0f112736f",
+      "completed": 120,
+      "terminal_tick": 3420,
+      "status": "FAILED",
+      "depleted_robots": 2,
+      "collisions": 0,
+      "arrivals_at_charger": 32,
+      "departures_to_charge": 34,
+      "median_battery_at_departure": 51.3,
+      "minimum_battery_at_arrival": 0.3,
+      "charging_station_changes": 0,
+      "passage_wait_at_paired_tick": 47,
+      "longest_passage_wait_at_paired_tick": 13,
+      "longest_passage_wait_full_run": 13,
+      "passage_stall_at_termination": false
+    },
+    {
+      "model": "nn-dc0456d6363e",
+      "completed": 122,
+      "terminal_tick": 2192,
+      "status": "FAILED",
+      "depleted_robots": 0,
+      "collisions": 0,
+      "arrivals_at_charger": 38,
+      "departures_to_charge": 39,
+      "median_battery_at_departure": 61.4,
+      "minimum_battery_at_arrival": 9.5,
+      "charging_station_changes": 9,
+      "passage_wait_at_paired_tick": 77,
+      "longest_passage_wait_at_paired_tick": 18,
+      "longest_passage_wait_full_run": 18,
+      "passage_stall_at_termination": false
+    }
+  ],
+  "learned_reserve": {
+    "observed_trips": 34,
+    "quantile": 0.95,
+    "weights": [
+      28.07,
+      0.6,
+      0.0,
+      48,
+      8.0
+    ]
+  },
+  "extended_rejected_candidate": {
+    "result": {
+      "model": "nn-1dc4d0ce109f",
+      "weights": [
+        18.0,
+        0.05,
+        0.0,
+        36,
+        8.0
+      ],
+      "completed": 124,
+      "ticks": 5153,
+      "depleted": 1,
+      "passage_wait": 111,
+      "old_passage_wait": 47,
+      "longest": 13,
+      "old_longest": 13,
+      "pass": false,
+      "collisions": 0,
+      "error": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "status": "FAILED",
+      "arrivals": 38,
+      "redirected": 10,
+      "crossings": 175
+    },
+    "last_passage_wait": 111,
+    "longest_full": 13
+  },
+  "live_replay": {
+    "model": "nn-dc0456d6363e",
+    "speed": 512.0,
+    "completed": 122,
+    "tick": 2192,
+    "status": "FAILED",
+    "executed_collisions": 0,
+    "minimum_battery_at_end": 60.0
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "scenario_id": "generated-87ef9d1c52042d90",
+  "seed": 3318493664,
+  "size": [
+    64,
+    64
+  ],
+  "robots": 17,
+  "tasks": 200,
+  "passage_rows": [
+    6,
+    38
+  ],
+  "paired_tick": 1311,
+  "tuning_and_evaluation_used_the_same_scenario": true,
+  "distinct_trial_models": 54,
+  "comparison": [
+    {
+      "model": "nn-58872dd77b34",
+      "completed": 45,
+      "ticks": 1311,
+      "stalled": true,
+      "wait": 7814,
+      "longest": 1125,
+      "status": "FAILED",
+      "crossings": 59,
+      "collisions": 0,
+      "error": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "wait_at_paired_tick": 7814,
+      "longest_wait_at_paired_tick": 1125
+    },
+    {
+      "model": "nn-0e15779e8354",
+      "completed": 109,
+      "ticks": 2649,
+      "stalled": false,
+      "wait": 47,
+      "longest": 13,
+      "status": "FAILED",
+      "crossings": 145,
+      "collisions": 0,
+      "error": "No progress for 30 ticks: check capacity, energy, station admission or reachability",
+      "wait_at_paired_tick": 46,
+      "longest_wait_at_paired_tick": 13
+    }
+  ],
+  "winning_trial": {
+    "parent": "nn-35bfc83c13ca",
+    "scale": 0.045,
+    "model": "nn-0e15779e8354",
+    "summary": {
+      "completed": 109,
+      "ticks": 2649,
+      "stalled": false,
+      "wait": 47,
+      "longest": 13,
+      "status": "FAILED",
+      "crossings": 145,
+      "collisions": 0,
+      "error": "No progress for 30 ticks: check capacity, energy, station admission or reachability"
+    },
+    "accepted": true,
+    "paired_waits": [
+      47,
+      86
+    ],
+    "paired_longest": [
+      13,
+      13
+    ]
+  }
+}

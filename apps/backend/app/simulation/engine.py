@@ -11,6 +11,8 @@ from app.algorithms.mapf import PlanResult, plan
 from app.core.generator import layout_key
 from app.domain.grid import Grid
 from app.domain.models import (
+    DEFAULT_MAX_TICKS,
+    NO_PROGRESS_TICK_LIMIT,
     AssignmentCandidate,
     AssignmentDecision,
     CellType,
@@ -26,13 +28,16 @@ from app.domain.models import (
 )
 from app.learning.features import FEATURE_NAMES, FEATURE_VERSION, features, geometric_eta
 from app.learning.model import EtaModel
+from app.neural.coordination import CoordinationWeights, simultaneous_moves
 from app.neural.online import Experience, ExperienceBuffer
 from app.neural.policy import (
+    DISPATCH_AGE_CAP,
     Action,
     Policy,
     dispatch_actions,
     load_policy,
     motion_actions,
+    narrow_passage_cells,
     resolve_moves,
 )
 from app.scheduling.assignment import assign, feasible
@@ -42,6 +47,9 @@ from app.simulation.invariants import (
     validate_state,
     validate_transition,
 )
+
+RECENT_FLEET_STATES = 256
+TICK_LIMIT_MESSAGE = "Simulation step limit reached."
 
 
 class Engine:
@@ -59,8 +67,13 @@ class Engine:
             raise ValueError("Požadovaná verze neuronové sítě není dostupná.")
         self.experience = experience
         self.visits: dict[str, deque[Point]] = {r.id: deque(maxlen=12) for r in scenario.robots}
+        self.motion_waits: dict[str, int] = {}
         self.motion_grid: Grid | None = None
+        self.charging_grid: Grid | None = None
         self.neural_charging: set[str] = set()
+        self.last_delivery_tick = 0
+        self.coordination_until = 0
+        self.active_coordination: CoordinationWeights | None = None
         if self.policy is None and scenario.config.scheduler == "learned" and predictor is None:
             raise ValueError("ML přiřazování vyžaduje natrénovaný model.")
         self.predictor = predictor
@@ -82,6 +95,9 @@ class Engine:
         ):
             raise ValueError("A scenario must contain initial pending tasks created at tick zero")
         self.initial = scenario.model_copy(deep=True)
+        self.max_ticks = scenario.config.max_ticks or DEFAULT_MAX_TICKS
+        self.initial.config.max_ticks = self.max_ticks
+        self.tick_limit_reached = False
         if self.policy:
             self.initial.config.neural_model_id = self.policy.id
             self.initial.config.ml_model_id = None
@@ -101,8 +117,10 @@ class Engine:
             r.home = r.home or r.position
             r.path = [r.position]
         self.grid = Grid(self.state.warehouse)
+        self.narrow_passages = narrow_passage_cells(self.state.warehouse)
         self.dirty = True
         self.stalled_ticks = 0
+        self.repeated_fleet_states: dict[tuple[object, ...], int] = {}
         validate_state(self.state)
         self.emit("STATE_SNAPSHOT", f"Scenario initialized. {len(self.state.robots)} robots ready.")
 
@@ -256,17 +274,70 @@ class Engine:
             for task in s.tasks
             if task.status in {TaskStatus.ASSIGNED, TaskStatus.IN_PROGRESS}
             for p in (task.pickup, task.dropoff)
+            if p == task.dropoff
+            or task.status == TaskStatus.ASSIGNED
+            or self.active_coordination is None
+            or not self.active_coordination.release_pickups
         }
         goals = {r.goal for r in s.robots if r.goal is not None}
         occupants = {r.position for r in s.robots}
-        available = [r for r in sorted(s.robots, key=lambda r: r.id) if r.mode == "IDLE"]
+        charging_weights = getattr(self.policy, "charging_weights", None)
+        redirect: dict[str, Point] = {}
+        charging_grid = None
+        if charging_weights is not None:
+            reserve, _, _, retry, _ = charging_weights
+            blocked_goals = {
+                r.position
+                for r in s.robots
+                if r.mode == "OFFLINE" or r.battery + 1e-9 < s.config.move_energy
+            }
+            if retry:
+                for r in s.robots:
+                    goal = r.goal
+                    if r.id not in self.neural_charging or goal is None or goal == r.position:
+                        continue
+                    remaining = self.grid.distance(r.position, goal)
+                    if r.battery + 1e-9 < s.config.move_energy:
+                        continue
+                    margin = (
+                        r.battery - remaining * s.config.move_energy
+                        if remaining is not None
+                        else -1
+                    )
+                    if (
+                        goal in blocked_goals
+                        or margin < reserve / 2
+                        or (margin < reserve and self.motion_waits.get(r.id, 0) >= retry)
+                    ):
+                        redirect[r.id] = goal
+            if redirect or any(r.mode == "IDLE" for r in s.robots):
+                occupied_route = blocked_goals | {
+                    r.position for r in s.robots if r.mode == "CHARGE" or r.service_remaining
+                }
+                if (
+                    self.charging_grid is None
+                    or self.charging_grid.blocked != self.grid.blocked | occupied_route
+                ):
+                    self.charging_grid = Grid(s.warehouse, set(s.obstacles) | occupied_route)
+                charging_grid = self.charging_grid
+        available = [
+            r for r in sorted(s.robots, key=lambda r: r.id) if r.mode == "IDLE" or r.id in redirect
+        ]
         # Rank actions for all available robots in one batch, then claim
         # robots and stations in score order.
         candidates = [
             (robot, action)
             for robot in available
             for action in dispatch_actions(
-                s, self.grid, robot, pending, stations, goals, occupants - {robot.position}
+                s,
+                self.grid,
+                robot,
+                pending,
+                stations,
+                goals,
+                occupants - {robot.position},
+                charging_grid=charging_grid,
+                current_charge=redirect.get(robot.id),
             )
         ]
         if not candidates:
@@ -281,6 +352,10 @@ class Engine:
         ranked = sorted(zip(scores, candidates, strict=True), key=lambda pair: -pair[0])
         for score, (robot, action) in ranked:
             if robot.id in chosen_robots or score <= best_idle[robot.id]:
+                continue
+            previous_charge = redirect.get(robot.id)
+            if previous_charge == action.target:
+                chosen_robots.add(robot.id)
                 continue
             if action.task:
                 if {action.task.pickup, action.task.dropoff} & (stations | goals):
@@ -321,11 +396,55 @@ class Engine:
                 self.set_status(robot, RobotStatus.MOVING_TO_PICKUP)
                 self.emit("TASK_ASSIGNED", f"{task.id} assigned to {robot.id}", task.id)
             else:
+                if previous_charge is not None:
+                    goals.discard(previous_charge)
                 robot.mode, robot.goal = "RETURN", action.target
                 if action.kind == "charge":
                     self.neural_charging.add(robot.id)
                 self.set_status(robot, RobotStatus.WAITING)
             goals.add(action.target)
+
+        if (
+            self.experience
+            and self.stalled_ticks
+            and not chosen_robots
+            and all(robot.mode in {"IDLE", "OFFLINE"} for robot in s.robots)
+        ):
+            # Waiting is negative feedback only when the whole fleet declined feasible work.
+            with_work = {robot.id for robot, action in candidates if action.task is not None}
+            for robot, action in candidates:
+                if action.kind == "idle" and robot.id in with_work:
+                    self.experience.dispatch.append(Experience(action.values, -0.4))
+
+    def _coordinate_traffic(self) -> None:
+        profile: CoordinationWeights | None = getattr(self.policy, "coordination_weights", None)
+        if profile is None:
+            self.active_coordination = None
+            return
+        s = self.state
+        if (
+            self.stalled_ticks >= profile.stalled_ticks
+            and s.metrics.completed_tasks >= profile.fraction_complete * len(s.tasks)
+        ):
+            self.coordination_until = max(self.coordination_until, s.tick + profile.duration)
+        if (
+            self.coordination_until
+            and profile.delivery_delay
+            and s.tick - self.last_delivery_tick >= profile.delivery_delay
+            and s.tick >= self.coordination_until + profile.cooldown
+        ):
+            self.coordination_until = s.tick + profile.duration
+        queue = profile.queue_trigger
+        if (
+            queue is not None
+            and s.metrics.completed_tasks >= queue.fraction_complete * len(s.tasks)
+            and s.tick >= self.coordination_until + profile.cooldown
+            and s.tick - self.last_delivery_tick >= queue.delivery_delay
+            and sum(streak >= queue.wait_ticks for streak in self.motion_waits.values())
+            >= queue.robots
+        ):
+            self.coordination_until = s.tick + profile.duration
+        self.active_coordination = profile if s.tick < self.coordination_until else None
 
     def _neural_moves(self) -> tuple[dict[str, Point], list[Experience]]:
         assert self.policy is not None
@@ -334,16 +453,31 @@ class Engine:
         fixed = {
             r.position
             for r in s.robots
-            if r.goal in {None, r.position} or r.service_remaining or r.mode == "OFFLINE"
+            if r.goal in {None, r.position}
+            or r.service_remaining
+            or r.mode == "OFFLINE"
+            or r.battery + 1e-9 < s.config.move_energy
         }
         blocked = self.grid.blocked | fixed
         if self.motion_grid is None or self.motion_grid.blocked != blocked:
             self.motion_grid = Grid(s.warehouse, set(s.obstacles) | fixed)
         ranked: dict[str, list[tuple[float, Point]]] = {}
         candidates: dict[str, dict[Point, Action]] = {}
+        profile = self.active_coordination
+        coordinating = bool(profile and (profile.movement or profile.progress or profile.revisit))
         for robot in s.robots:
             actions = motion_actions(
-                s, self.grid, self.motion_grid, robot, occupants, self.visits[robot.id]
+                s,
+                self.grid,
+                self.motion_grid,
+                robot,
+                occupants,
+                self.visits[robot.id],
+                narrow_passage=robot.position in self.narrow_passages,
+                wait_streak=self.motion_waits.get(robot.id, 0),
+                stalled_ticks=self.stalled_ticks,
+                coordinating=coordinating,
+                charging=robot.id in self.neural_charging,
             )
             if not actions:
                 continue
@@ -354,13 +488,22 @@ class Engine:
                 key=lambda candidate: -candidate[0],
             )
         old = {robot.id: robot.position for robot in s.robots}
-        new, rejected = resolve_moves(old, ranked)
+        together = simultaneous_moves(old, ranked) if coordinating else None
+        if together is None:
+            new, rejected = resolve_moves(old, ranked)
+        else:
+            new = together
+            rejected = sum(choices[0][1] != new[robot] for robot, choices in ranked.items())
+        self.motion_waits = {
+            rid: self.motion_waits.get(rid, 0) + 1 for rid in ranked if old[rid] == new[rid]
+        }
         s.neural_rejections += rejected
         feedback: list[Experience] = []
+        entered = {cell for rid, cell in new.items() if cell != old[rid]}
         for rid, choices in ranked.items():
             if self.experience:
                 first = choices[0][1]
-                if first != new[rid]:
+                if first != new[rid] and first != old[rid]:
                     feedback.append(Experience(candidates[rid][first].values, -0.7))
                 selected = candidates[rid][new[rid]]
                 if new[rid] != old[rid]:
@@ -370,6 +513,9 @@ class Engine:
                         if new[rid] == robot.goal
                         else 0.15 + 0.3 * selected.distance_gain - 0.6 * selected.recent_visits
                     )
+                    # Credit giving way when a second robot actually used the vacated cell.
+                    if old[rid] in entered and (coordinating or selected.distance_gain <= 0):
+                        reward = max(reward, 0.55 - 0.2 * selected.recent_visits)
                 else:
                     # A forced wait says nothing about the quality of the chosen action.
                     reward = -0.1 if first == new[rid] and len(choices) > 1 else 0.0
@@ -393,7 +539,13 @@ class Engine:
             r.id: r.goal if r.goal is not None and r.service_remaining == 0 else r.position
             for r in s.robots
         }
-        moving = [r for r in s.robots if goals[r.id] != r.position and r.mode != "OFFLINE"]
+        moving = [
+            r
+            for r in s.robots
+            if goals[r.id] != r.position
+            and r.mode != "OFFLINE"
+            and r.battery + 1e-9 >= s.config.move_energy
+        ]
         stationary = {r.position for r in s.robots if r not in moving}
         planning_grid = Grid(s.warehouse, set(s.obstacles) | stationary)
         ordered = sorted(
@@ -440,6 +592,7 @@ class Engine:
             since = perf_counter()
             s.neural_decisions = []
             s.neural_last_model_id = self.policy.id
+            self._coordinate_traffic()
             self._neural_dispatch()
             new, feedback = self._neural_moves()
             s.metrics.planning_time_ms += (perf_counter() - since) * 1000
@@ -449,20 +602,9 @@ class Engine:
                 return s
             new = {r.id: r.path[min(r.path_index + 1, len(r.path) - 1)] for r in s.robots}
         validate_transition(self.grid, old, new)
-        # Compute all energy requirements before any robot moves (atomic transition).
+        # Reject an infeasible move before applying any part of the transition.
         for r in s.robots:
-            energy = (
-                s.config.move_energy
-                if new[r.id] != r.position
-                else (
-                    s.config.handling_energy
-                    if r.service_remaining
-                    else 0
-                    if r.mode == "CHARGE"
-                    else s.config.wait_energy
-                )
-            )
-            if r.battery + 1e-9 < energy:
+            if new[r.id] != r.position and r.battery + 1e-9 < s.config.move_energy:
                 self.fail(f"{r.id}: insufficient energy; transition rejected")
                 return s
         if self.experience:
@@ -470,8 +612,9 @@ class Engine:
         s.tick += 1
         progressed = False
         for r in s.robots:
+            had_movement_energy = r.battery + 1e-9 >= s.config.move_energy
             moved = new[r.id] != r.position
-            was_servicing = r.service_remaining > 0
+            was_servicing = r.service_remaining > 0 and r.battery + 1e-9 >= s.config.handling_energy
             if moved:
                 r.orientation = round(
                     degrees(atan2(new[r.id][1] - r.position[1], new[r.id][0] - r.position[0]))
@@ -493,6 +636,8 @@ class Engine:
                 r.path, r.path_index = [r.position], 0
             else:
                 r.path_index = min(r.path_index + 1, len(r.path) - 1)
+                if had_movement_energy and r.battery + 1e-9 < s.config.move_energy:
+                    self.dirty = True
             if r.mode not in {"IDLE", "OFFLINE"}:
                 r.busy_ticks += 1
             key = f"{r.position[0]},{r.position[1]}"
@@ -510,6 +655,7 @@ class Engine:
                         self.set_status(r, RobotStatus.MOVING_TO_DROPOFF)
                     else:
                         task.status, task.completed_tick = TaskStatus.COMPLETED, s.tick
+                        self.last_delivery_tick = s.tick
                         observation = self.pending_observations.pop(task.id, None)
                         if observation is not None:
                             self.observations.append(
@@ -549,6 +695,7 @@ class Engine:
                     ):
                         r.mode, r.goal = "CHARGE", None
                         self.set_status(r, RobotStatus.CHARGING)
+                        progressed = True
                     else:
                         if self.experience:
                             self.experience.dispatch_finished(r.id, s.tick)
@@ -556,7 +703,7 @@ class Engine:
                         self.set_status(r, RobotStatus.IDLE)
                     self.neural_charging.discard(r.id)
                     self.dirty = True
-                elif task and r.mode in {"PICKUP", "DROPOFF"}:
+                elif task and r.mode in {"PICKUP", "DROPOFF"} and not r.service_remaining:
                     r.service_remaining = (
                         task.load_duration if r.mode == "PICKUP" else task.unload_duration
                     )
@@ -569,13 +716,106 @@ class Engine:
             s.status = "COMPLETED"
             s.metrics.success = True
             self.emit("SIMULATION_COMPLETED", "All transport tasks completed.")
-        elif self.stalled_ticks >= 30:
+        elif self.majority_stranded():
+            self.fail("Most available robots are out of energy.")
+        elif self.stalled_ticks >= NO_PROGRESS_TICK_LIMIT and not self.has_planned_motion():
             self.fail(
                 "No progress for 30 ticks: check capacity, energy, station admission or reachability"
             )
+        elif self.repeats_without_delivery():
+            self.fail("The fleet is repeating the same state without completing a delivery.")
+        elif s.tick >= self.max_ticks:
+            # Truncate the run without treating unfinished assignments as failed decisions.
+            self.tick_limit_reached = True
+            s.status = "FAILED"
+            s.error = TICK_LIMIT_MESSAGE
+            self.emit("SIMULATION_ERROR", s.error)
         self.update_metrics()
         validate_state(s)
         return s
+
+    def has_planned_motion(self) -> bool:
+        return self.policy is None and any(
+            any(point != robot.position for point in robot.path[robot.path_index + 1 :])
+            for robot in self.state.robots
+        )
+
+    def majority_stranded(self) -> bool:
+        available = [robot for robot in self.state.robots if robot.mode != "OFFLINE"]
+        stranded = sum(
+            robot.battery + 1e-9 < self.state.config.move_energy
+            and robot.mode != "CHARGE"
+            and not (
+                robot.mode in {"IDLE", "RETURN"}
+                and self.grid.kind(robot.position) == CellType.CHARGER
+                and robot.battery < robot.battery_capacity
+            )
+            and not (
+                robot.service_remaining
+                and robot.battery + 1e-9 >= self.state.config.handling_energy
+            )
+            for robot in available
+        )
+        return stranded * 2 > len(available)
+
+    def repeats_without_delivery(self) -> bool:
+        s = self.state
+        since_delivery = s.tick - self.last_delivery_tick
+        if not since_delivery:
+            self.repeated_fleet_states.clear()
+        if since_delivery < DISPATCH_AGE_CAP or any(
+            task.status == TaskStatus.PENDING and s.tick - task.created_tick < DISPATCH_AGE_CAP
+            for task in s.tasks
+        ):
+            return False
+
+        # Once ages stop changing dispatch scores, compare physical state and policy inputs.
+        profile = getattr(self.policy, "coordination_weights", None)
+        queue = profile.queue_trigger if profile else None
+        charging_weights = getattr(self.policy, "charging_weights", None)
+        waiting_weights = getattr(self.policy, "waiting_weights", None)
+        motion_wait_cap = max(
+            24,
+            queue.wait_ticks if queue else 0,
+            charging_weights[3] if charging_weights else 0,
+            waiting_weights[0] if waiting_weights else 0,
+        )
+        delivery_age_cap = max(
+            DISPATCH_AGE_CAP,
+            profile.delivery_delay if profile else 0,
+            queue.delivery_delay if queue else 0,
+        )
+        signature = (
+            self.policy.id if self.policy else None,
+            self.stalled_ticks,
+            self.dirty,
+            min(since_delivery, delivery_age_cap),
+            bool(self.coordination_until),
+            max(0, self.coordination_until - s.tick),
+            max(0, self.coordination_until + (profile.cooldown if profile else 0) - s.tick),
+            tuple(
+                (
+                    robot.position,
+                    robot.goal,
+                    robot.mode,
+                    robot.task_id,
+                    robot.service_remaining,
+                    robot.battery,
+                    robot.id in self.neural_charging,
+                    min(robot.waiting, 100) if self.policy else robot.waiting,
+                    min(self.motion_waits.get(robot.id, 0), motion_wait_cap),
+                    tuple(self.visits[robot.id])
+                    if self.policy
+                    else tuple(robot.path[robot.path_index :]),
+                )
+                for robot in s.robots
+            ),
+        )
+        prior = self.repeated_fleet_states.pop(signature, 0)
+        if len(self.repeated_fleet_states) == RECENT_FLEET_STATES:
+            del self.repeated_fleet_states[next(iter(self.repeated_fleet_states))]
+        self.repeated_fleet_states[signature] = prior + 1
+        return prior >= 2
 
     def learning_episode(self, purpose: str = "live") -> dict[str, Any]:
         return {
@@ -625,6 +865,8 @@ class Engine:
         ]
 
     def add_task(self, task: TransportTask) -> None:
+        if self.state.tick >= self.max_ticks:
+            raise ValueError(TICK_LIMIT_MESSAGE)
         if len(self.state.tasks) >= 500 or any(t.id == task.id for t in self.state.tasks):
             raise ValueError("Task limit reached or duplicate ID")
         if task.status != TaskStatus.PENDING or task.assigned_robot:
@@ -640,6 +882,7 @@ class Engine:
             raise ValueError("Dynamic obstacles disconnect stations")
         task.created_tick = self.state.tick
         self.state.tasks.append(task)
+        self.repeated_fleet_states.clear()
         if self.state.status == "COMPLETED":
             self.state.status = "PAUSED"
             self.state.metrics.success = False
@@ -661,6 +904,7 @@ class Engine:
                 raise ValueError("Obstacles require an empty floor cell, away from robot homes")
             s.obstacles.append(point)
         self.grid = Grid(s.warehouse, set(s.obstacles))
+        self.repeated_fleet_states.clear()
         for r in s.robots:
             r.path, r.path_index = [r.position], 0
         s.reservations = []
@@ -677,6 +921,7 @@ class Engine:
         if robot.task_id or robot.mode not in {"IDLE", "OFFLINE"}:
             raise ValueError("Only an idle robot can change availability")
         robot.mode = "IDLE" if available else "OFFLINE"
+        self.repeated_fleet_states.clear()
         self.dirty = True
         self.emit(
             "ROBOT_UPDATED", f"{robot_id} {'available' if available else 'offline'}", robot_id

@@ -1,0 +1,703 @@
+{
+  "model": "nn-1e8dfa17bb31",
+  "tick_limit": null,
+  "summary": {
+    "maps_completed": 20,
+    "maps_matching_previous_result": 20,
+    "delivered": 4000,
+    "collisions": 0,
+    "depleted": 0,
+    "fastest_ticks": 1164,
+    "slowest_ticks": 2817
+  },
+  "past_former_limit": {
+    "seed": 42,
+    "layout": "989fe400e2c54b2abc4fc8dc",
+    "tasks": 23,
+    "delivered": 23,
+    "finished": true,
+    "ticks": 5638,
+    "collisions": 0,
+    "depleted": 0,
+    "passage_wait": 0,
+    "longest_passage_wait": 0
+  },
+  "live_slower_attempts": [
+    {
+      "warehouse": [
+        64,
+        64
+      ],
+      "robots": 17,
+      "tasks": 200,
+      "best_ticks": 1968,
+      "completed_attempt": {
+        "status": "COMPLETED",
+        "ticks": 2239,
+        "completed_tasks": 200,
+        "model_updates": 1,
+        "checkpoint": "kept",
+        "error": null
+      }
+    },
+    {
+      "warehouse": [
+        45,
+        64
+      ],
+      "robots": 32,
+      "tasks": 200,
+      "best_ticks": 1172,
+      "completed_attempt": {
+        "status": "COMPLETED",
+        "ticks": 1338,
+        "completed_tasks": 200,
+        "model_updates": 1,
+        "checkpoint": "kept",
+        "error": null
+      }
+    }
+  ],
+  "maps": [
+    {
+      "case": "open-compact",
+      "cohort": 0,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 22,
+        "height": 19,
+        "density": 0.25,
+        "layout": "mixed",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 300276674,
+        "bottlenecks": false,
+        "passage_width": 1,
+        "passage_count": 1,
+        "traffic": "one_way"
+      },
+      "previous_ticks": 1915,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 300276674,
+        "layout": "8928fe2bbf500b988c29aa0f",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 1915,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 0,
+        "longest_passage_wait": 0
+      }
+    },
+    {
+      "case": "open-both",
+      "cohort": 0,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 24,
+        "height": 24,
+        "density": 0.33,
+        "layout": "aisles",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 2689826129,
+        "bottlenecks": false,
+        "passage_width": 1,
+        "passage_count": 1,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 1164,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 2689826129,
+        "layout": "604e490b3e3c816fd96315fe",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 1164,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 0,
+        "longest_passage_wait": 0
+      }
+    },
+    {
+      "case": "open-large",
+      "cohort": 0,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 62,
+        "height": 62,
+        "density": 0.4,
+        "layout": "islands",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 4250385424,
+        "bottlenecks": false,
+        "passage_width": 1,
+        "passage_count": 1,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 1797,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 4250385424,
+        "layout": "e14cbc78116beaa076cc9570",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 1797,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 0,
+        "longest_passage_wait": 0
+      }
+    },
+    {
+      "case": "single-compact",
+      "cohort": 0,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 25,
+        "height": 22,
+        "density": 0.32,
+        "layout": "mixed",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 3880915113,
+        "bottlenecks": true,
+        "passage_width": 1,
+        "passage_count": 1,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 1582,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 3880915113,
+        "layout": "886c9eff660c376f91495b7b",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 1582,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 1733,
+        "longest_passage_wait": 29
+      }
+    },
+    {
+      "case": "single-large",
+      "cohort": 0,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 60,
+        "height": 64,
+        "density": 0.4,
+        "layout": "aisles",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 639086370,
+        "bottlenecks": true,
+        "passage_width": 1,
+        "passage_count": 1,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 2072,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 639086370,
+        "layout": "bcf4c3cb5c27789ace66f0f3",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 2072,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 2853,
+        "longest_passage_wait": 54
+      }
+    },
+    {
+      "case": "single-one-way",
+      "cohort": 0,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 34,
+        "height": 28,
+        "density": 0.31,
+        "layout": "islands",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 185999241,
+        "bottlenecks": true,
+        "passage_width": 1,
+        "passage_count": 1,
+        "traffic": "one_way"
+      },
+      "previous_ticks": 2777,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 185999241,
+        "layout": "e0ff048b206026ffebf465dd",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 2777,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 960,
+        "longest_passage_wait": 33
+      }
+    },
+    {
+      "case": "two-single",
+      "cohort": 0,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 38,
+        "height": 41,
+        "density": 0.31,
+        "layout": "mixed",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 708007390,
+        "bottlenecks": true,
+        "passage_width": 1,
+        "passage_count": 2,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 1337,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 708007390,
+        "layout": "db7f415ff08255f98fdf3ba9",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 1337,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 878,
+        "longest_passage_wait": 29
+      }
+    },
+    {
+      "case": "three-single",
+      "cohort": 0,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 53,
+        "height": 50,
+        "density": 0.37,
+        "layout": "aisles",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 2631558840,
+        "bottlenecks": true,
+        "passage_width": 1,
+        "passage_count": 3,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 1595,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 2631558840,
+        "layout": "75877a7beb5333b0c89d1226",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 1595,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 982,
+        "longest_passage_wait": 34
+      }
+    },
+    {
+      "case": "one-double",
+      "cohort": 0,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 31,
+        "height": 34,
+        "density": 0.3,
+        "layout": "islands",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 3507085672,
+        "bottlenecks": true,
+        "passage_width": 2,
+        "passage_count": 1,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 1345,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 3507085672,
+        "layout": "74d86fe68262f8ac423d0ebc",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 1345,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 0,
+        "longest_passage_wait": 0
+      }
+    },
+    {
+      "case": "two-double",
+      "cohort": 0,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 48,
+        "height": 45,
+        "density": 0.38,
+        "layout": "mixed",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 3350812858,
+        "bottlenecks": true,
+        "passage_width": 2,
+        "passage_count": 2,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 1360,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 3350812858,
+        "layout": "09e06c6a7267d433fe8b29f8",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 1360,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 0,
+        "longest_passage_wait": 0
+      }
+    },
+    {
+      "case": "three-double",
+      "cohort": 0,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 43,
+        "height": 57,
+        "density": 0.32,
+        "layout": "aisles",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 1784535666,
+        "bottlenecks": true,
+        "passage_width": 2,
+        "passage_count": 3,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 1323,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 1784535666,
+        "layout": "32375c2d054e20abc8bf6e36",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 1323,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 0,
+        "longest_passage_wait": 0
+      }
+    },
+    {
+      "case": "three-wide",
+      "cohort": 0,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 51,
+        "height": 59,
+        "density": 0.39,
+        "layout": "islands",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 3950819587,
+        "bottlenecks": true,
+        "passage_width": 3,
+        "passage_count": 3,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 1400,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 3950819587,
+        "layout": "3707f03312b2334fbc2fd444",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 1400,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 0,
+        "longest_passage_wait": 0
+      }
+    },
+    {
+      "case": "open-large",
+      "cohort": 1,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 62,
+        "height": 60,
+        "density": 0.4,
+        "layout": "islands",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 3585789007,
+        "bottlenecks": false,
+        "passage_width": 1,
+        "passage_count": 1,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 1549,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 3585789007,
+        "layout": "bd1b1e6618413c2aff8e4f17",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 1549,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 0,
+        "longest_passage_wait": 0
+      }
+    },
+    {
+      "case": "single-compact",
+      "cohort": 1,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 24,
+        "height": 22,
+        "density": 0.32,
+        "layout": "mixed",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 2526270309,
+        "bottlenecks": true,
+        "passage_width": 1,
+        "passage_count": 1,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 1417,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 2526270309,
+        "layout": "50582b1149e57b347d80e6b5",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 1417,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 1090,
+        "longest_passage_wait": 24
+      }
+    },
+    {
+      "case": "single-large",
+      "cohort": 1,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 63,
+        "height": 64,
+        "density": 0.4,
+        "layout": "aisles",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 672395438,
+        "bottlenecks": true,
+        "passage_width": 1,
+        "passage_count": 1,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 2782,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 672395438,
+        "layout": "5b015a359a1fabf2c310df3e",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 2782,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 2564,
+        "longest_passage_wait": 44
+      }
+    },
+    {
+      "case": "single-one-way",
+      "cohort": 1,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 32,
+        "height": 25,
+        "density": 0.31,
+        "layout": "islands",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 3118228482,
+        "bottlenecks": true,
+        "passage_width": 1,
+        "passage_count": 1,
+        "traffic": "one_way"
+      },
+      "previous_ticks": 2817,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 3118228482,
+        "layout": "69e6b9e5be843d4fa27cc6f8",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 2817,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 254,
+        "longest_passage_wait": 13
+      }
+    },
+    {
+      "case": "two-single",
+      "cohort": 1,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 35,
+        "height": 40,
+        "density": 0.31,
+        "layout": "mixed",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 2202378052,
+        "bottlenecks": true,
+        "passage_width": 1,
+        "passage_count": 2,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 1544,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 2202378052,
+        "layout": "27dc579b1241269e9f928d69",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 1544,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 1162,
+        "longest_passage_wait": 26
+      }
+    },
+    {
+      "case": "one-double",
+      "cohort": 1,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 30,
+        "height": 34,
+        "density": 0.3,
+        "layout": "islands",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 1568041693,
+        "bottlenecks": true,
+        "passage_width": 2,
+        "passage_count": 1,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 1366,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 1568041693,
+        "layout": "ac652d491ae73477815709b8",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 1366,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 0,
+        "longest_passage_wait": 0
+      }
+    },
+    {
+      "case": "two-double",
+      "cohort": 1,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 46,
+        "height": 44,
+        "density": 0.38,
+        "layout": "mixed",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 540147560,
+        "bottlenecks": true,
+        "passage_width": 2,
+        "passage_count": 2,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 1509,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 540147560,
+        "layout": "afb6eef4b69accf7b1a26ecc",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 1509,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 0,
+        "longest_passage_wait": 0
+      }
+    },
+    {
+      "case": "three-wide",
+      "cohort": 1,
+      "generator": {
+        "name": "Generovaný sklad",
+        "width": 54,
+        "height": 57,
+        "density": 0.39,
+        "layout": "islands",
+        "robot_count": 32,
+        "task_count": 200,
+        "seed": 3641704836,
+        "bottlenecks": true,
+        "passage_width": 3,
+        "passage_count": 3,
+        "traffic": "bidirectional"
+      },
+      "previous_ticks": 1358,
+      "matches_previous_result": true,
+      "result": {
+        "seed": 3641704836,
+        "layout": "1aa889c95c3c4626ed3216b8",
+        "tasks": 200,
+        "delivered": 200,
+        "finished": true,
+        "ticks": 1358,
+        "collisions": 0,
+        "depleted": 0,
+        "passage_wait": 0,
+        "longest_passage_wait": 0
+      }
+    }
+  ]
+}

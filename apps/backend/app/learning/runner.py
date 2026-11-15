@@ -17,7 +17,7 @@ def run_episode(
     scheduler: str,
     purpose: str,
     artifact: dict[str, Any] | None = None,
-    max_ticks: int = 1800,
+    max_ticks: int | None = None,
 ) -> dict[str, Any]:
     scene = Scenario.model_validate(data)
     scene.config = scene.config.model_copy(
@@ -26,20 +26,15 @@ def run_episode(
             "neural_model_id": None,
             "scheduler": scheduler,
             "ml_model_id": artifact["id"] if artifact else None,
+            "max_ticks": max_ticks or scene.config.max_ticks,
         }
     )
     engine = Engine(scene, str(uuid4()), EtaModel(artifact) if artifact else None)
     began = perf_counter()
-    limit = "TICK_LIMIT"
-    for _ in range(max_ticks):
-        if perf_counter() - began > 30:
-            limit = "TIMEOUT"
-            break
+    while engine.state.status not in {"COMPLETED", "FAILED", "STOPPED"}:
         engine.step()
-        if engine.state.status in {"COMPLETED", "FAILED", "STOPPED"}:
-            break
     state = engine.state
-    status = state.status if state.status in {"COMPLETED", "FAILED", "STOPPED"} else limit
+    status = "TICK_LIMIT" if engine.tick_limit_reached else state.status
     episode = engine.learning_episode(purpose)
     if purpose == "training":
         # Identical generated episodes are upserted instead of inflating the dataset.

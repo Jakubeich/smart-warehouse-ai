@@ -25,7 +25,7 @@ class LearningRequest(Model):
     model_id: str | None = None
     scenario_id: str | None = None
     baseline: Literal["priority", "nearest", "hungarian"] = "priority"
-    max_ticks: int = Field(default=1800, ge=100, le=4000)
+    max_ticks: int | None = Field(default=None, ge=1)
 
 
 class Learning:

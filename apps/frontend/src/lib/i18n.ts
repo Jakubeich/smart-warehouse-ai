@@ -229,11 +229,17 @@ const errorMessages: Record<string, string> = {
   "A scenario must contain initial pending tasks created at tick zero":
     "Scénář musí obsahovat počáteční čekající úkoly vytvořené v kroku nula",
   "All transport tasks completed.": "Všechny přepravní úkoly byly dokončeny.",
+  "Simulation step limit reached.": "Simulace dosáhla limitu kroků.",
   "Training attempt reached its tick limit.": "Pokus dosáhl limitu kroků.",
+  "Training attempt rejected because more robots ran out of energy.":
+    "Pokus skončil předčasně, protože se vybilo více robotů než při nejlepším běhu.",
   "Training progress could not be saved. Try again.":
     "Zkušenosti se zatím nepodařilo uložit. Zkuste to znovu.",
   "No progress for 30 ticks: check capacity, energy, station admission or reachability":
     "Po dobu 30 kroků nedošlo k pokroku. Zkontrolujte nosnost, energii, obsazení a dostupnost stanic.",
+  "Most available robots are out of energy.": "Většina dostupných robotů se vybila.",
+  "The fleet is repeating the same state without completing a delivery.":
+    "Flotila se vrací do stejného stavu a nedokončuje přepravy.",
   "Task limit reached or duplicate ID":
     "Byl dosažen limit úkolů nebo se opakuje jejich ID",
   "New tasks must be pending and unassigned":

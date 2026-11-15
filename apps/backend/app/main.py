@@ -20,6 +20,7 @@ from app.domain.models import Scenario, SimulationState, TransportTask, Warehous
 from app.experiments.service import Experiments
 from app.learning.service import Learning, LearningRequest
 from app.neural.online import OnlineLearning
+from app.neural.shared import shared_policy, shared_summary
 from app.persistence.database import Repository
 from app.schemas.requests import (
     AvailabilityRequest,
@@ -44,7 +45,7 @@ def create_app(database: Repository | None = None) -> FastAPI:
 
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncIterator[None]:
-        await asyncio.to_thread(online.restore)
+        await asyncio.to_thread(lambda: online.restore(shared_policy(repository)))
         # Persisted RUNNING jobs lost their process at restart; never pretend they survived.
         for job in await asyncio.to_thread(repository.list, "experiment"):
             if job["status"] == "RUNNING":
@@ -231,7 +232,7 @@ def create_app(database: Repository | None = None) -> FastAPI:
 
     @app.get("/api/neural")
     def neural_model() -> dict[str, Any]:
-        return online.overview()
+        return {**online.overview(), "shared_training": shared_summary(repository)}
 
     @app.get("/api/learning")
     def learning_overview() -> dict[str, Any]:
@@ -276,7 +277,9 @@ def create_app(database: Repository | None = None) -> FastAPI:
             await asyncio.to_thread(stored, "scenario", body.scenario_id or "")
         )
         if body.config:
-            scene.config = body.config
+            scene.config = body.config.model_copy(
+                update={"max_ticks": body.config.max_ticks or scene.config.max_ticks}
+            )
         scene = Scenario.model_validate(scene.model_dump())
         async with session_changes:
             if len(sessions) >= 8 and body.replace_id not in sessions:
@@ -285,10 +288,7 @@ def create_app(database: Repository | None = None) -> FastAPI:
             if body.replace_id is not None:
                 await remove_session(body.replace_id)
                 # Closing the previous run may have flushed new weights.
-                policy = online.current()
-                session.engine.policy = policy
-                session.engine.state.config.neural_model_id = policy.id
-                session.update_learning_status()
+                session.sync_policy()
             sessions[session.engine.state.id] = session
             session.task = asyncio.create_task(session.tick_loop())
             await session.publish()

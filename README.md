@@ -51,6 +51,10 @@ npm --prefix apps/frontend run dev
 
 Vite a Nginx proxy `/api` a `/ws` na backend. `DATABASE_URL` lze nastavit jako proměnnou prostředí; `.env` slouží Compose. Pro lokální CLI mimo výchozí konfiguraci proměnnou explicitně exportujte.
 
+## Nasazení na Railway
+
+V jednom prostředí vytvořte PostgreSQL a dvě služby z GitHubu. Backend používá složku `/apps/backend`, jednu repliku, `PORT=8000` a `DATABASE_URL=${{Postgres.DATABASE_URL}}`. Frontend používá `/apps/frontend`, `PORT=80` a `BACKEND_HOST=backend.railway.internal`, pokud se backend jmenuje `backend`. Pro obě služby nastavte kontrolu dostupnosti `/api/health`. Dockerfile backendu při startu aplikuje databázové migrace. Pro veřejný přístup vytvořte HTTPS doménu na frontendu. Aktivní simulace jsou v paměti backendu a po jeho restartu je potřeba spustit nový běh. Scénáře a váhy se ukládají do PostgreSQL.
+
 ## Implementované funkce
 
 - Deterministický diskrétní tick engine; start/pause/resume/reset/stop/single-step, logický čas oddělený od real-time rychlosti.

@@ -19,9 +19,13 @@ class Document(Base):
 
 
 def database_url() -> str:
-    return os.getenv(
+    url = os.getenv(
         "DATABASE_URL", "postgresql+psycopg://warehouse:warehouse@localhost:55432/warehouse"
     )
+    scheme, separator, address = url.partition("://")
+    if separator and scheme in {"postgres", "postgresql"}:
+        return f"postgresql+psycopg://{address}"
+    return url
 
 
 class Repository:

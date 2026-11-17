@@ -4,7 +4,7 @@ import argparse
 import json
 import random
 from collections.abc import Sequence
-from concurrent.futures import ProcessPoolExecutor
+from concurrent.futures import Future, ProcessPoolExecutor
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from statistics import fmean
@@ -28,7 +28,7 @@ from app.neural.online import (
     ExperienceBuffer,
     OnlineLearning,
 )
-from app.neural.policy import NeuralPolicy
+from app.neural.policy import NeuralPolicy, narrow_passage_cells
 from app.neural.training import (
     TrainingMemory,
     TrainingTrial,
@@ -337,6 +337,32 @@ def check_batch(
     return [job.result() for job in jobs]
 
 
+def compare_batch(
+    pool: ProcessPoolExecutor,
+    parent: NeuralPolicy,
+    candidate: NeuralPolicy,
+    scenes: Sequence[Scenario],
+    baseline: Sequence[MapResult],
+) -> list[Future[Rollout] | MapResult]:
+    passage_only = (
+        candidate.artifact["layers"] is parent.artifact["layers"]
+        and candidate.waiting_weights == parent.waiting_weights
+        and candidate.charging_weights == parent.charging_weights
+        and candidate.coordination_weights == parent.coordination_weights
+    )
+    # The passage output layer is never consulted on these layouts.
+    return [
+        previous
+        if passage_only and not narrow_passage_cells(scene.warehouse)
+        else pool.submit(simulate, candidate.artifact, scene)
+        for scene, previous in zip(scenes, baseline, strict=True)
+    ]
+
+
+def comparison_results(jobs: Sequence[Future[Rollout] | MapResult]) -> list[MapResult]:
+    return [job if isinstance(job, MapResult) else job.result().result for job in jobs]
+
+
 def train_round(
     pool: ProcessPoolExecutor,
     parent: NeuralPolicy,
@@ -348,34 +374,36 @@ def train_round(
     seed = 826_100 + index * batch_span * 2
     varied = {"vary": index > 0, "large": index % 4 == 3}
     training = generated_batch(seed, excluded, **varied)
-    validation = generated_batch(seed + batch_span, excluded, **varied)
     examples = check_batch(pool, parent, training, learn=True)
     samples = [entry.memory for entry in examples if entry.memory is not None]
     before = [entry.result for entry in examples]
     jobs = [
-        (
-            candidate,
-            [pool.submit(simulate, candidate.artifact, scene) for scene in training],
-        )
+        (candidate, compare_batch(pool, parent, candidate, training, before))
         for candidate in proposals(parent, [*replay, *samples], index)
     ]
-    screened = [(model, [task.result().result for task in tasks]) for model, tasks in jobs]
+    screened = [(model, comparison_results(tasks)) for model, tasks in jobs]
     ranked = sorted(
-        ((model, data) for model, data in screened if protects(data, before)),
-        key=lambda entry: rank(entry[1]),
+        ((rank(data), model) for model, data in screened if protects(data, before)),
+        key=lambda entry: entry[0],
         reverse=True,
     )
-    validation_before = [entry.result for entry in check_batch(pool, parent, validation)]
+    baseline_rank = rank(before)
+    eligible = [model for score, model in ranked[:2] if score >= baseline_rank]
+    validation_before: list[MapResult] = []
     winner = None
-    winning_results = validation_before
     validated = []
-    for model, data in ranked[:2]:
-        if rank(data) < rank(before):
-            continue
-        results = [entry.result for entry in check_batch(pool, model, validation)]
-        validated.append((model, results))
-        if protects(results, validation_before) and rank(results) > rank(winning_results):
-            winner, winning_results = model, results
+    reused = sum(isinstance(task, MapResult) for _, tasks in jobs for task in tasks)
+    if eligible:
+        validation = generated_batch(seed + batch_span, excluded, **varied)
+        validation_before = [entry.result for entry in check_batch(pool, parent, validation)]
+        winning_results = validation_before
+        for model in eligible:
+            tasks = compare_batch(pool, parent, model, validation, validation_before)
+            reused += sum(isinstance(task, MapResult) for task in tasks)
+            results = comparison_results(tasks)
+            validated.append((model, results))
+            if protects(results, validation_before) and rank(results) > rank(winning_results):
+                winner, winning_results = model, results
 
     def serialize(data: Sequence[MapResult]) -> list[dict[str, Any]]:
         return [result.model_dump(mode="json") for result in data]
@@ -385,6 +413,7 @@ def train_round(
         "baseline": parent.id,
         "accepted": winner.id if winner else None,
         "maps_in_replay": len(replay),
+        "reused_passage_results": reused,
         "training_baseline": serialize(before),
         "validation_baseline": serialize(validation_before),
         "screened": {policy.id: serialize(results) for policy, results in screened},

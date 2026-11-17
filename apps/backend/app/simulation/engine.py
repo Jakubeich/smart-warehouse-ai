@@ -132,7 +132,7 @@ class Engine:
         self.stalled_ticks = 0
         self.repeated_fleet_states: dict[tuple[object, ...], int] = {}
         self.training_route_progress: dict[str, RouteProgress] = {}
-        validate_state(self.state)
+        validate_state(self.state, self.grid)
         self.emit("STATE_SNAPSHOT", f"Scenario initialized. {len(self.state.robots)} robots ready.")
 
     def emit(self, kind: str, message: str, entity: str | None = None) -> None:
@@ -744,7 +744,7 @@ class Engine:
             s.error = TICK_LIMIT_MESSAGE
             self.emit("SIMULATION_ERROR", s.error)
         self.update_metrics()
-        validate_state(s)
+        validate_state(s, self.grid)
         return s
 
     def has_planned_motion(self) -> bool:

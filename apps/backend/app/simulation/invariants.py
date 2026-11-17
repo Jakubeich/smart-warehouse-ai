@@ -38,17 +38,17 @@ def validate_transition(grid: Grid, old: dict[str, Point], new: dict[str, Point]
         raise InvariantError("Transition changed fleet membership")
     if len(set(new.values())) != len(new):
         raise InvariantError("Vertex collision rejected")
-    ids = sorted(old)
-    for i, rid in enumerate(ids):
-        if not grid.walkable(new[rid]) or manhattan(old[rid], new[rid]) > 1:
+    previous_occupants = {position: rid for rid, position in old.items()}
+    for rid, target in new.items():
+        if not grid.walkable(target) or manhattan(old[rid], target) > 1:
             raise InvariantError("Invalid robot movement rejected")
-        for other in ids[i + 1 :]:
-            if old[rid] == new[other] and old[other] == new[rid]:
-                raise InvariantError("Edge-swap collision rejected")
+        other = previous_occupants.get(target)
+        if other is not None and other != rid and new[other] == old[rid]:
+            raise InvariantError("Edge-swap collision rejected")
 
 
-def validate_state(state: SimulationState) -> None:
-    grid = Grid(state.warehouse, set(state.obstacles))
+def validate_state(state: SimulationState, grid: Grid | None = None) -> None:
+    grid = grid or Grid(state.warehouse, set(state.obstacles))
     pos = {r.id: r.position for r in state.robots}
     validate_transition(grid, pos, pos)
     for r in state.robots:

@@ -12,6 +12,17 @@ from app.scheduling.assignment import feasible
 from app.simulation.engine import Engine
 
 
+def test_route_distances_handle_row_boundaries_and_blocked_cells():
+    warehouse = Warehouse(id="rows", name="Rows", width=4, height=4)
+    grid = Grid(warehouse, {(x, 2) for x in range(4)})
+    goal = (0, 1)
+    assert grid.distance((1, 1), goal) == 1
+    assert grid.distance((3, 0), goal) == 4
+    assert grid.distance((0, 3), goal) is None
+    assert grid.distance((2, 1), goal) == 2
+    assert grid.shortest_path((3, 0), goal) == [(3, 0), (3, 1), (2, 1), (1, 1), goal]
+
+
 @pytest.mark.parametrize("width,count", [(1, 1), (1, 2), (2, 2), (3, 3)])
 def test_partition_only_crosses_at_passages_with_two_way_tasks(width, count):
     request = GeneratorRequest(

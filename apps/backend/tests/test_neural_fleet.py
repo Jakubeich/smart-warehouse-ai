@@ -11,7 +11,7 @@ from sqlalchemy.exc import SQLAlchemyError
 from app.core.demos import demo
 from app.core.generator import GeneratorRequest, generate
 from app.domain.grid import Grid
-from app.domain.models import Scenario
+from app.domain.models import Point, Scenario
 from app.main import create_app
 from app.neural.coordination import simultaneous_moves
 from app.neural.online import UPDATE_TICKS, Experience, OnlineLearning
@@ -42,7 +42,7 @@ from app.neural.training import (
     scenario_key,
 )
 from app.persistence.database import Base, Repository
-from app.simulation.engine import Engine
+from app.simulation.engine import TRAINING_STALL_MESSAGE, TRAINING_STALL_TICKS, Engine
 
 
 def test_neural_simulation_controls_dispatch_charging_and_movement(
@@ -237,6 +237,62 @@ def test_shared_training_respects_default_and_explicit_step_limits() -> None:
     scene.config.max_ticks = 5638
     result = simulate(load_policy().artifact, scene).result
     assert result.finished and result.delivered == 23 and result.ticks == 5638
+
+
+@pytest.mark.parametrize(
+    ("depleted", "queued", "expected"),
+    [
+        (0, 1, (TRAINING_STALL_TICKS + 10, "Simulation step limit reached.")),
+        (0, 3, (TRAINING_STALL_TICKS + 1, TRAINING_STALL_MESSAGE)),
+        (2, 1, (TRAINING_STALL_TICKS + 1, TRAINING_STALL_MESSAGE)),
+        (3, 0, (1, "Most available robots are out of energy.")),
+    ],
+)
+def test_training_restarts_when_most_robots_cannot_progress(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+    depleted: int,
+    queued: int,
+    expected: tuple[int, str],
+) -> None:
+    scene = demo("small", robot_count=4, task_count=1)
+    scene.config.max_ticks = TRAINING_STALL_TICKS + 10
+    for x, robot in enumerate(scene.robots, 1):
+        robot.position = (x + 5, 1)
+        if x <= depleted:
+            robot.battery = 0
+
+    def simulate_queue(engine: Engine) -> tuple[dict[str, Point], list[Experience]]:
+        robots = engine.state.robots
+        for waiting in robots[3 - queued : 3]:
+            waiting.goal = (waiting.position[0], 2)
+        circling = robots[-1]
+        circling.goal = (9, 7)
+        moves = {robot.id: robot.position for robot in engine.state.robots}
+        moves[circling.id] = (9, 2 if circling.position[1] == 1 else 1)
+        return moves, []
+
+    monkeypatch.setattr(Engine, "_neural_dispatch", lambda _: None)
+    monkeypatch.setattr(Engine, "_neural_moves", simulate_queue)
+    monkeypatch.setattr("app.simulation.service.TRAINING_RESTART_DELAY", 0.05)
+    repo = Repository(f"sqlite:///{tmp_path}/blocked.db")
+    Base.metadata.create_all(repo.engine)
+    with TestClient(create_app(repo)) as client:
+        state = client.post(
+            "/api/simulations", json={"scenario": scene.model_dump(mode="json")}
+        ).raise_for_status().json()
+        endpoint = f"/api/simulations/{state['id']}"
+        client.post(endpoint + "/speed", json={"speed": 512}).raise_for_status()
+        client.post(endpoint + "/training-start").raise_for_status()
+        for _ in range(300):
+            training = client.get(endpoint).raise_for_status().json()["training_loop"]
+            if training["attempt"] == 2:
+                break
+            time.sleep(0.01)
+        assert training["attempt"] == 2
+        last = training["last_result"]
+        assert last["status"] == "FAILED"
+        assert (last["ticks"], last["error"]) == expected
 
 
 @pytest.mark.parametrize("depleted", [1, 2])

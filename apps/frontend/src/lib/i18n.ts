@@ -238,6 +238,8 @@ const errorMessages: Record<string, string> = {
   "No progress for 30 ticks: check capacity, energy, station admission or reachability":
     "Po dobu 30 kroků nedošlo k pokroku. Zkontrolujte nosnost, energii, obsazení a dostupnost stanic.",
   "Most available robots are out of energy.": "Většina dostupných robotů se vybila.",
+  "Most available robots are blocked and no deliveries were completed.":
+    "Většina dostupných robotů dlouhodobě nepostupovala a žádná přeprava se nedokončila.",
   "The fleet is repeating the same state without completing a delivery.":
     "Flotila se vrací do stejného stavu a nedokončuje přepravy.",
   "Task limit reached or duplicate ID":

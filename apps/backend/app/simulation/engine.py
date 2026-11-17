@@ -1,7 +1,7 @@
 """Pure synchronous tick engine; no wall clock pacing, network, database or renderer."""
 
 from collections import deque
-from dataclasses import asdict
+from dataclasses import asdict, dataclass
 from math import atan2, degrees
 from time import perf_counter
 from typing import Any
@@ -49,7 +49,17 @@ from app.simulation.invariants import (
 )
 
 RECENT_FLEET_STATES = 256
+TRAINING_STALL_TICKS = 120
 TICK_LIMIT_MESSAGE = "Simulation step limit reached."
+TRAINING_STALL_MESSAGE = "Most available robots are blocked and no deliveries were completed."
+
+
+@dataclass(frozen=True)
+class RouteProgress:
+    leg: tuple[str, str | None]
+    target: Point
+    best_distance: int | None
+    last_tick: int
 
 
 class Engine:
@@ -121,6 +131,7 @@ class Engine:
         self.dirty = True
         self.stalled_ticks = 0
         self.repeated_fleet_states: dict[tuple[object, ...], int] = {}
+        self.training_route_progress: dict[str, RouteProgress] = {}
         validate_state(self.state)
         self.emit("STATE_SNAPSHOT", f"Scenario initialized. {len(self.state.robots)} robots ready.")
 
@@ -722,6 +733,8 @@ class Engine:
             self.fail(
                 "No progress for 30 ticks: check capacity, energy, station admission or reachability"
             )
+        elif s.training_loop and s.training_loop.active and self.training_fleet_blocked():
+            self.fail(TRAINING_STALL_MESSAGE)
         elif self.repeats_without_delivery():
             self.fail("The fleet is repeating the same state without completing a delivery.")
         elif s.tick >= self.max_ticks:
@@ -740,9 +753,8 @@ class Engine:
             for robot in self.state.robots
         )
 
-    def majority_stranded(self) -> bool:
-        available = [robot for robot in self.state.robots if robot.mode != "OFFLINE"]
-        stranded = sum(
+    def stranded(self, robot: Robot) -> bool:
+        return (
             robot.battery + 1e-9 < self.state.config.move_energy
             and robot.mode != "CHARGE"
             and not (
@@ -754,9 +766,48 @@ class Engine:
                 robot.service_remaining
                 and robot.battery + 1e-9 >= self.state.config.handling_energy
             )
-            for robot in available
         )
-        return stranded * 2 > len(available)
+
+    def majority_stranded(self) -> bool:
+        available = [robot for robot in self.state.robots if robot.mode != "OFFLINE"]
+        return sum(self.stranded(robot) for robot in available) * 2 > len(available)
+
+    def training_fleet_blocked(self) -> bool:
+        s = self.state
+        blocked = available = 0
+        for robot in s.robots:
+            if robot.mode == "OFFLINE":
+                self.training_route_progress.pop(robot.id, None)
+                continue
+            available += 1
+            if self.stranded(robot):
+                self.training_route_progress.pop(robot.id, None)
+                blocked += 1
+                continue
+            target = robot.goal
+            if target is None or robot.service_remaining or robot.mode == "CHARGE":
+                self.training_route_progress.pop(robot.id, None)
+                continue
+            leg = (robot.mode, robot.task_id)
+            distance = self.grid.distance(robot.position, target)
+            previous = self.training_route_progress.get(robot.id)
+            if previous is None or previous.leg != leg:
+                progress = RouteProgress(leg, target, distance, s.tick)
+            elif previous.target != target:
+                # Choosing another charger does not itself advance the robot.
+                progress = RouteProgress(leg, target, distance, previous.last_tick)
+            elif distance is not None and (
+                previous.best_distance is None or distance < previous.best_distance
+            ):
+                progress = RouteProgress(leg, target, distance, s.tick)
+            else:
+                progress = previous
+            self.training_route_progress[robot.id] = progress
+            blocked += s.tick - progress.last_tick >= TRAINING_STALL_TICKS
+        return (
+            s.tick - self.last_delivery_tick >= TRAINING_STALL_TICKS
+            and blocked * 2 > available
+        )
 
     def repeats_without_delivery(self) -> bool:
         s = self.state
@@ -883,6 +934,7 @@ class Engine:
         task.created_tick = self.state.tick
         self.state.tasks.append(task)
         self.repeated_fleet_states.clear()
+        self.training_route_progress.clear()
         if self.state.status == "COMPLETED":
             self.state.status = "PAUSED"
             self.state.metrics.success = False
@@ -905,6 +957,7 @@ class Engine:
             s.obstacles.append(point)
         self.grid = Grid(s.warehouse, set(s.obstacles))
         self.repeated_fleet_states.clear()
+        self.training_route_progress.clear()
         for r in s.robots:
             r.path, r.path_index = [r.position], 0
         s.reservations = []
